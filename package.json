@@ -1,0 +1,16 @@
+{
+  "name": "world-right-now",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "map": "node scripts/build-map.mjs",
+    "validate": "node scripts/validate.mjs",
+    "digest": "node scripts/digest.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "d3-geo": "3.1.1",
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "houthis": {
+    "term": "Houthis",
+    "definition": "An armed political movement from northern Yemen, formally called Ansar Allah. It has controlled Yemen's capital, Sanaa, since 2014, is aligned with Iran, and fought a Saudi-led military coalition from 2015."
+  },
+  "irgc": {
+    "term": "IRGC",
+    "definition": "Iran's Islamic Revolutionary Guard Corps, a military force set up after the 1979 revolution to protect the Islamic Republic. It is separate from Iran's regular army and has its own ground forces, navy, air force and an overseas arm, the Quds Force."
+  },
+  "strait-of-hormuz": {
+    "term": "Strait of Hormuz",
+    "definition": "The narrow sea passage between Iran and Oman that links the Persian Gulf to the open ocean. In normal times roughly a fifth of the world's oil passes through it, so closing it pushes up energy prices around the world."
+  },
+  "kremlin": {
+    "term": "Kremlin",
+    "definition": "The fortress in central Moscow that holds the Russian president's offices. News reports use the word as shorthand for the Russian government."
+  },
+  "fii": {
+    "term": "Future Investment Initiative",
+    "definition": "Saudi Arabia's yearly investor conference in Riyadh. It's nicknamed 'Davos in the Desert' after the World Economic Forum's meeting in Davos, Switzerland."
+  },
+  "yellow-vests": {
+    "term": "Yellow Vests",
+    "definition": "The gilets jaunes, a French protest movement that began in 2018 over fuel taxes and the cost of living. It's named after the high-visibility vests French drivers must carry."
+  },
+  "bond-yield": {
+    "term": "Bond yield",
+    "definition": "The return investors demand for lending money to a government. When yields rise, borrowing costs the government more, usually because investors see more risk in its finances."
+  },
+  "paris-agreement": {
+    "term": "Paris Agreement",
+    "definition": "The 2015 global climate deal. Countries agreed to keep warming well below 2°C above pre-industrial levels and to try to limit it to 1.5°C, with each country setting its own emissions pledges."
+  },
+  "cop31": {
+    "term": "COP31",
+    "definition": "The 31st UN climate change conference, where almost every country meets to negotiate climate action. COP31 takes place in Turkey in November 2026."
+  },
+  "unep": {
+    "term": "UNEP",
+    "definition": "The United Nations Environment Programme. Each year it publishes a report measuring the gap between countries' emissions pledges and what's needed to meet the Paris Agreement goals."
+  },
+  "ebola-bundibugyo": {
+    "term": "Bundibugyo virus",
+    "definition": "One of the species of Ebola virus, first identified in Uganda's Bundibugyo district in 2007. Unlike the more common Zaire species, it has no approved vaccine or specific treatment."
+  },
+  "rsf": {
+    "term": "RSF",
+    "definition": "The Rapid Support Forces, a Sudanese paramilitary force that grew out of the Janjaweed militias of Darfur. It has been at war with Sudan's army for control of the country since April 2023."
+  },
+  "abyei": {
+    "term": "Abyei",
+    "definition": "A small, oil-producing area on the border between Sudan and South Sudan that both countries claim. Its status was left unresolved when South Sudan became independent in 2011, and UN peacekeepers are based there."
+  },
+  "tigray": {
+    "term": "Tigray",
+    "definition": "A region in northern Ethiopia. A war between Ethiopia's federal government and Tigrayan forces from 2020 to 2022 killed hundreds of thousands of people before a peace deal was signed in Pretoria."
+  },
+  "fdlr": {
+    "term": "FDLR",
+    "definition": "The Democratic Forces for the Liberation of Rwanda, an armed group in eastern DR Congo. It was founded by Rwandan Hutu fighters, including people linked to the 1994 genocide against the Tutsi."
+  },
+  "sir": {
+    "term": "Special Intensive Revision",
+    "definition": "An exercise by India's Election Commission to re-check voter rolls house by house and remove duplicate, dead or relocated voters. It started as a pilot in Bihar in 2025 and has since run in phases across the country."
+  },
+  "midterms": {
+    "term": "Midterm elections",
+    "definition": "US elections held halfway through a president's four-year term, for all 435 House seats, about a third of the Senate and many state offices. The 2026 midterms are on 3 November."
+  },
+  "super-pac": {
+    "term": "Super PAC",
+    "definition": "A US political committee that can raise and spend unlimited money for or against candidates, as long as it doesn't coordinate directly with their campaigns."
+  },
+  "west-bank": {
+    "term": "West Bank",
+    "definition": "Palestinian territory between Israel and Jordan that Israel has occupied since 1967. About three million Palestinians and several hundred thousand Israeli settlers live there, and most countries consider the settlements illegal under international law."
+  },
+  "triple-lock": {
+    "term": "Triple lock",
+    "definition": "Ireland's rule that it sends more than a small number of troops abroad only with a UN mandate, government approval and a vote in the Dáil, its parliament. It's tied to Ireland's tradition of military neutrality."
+  },
+  "patriots-for-europe": {
+    "term": "Patriots for Europe",
+    "definition": "A far-right group in the European Parliament formed in 2024. Its members include Hungary's Fidesz and France's National Rally."
+  },
+  "cambridge-analytica": {
+    "term": "Cambridge Analytica",
+    "definition": "A British political consulting firm that, it was revealed in 2018, had harvested data from up to 87 million Facebook users without their consent. The scandal led to fines and lawsuits against Facebook, now Meta."
+  },
+  "php": {
+    "term": "PHP",
+    "definition": "A programming language that runs on web servers. It powers a large share of the web, including sites built on WordPress."
+  },
+  "chapter-11": {
+    "term": "Chapter 11",
+    "definition": "The part of US bankruptcy law that lets a company keep operating while it reorganizes its debts under a court's supervision, instead of shutting down."
+  },
+  "737-max": {
+    "term": "Boeing 737 Max",
+    "definition": "Boeing's newest family of 737 jets. Two fatal crashes in 2018 and 2019 grounded the plane worldwide for about 20 months and delayed later versions such as the Max 10."
+  },
+  "kelvin-wave": {
+    "term": "Kelvin wave",
+    "definition": "A huge, slow wave that travels beneath the ocean surface along the equator or a coastline, carrying warm water with it. Kelvin waves help start and strengthen El Niño."
+  },
+  "el-nino": {
+    "term": "El Niño",
+    "definition": "A natural climate pattern in which the central and eastern tropical Pacific Ocean warms up every few years. It shifts weather around the world and usually nudges global temperatures up."
+  },
+  "psilocybin": {
+    "term": "Psilocybin",
+    "definition": "The compound in 'magic mushrooms' that causes psychedelic effects. Researchers are testing it as a treatment for conditions including depression."
+  }
+}

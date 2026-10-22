@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Right Now</title>
+<meta name="description" content="Today's world news from NPR, Al Jazeera, France 24 and ABC News, explained: where each story is happening, how we got here, and what the key terms mean.">
+<meta property="og:title" content="World Right Now">
+<meta property="og:description" content="Today's world news, explained in plain words, with background, timelines and a map.">
+<meta name="theme-color" content="#EEF1F4">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the news</a>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top">World Right Now</a>
+    <nav aria-label="Sections">
+      <a href="#today">Today</a>
+      <a href="#map">Map</a>
+      <a href="#ongoing">Ongoing stories</a>
+      <a href="#key-terms">Key terms</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <h1>The world, right now</h1>
+      <p class="intro" id="intro">Today's biggest stories, explained: where they're happening, how we got here, and what the words mean.</p>
+      <div class="clocks" id="clocks" role="group" aria-label="Local time where the top stories are happening"></div>
+      <p class="stale" id="stale" hidden></p>
+      <noscript><p class="stale">This site needs JavaScript to show the news. You can read the stories directly in <a href="data/latest.json">today's data file</a>.</p></noscript>
+    </div>
+  </section>
+
+  <section class="lead" aria-label="Top stories">
+    <div class="wrap" id="lead"></div>
+  </section>
+
+  <section class="map" id="map" aria-labelledby="map-h">
+    <div class="wrap">
+      <h2 class="sec" id="map-h">Where it's happening</h2>
+      <p class="sec-intro">Each dot is one of today's stories. Select a dot to read it.</p>
+      <div class="map-box" id="map-box"></div>
+      <p class="map-note" id="map-note"></p>
+    </div>
+  </section>
+
+  <section class="desk" id="today" aria-labelledby="desk-h">
+    <div class="wrap">
+      <h2 class="sec" id="desk-h">Everything else today</h2>
+      <div class="filters">
+        <div class="row" id="f-region" role="group" aria-label="Filter by region"><span class="lbl">Where</span></div>
+        <div class="row" id="f-topic" role="group" aria-label="Filter by topic"><span class="lbl">What</span></div>
+      </div>
+      <div class="list" id="list"></div>
+    </div>
+  </section>
+
+  <section class="threads" id="ongoing" aria-labelledby="threads-h">
+    <div class="wrap">
+      <h2 class="sec" id="threads-h">Ongoing stories</h2>
+      <p class="sec-intro">The big stories that keep coming back, as timelines. Each step links to the reporting it comes from.</p>
+      <div class="thread-list" id="threads"></div>
+    </div>
+  </section>
+
+  <section class="terms" id="key-terms" aria-labelledby="terms-h">
+    <div class="wrap">
+      <h2 class="sec" id="terms-h">Key terms</h2>
+      <p class="sec-intro">Words that come up in the news, in plain English. Underlined words in the stories open these too.</p>
+      <dl id="terms"></dl>
+    </div>
+  </section>
+
+  <section class="light" aria-labelledby="light-h">
+    <div class="wrap">
+      <h2 class="sec" id="light-h">Something lighter</h2>
+      <div class="grid" id="light"></div>
+    </div>
+  </section>
+
+  <section class="sport" aria-labelledby="sport-h">
+    <div class="wrap">
+      <h2 class="sec" id="sport-h">Scores and sport</h2>
+      <div class="scores" id="sport"></div>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <h2 class="sec" id="about-h">About, privacy and terms</h2>
+      <p class="sec-intro">World Right Now has no accounts, payments, ads, forms or analytics. This is how it works and what it does with your information.</p>
+      <div class="grid">
+        <div class="block" id="how">
+          <h3>How it's made</h3>
+          <p>Every morning, Claude, an AI model made by Anthropic, reads the public news feeds of <a href="https://www.npr.org/sections/world/">NPR</a>, <a href="https://www.aljazeera.com/">Al Jazeera</a>, <a href="https://www.france24.com/en/">France 24</a> and <a href="https://www.abc.net.au/news">ABC News (Australia)</a>. It rewrites each story in plain words and adds background, key terms and timelines. Every story links to the original reports so you can check them. AI can make mistakes, so the reports are the final word.</p>
+        </div>
+        <div class="block" id="privacy">
+          <h3>Privacy</h3>
+          <ul>
+            <li>The site collects no personal information. There are no accounts, forms, trackers or analytics.</li>
+            <li>The only thing it saves is the region and topic you last filtered by. That stays in your own browser so your choice is still set next time, and it never leaves your device.</li>
+            <li>The site is hosted on GitHub Pages. Like any web host, GitHub may log visitors' IP addresses for security; see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</li>
+            <li>Links to news sites take you to those sites, which have their own privacy policies.</li>
+            <li>Because the site collects nothing from anyone, it doesn't ask for anyone's age, including children's.</li>
+          </ul>
+        </div>
+        <div class="block" id="cookies">
+          <h3>Cookies and storage</h3>
+          <p>This site sets no cookies and loads nothing from other websites: its typeface and map are part of the site. The filter it remembers is stored only because you picked it, so there's no consent banner to click through.</p>
+        </div>
+        <div class="block" id="your-data">
+          <h3>Your data</h3>
+          <p>There's nothing to ask us to delete, because we don't store anything about you. To remove what this site saved in your browser, press the button.</p>
+          <div class="row"><button class="plain" type="button" id="clear">Clear what this site saved</button></div>
+          <p class="cleared" id="cleared" aria-live="polite"></p>
+        </div>
+        <div class="block" id="terms-of-use">
+          <h3>Terms of use</h3>
+          <ul>
+            <li>World Right Now is free to read and sells nothing, so there are no fees, subscriptions or refunds.</li>
+            <li>Summaries are short rewrites of reporting by NPR, Al Jazeera, France 24 and ABC News. The site isn't affiliated with or endorsed by those outlets. Original headlines are quoted with a link to the full report, and the reporting belongs to its publishers.</li>
+            <li>Summaries and background can miss detail or go out of date as stories develop. Check the linked reports before you rely on anything here. Nothing here is professional, legal, medical or financial advice.</li>
+          </ul>
+        </div>
+        <div class="block" id="accessibility">
+          <h3>Accessibility</h3>
+          <p>Everything works with a keyboard. Tab moves between controls, Enter or Space presses buttons and opens the expandable sections, and Escape closes a key-term card. "Skip to the news" is the first stop. Text and controls meet WCAG AA colour contrast in light and dark mode, and transitions switch off if your device asks for reduced motion. The map is also available as the list of stories below it.</p>
+        </div>
+        <div class="block" id="credits">
+          <h3>Credits and licences</h3>
+          <p>Typeface: Schibsted Grotesk, used under the <a href="assets/fonts/OFL.txt">SIL Open Font License 1.1</a>. Map outlines: <a href="https://www.naturalearthdata.com/">Natural Earth</a>, public domain. No photographs or illustrations are used. News reporting is © its publishers and is linked, not copied.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="name">World Right Now</p>
+    <nav aria-label="About, privacy and terms">
+      <a href="#how">How it's made</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#cookies">Cookies and storage</a>
+      <a href="#your-data">Your data</a>
+      <a href="#terms-of-use">Terms of use</a>
+      <a href="#accessibility">Accessibility</a>
+      <a href="#credits">Credits</a>
+    </nav>
+    <p id="footer-stamp"></p>
+  </div>
+</footer>
+
+<div class="term-pop" id="term-pop" role="dialog" aria-modal="false" aria-labelledby="term-pop-title" hidden>
+  <strong id="term-pop-title"></strong>
+  <p id="term-pop-def"></p>
+  <a id="term-pop-link" href="#key-terms">See all key terms</a>
+</div>
+
+<script src="assets/map.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
