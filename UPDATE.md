@@ -21,8 +21,10 @@ Replace the whole file. Keep the same shape as the current file:
 
 - `date` (YYYY-MM-DD, today in UTC), `snapshot` (ISO time you gathered the news), `outlets` (the outlets you used).
 - `stories`: 20 to 30 stories. Exactly one has `"lead": "main"` and two have `"lead": "side"`: the three most important stories in the world today, not the most clicked.
-  Each story has `id`, `topic` (Conflict, Politics, Business, Tech, Science, Health, Climate, Culture), `region` (Europe, Middle East, Africa, Asia-Pacific, Americas, Global), `city`, `tz` (IANA zone, `"UTC"` for worldwide, `null` for none), `lat`/`lon` (or both `null`), `title`, `summary`, `background`, optional `thread`, and `sources` (outlet, original headline, https url, ISO time).
-- `lighter`: 6 to 8 good-news, science or curious stories.
+  Each story has `id`, `topic` (Conflict, Politics, Business, Tech, Science, Health, Climate, Culture), `region` (Europe, Middle East, Africa, Asia-Pacific, Americas, Global), `city`, `country`, optional `state`, optional `places`, `tz` (IANA zone, `"UTC"` for worldwide, `null` for none), `lat`/`lon` (or both `null`), `title`, `summary`, `background`, optional `thread`, and `sources` (outlet, original headline, https url, ISO time).
+  The place fields power the site's search: `country` is the country the dateline is in (`"Worldwide"` for global stories), `state` is the US state, province or region when there is a clear one, and `places` lists other countries or states the story is mainly about (for example a US story about Canada gets `"places": ["Canada"]`).
+  Keep titles under about 90 characters: the top stories are set large.
+- `lighter`: 6 to 8 good-news, science or curious stories, with the same place fields where they apply.
 - `sport`: 5 to 8 results or big sport stories.
 
 Writing rules:
@@ -37,6 +39,7 @@ Writing rules:
 
 For each ongoing thread with news today, add new events at the end (dates in order, each with its source).
 Start a new thread when a story has clearly become a running one. Keep threads that went quiet.
+Keep every existing field, including each thread's `image` and its credit. A new thread may go without an image.
 
 ## 4. Check and publish
 

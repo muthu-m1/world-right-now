@@ -1,21 +1,40 @@
-// World Right Now: renders today's stories, the map, ongoing stories and key terms
-// from the JSON files in data/. No libraries and no outside requests.
+// World Right Now: renders today's edition from the JSON files in data/.
+// No libraries and no outside requests. The news is a daily snapshot; local times and
+// day-and-night shading are worked out live in the browser from the current time.
 (function () {
   "use strict";
 
-  var state = { region: "All", topic: "All" };
+  var D, TERMS, THREADS;
+  var RANKED = [];
+  var REGIONS = ["All", "Europe", "Middle East", "Africa", "Asia-Pacific", "Americas", "Global"];
+  var reduceMotion = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var state = { region: "All", topic: "All", q: "" };
   try {
     var saved = JSON.parse(localStorage.getItem("wrn-filters") || "null");
-    if (saved && saved.region && saved.topic) state = saved;
+    if (saved && saved.region && saved.topic) { state.region = saved.region; state.topic = saved.topic; }
   } catch (e) {}
+  function save() {
+    try { localStorage.setItem("wrn-filters", JSON.stringify({ region: state.region, topic: state.topic })); } catch (e) {}
+  }
 
-  var D, TERMS, THREADS;
-
+  // ---------------------------------------------------------------- helpers
+  function $(id) { return document.getElementById(id); }
   function el(tag, cls, text) {
     var n = document.createElement(tag);
     if (cls) n.className = cls;
     if (text != null) n.textContent = text;
     return n;
+  }
+  function icon(name, cls) {
+    var NS = "http://www.w3.org/2000/svg";
+    var s = document.createElementNS(NS, "svg");
+    s.setAttribute("class", "ico" + (cls ? " " + cls : ""));
+    s.setAttribute("aria-hidden", "true");
+    var u = document.createElementNS(NS, "use");
+    u.setAttribute("href", "#i-" + name);
+    s.appendChild(u);
+    return s;
   }
   function link(text, href, cls) {
     var a = el("a", cls, text);
@@ -23,8 +42,25 @@
     if (/^https?:/.test(href)) { a.target = "_blank"; a.rel = "noopener"; }
     return a;
   }
+  function outLink(text, href, cls) {
+    var a = link("", href, cls);
+    a.appendChild(document.createTextNode(text));
+    a.appendChild(icon("out"));
+    a.setAttribute("aria-label", text + " (opens the original report)");
+    return a;
+  }
+  function strip(t) { return String(t || "").replace(/\[\[[a-z0-9-]+\|([^\]]+)\]\]/g, "$1"); }
+  function norm(t) { return String(t || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, " ").trim(); }
+  function debounce(fn, ms) { var t; return function () { clearTimeout(t); t = setTimeout(fn, ms); }; }
+  // Next animation frame, with a timer fallback for background or throttled tabs.
+  function frame(cb) {
+    var done = false;
+    function run() { if (!done) { done = true; cb(performance.now()); } }
+    requestAnimationFrame(run);
+    setTimeout(run, 40);
+  }
 
-  // ---- Time ---------------------------------------------------------------
+  // ---------------------------------------------------------------- time
   function partOfDay(h) {
     if (h < 5) return "night";
     if (h < 12) return "morning";
@@ -33,20 +69,20 @@
     return "night";
   }
   function localTime(tz) {
-    if (tz === null) return "No official time zone yet";
+    if (tz === null || tz === "null") return "No time zone";
     var now = new Date();
-    if (tz === "UTC") {
-      return new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" }).format(now) + " UTC";
-    }
+    if (tz === "UTC") return new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" }).format(now) + " UTC";
     try {
       var t = new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", timeZone: tz }).format(now).toLowerCase();
       var h = Number(new Intl.DateTimeFormat("en-US", { hour: "numeric", hourCycle: "h23", timeZone: tz }).format(now));
-      return t + " there, " + partOfDay(h);
+      return t + " · " + partOfDay(h);
     } catch (e) { return ""; }
   }
   function shortTime(tz) {
-    return new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", timeZone: tz }).format(new Date()).toLowerCase();
+    try { return new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", timeZone: tz }).format(new Date()).toLowerCase(); }
+    catch (e) { return ""; }
   }
+  function utcNow() { return new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" }).format(new Date()); }
   function ago(iso) {
     var mins = Math.round((Date.now() - new Date(iso).getTime()) / 60000);
     if (mins < 60) return Math.max(mins, 1) + " min ago";
@@ -55,7 +91,6 @@
     return Math.round(h / 24) + " days ago";
   }
   function fmtEventDate(d) {
-    // "2026-10-21" -> "21 Oct 2026", "2026-02" -> "Feb 2026"
     var p = d.split("-").map(Number);
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     return (p[2] ? p[2] + " " : "") + months[p[1] - 1] + " " + p[0];
@@ -67,8 +102,26 @@
     return seen;
   }
 
-  // ---- Text with key terms --------------------------------------------------
-  // Story text marks key terms as [[term-id|shown words]].
+  // ---------------------------------------------------------------- the sun
+  // Approximate subsolar point (good to about a degree), enough for day/night shading.
+  var RAD = Math.PI / 180;
+  function subsolar(date) {
+    var start = Date.UTC(date.getUTCFullYear(), 0, 0);
+    var n = (date.getTime() - start) / 86400000;
+    var g = 2 * Math.PI / 365 * (n - 1);
+    var decl = 0.006918 - 0.399912 * Math.cos(g) + 0.070257 * Math.sin(g) - 0.006758 * Math.cos(2 * g)
+      + 0.000907 * Math.sin(2 * g) - 0.002697 * Math.cos(3 * g) + 0.00148 * Math.sin(3 * g);
+    var eot = 229.18 * (0.000075 + 0.001868 * Math.cos(g) - 0.032077 * Math.sin(g) - 0.014615 * Math.cos(2 * g) - 0.040849 * Math.sin(2 * g));
+    var utcMin = date.getUTCHours() * 60 + date.getUTCMinutes() + date.getUTCSeconds() / 60;
+    var lon = -(utcMin + eot - 720) / 4;
+    lon = ((lon + 540) % 360) - 180;
+    return { lat: decl / RAD, lon: lon };
+  }
+  function sunSin(lat, lon, ss) {
+    return Math.sin(lat * RAD) * Math.sin(ss.lat * RAD) + Math.cos(lat * RAD) * Math.cos(ss.lat * RAD) * Math.cos((lon - ss.lon) * RAD);
+  }
+
+  // ---------------------------------------------------------------- key terms in text
   function rich(text, tag, cls) {
     var node = el(tag || "p", cls);
     var re = /\[\[([a-z0-9-]+)\|([^\]]+)\]\]/g, last = 0, m;
@@ -90,7 +143,7 @@
     return node;
   }
 
-  var pop = document.getElementById("term-pop");
+  var pop = $("term-pop");
   var popFor = null;
   function closePop(returnFocus) {
     if (!popFor) return;
@@ -103,337 +156,939 @@
     var t = TERMS[btn.dataset.term];
     if (popFor === btn) { closePop(true); return; }
     closePop(false);
-    document.getElementById("term-pop-title").textContent = t.term;
-    document.getElementById("term-pop-def").textContent = t.definition;
-    document.getElementById("term-pop-link").href = "#term-" + btn.dataset.term;
+    $("term-pop-title").textContent = t.term;
+    $("term-pop-def").textContent = t.definition;
+    $("term-pop-link").href = "#term-" + btn.dataset.term;
     pop.hidden = false;
     var r = btn.getBoundingClientRect();
     var w = pop.offsetWidth;
     var left = Math.min(Math.max(16, r.left + window.scrollX), window.scrollX + document.documentElement.clientWidth - w - 16);
     pop.style.left = left + "px";
-    pop.style.top = (r.bottom + window.scrollY + 8) + "px";
+    pop.style.top = (r.bottom + window.scrollY + 10) + "px";
     btn.setAttribute("aria-expanded", "true");
     popFor = btn;
   }
   document.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest("button.term");
-    if (b) { openPop(b); return; }
+    if (b) { e.stopPropagation(); openPop(b); return; }
     if (popFor && !pop.contains(e.target)) closePop(false);
   });
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && popFor) closePop(true);
+  $("term-pop-link").addEventListener("click", function (e) {
+    var id = this.getAttribute("href").slice(1);
+    closePop(false);
+    e.preventDefault();
+    showTerm(id);
   });
-  document.getElementById("term-pop-link").addEventListener("click", function () { closePop(false); });
 
-  // ---- Building blocks ------------------------------------------------------
-  function dateline(s) {
-    var d = el("div", "dl");
+  // ---------------------------------------------------------------- ranking and search
+  // Top stories: the day's lead stories as chosen in the daily update, then the stories
+  // covered by the most outlets, then the most reports, then the most recent.
+  function score(s) {
+    var lead = s.lead === "main" ? 3 : s.lead === "side" ? 2 : 0;
+    return lead * 1e6 + outletsOf(s).length * 1e4 + s.sources.length * 1e2 + new Date(latest(s)).getTime() / 1e11;
+  }
+  function placeFields(s) {
+    return [s.city, s.state, s.country].concat(s.places || []).filter(Boolean).map(norm);
+  }
+  function textOf(s) {
+    return norm([s.title, strip(s.summary), strip(s.background), s.topic, s.region].join(" "));
+  }
+  // 2: the place matches, 1: the words appear in the story, 0: no match
+  function matchLevel(s, q) {
+    if (!q) return 2;
+    var places = placeFields(s);
+    for (var i = 0; i < places.length; i++) {
+      if (places[i] === q || places[i].indexOf(q) === 0 || (q.length > 3 && places[i].indexOf(q) >= 0)) return 2;
+    }
+    if (norm(s.region) === q) return 2;
+    return textOf(s).indexOf(q) >= 0 ? 1 : 0;
+  }
+  function results() {
+    var q = norm(state.q);
+    return RANKED
+      .map(function (s) { return { s: s, m: matchLevel(s, q) }; })
+      .filter(function (r) {
+        return r.m > 0 && (state.region === "All" || r.s.region === state.region) && (state.topic === "All" || r.s.topic === state.topic);
+      })
+      .sort(function (a, b) { return b.m - a.m || score(b.s) - score(a.s); })
+      .map(function (r) { return r.s; });
+  }
+
+  // ---------------------------------------------------------------- shared story parts
+  function dateline(s, opts) {
+    var d = el(opts && opts.inline ? "span" : "p", "dl");
     d.appendChild(el("span", "city", s.city));
+    var where = [s.state, s.country].filter(function (x) { return x && x !== s.city && x !== "Worldwide"; }).join(", ");
+    if (where && !(opts && opts.short)) d.appendChild(el("span", "where", where));
     var l = el("span", "local num", localTime(s.tz));
     l.dataset.tz = s.tz === null ? "null" : s.tz;
     d.appendChild(l);
     return d;
   }
-
+  function metaLine(s, inline) {
+    var m = el(inline ? "span" : "p", "meta");
+    var n = outletsOf(s).length;
+    m.appendChild(el("span", null, s.topic));
+    m.appendChild(el("span", null, n > 1 ? n + " outlets" : outletsOf(s)[0]));
+    m.appendChild(el("span", "num", "Latest " + ago(latest(s))));
+    return m;
+  }
+  function chev() { return icon("chev"); }
+  function whyBlock(s, open) {
+    if (!s.background) return null;
+    var det = el("details", "why");
+    if (open) det.open = true;
+    var sum = el("summary");
+    sum.appendChild(document.createTextNode("How we got here"));
+    sum.appendChild(chev());
+    det.appendChild(sum);
+    var box = el("div", "why-text");
+    box.appendChild(rich(s.background));
+    if (s.thread && THREADS[s.thread]) {
+      var f = link("", "#thread-" + s.thread, "follow");
+      f.appendChild(document.createTextNode("Timeline: " + THREADS[s.thread].title));
+      f.appendChild(icon("arrow"));
+      box.appendChild(f);
+    }
+    det.appendChild(box);
+    return det;
+  }
   function sourcesBlock(s) {
     var outs = outletsOf(s);
     var det = el("details", "sources");
-    det.appendChild(el("summary", null,
-      (outs.length > 1 ? "Reported by " + outs.length + " outlets: " : "Reported by ") + outs.join(", ") +
-      ". Latest " + ago(latest(s)) + ". " + (s.sources.length > 1 ? "See all " + s.sources.length + " reports" : "Read the report")));
-    var ul = el("ul");
+    var sum = el("summary");
+    sum.appendChild(document.createTextNode(
+      (s.sources.length > 1 ? s.sources.length + " original reports" : "Original report") + " · " + outs.join(", ")));
+    sum.appendChild(chev());
+    det.appendChild(sum);
+    var ul = el("ul", "src-list");
     s.sources.forEach(function (x) {
       var li = el("li");
-      li.appendChild(link(x.title, x.url));
-      li.appendChild(el("span", "num", "  " + x.outlet + ", " + ago(x.time)));
+      li.appendChild(outLink(x.title, x.url));
+      li.appendChild(el("span", "src-meta num", x.outlet + " · " + ago(x.time)));
       ul.appendChild(li);
     });
     det.appendChild(ul);
     return det;
   }
 
-  function whyBlock(s, open) {
-    if (!s.background) return null;
-    var det = el("details", "why");
-    if (open) det.open = true;
-    det.appendChild(el("summary", null, "How we got here"));
-    var box = el("div", "text");
-    box.appendChild(rich(s.background));
-    if (s.thread && THREADS[s.thread]) {
-      var f = el("p", "follow");
-      f.appendChild(document.createTextNode("Follow the timeline: "));
-      f.appendChild(link(THREADS[s.thread].title, "#thread-" + s.thread));
-      box.appendChild(f);
+  // Location inset: a crop of the NASA Earth image around the story's place, lit as it is now.
+  var insets = [];
+  function inset(s, span) {
+    if (s.lat == null || s.lon == null) {
+      var none = el("div", "inset inset-none");
+      none.appendChild(icon(/moon/i.test(s.city) ? "moon" : "globe"));
+      none.appendChild(el("span", "none-label", s.city === "Worldwide" ? "A worldwide story" : "No single place on Earth"));
+      return none;
     }
-    det.appendChild(box);
-    return det;
+    var box = el("div", "inset");
+    box.dataset.lat = s.lat; box.dataset.lon = s.lon; box.dataset.span = span;
+    box.setAttribute("role", "img");
+    box.appendChild(el("span", "here"));
+    var chip = el("span", "light");
+    box.appendChild(chip);
+    insets.push(box);
+    paintInset(box);
+    return box;
+  }
+  function paintInset(box) {
+    var lat = +box.dataset.lat, lon = +box.dataset.lon, span = +box.dataset.span;
+    var night = sunSin(lat, lon, subsolar(new Date())) < -0.03;
+    var W = box.clientWidth || 600, H = box.clientHeight || 340;
+    var k = 360 / span, Wi = W * k, Hi = Wi / 2;
+    var x = W / 2 - (lon + 180) / 360 * Wi;
+    var y = Math.min(0, Math.max(H - Hi, H / 2 - (90 - lat) / 180 * Hi));
+    box.style.backgroundImage = "url(assets/img/" + (night ? "earth-night" : "earth-day") + ".jpg)";
+    box.style.backgroundSize = Wi.toFixed(0) + "px " + Hi.toFixed(0) + "px";
+    box.style.backgroundPosition = x.toFixed(1) + "px " + y.toFixed(1) + "px";
+    box.style.backgroundRepeat = "repeat-x";
+    var chip = box.querySelector(".light");
+    chip.textContent = "";
+    chip.appendChild(icon(night ? "moon" : "sun"));
+    chip.appendChild(document.createTextNode(night ? "Night there now" : "Daylight there now"));
+    box.setAttribute("aria-label", "Satellite view around this place, " + (night ? "at night" : "in daylight") + " right now");
   }
 
-  function metaLine(s) {
-    return el("p", "meta", s.topic + (s.region !== "Global" ? ", " + s.region : ""));
-  }
-
-  function storyBody(container, s, headTag, openWhy) {
-    container.appendChild(el(headTag, null, s.title));
-    container.appendChild(rich(s.summary, "p", "sum"));
-    var w = whyBlock(s, openWhy);
-    if (w) container.appendChild(w);
-    container.appendChild(sourcesBlock(s));
-  }
-
-  // ---- Sections -------------------------------------------------------------
+  // ---------------------------------------------------------------- hero
   function renderHero() {
     var snap = new Date(D.snapshot);
-    var dateStr = new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(snap);
-    var timeStr = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" }).format(snap);
-    document.getElementById("intro").textContent =
-      dateStr + ". " + D.stories.length + " stories from " + D.outlets.slice(0, -1).join(", ") + " and " + D.outlets.slice(-1) +
-      ", explained: where they're happening, how we got here, and what the words mean.";
-    document.getElementById("footer-stamp").textContent = "Last updated " + dateStr + " at " + timeStr + " UTC.";
-    var hoursOld = (Date.now() - snap.getTime()) / 3600000;
-    if (hoursOld > 30) {
-      var st = document.getElementById("stale");
+    var day = new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" }).format(snap);
+    var time = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" }).format(snap);
+    $("edition-text").textContent = "Daily edition · " + day + " · gathered " + time + " UTC";
+    $("footer-stamp").textContent = "This edition was gathered on " + day + " at " + time + " UTC. A new one is published every morning.";
+    var hours = (Date.now() - snap.getTime()) / 3600000;
+    if (hours > 30) {
+      var st = $("stale");
       st.hidden = false;
-      st.textContent = "These stories were gathered " + Math.round(hoursOld / 24) + " days ago, so some may have moved on. Follow the links for the latest reporting.";
+      st.textContent = "This edition was gathered " + Math.round(hours / 24) + " days ago, so some stories may have moved on. Follow the links for the latest reporting.";
     }
-    var clocks = document.getElementById("clocks");
-    D.stories.filter(function (s) { return s.lead && s.tz && s.tz !== "UTC"; }).forEach(function (s) {
-      var c = el("div", "clock");
-      var t = el("span", "t num", shortTime(s.tz));
+
+    // Example searches taken from today's own stories.
+    var picks = [];
+    var top = RANKED[0];
+    if (top) picks.push(top.city);
+    var withState = RANKED.find(function (s) { return s.state && s.country === "United States"; });
+    if (withState) picks.push(withState.state);
+    var other = RANKED.find(function (s) { return s.country && s.country !== "Worldwide" && picks.indexOf(s.country) < 0 && s.country !== (top && top.country) && s.country !== "United States"; });
+    if (other) picks.push(other.country);
+    var hint = $("hint");
+    hint.textContent = "";
+    if (picks.length) {
+      hint.appendChild(document.createTextNode("Try "));
+      picks.forEach(function (p, i) {
+        if (i) hint.appendChild(document.createTextNode(i === picks.length - 1 ? " or " : ", "));
+        var b = el("button", null, p);
+        b.type = "button";
+        b.addEventListener("click", function () { runSearch(p, true); });
+        hint.appendChild(b);
+      });
+    }
+
+    // Numbers, all counted from today's data.
+    var outlets = {};
+    var countries = {};
+    D.stories.forEach(function (s) {
+      s.sources.forEach(function (x) { outlets[x.outlet] = 1; });
+      if (s.country && s.country !== "Worldwide") countries[s.country] = 1;
+    });
+    var stats = [
+      [D.stories.length, "Stories today"],
+      [Object.keys(outlets).length, "News outlets"],
+      [Object.keys(countries).length, "Countries and territories"],
+      [Object.keys(THREADS).length, "Ongoing timelines"],
+    ];
+    var dlEl = $("stats");
+    stats.forEach(function (x) {
+      var d = el("div");
+      d.appendChild(el("dt", null, x[1]));
+      d.appendChild(el("dd", null, String(x[0])));
+      dlEl.appendChild(d);
+    });
+  }
+
+  // The live Earth: NASA day and night imagery blended along today's terminator.
+  var earth = { day: null, night: null, comp: null, at: 0 };
+  function loadImg(src) {
+    return new Promise(function (res, rej) {
+      var i = new Image();
+      i.onload = function () { res(i); };
+      i.onerror = rej;
+      i.src = src;
+    });
+  }
+  function buildComposite() {
+    var W = earth.day.naturalWidth, H = earth.day.naturalHeight;
+    var ss = subsolar(new Date());
+    var mw = 512, mh = 256;
+    var mask = document.createElement("canvas");
+    mask.width = mw; mask.height = mh;
+    var mctx = mask.getContext("2d");
+    var img = mctx.createImageData(mw, mh);
+    for (var y = 0; y < mh; y++) {
+      var lat = 90 - (y + 0.5) / mh * 180;
+      for (var x = 0; x < mw; x++) {
+        var lon = -180 + (x + 0.5) / mw * 360;
+        var a = Math.max(0, Math.min(1, (0.1 - sunSin(lat, lon, ss)) / 0.2));
+        var i = (y * mw + x) * 4;
+        img.data[i] = img.data[i + 1] = img.data[i + 2] = 0;
+        img.data[i + 3] = Math.round(a * 255);
+      }
+    }
+    mctx.putImageData(img, 0, 0);
+    var night = document.createElement("canvas");
+    night.width = W; night.height = H;
+    var nctx = night.getContext("2d");
+    nctx.drawImage(earth.night, 0, 0, W, H);
+    nctx.globalCompositeOperation = "destination-in";
+    nctx.imageSmoothingEnabled = true;
+    nctx.drawImage(mask, 0, 0, W, H);
+    var comp = document.createElement("canvas");
+    comp.width = W; comp.height = H;
+    var cctx = comp.getContext("2d");
+    cctx.drawImage(earth.day, 0, 0, W, H);
+    // Dim the daylit side a touch so the page stays dark and the night lights carry.
+    cctx.fillStyle = "rgba(8, 9, 13, 0.28)";
+    cctx.fillRect(0, 0, W, H);
+    cctx.drawImage(night, 0, 0);
+    earth.comp = comp;
+    earth.at = Date.now();
+  }
+  function earthView() {
+    var stage = $("earth-stage");
+    var W = stage.clientWidth, H = stage.clientHeight;
+    var latTop = 78, latBot = -58, latSpan = latTop - latBot;
+    var lonSpan = latSpan * W / H;
+    var center = 10;
+    if (lonSpan >= 360) {
+      lonSpan = 360;
+      latSpan = 360 * H / W;
+      latTop = 10 + latSpan / 2;
+      latBot = latTop - latSpan;
+    } else {
+      // On narrow screens, centre on the top stories.
+      var pts = RANKED.slice(0, 3).filter(function (s) { return s.lon != null; });
+      if (pts.length) {
+        var sx = 0, sy = 0;
+        pts.forEach(function (s) { sx += Math.cos(s.lon * RAD); sy += Math.sin(s.lon * RAD); });
+        center = Math.atan2(sy, sx) / RAD;
+      }
+    }
+    return { W: W, H: H, lon0: lonSpan >= 360 ? -180 : center - lonSpan / 2, lonSpan: lonSpan, latTop: latTop, latSpan: latSpan };
+  }
+  function drawEarth() {
+    if (!earth.comp) return;
+    var v = earthView();
+    var canvas = $("earth-canvas");
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(v.W * dpr);
+    canvas.height = Math.round(v.H * dpr);
+    var ctx = canvas.getContext("2d");
+    ctx.imageSmoothingQuality = "high";
+    var cw = earth.comp.width, ch = earth.comp.height;
+    var sy = (90 - v.latTop) / 180 * ch, sh = v.latSpan / 180 * ch;
+    var lon0 = ((v.lon0 + 180) % 360 + 360) % 360; // 0..360 from the left edge of the image
+    var sx = lon0 / 360 * cw, sw = v.lonSpan / 360 * cw;
+    var first = Math.min(sw, cw - sx);
+    var dW = canvas.width, dH = canvas.height;
+    ctx.drawImage(earth.comp, sx, sy, first, sh, 0, 0, dW * first / sw, dH);
+    if (first < sw) ctx.drawImage(earth.comp, 0, sy, sw - first, sh, dW * first / sw, 0, dW * (sw - first) / sw, dH);
+    placePins(v);
+  }
+  function placePins(v) {
+    var wrap = $("earth-pins");
+    wrap.textContent = "";
+    var boxes = [];
+    RANKED.slice(0, 3).forEach(function (s) {
+      if (s.lat == null) return;
+      var dx = ((s.lon - v.lon0) % 360 + 360) % 360;
+      if (dx > v.lonSpan) return;
+      var x = dx / v.lonSpan * v.W;
+      var y = (v.latTop - s.lat) / v.latSpan * v.H;
+      if (y < 10 || y > v.H - 10) return;
+      var a = link("", "#s-" + s.id, "pin");
+      a.style.left = x + "px";
+      a.style.top = y + "px";
+      a.appendChild(el("span", "pin-dot"));
+      var lab = el("span", "pin-label");
+      lab.appendChild(el("b", null, s.city));
+      var t = el("span", "num", shortTime(s.tz) + " there");
       t.dataset.short = s.tz;
-      c.appendChild(t);
-      c.appendChild(el("span", "c", "in " + s.city));
-      clocks.appendChild(c);
+      lab.appendChild(t);
+      a.appendChild(lab);
+      a.setAttribute("aria-label", s.city + ": " + s.title);
+      a.addEventListener("click", function (e) { e.preventDefault(); showStory(s.id); });
+      wrap.appendChild(a);
+      // Keep labels apart: try the preferred side, the other side, then a little above or below.
+      var prefer = x > v.W * 0.62;
+      var h = lab.getBoundingClientRect().height;
+      var options = [[prefer, 0], [!prefer, 0], [prefer, -0.7], [!prefer, -0.7], [prefer, 0.7], [!prefer, 0.7]];
+      function hit() {
+        var b = lab.getBoundingClientRect();
+        return boxes.some(function (o) { return !(b.right + 6 < o.left || b.left - 6 > o.right || b.bottom + 4 < o.top || b.top - 4 > o.bottom); });
+      }
+      for (var i = 0; i < options.length; i++) {
+        a.classList.toggle("flip", options[i][0]);
+        lab.style.transform = options[i][1] ? "translateY(" + (options[i][1] * h) + "px)" : "";
+        if (!hit()) break;
+      }
+      boxes.push(lab.getBoundingClientRect());
+    });
+  }
+  function startEarth() {
+    var fig = $("earth");
+    Promise.all([loadImg("assets/img/earth-day.jpg"), loadImg("assets/img/earth-night.jpg")]).then(function (imgs) {
+      earth.day = imgs[0]; earth.night = imgs[1];
+      buildComposite();
+      drawEarth();
+      frame(function () { fig.classList.add("is-ready"); });
+      $("earth-cap").textContent = "Daylight and darkness across the Earth at " + utcNow() + " UTC, worked out from the current time and drawn with NASA imagery. Markers show today's top three stories.";
+    }).catch(function () {
+      fig.hidden = true;
     });
   }
 
-  function renderLead() {
-    var lead = document.getElementById("lead");
-    var side = el("div", "side");
-    D.stories.filter(function (s) { return s.lead; }).forEach(function (s) {
-      var a = el("article", s.lead === "main" ? "main" : null);
-      a.id = "s-" + s.id;
-      a.appendChild(dateline(s));
-      storyBody(a, s, "h2", s.lead === "main");
-      if (s.lead === "main") lead.appendChild(a); else side.appendChild(a);
-    });
-    lead.appendChild(side);
+  // ---------------------------------------------------------------- stories
+  function featureCard(s, kind, n) {
+    var a = el("article", "feature rv " + kind);
+    a.id = "s-" + s.id;
+    a.appendChild(inset(s, kind === "is-main" ? 34 : 40));
+    // The badge says why the story is up top, using only what the data shows.
+    var outs = outletsOf(s);
+    var unfiltered = !state.q && state.region === "All" && state.topic === "All";
+    var why = unfiltered && s.lead === "main" ? "Lead story" : unfiltered && s.lead ? "Top story" : "";
+    var cover = outs.length > 1 ? outs.length + " outlets" : outs[0];
+    a.appendChild(el("span", "rank", why ? why + " · " + cover : "Covered by " + cover));
+    var b = el("div", "feature-body");
+    b.appendChild(dateline(s));
+    b.appendChild(el("h3", null, s.title));
+    b.appendChild(rich(s.summary, "p", "sum"));
+    b.appendChild(metaLine(s));
+    var w = whyBlock(s, kind === "is-main" && window.innerWidth > 720);
+    if (w) b.appendChild(w);
+    b.appendChild(sourcesBlock(s));
+    a.appendChild(b);
+    return a;
+  }
+  function row(s) {
+    var li = el("li", "row");
+    li.id = "s-" + s.id;
+    var head = el("button", "row-head");
+    head.type = "button";
+    head.setAttribute("aria-expanded", "false");
+    head.setAttribute("aria-controls", "rb-" + s.id);
+    head.appendChild(dateline(s, { short: true, inline: true }));
+    head.appendChild(el("span", "row-title", s.title));
+    head.appendChild(metaLine(s, true));
+    head.appendChild(chev());
+    var body = el("div", "row-body");
+    body.id = "rb-" + s.id;
+    body.hidden = true;
+    var where = [s.state, s.country].filter(function (x) { return x && x !== s.city && x !== "Worldwide"; }).join(", ");
+    if (where) body.appendChild(el("p", "meta", where));
+    body.appendChild(rich(s.summary, "p", "sum"));
+    var w = whyBlock(s, false);
+    if (w) body.appendChild(w);
+    body.appendChild(sourcesBlock(s));
+    head.addEventListener("click", function () { toggleRow(li); });
+    li.appendChild(head);
+    li.appendChild(body);
+    return li;
+  }
+  function toggleRow(li, open) {
+    var head = li.querySelector(".row-head");
+    var body = li.querySelector(".row-body");
+    var to = open == null ? head.getAttribute("aria-expanded") !== "true" : open;
+    head.setAttribute("aria-expanded", String(to));
+    body.hidden = !to;
   }
 
+  function renderStories() {
+    insets = insets.filter(function (b) { return document.body.contains(b) && !b.closest("#featured"); });
+    var list = results();
+    var featured = $("featured");
+    var more = $("more");
+    featured.textContent = "";
+    more.textContent = "";
+    var top = list.slice(0, 3), rest = list.slice(3);
+    top.forEach(function (s, i) {
+      var kind = top.length === 1 ? "is-solo" : top.length === 2 ? "is-pair" : i === 0 ? "is-main" : "is-side";
+      featured.appendChild(featureCard(s, kind, i));
+    });
+    rest.forEach(function (s) { more.appendChild(row(s)); });
+    $("more-wrap").hidden = !rest.length;
+    $("more-h").textContent = state.q || state.region !== "All" || state.topic !== "All" ? "More matching stories" : "More stories";
+
+    // Status line
+    var st = $("status");
+    st.textContent = "";
+    var filtered = state.q || state.region !== "All" || state.topic !== "All";
+    if (!list.length) {
+      var e = el("p", "empty");
+      e.textContent = state.q
+        ? "No stories in today's edition mention “" + state.q + "”" + (state.region !== "All" || state.topic !== "All" ? " with these filters" : "") + ". Try a nearby country, a region, or clear the search."
+        : "No stories match these filters today.";
+      featured.appendChild(e);
+    }
+    var p = el("p");
+    var strong = el("strong", "num", String(list.length));
+    p.appendChild(strong);
+    p.appendChild(document.createTextNode(list.length === 1 ? " story" : " stories"));
+    var bits = [];
+    if (state.q) bits.push("for “" + state.q + "”");
+    if (state.region !== "All") bits.push("in " + state.region);
+    if (state.topic !== "All") bits.push("about " + state.topic.toLowerCase());
+    if (bits.length) p.appendChild(document.createTextNode(" " + bits.join(" ")));
+    p.appendChild(document.createTextNode(list.length > 3 ? ". Top three first, ranked by lead stories and how many outlets covered them." : "."));
+    st.appendChild(p);
+    if (filtered) {
+      var c = el("button", "btn-link", "Clear search and filters");
+      c.type = "button";
+      c.addEventListener("click", function () { clearAll(); });
+      st.appendChild(c);
+    }
+
+    ["f-region", "f-topic"].forEach(function (id) {
+      var key = id === "f-region" ? "region" : "topic";
+      Array.prototype.forEach.call($(id).querySelectorAll(".chip"), function (b) {
+        b.setAttribute("aria-pressed", String(b.dataset.val === state[key]));
+      });
+    });
+    $("clear-q").hidden = !state.q;
+    reveal();
+    // Position the location pictures now that they have their real size.
+    frame(function () { insets.forEach(paintInset); });
+  }
+  function clearAll() {
+    state.q = ""; state.region = "All"; state.topic = "All";
+    $("q").value = ""; $("hero-q").value = "";
+    save();
+    renderStories();
+  }
+  function runSearch(q, scroll) {
+    state.q = q.trim();
+    $("q").value = state.q;
+    $("hero-q").value = state.q;
+    renderStories();
+    if (scroll) $("today").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+  }
+  function showStory(id) {
+    var node = $("s-" + id);
+    if (!node) { clearAll(); node = $("s-" + id); }
+    if (!node) return;
+    if (node.classList.contains("row")) toggleRow(node, true);
+    node.classList.add("is-in");
+    node.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    var focusable = node.querySelector(".row-head") || node.querySelector("h3");
+    if (focusable) {
+      if (!focusable.hasAttribute("tabindex") && focusable.tagName === "H3") focusable.setAttribute("tabindex", "-1");
+      setTimeout(function () { focusable.focus({ preventScroll: true }); }, reduceMotion ? 0 : 450);
+    }
+  }
+
+  function buildControls() {
+    var topics = ["All"];
+    D.stories.forEach(function (s) { if (topics.indexOf(s.topic) < 0) topics.push(s.topic); });
+    if (REGIONS.indexOf(state.region) < 0) state.region = "All";
+    if (topics.indexOf(state.topic) < 0) state.topic = "All";
+    function count(key, val) { return D.stories.filter(function (s) { return val === "All" || s[key] === val; }).length; }
+    function build(id, key, vals) {
+      var wrap = $(id);
+      vals.forEach(function (v) {
+        var n = count(key, v);
+        if (!n) return;
+        var b = el("button", "chip", v === "All" ? (key === "region" ? "All regions" : "All topics") : v);
+        b.type = "button";
+        b.dataset.val = v;
+        b.appendChild(el("span", "count", String(n)));
+        b.addEventListener("click", function () { state[key] = v; save(); renderStories(); });
+        wrap.appendChild(b);
+      });
+    }
+    build("f-region", "region", REGIONS);
+    build("f-topic", "topic", topics);
+
+    // Place suggestions for both search boxes.
+    var seen = {}, names = [];
+    D.stories.concat(D.lighter || []).forEach(function (s) {
+      [s.city, s.state, s.country].concat(s.places || []).forEach(function (p) {
+        if (p && p !== "Worldwide" && !seen[p]) { seen[p] = 1; names.push(p); }
+      });
+    });
+    names.sort(function (a, b) { return a.localeCompare(b); });
+    var dl = $("places");
+    names.forEach(function (n) { var o = el("option"); o.value = n; dl.appendChild(o); });
+
+    var q = $("q");
+    q.value = state.q;
+    q.addEventListener("input", debounce(function () { state.q = q.value.trim(); $("hero-q").value = state.q; renderStories(); }, 140));
+    q.addEventListener("keydown", function (e) { if (e.key === "Escape" && q.value) { e.preventDefault(); runSearch("", false); } });
+    $("clear-q").addEventListener("click", function () { runSearch("", false); q.focus(); });
+    $("hero-search").addEventListener("submit", function (e) { e.preventDefault(); runSearch($("hero-q").value, true); });
+    $("open-search").addEventListener("click", function () {
+      $("today").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+      setTimeout(function () { q.focus({ preventScroll: true }); }, reduceMotion ? 0 : 400);
+      closeMenu();
+    });
+  }
+
+  // ---------------------------------------------------------------- map
+  var MAP = { svg: null, vb: null, markers: [], s: 1 };
+  var ZOOMS = {
+    World: [-180, 180, 84, -58],
+    Europe: [-25, 45, 71, 33],
+    "Middle East": [24, 64, 42, 10],
+    Africa: [-20, 54, 38, -36],
+    "Asia-Pacific": [62, 180, 56, -48],
+    Americas: [-170, -30, 72, -56],
+  };
+  function mx(lon) { var M = window.WRN_MAP; return (lon + 180) * M.k; }
+  function my(lat) { var M = window.WRN_MAP; return (M.top - lat) * M.k; }
+  function nightPath() {
+    var M = window.WRN_MAP;
+    var ss = subsolar(new Date());
+    var dec = Math.abs(ss.lat) < 0.2 ? (ss.lat < 0 ? -0.2 : 0.2) : ss.lat;
+    var pts = [];
+    for (var lon = -180; lon <= 180; lon += 2) {
+      var lat = Math.atan(-Math.cos((lon - ss.lon) * RAD) / Math.tan(dec * RAD)) / RAD;
+      pts.push(mx(lon).toFixed(1) + "," + Math.max(-20, Math.min(M.h + 20, my(lat))).toFixed(1));
+    }
+    var edge = dec < 0 ? -20 : M.h + 20; // the pole in darkness
+    // Close the shape just outside the map so its outline only draws along the terminator.
+    var y0 = pts[0].split(",")[1], y1 = pts[pts.length - 1].split(",")[1];
+    return "M-20," + edge + " L-20," + y0 + " L" + pts.join(" L") + " L" + (M.w + 20) + "," + y1 + " L" + (M.w + 20) + "," + edge + " Z";
+  }
   function renderMap() {
     var M = window.WRN_MAP;
-    var box = document.getElementById("map-box");
-    if (!M) { box.hidden = true; return; }
+    var frame = $("map-frame");
+    if (!M) { frame.hidden = true; return; }
     var NS = "http://www.w3.org/2000/svg";
     var svg = document.createElementNS(NS, "svg");
     svg.setAttribute("viewBox", "0 0 " + M.w + " " + M.h);
     svg.setAttribute("role", "group");
     svg.setAttribute("aria-label", "World map of today's stories");
+    MAP.vb = [0, 0, M.w, M.h];
+
+    var grat = document.createElementNS(NS, "path");
+    var d = "";
+    for (var lo = -150; lo <= 150; lo += 30) d += "M" + mx(lo) + ",0V" + M.h;
+    for (var la = -30; la <= 60; la += 30) d += "M0," + my(la) + "H" + M.w;
+    grat.setAttribute("d", d);
+    grat.setAttribute("class", "grat");
+    grat.setAttribute("aria-hidden", "true");
+    svg.appendChild(grat);
+
     var land = document.createElementNS(NS, "path");
     land.setAttribute("class", "land");
     land.setAttribute("d", M.land);
     land.setAttribute("aria-hidden", "true");
     svg.appendChild(land);
 
-    var tip = el("div", "map-tip");
-    tip.hidden = true;
-    var placed = 0, unplaced = [];
-    // Several stories can share a city; nudge repeats so each dot stays clickable.
-    var seen = {};
-    D.stories.forEach(function (s) {
+    var shade = document.createElementNS(NS, "path");
+    shade.setAttribute("class", "nightshade");
+    shade.setAttribute("d", nightPath());
+    shade.setAttribute("aria-hidden", "true");
+    svg.appendChild(shade);
+    MAP.shade = shade;
+
+    var tip = $("map-tip");
+    var seen = {}, unplaced = [];
+    var topIds = RANKED.slice(0, 3).map(function (s) { return s.id; });
+    // Draw ordinary markers first so the top stories sit on top.
+    RANKED.slice().reverse().forEach(function (s) {
       if (s.lat == null || s.lon == null) { if (unplaced.indexOf(s.city) < 0) unplaced.push(s.city); return; }
       var key = s.lat + "," + s.lon;
       var n = seen[key] = (seen[key] || 0) + 1;
-      var x = (s.lon + 180) * M.k + (n - 1) * 14;
-      var y = (M.top - s.lat) * M.k;
+      var top = topIds.indexOf(s.id) >= 0;
       var a = document.createElementNS(NS, "a");
       a.setAttribute("href", "#s-" + s.id);
-      a.setAttribute("class", "dot");
+      a.setAttribute("class", "mk" + (top ? " top" : ""));
       a.setAttribute("aria-label", s.city + ": " + s.title);
-      var c = document.createElementNS(NS, "circle");
-      c.setAttribute("cx", x.toFixed(1));
-      c.setAttribute("cy", y.toFixed(1));
-      c.setAttribute("r", s.lead ? 8 : 6);
-      a.appendChild(c);
+      var halo = document.createElementNS(NS, "circle");
+      halo.setAttribute("class", "halo");
+      var core = document.createElementNS(NS, "circle");
+      core.setAttribute("class", "core");
+      a.appendChild(halo);
+      a.appendChild(core);
+      var m = { a: a, halo: halo, core: core, x: mx(s.lon), y: my(s.lat), n: n - 1, top: top };
+      MAP.markers.push(m);
       function show() {
-        var r = box.getBoundingClientRect(), cr = c.getBoundingClientRect();
-        tip.textContent = s.city + ": " + s.title;
-        tip.style.left = (cr.left + cr.width / 2 - r.left) + "px";
-        tip.style.top = (cr.top - r.top) + "px";
+        var fr = frame.getBoundingClientRect(), cr = core.getBoundingClientRect();
+        tip.textContent = "";
+        tip.appendChild(el("b", null, s.city + " · " + shortTime(s.tz)));
+        tip.appendChild(document.createTextNode(s.title));
+        tip.style.left = Math.min(Math.max(150, cr.left + cr.width / 2 - fr.left), fr.width - 150) + "px";
+        tip.style.top = (cr.top - fr.top) + "px";
         tip.hidden = false;
       }
       a.addEventListener("mouseenter", show);
       a.addEventListener("focus", show);
       a.addEventListener("mouseleave", function () { tip.hidden = true; });
       a.addEventListener("blur", function () { tip.hidden = true; });
-      a.addEventListener("click", function () {
-        // Make sure the story is visible even if filters would hide it.
-        if (!s.lead && (state.region !== "All" || state.topic !== "All")) {
-          state = { region: "All", topic: "All" }; save(); renderList();
-        }
-      });
+      a.addEventListener("click", function (e) { e.preventDefault(); tip.hidden = true; showStory(s.id); });
       svg.appendChild(a);
-      placed++;
     });
-    box.appendChild(svg);
-    box.appendChild(tip);
-    document.getElementById("map-note").textContent =
-      placed + " stories on the map." + (unplaced.length ? " Not shown, because they have no single location: " + unplaced.join(", ") + "." : "");
-  }
+    // Bring the top markers to the front.
+    MAP.markers.filter(function (m) { return m.top; }).forEach(function (m) { svg.appendChild(m.a); });
+    frame.appendChild(svg);
+    MAP.svg = svg;
+    sizeMarkers();
 
-  // Filters + list
-  var REGIONS = ["All", "Europe", "Middle East", "Africa", "Asia-Pacific", "Americas", "Global"];
-  var rows = {};
-  function save() { try { localStorage.setItem("wrn-filters", JSON.stringify(state)); } catch (e) {} }
+    var placed = MAP.markers.length;
+    $("map-note").textContent = placed + " of " + D.stories.length + " stories on the map." +
+      (unplaced.length ? " Not shown, because they have no single location: " + unplaced.join(", ") + "." : "");
+    $("night-label").textContent = "Night as of " + utcNow() + " UTC";
 
-  function buildFilters() {
-    var topics = ["All"];
-    D.stories.forEach(function (s) { if (topics.indexOf(s.topic) < 0) topics.push(s.topic); });
-    function count(key, val) {
-      return D.stories.filter(function (s) { return val === "All" || s[key] === val; }).length;
-    }
-    function buildRow(id, key, vals) {
-      var row = document.getElementById(id);
-      vals.forEach(function (v) {
-        var n = count(key, v);
-        if (!n) return;
-        var b = el("button", "chip", v);
-        b.type = "button";
-        b.appendChild(el("span", "count num", String(n)));
-        b.dataset.val = v;
-        b.onclick = function () { state[key] = v; save(); renderList(); };
-        row.appendChild(b);
+    var zoomWrap = $("map-zoom");
+    Object.keys(ZOOMS).forEach(function (name) {
+      var b = el("button", "chip", name);
+      b.type = "button";
+      b.dataset.val = name;
+      b.setAttribute("aria-pressed", String(name === "World"));
+      b.addEventListener("click", function () {
+        Array.prototype.forEach.call(zoomWrap.children, function (c) { c.setAttribute("aria-pressed", String(c === b)); });
+        zoomTo(name);
       });
+      zoomWrap.appendChild(b);
+    });
+
+    $("night-toggle").addEventListener("change", function () {
+      frame.classList.toggle("no-night", !this.checked);
+    });
+  }
+  function sizeMarkers() {
+    var s = MAP.vb[2] / window.WRN_MAP.w;
+    var frameW = $("map-frame").clientWidth || 1000;
+    var px = MAP.vb[2] / frameW; // viewBox units per screen pixel
+    // Smaller markers on small maps so nearby stories stay apart; slightly larger when zoomed in.
+    var size = Math.max(0.55, Math.min(1, frameW / 900)) * Math.max(1, 0.9 / Math.sqrt(s));
+    MAP.markers.forEach(function (m) {
+      var x = m.x + m.n * 13 * px * size;
+      m.core.setAttribute("cx", x); m.core.setAttribute("cy", m.y);
+      m.halo.setAttribute("cx", x); m.halo.setAttribute("cy", m.y);
+      m.core.setAttribute("r", (m.top ? 6 : 4.5) * px * size);
+      m.halo.setAttribute("r", (m.top ? 15 : 10) * px * size);
+    });
+  }
+  function zoomTo(name) {
+    var M = window.WRN_MAP;
+    var z = ZOOMS[name];
+    var x0 = mx(z[0]), x1 = mx(z[1]), y0 = Math.max(0, my(z[2])), y1 = Math.min(M.h, my(z[3]));
+    // Keep the frame's aspect ratio: grow the box in one direction to fit.
+    var aspect = M.w / M.h;
+    var w = x1 - x0, h = y1 - y0;
+    if (w / h > aspect) { var nh = w / aspect; y0 -= (nh - h) / 2; h = nh; } else { var nw = h * aspect; x0 -= (nw - w) / 2; w = nw; }
+    x0 = Math.max(0, Math.min(M.w - w, x0)); y0 = Math.max(0, Math.min(M.h - h, y0));
+    var to = [x0, y0, Math.min(w, M.w), Math.min(h, M.h)];
+    var from = MAP.vb.slice();
+    var t0 = performance.now(), dur = reduceMotion ? 0 : 650;
+    function step(now) {
+      var t = dur ? Math.min(1, (now - t0) / dur) : 1;
+      var e = 1 - Math.pow(1 - t, 3);
+      MAP.vb = from.map(function (v, i) { return v + (to[i] - v) * e; });
+      MAP.svg.setAttribute("viewBox", MAP.vb.map(function (v) { return v.toFixed(2); }).join(" "));
+      sizeMarkers();
+      if (t < 1) frame(step);
     }
-    buildRow("f-region", "region", REGIONS);
-    buildRow("f-topic", "topic", topics);
-    if (REGIONS.indexOf(state.region) < 0) state.region = "All";
-    if (topics.indexOf(state.topic) < 0) state.topic = "All";
-
-    D.stories.forEach(function (s) {
-      var a = el("article", "story");
-      if (!s.lead) a.id = "s-" + s.id;
-      a.appendChild(dateline(s));
-      var body = el("div", "body");
-      body.appendChild(metaLine(s));
-      storyBody(body, s, "h3", false);
-      a.appendChild(body);
-      rows[s.id] = a;
-    });
+    frame(step);
   }
 
-  var listEl = document.getElementById("list");
-  var emptyEl = el("p", "empty", "No stories match these filters. Try another region or topic.");
-  function renderList() {
-    ["f-region", "f-topic"].forEach(function (id) {
-      var key = id === "f-region" ? "region" : "topic";
-      Array.prototype.forEach.call(document.getElementById(id).querySelectorAll("button"), function (b) {
-        b.setAttribute("aria-pressed", String(b.dataset.val === state[key]));
-      });
-    });
-    var filtered = state.region !== "All" || state.topic !== "All";
-    listEl.textContent = "";
-    var shown = D.stories
-      .filter(function (s) {
-        if (!filtered && s.lead) return false;
-        return (state.region === "All" || s.region === state.region) && (state.topic === "All" || s.topic === state.topic);
-      })
-      .sort(function (a, b) { return latest(b) < latest(a) ? -1 : 1; });
-    shown.forEach(function (s) { listEl.appendChild(rows[s.id]); });
-    if (!shown.length) listEl.appendChild(emptyEl);
-  }
-
+  // ---------------------------------------------------------------- timelines
+  var threadIds = [];
   function renderThreads() {
-    var wrap = document.getElementById("threads");
-    Object.keys(THREADS).forEach(function (id) {
+    var tabs = $("thread-tabs"), panels = $("thread-panels");
+    threadIds = Object.keys(THREADS);
+    var top = RANKED.find(function (s) { return s.thread && THREADS[s.thread]; });
+    var first = top ? top.thread : threadIds[0];
+    threadIds.forEach(function (id) {
       var t = THREADS[id];
-      var a = el("article", "thread");
-      a.id = "thread-" + id;
-      a.appendChild(el("h3", null, t.title));
-      a.appendChild(rich(t.intro));
-      var ol = el("ol");
+      var tab = el("button", "tab", t.title);
+      tab.type = "button";
+      tab.id = "tab-" + id;
+      tab.setAttribute("role", "tab");
+      tab.setAttribute("aria-controls", "thread-" + id);
+      tab.addEventListener("click", function () { selectThread(id, false); });
+      tab.addEventListener("keydown", tabKeys);
+      tabs.appendChild(tab);
+
+      var p = el("article", "thread");
+      p.id = "thread-" + id;
+      p.setAttribute("role", "tabpanel");
+      p.setAttribute("aria-labelledby", "tab-" + id);
+      p.tabIndex = 0;
+      var fig = el("figure", "thread-fig");
+      if (t.image) {
+        var img = el("img");
+        img.src = t.image.src; img.alt = t.image.alt || ""; img.loading = "lazy"; img.decoding = "async";
+        img.width = 1200; img.height = 900;
+        fig.appendChild(img);
+        if (t.image.credit) {
+          var cap = el("figcaption");
+          cap.appendChild(document.createTextNode("Photo: "));
+          cap.appendChild(link(t.image.credit, t.image.url || "#"));
+          fig.appendChild(cap);
+        }
+      } else {
+        fig.classList.add("inset-none");
+        fig.appendChild(icon("layers"));
+      }
+      p.appendChild(fig);
+      var body = el("div", "thread-body");
+      body.appendChild(el("h3", null, t.title));
+      body.appendChild(rich(t.intro, "p", "thread-intro"));
+      var ol = el("ol", "tl");
       t.events.forEach(function (ev) {
         var li = el("li");
         var tm = el("time", "num", fmtEventDate(ev.date));
         tm.setAttribute("datetime", ev.date);
         li.appendChild(tm);
-        var body = el("div");
-        body.appendChild(rich(ev.text));
+        li.appendChild(rich(ev.text));
         if (ev.source) {
           var src = el("p", "src");
-          src.appendChild(link(ev.source.outlet, ev.source.url));
-          body.appendChild(src);
+          src.appendChild(outLink(ev.source.outlet, ev.source.url));
+          li.appendChild(src);
         }
-        li.appendChild(body);
         ol.appendChild(li);
       });
-      a.appendChild(ol);
-      var today = D.stories.filter(function (s) { return s.thread === id; });
+      body.appendChild(ol);
+      var today = RANKED.filter(function (s) { return s.thread === id; });
       if (today.length) {
-        var p = el("p", "today");
-        p.appendChild(document.createTextNode("Today: "));
-        today.forEach(function (s, i) {
-          if (i) p.appendChild(document.createTextNode("; "));
-          p.appendChild(link(s.title, "#s-" + s.id));
+        var tl = el("div", "today-links");
+        tl.appendChild(el("p", null, "In today's edition"));
+        today.forEach(function (s) {
+          var a = link("", "#s-" + s.id);
+          a.appendChild(icon("arrow"));
+          a.appendChild(document.createTextNode(s.title));
+          a.addEventListener("click", function (e) { e.preventDefault(); showStory(s.id); });
+          tl.appendChild(a);
         });
-        a.appendChild(p);
+        body.appendChild(tl);
       }
-      wrap.appendChild(a);
+      p.appendChild(body);
+      panels.appendChild(p);
     });
+    selectThread(first, false, true);
+  }
+  function selectThread(id, scroll, quiet) {
+    if (!THREADS[id]) return;
+    threadIds.forEach(function (t) {
+      var on = t === id;
+      var tab = $("tab-" + t);
+      tab.setAttribute("aria-selected", String(on));
+      tab.tabIndex = on ? 0 : -1;
+      $("thread-" + t).hidden = !on;
+    });
+    if (!quiet) $("tab-" + id).scrollIntoView({ block: "nearest", inline: "nearest" });
+    if (scroll) $("ongoing").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+  }
+  function tabKeys(e) {
+    var i = threadIds.indexOf(this.id.slice(4));
+    var j = e.key === "ArrowRight" ? i + 1 : e.key === "ArrowLeft" ? i - 1 : e.key === "Home" ? 0 : e.key === "End" ? threadIds.length - 1 : null;
+    if (j === null) return;
+    e.preventDefault();
+    j = (j + threadIds.length) % threadIds.length;
+    selectThread(threadIds[j], false);
+    $("tab-" + threadIds[j]).focus();
   }
 
+  // ---------------------------------------------------------------- key terms
   function renderTerms() {
-    var dl = document.getElementById("terms");
+    var grid = $("terms");
     Object.keys(TERMS)
       .sort(function (a, b) { return TERMS[a].term.localeCompare(TERMS[b].term); })
       .forEach(function (id) {
-        var d = el("div");
+        var d = el("div", "rv");
         d.id = "term-" + id;
+        d.dataset.text = norm(TERMS[id].term + " " + TERMS[id].definition);
         d.appendChild(el("dt", null, TERMS[id].term));
         d.appendChild(el("dd", null, TERMS[id].definition));
-        dl.appendChild(d);
+        grid.appendChild(d);
       });
+    var input = $("term-q");
+    input.addEventListener("input", function () { filterTerms(input.value); });
+  }
+  function filterTerms(v) {
+    var q = norm(v), shown = 0;
+    Array.prototype.forEach.call($("terms").children, function (d) {
+      var on = !q || d.dataset.text.indexOf(q) >= 0;
+      d.hidden = !on;
+      if (on) { shown++; d.classList.add("is-in"); }
+    });
+    $("terms-empty").hidden = shown > 0;
+  }
+  function showTerm(id) {
+    var node = $(id);
+    if (!node) return;
+    if (node.hidden) { $("term-q").value = ""; filterTerms(""); }
+    node.classList.add("is-in", "flash");
+    setTimeout(function () { node.classList.remove("flash"); }, 2400);
+    node.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
   }
 
+  // ---------------------------------------------------------------- lighter and sport
   function renderLighter() {
-    var lightEl = document.getElementById("light");
-    D.lighter.forEach(function (s) {
-      var a = el("article", "item" + (s.big ? " big" : ""));
-      a.appendChild(dateline(s));
-      a.appendChild(el("h3", null, s.title));
-      a.appendChild(rich(s.summary));
-      a.appendChild(sourcesBlock(s));
-      lightEl.appendChild(a);
+    var row = $("light");
+    (D.lighter || []).forEach(function (s) {
+      var a = el("article", "light-card rv");
+      a.appendChild(inset(s, 30));
+      var b = el("div", "light-body");
+      b.appendChild(dateline(s, { short: true }));
+      b.appendChild(el("h3", null, s.title));
+      b.appendChild(rich(s.summary, "p", "sum"));
+      s.sources.forEach(function (x) { b.appendChild(outLink(x.outlet, x.url, "out")); });
+      a.appendChild(b);
+      row.appendChild(a);
     });
+    frame(function () { insets.forEach(paintInset); });
   }
-
   function renderSport() {
-    var sportEl = document.getElementById("sport");
-    D.sport.forEach(function (x) {
-      var r = el("div", "score");
-      r.appendChild(el("p", "r num", x.result));
-      var n = el("p", "n", x.note + " ");
-      n.appendChild(link(x.outlet, x.url));
-      r.appendChild(n);
-      sportEl.appendChild(r);
+    var ul = $("sport");
+    (D.sport || []).forEach(function (x) {
+      var li = el("li", "score rv");
+      li.appendChild(el("p", "r", x.result));
+      li.appendChild(el("p", "n", x.note));
+      li.appendChild(outLink(x.outlet, x.url, "out"));
+      ul.appendChild(li);
+    });
+  }
+  function renderCredits() {
+    var parts = [];
+    Object.keys(THREADS).forEach(function (id) {
+      var im = THREADS[id].image;
+      if (im && im.credit) parts.push({ t: THREADS[id].title, c: im.credit, u: im.url });
+    });
+    var p = $("photo-credits");
+    if (!parts.length) return;
+    p.appendChild(document.createTextNode("Timeline photos: "));
+    parts.forEach(function (x, i) {
+      if (i) p.appendChild(document.createTextNode("; "));
+      p.appendChild(document.createTextNode(x.t + ", "));
+      p.appendChild(link(x.c, x.u));
+    });
+    p.appendChild(document.createTextNode(", via Wikimedia Commons."));
+  }
+
+  // ---------------------------------------------------------------- reveal on scroll
+  var io = ("IntersectionObserver" in window) && !reduceMotion
+    ? new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
+        });
+      }, { rootMargin: "0px 0px -8% 0px" })
+    : null;
+  function reveal() {
+    Array.prototype.forEach.call(document.querySelectorAll(".rv:not(.is-in)"), function (n, i) {
+      if (!io) { n.classList.add("is-in"); return; }
+      n.style.transitionDelay = (n.classList.contains("feature") ? (Array.prototype.indexOf.call(n.parentNode.children, n) * 80) : 0) + "ms";
+      io.observe(n);
     });
   }
 
-  document.getElementById("clear").onclick = function () {
+  // ---------------------------------------------------------------- page chrome
+  var menuBtn = $("menu-btn"), nav = $("nav");
+  function closeMenu() { nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); }
+  menuBtn.addEventListener("click", function () {
+    var open = !nav.classList.contains("open");
+    nav.classList.toggle("open", open);
+    menuBtn.setAttribute("aria-expanded", String(open));
+    if (open) nav.querySelector("a").focus();
+  });
+  nav.addEventListener("click", function (e) { if (e.target.closest("a")) closeMenu(); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    if (popFor) { closePop(true); return; }
+    if (nav.classList.contains("open")) { closeMenu(); menuBtn.focus(); }
+  });
+
+  // Links to a timeline (from stories) open the right tab.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#thread-"]');
+    if (!a) return;
+    e.preventDefault();
+    selectThread(a.getAttribute("href").slice(8), true);
+  });
+
+  $("clear").addEventListener("click", function () {
     try { localStorage.removeItem("wrn-filters"); } catch (e) {}
-    state = { region: "All", topic: "All" };
-    if (D) renderList();
-    document.getElementById("cleared").textContent = "Done. This site has nothing saved in your browser now.";
-  };
+    state.region = "All"; state.topic = "All";
+    if (D) renderStories();
+    $("cleared").textContent = "Done. This site has nothing saved in your browser now.";
+  });
 
   function tick() {
-    Array.prototype.forEach.call(document.querySelectorAll(".local[data-tz]"), function (n) {
-      n.textContent = localTime(n.dataset.tz === "null" ? null : n.dataset.tz);
-    });
-    Array.prototype.forEach.call(document.querySelectorAll("[data-short]"), function (n) {
-      n.textContent = shortTime(n.dataset.short);
-    });
+    Array.prototype.forEach.call(document.querySelectorAll(".local[data-tz]"), function (n) { n.textContent = localTime(n.dataset.tz); });
+    Array.prototype.forEach.call(document.querySelectorAll("[data-short]"), function (n) { n.textContent = shortTime(n.dataset.short) + " there"; });
   }
+  function hourly() {
+    // Light and shade move slowly; refresh them every few minutes.
+    if (earth.day) { buildComposite(); drawEarth(); $("earth-cap").textContent = $("earth-cap").textContent.replace(/at \d\d:\d\d UTC/, "at " + utcNow() + " UTC"); }
+    if (MAP.shade) { MAP.shade.setAttribute("d", nightPath()); $("night-label").textContent = "Night as of " + utcNow() + " UTC"; }
+    insets.forEach(paintInset);
+  }
+  var onResize = debounce(function () {
+    drawEarth();
+    if (MAP.svg) sizeMarkers();
+    insets.forEach(paintInset);
+  }, 150);
 
   function getJSON(path) {
     return fetch(path, { cache: "no-cache" }).then(function (r) {
@@ -445,24 +1100,34 @@
   Promise.all([getJSON("data/latest.json"), getJSON("data/terms.json"), getJSON("data/threads.json")])
     .then(function (res) {
       D = res[0]; TERMS = res[1]; THREADS = res[2];
+      RANKED = D.stories.slice().sort(function (a, b) { return score(b) - score(a); });
       renderHero();
-      renderLead();
+      startEarth();
+      buildControls();
+      renderStories();
       renderMap();
-      buildFilters();
-      renderList();
       renderThreads();
       renderTerms();
       renderLighter();
       renderSport();
+      renderCredits();
+      reveal();
       setInterval(tick, 30000);
-      // Jump to a linked story or term once everything exists.
-      if (location.hash) {
-        var target = document.getElementById(location.hash.slice(1));
-        if (target) target.scrollIntoView();
+      setInterval(hourly, 5 * 60000);
+      window.addEventListener("resize", onResize);
+      // Deep links to a story, timeline or term, on load and when the hash changes.
+      function followHash(onLoad) {
+        var h = location.hash.slice(1);
+        if (/^s-/.test(h)) showStory(h.slice(2));
+        else if (/^thread-/.test(h)) selectThread(h.slice(7), true);
+        else if (/^term-/.test(h)) showTerm(h);
+        else if (onLoad && h && $(h)) $(h).scrollIntoView();
       }
+      followHash(true);
+      window.addEventListener("hashchange", function () { followHash(false); });
     })
     .catch(function () {
-      var st = document.getElementById("stale");
+      var st = $("stale");
       st.hidden = false;
       st.textContent = "Today's stories didn't load. Refresh the page to try again.";
     });

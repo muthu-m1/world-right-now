@@ -2,111 +2,217 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>World Right Now</title>
-<meta name="description" content="Today's world news from NPR, Al Jazeera, France 24 and ABC News, explained: where each story is happening, how we got here, and what the key terms mean.">
+<meta name="description" content="Today's world news, explained: where each story is happening, the local time there, how we got here and what the key terms mean. Every story links to the original reporting.">
 <meta property="og:title" content="World Right Now">
-<meta property="og:description" content="Today's world news, explained in plain words, with background, timelines and a map.">
-<meta name="theme-color" content="#EEF1F4">
+<meta property="og:description" content="Today's world news, explained, with a live day-and-night map, timelines and key terms.">
+<meta property="og:image" content="assets/img/earth-night.jpg">
+<meta name="theme-color" content="#08090D">
+<meta name="color-scheme" content="dark">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.8 2.6-2.8 15.4 0 18M12 3c2.8 2.6 2.8 15.4 0 18"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M9 6h9v9M18 6 6 18"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19.5 14.5A8 8 0 0 1 9.5 4.5a8 8 0 1 0 10 10Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 4 9 5-9 5-9-5 9-5Z"/><path d="m3 14 9 5 9-5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></symbol>
+</svg>
+
 <a class="skip" href="#main">Skip to the news</a>
 
 <header class="bar">
-  <div class="wrap">
-    <a class="mark" href="#top">World Right Now</a>
-    <nav aria-label="Sections">
-      <a href="#today">Today</a>
+  <div class="wrap bar-in">
+    <a class="brand" href="#top" aria-label="World Right Now, back to top">
+      <svg class="ico brand-ico" aria-hidden="true"><use href="#i-globe"/></svg>
+      <span>World Right Now</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#today">Stories</a>
       <a href="#map">Map</a>
-      <a href="#ongoing">Ongoing stories</a>
+      <a href="#ongoing">Timelines</a>
       <a href="#key-terms">Key terms</a>
       <a href="#about">About</a>
     </nav>
+    <div class="bar-actions">
+      <button class="icon-btn" type="button" id="open-search" aria-label="Search stories by place">
+        <svg class="ico" aria-hidden="true"><use href="#i-search"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
 <main id="main" tabindex="-1">
-  <section class="hero" id="top">
-    <div class="wrap">
-      <h1>The world, right now</h1>
-      <p class="intro" id="intro">Today's biggest stories, explained: where they're happening, how we got here, and what the words mean.</p>
-      <div class="clocks" id="clocks" role="group" aria-label="Local time where the top stories are happening"></div>
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="wrap hero-copy">
+      <p class="edition" id="edition"><span class="pulse" aria-hidden="true"></span><span id="edition-text">Today's edition</span></p>
+      <h1 id="hero-h">The world, right now</h1>
+      <p class="deck" id="deck">Today's biggest stories, explained: where they're happening, how we got here, and what the words mean. Every story links to the original reporting.</p>
+      <div class="hero-find">
+        <form class="search search-hero" id="hero-search" role="search" aria-label="Search stories by place">
+          <svg class="ico" aria-hidden="true"><use href="#i-search"/></svg>
+          <label class="sr" for="hero-q">Search by country, state or city</label>
+          <input id="hero-q" type="search" list="places" autocomplete="off" placeholder="Search a country, state or city">
+          <button class="btn" type="submit">Search</button>
+        </form>
+        <p class="hint" id="hint"></p>
+      </div>
       <p class="stale" id="stale" hidden></p>
       <noscript><p class="stale">This site needs JavaScript to show the news. You can read the stories directly in <a href="data/latest.json">today's data file</a>.</p></noscript>
     </div>
-  </section>
-
-  <section class="lead" aria-label="Top stories">
-    <div class="wrap" id="lead"></div>
-  </section>
-
-  <section class="map" id="map" aria-labelledby="map-h">
+    <figure class="earth" id="earth">
+      <div class="earth-stage" id="earth-stage">
+        <canvas id="earth-canvas" aria-hidden="true"></canvas>
+        <div class="earth-pins" id="earth-pins"></div>
+      </div>
+      <figcaption class="wrap earth-cap" id="earth-cap">Daylight and darkness across the Earth right now, from NASA satellite imagery.</figcaption>
+    </figure>
     <div class="wrap">
-      <h2 class="sec" id="map-h">Where it's happening</h2>
-      <p class="sec-intro">Each dot is one of today's stories. Select a dot to read it.</p>
-      <div class="map-box" id="map-box"></div>
-      <p class="map-note" id="map-note"></p>
+      <dl class="stats" id="stats" aria-label="Today's edition in numbers"></dl>
     </div>
   </section>
 
-  <section class="desk" id="today" aria-labelledby="desk-h">
+  <section class="stories" id="today" aria-labelledby="stories-h">
     <div class="wrap">
-      <h2 class="sec" id="desk-h">Everything else today</h2>
-      <div class="filters">
-        <div class="row" id="f-region" role="group" aria-label="Filter by region"><span class="lbl">Where</span></div>
-        <div class="row" id="f-topic" role="group" aria-label="Filter by topic"><span class="lbl">What</span></div>
+      <div class="sec-head">
+        <h2 id="stories-h">Today's stories</h2>
+        <p class="sec-sub">The three most-covered stories first, then everything else. Search a place or narrow by region and topic.</p>
       </div>
-      <div class="list" id="list"></div>
+
+      <div class="toolbar" id="toolbar">
+        <div class="search search-bar" role="search">
+          <svg class="ico" aria-hidden="true"><use href="#i-search"/></svg>
+          <label class="sr" for="q">Search by country, state or city</label>
+          <input id="q" type="search" list="places" autocomplete="off" placeholder="Country, state, city or topic">
+          <button class="icon-btn clear-q" type="button" id="clear-q" aria-label="Clear search" hidden>
+            <svg class="ico" aria-hidden="true"><use href="#i-x"/></svg>
+          </button>
+        </div>
+        <datalist id="places"></datalist>
+        <div class="chips" id="f-region" role="group" aria-label="Filter by region"></div>
+        <div class="chips" id="f-topic" role="group" aria-label="Filter by topic"></div>
+      </div>
+
+      <div class="status" id="status" aria-live="polite"></div>
+
+      <div class="featured" id="featured"></div>
+
+      <div class="more" id="more-wrap">
+        <h3 class="more-h" id="more-h">More stories</h3>
+        <ol class="more-list" id="more"></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="mapsec" id="map" aria-labelledby="map-h">
+    <div class="wrap">
+      <div class="sec-head sec-head-row">
+        <div>
+          <h2 id="map-h">The map</h2>
+          <p class="sec-sub">Every located story, with the part of the world in darkness right now shaded. Select a marker to read the story.</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="night-toggle" checked>
+          <span class="switch-track" aria-hidden="true"></span>
+          <span>Show night</span>
+        </label>
+      </div>
+      <div class="chips map-zoom" id="map-zoom" role="group" aria-label="Zoom the map to a region"></div>
+      <div class="map-frame" id="map-frame">
+        <div class="map-tip" id="map-tip" hidden></div>
+      </div>
+      <div class="map-foot">
+        <ul class="legend" aria-label="Map key">
+          <li><span class="key key-top" aria-hidden="true"></span>Top story</li>
+          <li><span class="key key-dot" aria-hidden="true"></span>Story</li>
+          <li><span class="key key-night" aria-hidden="true"></span><span id="night-label">Night now</span></li>
+        </ul>
+        <p class="map-note" id="map-note"></p>
+      </div>
     </div>
   </section>
 
   <section class="threads" id="ongoing" aria-labelledby="threads-h">
     <div class="wrap">
-      <h2 class="sec" id="threads-h">Ongoing stories</h2>
-      <p class="sec-intro">The big stories that keep coming back, as timelines. Each step links to the reporting it comes from.</p>
-      <div class="thread-list" id="threads"></div>
+      <div class="sec-head">
+        <h2 id="threads-h">Ongoing stories</h2>
+        <p class="sec-sub">The stories that keep coming back, as timelines. Every step links to the reporting it comes from.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Ongoing stories" id="thread-tabs"></div>
+      <div id="thread-panels"></div>
     </div>
   </section>
 
   <section class="terms" id="key-terms" aria-labelledby="terms-h">
     <div class="wrap">
-      <h2 class="sec" id="terms-h">Key terms</h2>
-      <p class="sec-intro">Words that come up in the news, in plain English. Underlined words in the stories open these too.</p>
-      <dl id="terms"></dl>
+      <div class="sec-head sec-head-row">
+        <div>
+          <h2 id="terms-h">Key terms</h2>
+          <p class="sec-sub">Words that come up in the news, in plain English. Underlined words in the stories open these too.</p>
+        </div>
+        <div class="search search-sm">
+          <svg class="ico" aria-hidden="true"><use href="#i-search"/></svg>
+          <label class="sr" for="term-q">Find a key term</label>
+          <input id="term-q" type="search" autocomplete="off" placeholder="Find a term">
+        </div>
+      </div>
+      <dl class="term-grid" id="terms"></dl>
+      <p class="empty" id="terms-empty" hidden>No key terms match that word yet.</p>
     </div>
   </section>
 
-  <section class="light" aria-labelledby="light-h">
+  <section class="lighter" id="lighter" aria-labelledby="light-h">
     <div class="wrap">
-      <h2 class="sec" id="light-h">Something lighter</h2>
-      <div class="grid" id="light"></div>
+      <div class="sec-head">
+        <h2 id="light-h">Something lighter</h2>
+        <p class="sec-sub">Science, nature and the curious corners of the news.</p>
+      </div>
+      <div class="light-row" id="light"></div>
     </div>
   </section>
 
-  <section class="sport" aria-labelledby="sport-h">
+  <section class="sport" id="sport-sec" aria-labelledby="sport-h">
     <div class="wrap">
-      <h2 class="sec" id="sport-h">Scores and sport</h2>
-      <div class="scores" id="sport"></div>
+      <div class="sec-head">
+        <h2 id="sport-h">Scores and sport</h2>
+      </div>
+      <ul class="scores" id="sport"></ul>
     </div>
   </section>
 
   <section class="about" id="about" aria-labelledby="about-h">
     <div class="wrap">
-      <h2 class="sec" id="about-h">About, privacy and terms</h2>
-      <p class="sec-intro">World Right Now has no accounts, payments, ads, forms or analytics. This is how it works and what it does with your information.</p>
-      <div class="grid">
+      <div class="sec-head">
+        <h2 id="about-h">About, privacy and terms</h2>
+        <p class="sec-sub">World Right Now has no accounts, payments, ads, forms or analytics. This is how it works and what it does with your information.</p>
+      </div>
+      <div class="about-grid">
         <div class="block" id="how">
           <h3>How it's made</h3>
           <p>Every morning, Claude, an AI model made by Anthropic, reads the public news feeds of <a href="https://www.npr.org/sections/world/">NPR</a>, <a href="https://www.aljazeera.com/">Al Jazeera</a>, <a href="https://www.france24.com/en/">France 24</a> and <a href="https://www.abc.net.au/news">ABC News (Australia)</a>. It rewrites each story in plain words and adds background, key terms and timelines. Every story links to the original reports so you can check them. AI can make mistakes, so the reports are the final word.</p>
+          <p>The news is a daily edition, not a live feed. What does update live is the clock: local times and the day-and-night shading are worked out in your browser from the current time.</p>
         </div>
         <div class="block" id="privacy">
           <h3>Privacy</h3>
           <ul>
             <li>The site collects no personal information. There are no accounts, forms, trackers or analytics.</li>
-            <li>The only thing it saves is the region and topic you last filtered by. That stays in your own browser so your choice is still set next time, and it never leaves your device.</li>
+            <li>The only thing it saves is the region and topic you last filtered by. That stays in your own browser so your choice is still set next time, and it never leaves your device. Searches aren't saved.</li>
             <li>The site is hosted on GitHub Pages. Like any web host, GitHub may log visitors' IP addresses for security; see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</li>
             <li>Links to news sites take you to those sites, which have their own privacy policies.</li>
             <li>Because the site collects nothing from anyone, it doesn't ask for anyone's age, including children's.</li>
@@ -114,12 +220,12 @@
         </div>
         <div class="block" id="cookies">
           <h3>Cookies and storage</h3>
-          <p>This site sets no cookies and loads nothing from other websites: its typeface and map are part of the site. The filter it remembers is stored only because you picked it, so there's no consent banner to click through.</p>
+          <p>This site sets no cookies and loads nothing from other websites: its typefaces, map and pictures are part of the site. The filter it remembers is stored only because you picked it, so there's no consent banner to click through.</p>
         </div>
         <div class="block" id="your-data">
           <h3>Your data</h3>
           <p>There's nothing to ask us to delete, because we don't store anything about you. To remove what this site saved in your browser, press the button.</p>
-          <div class="row"><button class="plain" type="button" id="clear">Clear what this site saved</button></div>
+          <p><button class="btn btn-ghost" type="button" id="clear">Clear what this site saved</button></p>
           <p class="cleared" id="cleared" aria-live="polite"></p>
         </div>
         <div class="block" id="terms-of-use">
@@ -132,21 +238,23 @@
         </div>
         <div class="block" id="accessibility">
           <h3>Accessibility</h3>
-          <p>Everything works with a keyboard. Tab moves between controls, Enter or Space presses buttons and opens the expandable sections, and Escape closes a key-term card. "Skip to the news" is the first stop. Text and controls meet WCAG AA colour contrast in light and dark mode, and transitions switch off if your device asks for reduced motion. The map is also available as the list of stories below it.</p>
+          <p>Everything works with a keyboard. Tab moves between controls, Enter or Space presses buttons and opens the expandable sections, arrow keys move between timeline tabs, and Escape closes a key-term card or the menu. "Skip to the news" is the first stop. Text meets WCAG AA colour contrast, and motion switches off if your device asks for reduced motion. The map is also available as the list of stories.</p>
         </div>
-        <div class="block" id="credits">
+        <div class="block block-wide" id="credits">
           <h3>Credits and licences</h3>
-          <p>Typeface: Schibsted Grotesk, used under the <a href="assets/fonts/OFL.txt">SIL Open Font License 1.1</a>. Map outlines: <a href="https://www.naturalearthdata.com/">Natural Earth</a>, public domain. No photographs or illustrations are used. News reporting is © its publishers and is linked, not copied.</p>
+          <p>Typefaces: Newsreader and Hanken Grotesk, used under the SIL Open Font License 1.1 (<a href="assets/fonts/OFL-newsreader.txt">Newsreader licence</a>, <a href="assets/fonts/OFL-hanken-grotesk.txt">Hanken Grotesk licence</a>). Map outlines: <a href="https://www.naturalearthdata.com/">Natural Earth</a>, public domain. Earth imagery: <a href="https://commons.wikimedia.org/wiki/File:Land_shallow_topo_2048.jpg">Blue Marble</a> by Reto Stöckli, NASA Goddard, and <a href="https://earthobservatory.nasa.gov/features/NightLights">Earth at Night (Black Marble 2016)</a> by NASA Earth Observatory, both public domain.</p>
+          <p id="photo-credits"></p>
+          <p>News reporting is © its publishers and is linked, not copied.</p>
         </div>
       </div>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <p class="name">World Right Now</p>
-    <nav aria-label="About, privacy and terms">
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p class="foot-name">World Right Now</p>
+    <nav class="foot-nav" aria-label="About, privacy and terms">
       <a href="#how">How it's made</a>
       <a href="#privacy">Privacy</a>
       <a href="#cookies">Cookies and storage</a>
@@ -155,11 +263,12 @@
       <a href="#accessibility">Accessibility</a>
       <a href="#credits">Credits</a>
     </nav>
-    <p id="footer-stamp"></p>
+    <p class="foot-stamp" id="footer-stamp"></p>
   </div>
 </footer>
 
 <div class="term-pop" id="term-pop" role="dialog" aria-modal="false" aria-labelledby="term-pop-title" hidden>
+  <p class="term-pop-k"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Key term</p>
   <strong id="term-pop-title"></strong>
   <p id="term-pop-def"></p>
   <a id="term-pop-link" href="#key-terms">See all key terms</a>

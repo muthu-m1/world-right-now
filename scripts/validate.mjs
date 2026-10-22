@@ -44,7 +44,10 @@ if (D && TERMS && THREADS) {
     if (!/^[a-z0-9-]+$/.test(s.id || "")) fail(`${w}: id must be lowercase letters, digits and dashes`);
     if (ids.has(s.id)) fail(`${w}: duplicate id`);
     ids.add(s.id);
-    for (const k of ["topic", "city", "title", "summary"]) if (!s[k]) fail(`${w}: missing ${k}`);
+    for (const k of ["topic", "city", "country", "title", "summary"]) if (!s[k]) fail(`${w}: missing ${k}`);
+    if (s.state != null && typeof s.state !== "string") fail(`${w}: state must be text`);
+    if (s.places != null && (!Array.isArray(s.places) || s.places.some((p) => typeof p !== "string"))) fail(`${w}: places must be a list of names`);
+    if (s.title && s.title.length > 110) fail(`${w}: title is ${s.title.length} characters; keep it under 110`);
     if (!regions.includes(s.region)) fail(`${w}: region must be one of ${regions.join(", ")}`);
     if (!tzOK(s.tz)) fail(`${w}: unknown time zone "${s.tz}"`);
     if ((s.lat == null) !== (s.lon == null)) fail(`${w}: give both lat and lon, or neither`);
@@ -73,6 +76,7 @@ if (D && TERMS && THREADS) {
   }
   for (const [id, t] of Object.entries(THREADS)) {
     if (!t.title || !t.intro || !Array.isArray(t.events) || !t.events.length) fail(`thread "${id}": needs title, intro and events`);
+    if (t.image && (!t.image.src || !t.image.alt || !t.image.credit)) fail(`thread "${id}": image needs src, alt and credit`);
     termRefs(t.intro, `thread "${id}"`);
     for (const ev of t.events || []) {
       if (!/^\d{4}-\d{2}(-\d{2})?$/.test(ev.date)) fail(`thread "${id}": event date "${ev.date}" must be YYYY-MM or YYYY-MM-DD`);
