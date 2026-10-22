@@ -3,54 +3,250 @@
     "title": "Ending the war in Ukraine",
     "intro": "Russia's full-scale invasion is nearing its fifth year. The US is trying to broker a deal, while Kyiv worries Washington is stepping back from its support.",
     "events": [
-      {"date": "2022-02", "text": "Russia launches its full-scale invasion of Ukraine.", "source": {"outlet": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/21/what-happened-during-witkoff-and-kushners-latest-meeting-with-putin"}},
-      {"date": "2026-02", "text": "The last round of US-mediated Russia–Ukraine talks takes place, days before the US–Israeli war on Iran begins.", "source": {"outlet": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/21/what-happened-during-witkoff-and-kushners-latest-meeting-with-putin"}},
-      {"date": "2026-09", "text": "US envoy Steve Witkoff meets Vladimir Putin in Moscow.", "source": {"outlet": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/21/what-happened-during-witkoff-and-kushners-latest-meeting-with-putin"}},
-      {"date": "2026-10-20", "text": "Ukraine accepts a US proposal for a three-way meeting of negotiators.", "source": {"outlet": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/21/what-happened-during-witkoff-and-kushners-latest-meeting-with-putin"}},
-      {"date": "2026-10-21", "text": "Witkoff meets Putin in St Petersburg, with Jared Kushner joining by video. Russia frees American Stephen Hubbard, and the Kremlin says talks could resume in mid-November, possibly in Abu Dhabi.", "source": {"outlet": "France 24", "url": "https://www.france24.com/en/kremlin-says-ready-to-resume-3-way-talks-with-us-and-ukraine-mid-november"}},
-      {"date": "2026-10-22", "text": "Overnight Russian missile strikes on Kyiv injure six people.", "source": {"outlet": "France 24", "url": "https://www.france24.com/en/europe/20261022-russia-missiles-kyiv-ukraine-peace-talks"}}
+      {
+        "date": "2022-02",
+        "text": "Russia launches its full-scale invasion of Ukraine.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/21/what-happened-during-witkoff-and-kushners-latest-meeting-with-putin"
+        }
+      },
+      {
+        "date": "2026-02",
+        "text": "The last round of US-mediated Russia–Ukraine talks takes place, days before the US–Israeli war on Iran begins.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/21/what-happened-during-witkoff-and-kushners-latest-meeting-with-putin"
+        }
+      },
+      {
+        "date": "2026-09",
+        "text": "US envoy Steve Witkoff meets Vladimir Putin in Moscow.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/21/what-happened-during-witkoff-and-kushners-latest-meeting-with-putin"
+        }
+      },
+      {
+        "date": "2026-10-20",
+        "text": "Ukraine accepts a US proposal for a three-way meeting of negotiators.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/21/what-happened-during-witkoff-and-kushners-latest-meeting-with-putin"
+        }
+      },
+      {
+        "date": "2026-10-21",
+        "text": "Witkoff meets Putin in St Petersburg, with Jared Kushner joining by video. Russia frees American Stephen Hubbard, and the Kremlin says talks could resume in mid-November, possibly in Abu Dhabi.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/kremlin-says-ready-to-resume-3-way-talks-with-us-and-ukraine-mid-november"
+        }
+      },
+      {
+        "date": "2026-10-22",
+        "text": "Overnight Russian missile strikes on Kyiv injure six people.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/europe/20261022-russia-missiles-kyiv-ukraine-peace-talks"
+        }
+      },
+      {
+        "date": "2026-10-22",
+        "text": "The toll from the overnight strikes on Kyiv rises to at least one dead and 22 injured, and Moscow says Ukraine sent 630 drones at the region.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/22/russian-strikes-hit-kyiv-after-witkoff-meets-putin"
+        }
+      }
     ]
   },
   "iran-gulf": {
     "title": "The Iran war and the Gulf",
     "intro": "A US–Israeli war on Iran that began in February has spread across the region, disrupting shipping through the Strait of Hormuz and drawing in Iran-aligned groups such as Yemen's Houthis.",
     "events": [
-      {"date": "2026-02", "text": "The US and Israel launch a war on Iran.", "source": {"outlet": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/21/us-orders-departure-of-personnel-from-saudi-arabia-citing-houthi-threat"}},
-      {"date": "2026-03", "text": "Iran strikes targets across the region. Drones hit the US embassy in Riyadh.", "source": {"outlet": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/21/us-orders-departure-of-personnel-from-saudi-arabia-citing-houthi-threat"}},
-      {"date": "2026-06-17", "text": "The US and Iran reach a memorandum of understanding.", "source": {"outlet": "Al Jazeera", "url": "https://www.aljazeera.com/news/liveblog/2026/10/22/iran-war-live-irgc-vows-invasion-as-defence-doctrine-turns-offensive"}},
-      {"date": "2026-07-12", "text": "The US launches fresh strikes on Iran, and Iran says it has closed the Strait of Hormuz.", "source": {"outlet": "OPB / NPR", "url": "https://www.opb.org/article/2026/07/12/u-s-launches-fresh-strikes-on-iran-as-tehran-says-it-has-closed-strait-of-hormuz/"}},
-      {"date": "2026-10-21", "text": "Saudi Arabia cancels its 'Davos in the Desert' conference because of Houthi strikes, and the US orders non-emergency staff to leave the kingdom.", "source": {"outlet": "NPR", "url": "https://www.npr.org/2026/10/21/nx-s1-6009545/saudi-arabia-cancels-davos-in-the-desert-due-to-air-strikes"}},
-      {"date": "2026-10-22", "text": "An attack on King Fahd airport kills one person. Iran's Revolutionary Guards say their doctrine is now 'offensive', and Qatar and France call for the Strait of Hormuz to reopen.", "source": {"outlet": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/22/qatar-france-call-for-opening-of-hormuz-and-gaza-ceasefire-implementation"}}
+      {
+        "date": "2026-02",
+        "text": "The US and Israel launch a war on Iran.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/21/us-orders-departure-of-personnel-from-saudi-arabia-citing-houthi-threat"
+        }
+      },
+      {
+        "date": "2026-03",
+        "text": "Iran strikes targets across the region. Drones hit the US embassy in Riyadh.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/21/us-orders-departure-of-personnel-from-saudi-arabia-citing-houthi-threat"
+        }
+      },
+      {
+        "date": "2026-06-17",
+        "text": "The US and Iran reach a memorandum of understanding.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/10/22/iran-war-live-irgc-vows-invasion-as-defence-doctrine-turns-offensive"
+        }
+      },
+      {
+        "date": "2026-07-12",
+        "text": "The US launches fresh strikes on Iran, and Iran says it has closed the Strait of Hormuz.",
+        "source": {
+          "outlet": "OPB / NPR",
+          "url": "https://www.opb.org/article/2026/07/12/u-s-launches-fresh-strikes-on-iran-as-tehran-says-it-has-closed-strait-of-hormuz/"
+        }
+      },
+      {
+        "date": "2026-10-21",
+        "text": "Saudi Arabia cancels its 'Davos in the Desert' conference because of Houthi strikes, and the US orders non-emergency staff to leave the kingdom.",
+        "source": {
+          "outlet": "NPR",
+          "url": "https://www.npr.org/2026/10/21/nx-s1-6009545/saudi-arabia-cancels-davos-in-the-desert-due-to-air-strikes"
+        }
+      },
+      {
+        "date": "2026-10-22",
+        "text": "An attack on King Fahd airport kills one person. Iran's Revolutionary Guards say their doctrine is now 'offensive', and Qatar and France call for the Strait of Hormuz to reopen.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/22/qatar-france-call-for-opening-of-hormuz-and-gaza-ceasefire-implementation"
+        }
+      },
+      {
+        "date": "2026-10-22",
+        "text": "A person briefed on war planning tells NPR the US and Israel are preparing for a possible attack on Iran in early November. Iranian state media says the IRGC targeted seven oil tankers in the Strait of Hormuz.",
+        "source": {
+          "outlet": "NPR",
+          "url": "https://www.npr.org/2026/10/22/nx-s1-6011514/us-israel-iran-war"
+        }
+      },
+      {
+        "date": "2026-10-22",
+        "text": "The death toll from the Houthi strike on King Fahd airport rises to two, and fighting intensifies in Yemen's Taiz, where the UN says nearly 260,000 people have been displaced since August.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/22/fighting-rages-in-yemens-taiz-as-un-warns-nearly-260000-now-displaced"
+        }
+      }
     ]
   },
   "france-unrest": {
     "title": "Unrest in France",
     "intro": "Protests over the cost of living and fuel prices turned into some of France's worst street violence in years, shaking markets and politics.",
     "events": [
-      {"date": "2026-10-17", "text": "Protests in Paris against living costs and fuel prices turn violent.", "source": {"outlet": "France 24", "url": "https://www.france24.com/en/europe/20261022-live-paris-bans-protests-after-violent-unrest-as-macron-takes-swipe-at-trump"}},
-      {"date": "2026-10-19", "text": "Prime Minister Sébastien Lecornu calls for curfews in cities hit by riots and looting.", "source": {"outlet": "France 24", "url": "https://www.france24.com/en/europe/20261022-live-paris-bans-protests-after-violent-unrest-as-macron-takes-swipe-at-trump"}},
-      {"date": "2026-10-20", "text": "Nightly curfews take effect in Paris, Bordeaux, Nice and other cities.", "source": {"outlet": "France 24", "url": "https://www.france24.com/en/europe/20261022-live-paris-bans-protests-after-violent-unrest-as-macron-takes-swipe-at-trump"}},
-      {"date": "2026-10-21", "text": "French bond yields rise above 5%, the highest since 2002, and police ban protests in parts of Paris for the next day.", "source": {"outlet": "France 24", "url": "https://www.france24.com/en/french-bond-yields-hit-24-year-high-after-unrest"}},
-      {"date": "2026-10-22", "text": "The protest ban covers sites including the Élysée Palace, parliament, the Louvre and the Champs-Élysées from 8am to 8pm.", "source": {"outlet": "France 24", "url": "https://www.france24.com/en/europe/20261022-live-paris-bans-protests-after-violent-unrest-as-macron-takes-swipe-at-trump"}}
+      {
+        "date": "2026-10-17",
+        "text": "Protests in Paris against living costs and fuel prices turn violent.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/europe/20261022-live-paris-bans-protests-after-violent-unrest-as-macron-takes-swipe-at-trump"
+        }
+      },
+      {
+        "date": "2026-10-19",
+        "text": "Prime Minister Sébastien Lecornu calls for curfews in cities hit by riots and looting.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/europe/20261022-live-paris-bans-protests-after-violent-unrest-as-macron-takes-swipe-at-trump"
+        }
+      },
+      {
+        "date": "2026-10-20",
+        "text": "Nightly curfews take effect in Paris, Bordeaux, Nice and other cities.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/europe/20261022-live-paris-bans-protests-after-violent-unrest-as-macron-takes-swipe-at-trump"
+        }
+      },
+      {
+        "date": "2026-10-21",
+        "text": "French bond yields rise above 5%, the highest since 2002, and police ban protests in parts of Paris for the next day.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/french-bond-yields-hit-24-year-high-after-unrest"
+        }
+      },
+      {
+        "date": "2026-10-22",
+        "text": "The protest ban covers sites including the Élysée Palace, parliament, the Louvre and the Champs-Élysées from 8am to 8pm.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/europe/20261022-live-paris-bans-protests-after-violent-unrest-as-macron-takes-swipe-at-trump"
+        }
+      },
+      {
+        "date": "2026-10-22",
+        "text": "Macron says 'illegitimate' protests will be banned in the coming days, and the government says soldiers will be deployed on the streets.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/europe/20261022-live-paris-bans-protests-after-violent-unrest-as-macron-takes-swipe-at-trump"
+        }
+      }
     ]
   },
   "ebola-2026": {
     "title": "The 2026 Ebola outbreak",
     "intro": "DR Congo's deadliest Ebola outbreak on record is caused by the Bundibugyo strain, which has no approved vaccine, and it has now spread beyond the country.",
     "events": [
-      {"date": "2026-05", "text": "An Ebola outbreak begins in DR Congo. It has since recorded more than 9,000 cases and over 4,000 deaths.", "source": {"outlet": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/21/nigerias-first-ebola-case-matches-dr-congo-strain-health-officials-say"}},
-      {"date": "2026-10-03", "text": "A woman travels from Uganda to Abuja. She falls ill days later.", "source": {"outlet": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/21/nigerias-first-ebola-case-matches-dr-congo-strain-health-officials-say"}},
-      {"date": "2026-10-06", "text": "Kenya begins recording cases. Nine have been reported since.", "source": {"outlet": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/21/nigerias-first-ebola-case-matches-dr-congo-strain-health-officials-say"}},
-      {"date": "2026-10-21", "text": "Nigeria and the WHO confirm her case is the Bundibugyo strain. Officials trace 44 contacts.", "source": {"outlet": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/21/nigerias-first-ebola-case-matches-dr-congo-strain-health-officials-say"}}
+      {
+        "date": "2026-05",
+        "text": "An Ebola outbreak begins in DR Congo. It has since recorded more than 9,000 cases and over 4,000 deaths.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/21/nigerias-first-ebola-case-matches-dr-congo-strain-health-officials-say"
+        }
+      },
+      {
+        "date": "2026-10-03",
+        "text": "A woman travels from Uganda to Abuja. She falls ill days later.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/21/nigerias-first-ebola-case-matches-dr-congo-strain-health-officials-say"
+        }
+      },
+      {
+        "date": "2026-10-06",
+        "text": "Kenya begins recording cases. Nine have been reported since.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/21/nigerias-first-ebola-case-matches-dr-congo-strain-health-officials-say"
+        }
+      },
+      {
+        "date": "2026-10-21",
+        "text": "Nigeria and the WHO confirm her case is the Bundibugyo strain. Officials trace 44 contacts.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/21/nigerias-first-ebola-case-matches-dr-congo-strain-health-officials-say"
+        }
+      }
     ]
   },
   "sudan-war": {
     "title": "Sudan's war",
     "intro": "Sudan's army and the paramilitary RSF have been fighting for control of the country since April 2023, and the UN warns the war is spilling over its borders.",
     "events": [
-      {"date": "2023-04", "text": "War breaks out between Sudan's army and the Rapid Support Forces."},
-      {"date": "2026-10-19", "text": "A drone strike hits the Amiet market in the Abyei area, which Sudan and South Sudan both claim. Local authorities blame the Sudanese army.", "source": {"outlet": "France 24", "url": "https://www.france24.com/en/neither-the-sudanese-military-nor-the-rsf-take-any-acknowledgement-of-human-life-in-this-war"}},
-      {"date": "2026-10-21", "text": "A local official says the death toll has reached 153 and is likely higher.", "source": {"outlet": "France 24", "url": "https://www.france24.com/en/neither-the-sudanese-military-nor-the-rsf-take-any-acknowledgement-of-human-life-in-this-war"}}
+      {
+        "date": "2023-04",
+        "text": "War breaks out between Sudan's army and the Rapid Support Forces."
+      },
+      {
+        "date": "2026-10-19",
+        "text": "A drone strike hits the Amiet market in the Abyei area, which Sudan and South Sudan both claim. Local authorities blame the Sudanese army.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/neither-the-sudanese-military-nor-the-rsf-take-any-acknowledgement-of-human-life-in-this-war"
+        }
+      },
+      {
+        "date": "2026-10-21",
+        "text": "A local official says the death toll has reached 153 and is likely higher.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/neither-the-sudanese-military-nor-the-rsf-take-any-acknowledgement-of-human-life-in-this-war"
+        }
+      }
     ]
   }
 }

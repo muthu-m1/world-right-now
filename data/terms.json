@@ -110,5 +110,33 @@
   "psilocybin": {
     "term": "Psilocybin",
     "definition": "The compound in 'magic mushrooms' that causes psychedelic effects. Researchers are testing it as a treatment for conditions including depression."
+  },
+  "imf": {
+    "term": "IMF",
+    "definition": "The International Monetary Fund, a global institution, owned by most of the world's governments, that lends to governments in financial trouble and publishes forecasts for the world economy."
+  },
+  "ocha": {
+    "term": "OCHA",
+    "definition": "The UN Office for the Coordination of Humanitarian Affairs, which organises the UN's emergency aid and reports on crises such as wars and disasters."
+  },
+  "sakharov-prize": {
+    "term": "Sakharov Prize",
+    "definition": "The European Union's top human rights award, given each year since 1988 by the European Parliament. It is named after Andrei Sakharov, a Soviet scientist and dissident."
+  },
+  "icc": {
+    "term": "International Criminal Court",
+    "definition": "A court in The Hague, opened in 2002, that tries individuals for genocide, war crimes, crimes against humanity and aggression when national courts cannot or will not. The US, Russia, China and Israel are not members."
+  },
+  "gang-suppression-force": {
+    "term": "Gang Suppression Force",
+    "definition": "An international security force approved by the UN Security Council in 2025 to help Haiti's police fight the armed gangs that control much of Port-au-Prince."
+  },
+  "starshield": {
+    "term": "Starshield",
+    "definition": "A military version of SpaceX's Starlink satellite internet service, developed for the US Department of Defense."
+  },
+  "class-action": {
+    "term": "class action",
+    "definition": "A lawsuit brought by a few people on behalf of a larger group who say they were harmed in the same way, so that all their claims are decided together."
   }
 }
