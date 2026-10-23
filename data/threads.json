@@ -64,6 +64,14 @@
           "outlet": "Al Jazeera",
           "url": "https://www.aljazeera.com/news/2026/10/22/russian-strikes-hit-kyiv-after-witkoff-meets-putin"
         }
+      },
+      {
+        "date": "2026-10-23",
+        "text": "Putin says Russia is ready to resume three-way talks, but on the terms of a final peace deal and not a short ceasefire.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/russia-ready-for-talks-on-plans-for-final-ukraine-deal-not-truce-putin"
+        }
       }
     ]
   },
@@ -140,6 +148,14 @@
           "outlet": "Al Jazeera",
           "url": "https://www.aljazeera.com/news/2026/10/22/fighting-rages-in-yemens-taiz-as-un-warns-nearly-260000-now-displaced"
         }
+      },
+      {
+        "date": "2026-10-23",
+        "text": "Reports say the US and Israel are planning fresh strikes on Iran after the US midterm elections, and analysts warn emergency oil stocks are at multidecade lows.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/nyt-reports-plans-for-fresh-strikes-on-iran-after-the-us-midterm-elections"
+        }
       }
     ]
   },
@@ -200,6 +216,14 @@
           "outlet": "France 24",
           "url": "https://www.france24.com/en/europe/20261022-live-paris-bans-protests-after-violent-unrest-as-macron-takes-swipe-at-trump"
         }
+      },
+      {
+        "date": "2026-10-23",
+        "text": "Authorities say 70,000 security forces will be mobilised for Saturday protests, and Macron meets student representatives.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/europe/20261023-macron-meets-with-student-representatives-and-law-enforcement-ahead-of-new-protests"
+        }
       }
     ]
   },
@@ -243,6 +267,14 @@
         "source": {
           "outlet": "Al Jazeera",
           "url": "https://www.aljazeera.com/news/2026/10/21/nigerias-first-ebola-case-matches-dr-congo-strain-health-officials-say"
+        }
+      },
+      {
+        "date": "2026-10-23",
+        "text": "The WHO warns Africa faces a 'complex' Ebola outbreak after the virus reaches Nigeria, the first case in the west of the continent.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/africa-faces-complex-ebola-outbreak-after-spread-to-nigeria-who"
         }
       }
     ]

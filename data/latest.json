@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-22",
-  "snapshot": "2026-10-22T11:05:00Z",
+  "date": "2026-10-23",
+  "snapshot": "2026-10-23T11:30:00Z",
   "outlets": [
     "NPR",
     "Al Jazeera",
@@ -18,125 +18,30 @@
       "tz": "Asia/Tehran",
       "lat": 35.69,
       "lon": 51.39,
-      "title": "The US and Israel are preparing for a possible new attack on Iran, a source tells NPR",
-      "summary": "A person briefed on the planning told NPR the US is building up forces to be ready to strike by early November, after the US [[midterms|midterm elections]], though the build-up could also be a way to pressure Iran into a deal. Iran's foreign minister said Iran is 'just as prepared for diplomacy as we are for war'. Iranian state media said the [[irgc|IRGC]] targeted seven oil tankers in the [[strait-of-hormuz|Strait of Hormuz]] on Thursday, and the Guards had earlier called their defence doctrine 'offensive'.",
-      "background": "The US and Israel launched a war on Iran on 28 February 2026, killing its supreme leader and other senior officials. A ceasefire has not held: Iran has blocked the Strait of Hormuz and targeted commercial ships, and the US has blockaded Iranian ports and oil shipments. The [[imf|IMF]] says Iraq, Kuwait and Qatar face economic contractions of around 16% this year, and that oil could average $130 a barrel in 2027 if the war goes on.",
+      "title": "The US and Israel are reported to be planning new strikes on Iran after the midterms",
+      "summary": "NPR spoke with retired Gen. Joseph Votel about a US and Israeli plan for a possible bombing campaign after the US [[midterms|midterm elections]], and France 24 reports that the New York Times has described plans for fresh strikes. Al Jazeera says emergency oil stocks are at multidecade lows, and analysts quoted there say the world may have only a month or two of cover if the [[strait-of-hormuz|Strait of Hormuz]] shuts again.",
+      "background": "The US and Israel launched a war on Iran on 28 February 2026. A ceasefire has not held: Iran has blocked the Strait of Hormuz and targeted commercial ships, and the US has blockaded Iranian ports and oil shipments.",
       "sources": [
         {
           "outlet": "NPR",
-          "title": "U.S. and Israel are planning for a possible attack on Iran, source tells NPR",
-          "url": "https://www.npr.org/2026/10/22/nx-s1-6011514/us-israel-iran-war",
-          "time": "2026-10-22T08:56:00Z"
+          "title": "Retired general discusses the U.S. and Israeli plan for possible attack on Iran",
+          "url": "https://www.npr.org/2026/10/23/nx-s1-6012303/retired-general-discusses-the-u-s-and-israeli-plan-for-possible-attack-on-iran",
+          "time": "2026-10-23T10:36:00Z"
+        },
+        {
+          "outlet": "France 24",
+          "title": "NYT reports plans for fresh strikes on Iran after the US midterm elections",
+          "url": "https://www.france24.com/en/nyt-reports-plans-for-fresh-strikes-on-iran-after-the-us-midterm-elections",
+          "time": "2026-10-23T08:40:00Z"
         },
         {
           "outlet": "Al Jazeera",
-          "title": "Iran war live: IRGC vows invasion as defence doctrine turns 'offensive'",
-          "url": "https://www.aljazeera.com/news/liveblog/2026/10/22/iran-war-live-irgc-vows-invasion-as-defence-doctrine-turns-offensive",
-          "time": "2026-10-22T00:00:00Z"
-        },
-        {
-          "outlet": "Al Jazeera",
-          "title": "Qatar, France call for opening of Hormuz and Gaza ceasefire implementation",
-          "url": "https://www.aljazeera.com/news/2026/10/22/qatar-france-call-for-opening-of-hormuz-and-gaza-ceasefire-implementation",
-          "time": "2026-10-22T01:45:00Z"
+          "title": "Are global oil reserves sufficient to withstand renewed US-Iran war?",
+          "url": "https://www.aljazeera.com/news/2026/10/23/are-global-oil-reserves-sufficient-to-withstand-renewed-us-iran-war",
+          "time": "2026-10-23T07:37:00Z"
         }
       ],
       "lead": "main"
-    },
-    {
-      "id": "ukraine",
-      "thread": "ukraine-talks",
-      "topic": "Conflict",
-      "region": "Europe",
-      "city": "Kyiv",
-      "country": "Ukraine",
-      "tz": "Europe/Kyiv",
-      "lat": 50.45,
-      "lon": 30.52,
-      "title": "Russia and Ukraine trade heavy strikes a day after Moscow signals it's ready for talks",
-      "summary": "Russian attacks on Kyiv overnight killed at least one person and injured 22, including four children, Ukraine's emergency service said. Moscow's mayor said Ukraine sent 630 drones at the region, 163 of them towards the capital, wounding two people. The [[kremlin|Kremlin]] says it could resume three-way talks with the US and Ukraine in mid-November, but Ukraine's foreign minister said 'appeasement' will not stop the war.",
-      "background": "Russia launched its full-scale invasion of Ukraine in February 2022. The last US-mediated talks were in February 2026, just before the US and Israel went to war with Iran, and the effort stalled after that. The new plan is a meeting of negotiators from all three countries about security guarantees once the fighting stops. Kyiv worries the Trump administration is moving closer to Moscow, and US envoy Witkoff drew criticism from both parties after calling Putin a 'humanitarian'.",
-      "sources": [
-        {
-          "outlet": "Al Jazeera",
-          "title": "Russian strikes hit Kyiv after Witkoff meets Putin",
-          "url": "https://www.aljazeera.com/news/2026/10/22/russian-strikes-hit-kyiv-after-witkoff-meets-putin",
-          "time": "2026-10-22T08:18:00Z"
-        },
-        {
-          "outlet": "France 24",
-          "title": "Russia and Ukraine trade strikes overnight as Moscow signals readiness for peace talks",
-          "url": "https://www.france24.com/en/europe/20261022-russia-missiles-kyiv-ukraine-peace-talks",
-          "time": "2026-10-22T01:51:00Z"
-        },
-        {
-          "outlet": "Al Jazeera",
-          "title": "What happened during Witkoff and Kushner's latest meeting with Putin",
-          "url": "https://www.aljazeera.com/news/2026/10/21/what-happened-during-witkoff-and-kushners-latest-meeting-with-putin",
-          "time": "2026-10-21T23:52:00Z"
-        },
-        {
-          "outlet": "France 24",
-          "title": "Kremlin says 'ready' to resume 3-way talks with US and Ukraine mid-November",
-          "url": "https://www.france24.com/en/kremlin-says-ready-to-resume-3-way-talks-with-us-and-ukraine-mid-november",
-          "time": "2026-10-21T15:51:00Z"
-        },
-        {
-          "outlet": "NPR",
-          "title": "Zelenskyy says early warning system for Russian missile attacks resumes",
-          "url": "https://www.npr.org/2026/10/21/g-s1-149026/zelenskyy-russian-missiles-warning",
-          "time": "2026-10-21T05:43:00Z"
-        }
-      ],
-      "lead": "side"
-    },
-    {
-      "id": "saudi",
-      "thread": "iran-gulf",
-      "topic": "Conflict",
-      "region": "Middle East",
-      "city": "Riyadh",
-      "country": "Saudi Arabia",
-      "state": "Eastern Province",
-      "tz": "Asia/Riyadh",
-      "lat": 24.71,
-      "lon": 46.68,
-      "title": "Houthi attacks on Saudi Arabia turn deadlier as the kingdom cancels its investor summit",
-      "summary": "Saudi Arabia's civil aviation authority said the death toll from a Houthi strike on King Fahd International Airport in Dammam has risen to two. The US ordered some staff to leave the kingdom, Saudi Arabia called off its '[[fii|Davos in the Desert]]' conference, and Macron flew to Riyadh unannounced to show support.",
-      "background": "Yemen's [[houthis|Houthis]] are aligned with Iran and fought a Saudi-led coalition for years before that war wound down. Since the US–Israeli war on Iran began in February 2026, Iran and its allies have struck targets around the Gulf, and Al Jazeera describes the Houthi attacks on Saudi Arabia as a new front in that wider conflict. The US had already pulled staff out of the region once, early in the war.",
-      "sources": [
-        {
-          "outlet": "Al Jazeera",
-          "title": "Fighting rages in Yemen's Taiz as UN warns nearly 260,000 displaced",
-          "url": "https://www.aljazeera.com/news/2026/10/22/fighting-rages-in-yemens-taiz-as-un-warns-nearly-260000-now-displaced",
-          "time": "2026-10-22T09:00:00Z"
-        },
-        {
-          "outlet": "Al Jazeera",
-          "title": "One killed, eight injured in attack on Saudi Arabia's King Fahd airport",
-          "url": "https://www.aljazeera.com/news/2026/10/22/one-killed-eight-injured-in-attack-on-saudi-arabias-king-fahd-airport-2",
-          "time": "2026-10-22T00:25:00Z"
-        },
-        {
-          "outlet": "Al Jazeera",
-          "title": "US orders departure of personnel from Saudi Arabia, citing Houthi threat",
-          "url": "https://www.aljazeera.com/news/2026/10/21/us-orders-departure-of-personnel-from-saudi-arabia-citing-houthi-threat",
-          "time": "2026-10-21T23:13:00Z"
-        },
-        {
-          "outlet": "France 24",
-          "title": "Macron visits Riyadh to show solidarity amid Houthi attacks",
-          "url": "https://www.france24.com/en/macron-visits-riyadh-show-solidarity-amid-houthi-attacks-ease-tensions-home-via-fuel-deal",
-          "time": "2026-10-21T17:09:00Z"
-        },
-        {
-          "outlet": "NPR",
-          "title": "Saudi Arabia cancels 'Davos in the Desert' due to Yemen's Houthi strikes",
-          "url": "https://www.npr.org/2026/10/21/nx-s1-6009545/saudi-arabia-cancels-davos-in-the-desert-due-to-air-strikes",
-          "time": "2026-10-21T08:40:00Z"
-        }
-      ],
-      "lead": "side"
     },
     {
       "id": "france",
@@ -149,129 +54,117 @@
       "tz": "Europe/Paris",
       "lat": 48.86,
       "lon": 2.35,
-      "title": "Macron says 'illegitimate' protests will be banned as France braces for another weekend",
-      "summary": "Macron said unions and other organised groups would be offered alternative routes for marches, and the government says it will put soldiers on the streets after the rioting and looting. More than 2,000 people, most of them minors, were taken into police custody, Al Jazeera reports. French [[bond-yield|bond yields]] are above 5%, the highest since 2002, and Macron dismissed 'stupid comments' by foreign leaders after Trump blamed migrants for the unrest.",
-      "background": "The protests began over the cost of living and rising fuel prices, led by high school students and the [[yellow-vests|Yellow Vests]] movement. When they turned violent, the government imposed nightly curfews in Paris and other big cities. Investors now want more to lend to France, which makes its debt more expensive at a tense political moment, with Le Pen preparing to launch her presidential campaign.",
+      "title": "France plans to deploy 70,000 security officers as Macron meets students before new protests",
+      "summary": "Interior Minister Laurent Nunez said 70,000 security forces will be mobilised for protests across France on Saturday, as President Emmanuel Macron met student representatives for the first time. Macron said on Thursday that 'illegitimate' protests would be banned and blamed 'seditious' ultra-left groups and vandals for last weekend's riots and looting. Authorities are also asking the public to hand in videos of looting to help identify rioters, a move France 24 says has caused debate.",
+      "background": "The protests followed a wave of anger over the cost of living, and the government has imposed curfews in several cities to prevent more violence. Young people have also protested in other countries, which commentators on Al Jazeera and France 24 link to inequality and weak public services.",
       "sources": [
         {
           "outlet": "France 24",
-          "title": "Live: France will ban 'illegitimate' protests in coming days, says Macron",
-          "url": "https://www.france24.com/en/europe/20261022-live-paris-bans-protests-after-violent-unrest-as-macron-takes-swipe-at-trump",
-          "time": "2026-10-22T10:44:00Z"
+          "title": "Live: France will deploy 70,000 security forces for Saturday protests, says interior minister",
+          "url": "https://www.france24.com/en/europe/20261023-macron-meets-with-student-representatives-and-law-enforcement-ahead-of-new-protests",
+          "time": "2026-10-23T05:06:00Z"
+        },
+        {
+          "outlet": "France 24",
+          "title": "French authorities call for videos of looting to identify rioters",
+          "url": "https://www.france24.com/en/french-authorities-call-for-videos-of-looting-to-identify-rioters",
+          "time": "2026-10-23T10:47:00Z"
         },
         {
           "outlet": "Al Jazeera",
-          "title": "'Stupid talk': France rejects Trump's attempt to blame unrest on migration",
-          "url": "https://www.aljazeera.com/news/2026/10/22/stupid-talk-france-rejects-trumps-attempt-to-blame-unrest-on-migration",
-          "time": "2026-10-22T05:58:00Z"
-        },
-        {
-          "outlet": "France 24",
-          "title": "French bond yields hit 24-year high after unrest",
-          "url": "https://www.france24.com/en/french-bond-yields-hit-24-year-high-after-unrest",
-          "time": "2026-10-21T20:43:00Z"
-        },
-        {
-          "outlet": "France 24",
-          "title": "In run-up to mass protests and riots, pro-Russian accounts amplified French anger, NGO finds",
-          "url": "https://www.france24.com/en/in-run-up-to-mass-protests-and-riots-pro-russian-accounts-amplified-french-anger-ngo-finds",
-          "time": "2026-10-21T21:21:00Z"
-        },
-        {
-          "outlet": "France 24",
-          "title": "Le Pen sees polls boost amid mass protests, riots",
-          "url": "https://www.france24.com/en/le-pen-sees-polls-boost-amid-mass-protests-riots",
-          "time": "2026-10-21T18:56:00Z"
+          "title": "Macron to meet student groups: Where are France’s protests heading?",
+          "url": "https://www.aljazeera.com/news/2026/10/23/we-want-promises-backed-by-results",
+          "time": "2026-10-23T08:50:00Z"
         }
-      ]
+      ],
+      "lead": "side"
     },
     {
-      "id": "yemen",
-      "thread": "iran-gulf",
+      "id": "ukraine",
+      "thread": "ukraine-talks",
+      "topic": "Conflict",
+      "region": "Europe",
+      "city": "Moscow",
+      "country": "Russia",
+      "places": [
+        "Ukraine",
+        "United States"
+      ],
+      "tz": "Europe/Moscow",
+      "lat": 55.76,
+      "lon": 37.62,
+      "title": "Putin says Russia will resume three-way talks, but wants a final deal rather than a truce",
+      "summary": "President Vladimir Putin said on Thursday that Russia is ready to resume three-way talks with Ukraine and the US, but on the security terms of a final peace deal and not on a 'short' ceasefire. Separately, France 24 reports that Donald Trump said Ukraine's access to the [[starshield|Starshield]] satellite system had been restored after Kyiv reported limits, while US officials and allies have blamed each other for the problem.",
+      "background": "Russia launched its full-scale invasion of Ukraine in February 2022. The last US-mediated talks were in February 2026, just before the US and Israel went to war with Iran.",
+      "sources": [
+        {
+          "outlet": "France 24",
+          "title": "Russia ready for talks on plans for final Ukraine deal, not truce: Putin",
+          "url": "https://www.france24.com/en/russia-ready-for-talks-on-plans-for-final-ukraine-deal-not-truce-putin",
+          "time": "2026-10-23T08:00:00Z"
+        },
+        {
+          "outlet": "France 24",
+          "title": "US offers mixed messages on limits to Ukraine's Starshield system",
+          "url": "https://www.france24.com/en/europe/20261023-us-offers-mixed-messages-on-limits-to-ukraine-s-starshield-system",
+          "time": "2026-10-23T06:22:00Z"
+        }
+      ],
+      "lead": "side"
+    },
+    {
+      "id": "westbank",
       "topic": "Conflict",
       "region": "Middle East",
-      "city": "Taiz",
-      "country": "Yemen",
-      "tz": "Asia/Aden",
-      "lat": 13.58,
-      "lon": 44.02,
-      "title": "Fighting intensifies in Yemen's Taiz, and the UN says nearly 260,000 people have fled their homes",
-      "summary": "A spokesperson for Yemen's government forces said they carried out 835 operations against the [[houthis|Houthis]], and the government warned civilians to stay away from Houthi rallies, which it called legitimate targets. [[ocha|OCHA]] says about 260,000 people have been displaced since August, and the UN has verified 57 civilians killed, half of them children.",
-      "background": "Yemen's internationally recognised government, backed by a Saudi-led coalition, launched a counteroffensive this month to retake Houthi-held areas, including the capital, Sanaa. It followed a Houthi blockade on Saudi Arabia in the Bab al-Mandeb strait in July and rapid Houthi gains along the Red Sea coast.",
+      "city": "Hebron",
+      "country": "West Bank",
+      "places": [
+        "Israel"
+      ],
+      "tz": "Asia/Hebron",
+      "lat": 31.53,
+      "lon": 35.1,
+      "title": "Israel orders the army to prepare a full closure of the West Bank after a deadly gunfight",
+      "summary": "Israeli soldiers shot and killed two men near Hebron on Friday who the military said had launched an attack, and at least five people were injured, some critically, NPR reports. Prime Minister Benjamin Netanyahu's office told the army to prepare a full closure of the occupied [[west-bank|West Bank]], according to France 24. Al Jazeera says the clampdown comes as attacks on Palestinian farmers are increasing.",
+      "background": "Israel has occupied the West Bank since 1967. France 24 notes the attack comes before an Israeli election.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "Israel orders closure of West Bank after soldiers kill 2 men behind an alleged attack",
+          "url": "https://www.npr.org/2026/10/23/nx-s1-6013333/netanyahu-closure-west-bank",
+          "time": "2026-10-23T09:40:00Z"
+        },
+        {
+          "outlet": "France 24",
+          "title": "Netanyahu orders army to prepare for full West Bank closure after attack",
+          "url": "https://www.france24.com/en/middle-east/20261023-netanyahu-orders-army-to-prepare-for-full-west-bank-closure-after-attack",
+          "time": "2026-10-23T08:35:00Z"
+        },
+        {
+          "outlet": "Al Jazeera",
+          "title": "Israel preparing full lockdown of occupied West Bank after Hebron gunfight",
+          "url": "https://www.aljazeera.com/news/2026/10/23/israel-arrests-36-palestinians-in-the-west-bank-attacks-on-farmers-ramp-up",
+          "time": "2026-10-23T04:09:00Z"
+        }
+      ]
+    },
+    {
+      "id": "israelelection",
+      "topic": "Politics",
+      "region": "Middle East",
+      "city": "Jerusalem",
+      "country": "Israel",
+      "tz": "Asia/Jerusalem",
+      "lat": 31.77,
+      "lon": 35.21,
+      "title": "Ultra-Orthodox military service becomes a flashpoint in Israel's election campaign",
+      "summary": "Al Jazeera reports that the debate over conscripting ultra-Orthodox men is heating up as Israel's election approaches, reflecting deep divisions in society and politics.",
       "sources": [
         {
           "outlet": "Al Jazeera",
-          "title": "Fighting rages in Yemen's Taiz as UN warns nearly 260,000 displaced",
-          "url": "https://www.aljazeera.com/news/2026/10/22/fighting-rages-in-yemens-taiz-as-un-warns-nearly-260000-now-displaced",
-          "time": "2026-10-22T09:00:00Z"
-        }
-      ]
-    },
-    {
-      "id": "icc",
-      "topic": "Politics",
-      "region": "Europe",
-      "city": "The Hague",
-      "country": "Netherlands",
-      "state": "South Holland",
-      "tz": "Europe/Amsterdam",
-      "lat": 52.08,
-      "lon": 4.31,
-      "title": "The International Criminal Court wins the EU's top human rights prize",
-      "summary": "The European Parliament gave its 2026 [[sakharov-prize|Sakharov Prize]] to the [[icc|ICC]], less than two weeks after President Trump announced sanctions against the court. ICC President Tomoko Akane said the award comes as the court faces 'unprecedented challenges'.",
-      "background": "The ICC opened in 2002 to prosecute war crimes, crimes against humanity, genocide and aggression. Trump has targeted it since it issued arrest warrants for Israeli Prime Minister Benjamin Netanyahu and his former defence minister. According to France 24, the new US sanctions cut the court off from US financial services, technology firms and the dollar.",
-      "sources": [
-        {
-          "outlet": "France 24",
-          "title": "International Criminal Court wins EU's Sakharov human rights prize",
-          "url": "https://www.france24.com/en/europe/20261022-international-criminal-court-wins-eu-s-sakharov-human-rights-prize",
-          "time": "2026-10-22T10:10:00Z"
-        }
-      ]
-    },
-    {
-      "id": "haiti",
-      "topic": "Conflict",
-      "region": "Americas",
-      "city": "Port-au-Prince",
-      "country": "Haiti",
-      "tz": "America/Port-au-Prince",
-      "lat": 18.54,
-      "lon": -72.34,
-      "title": "El Salvador launches a military operation to rescue four of its soldiers kidnapped in Haiti",
-      "summary": "President Nayib Bukele says the four aviation technicians went missing after gangs attacked their armoured vehicle near Port-au-Prince, and warned of a stronger response if they are not freed unharmed. Haiti's government calls their release an 'absolute priority'.",
-      "background": "Gangs control an estimated 70% of Haiti's capital. A UN-backed [[gang-suppression-force|gang suppression force]] of more than 2,000 troops, including from El Salvador, Chad, Jamaica and Guatemala, is deployed there, and this was the first major attack on it. Haiti is preparing for its first general election in more than a decade.",
-      "sources": [
-        {
-          "outlet": "NPR",
-          "title": "Bukele says military operation launched to rescue Salvadorans held by gangs in Haiti",
-          "url": "https://www.npr.org/2026/10/22/nx-s1-6012029/bukele-military-operation-haiti",
-          "time": "2026-10-22T08:39:00Z"
-        }
-      ]
-    },
-    {
-      "id": "korea",
-      "topic": "Conflict",
-      "region": "Asia-Pacific",
-      "city": "Paju",
-      "country": "South Korea",
-      "state": "Gyeonggi",
-      "places": [
-        "North Korea"
-      ],
-      "tz": "Asia/Seoul",
-      "lat": 37.76,
-      "lon": 126.78,
-      "title": "North Korea says it will restart propaganda broadcasts across the border",
-      "summary": "Kim Yo Jong, sister of leader Kim Jong Un, said loudspeakers will be running along the whole border within October, and warned of retaliation if South Korean warning shots harm North Korean troops. South Korea's defence ministry says it will need to take 'proportionate measures'.",
-      "background": "North Korea has been adding mines, fences and anti-tank barriers to one of the world's most heavily armed borders, as Kim Jong Un pursues a policy of permanently cutting ties with the South. Seoul blames North Korean mines for blasts on 21 September that injured three South Korean soldiers; the North denies it.",
-      "sources": [
-        {
-          "outlet": "NPR",
-          "title": "North Korea says it will resume propaganda broadcasts across border into South Korea",
-          "url": "https://www.npr.org/2026/10/22/g-s1-149306/north-korea-propaganda-broadcasts",
-          "time": "2026-10-22T06:36:00Z"
+          "title": "Ultra-Orthodox conscription debate ignites Israel’s election battleground",
+          "url": "https://www.aljazeera.com/news/2026/10/23/ultra-orthodox-conscription-debate-ignites-israels-election-battleground",
+          "time": "2026-10-23T09:03:00Z"
         }
       ]
     },
@@ -279,75 +172,93 @@
       "id": "syria",
       "topic": "Conflict",
       "region": "Middle East",
-      "city": "Deraa",
+      "city": "Damascus",
       "country": "Syria",
+      "places": [
+        "Israel"
+      ],
       "tz": "Asia/Damascus",
-      "lat": 32.62,
-      "lon": 36.1,
-      "title": "Israeli forces kill a disabled man in a raid in southern Syria, Syrian state media says",
-      "summary": "The SANA news agency said the civilian was shot dead in the village of Jamla, where Israeli forces had placed snipers on rooftops. The Israeli military did not immediately comment.",
-      "background": "Since Bashar al-Assad was removed in December 2024, Israel has carried out hundreds of strikes in Syria and regularly sent troops into its territory. Israeli officials say they plan to keep troops in what they call a 'security zone' in the south. Talks on a security deal have largely stalled since the war on Iran began.",
+      "lat": 33.51,
+      "lon": 36.29,
+      "title": "Israeli forces are accused of killing a disabled man in a raid in Syria",
+      "summary": "Al Jazeera reports that Israeli forces reportedly shot dead a Syrian man with an intellectual disability and hearing problems during a raid.",
       "sources": [
         {
           "outlet": "Al Jazeera",
-          "title": "Israeli forces kill disabled man in southern Syria raid, state media says",
-          "url": "https://www.aljazeera.com/news/2026/10/22/israeli-forces-kill-disabled-man-in-southern-syria-raid-state-media-says",
-          "time": "2026-10-22T10:01:00Z"
+          "title": "Israeli forces accused of killing disabled man in Syria raid",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/23/israeli-forces-accused-of-killing-disabled-man-in-syria-raid",
+          "time": "2026-10-23T08:35:00Z"
         }
       ]
     },
     {
-      "id": "hubbard",
-      "thread": "ukraine-talks",
+      "id": "korea",
+      "topic": "Conflict",
+      "region": "Asia-Pacific",
+      "city": "Seoul",
+      "country": "South Korea",
+      "places": [
+        "North Korea"
+      ],
+      "tz": "Asia/Seoul",
+      "lat": 37.57,
+      "lon": 126.98,
+      "title": "South Korea invites North Korea to military talks to calm rising border tension",
+      "summary": "Seoul said it has invited Pyongyang to talks about restoring military communication lines and preventing accidental clashes. The offer came days after North Korea said it had moved new military units into 'firing positions' along the border. It is unclear whether Pyongyang will agree.",
+      "background": "Al Jazeera says North Korean leader Kim Jong Un has taken a hardline approach to Seoul and suspended virtually all dialogue and cooperation with the South in recent years.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "South Korea invites North for military talks over border",
+          "url": "https://www.aljazeera.com/news/2026/10/23/south-korea-invites-north-for-military-talks-over-border",
+          "time": "2026-10-23T10:20:00Z"
+        }
+      ]
+    },
+    {
+      "id": "serbia",
       "topic": "Politics",
       "region": "Europe",
-      "city": "Moscow",
-      "country": "Russia",
-      "tz": "Europe/Moscow",
-      "lat": 55.76,
-      "lon": 37.62,
-      "title": "Putin frees jailed American Stephen Hubbard at Trump's request",
-      "summary": "The 74-year-old retired teacher from Michigan had spent four years in Russian custody. His release was announced as the latest talks on ending the war in Ukraine began.",
-      "background": "Hubbard was arrested in Russia in 2022, accused of being a Ukrainian mercenary, and sentenced to more than six years in prison. Moscow called his release a goodwill gesture during Witkoff's visit.",
+      "city": "Belgrade",
+      "country": "Serbia",
+      "tz": "Europe/Belgrade",
+      "lat": 44.79,
+      "lon": 20.45,
+      "title": "Serbia votes on Sunday in a snap election that tests a student-led challenge to Vucic",
+      "summary": "The 25 October parliamentary vote will show whether President Aleksandar Vucic's Serbian Progressive Party can extend its 14-year hold on power or whether a student-led movement can loosen it, Al Jazeera reports. Vucic resigned the presidency in September and is leading his party's campaign for prime minister.",
+      "background": "In November 2024 the collapse of a concrete canopy at a railway station in Novi Sad killed 16 people. Demands for accountability grew into a nationwide movement against alleged corruption, with students as its driving force.",
       "sources": [
         {
-          "outlet": "NPR",
-          "title": "Putin releases American Stephen Hubbard from Russian prison",
-          "url": "https://www.npr.org/2026/10/21/nx-s1-6010608/putin-releases-american-stephen-hubbard-from-russian-prison",
-          "time": "2026-10-21T22:39:00Z"
-        },
-        {
           "outlet": "Al Jazeera",
-          "title": "Russia frees American Stephen Hubbard after 4 years behind bars",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/22/russia-frees-american-stephen-hubbard-after-4-years-behind-bars",
-          "time": "2026-10-22T02:16:00Z"
+          "title": "Serbia’s snap election: What’s at stake and can students unseat Vucic?",
+          "url": "https://www.aljazeera.com/news/2026/10/23/serbias-snap-election-whats-at-stake-and-can-students-unseat-vucic",
+          "time": "2026-10-23T09:52:00Z"
         }
       ]
     },
     {
-      "id": "climate",
-      "topic": "Climate",
-      "region": "Global",
-      "city": "Worldwide",
-      "country": "Worldwide",
-      "tz": "UTC",
-      "lat": null,
-      "lon": null,
-      "title": "UN report: the world is on track for about 2.6°C of warming this century",
-      "summary": "Current national pledges fall far short of the [[paris-agreement|Paris Agreement]]'s 1.5°C goal, the [[unep|UN Environment Programme]] says, ahead of the [[cop31|COP31]] climate summit in Turkey next month. A UN report also finds a major rise in US climate pollution.",
-      "background": "Under the Paris Agreement, each country sets its own pledge to cut emissions, and the UN checks every year whether those pledges add up to the goal. Scientists say every tenth of a degree of extra warming brings more extreme heat, floods and sea level rise. COP31 is where countries are expected to answer this gap.",
+      "id": "brazil",
+      "topic": "Politics",
+      "region": "Americas",
+      "city": "Brasília",
+      "country": "Brazil",
+      "tz": "America/Sao_Paulo",
+      "lat": -15.79,
+      "lon": -47.88,
+      "title": "Brazil's tight presidential runoff pits Lula against a Bolsonaro heir on Sunday",
+      "summary": "NPR describes the 25 October runoff as a close race between a political giant, President Luiz Inácio Lula da Silva, and a Bolsonaro heir over the country's political future. France 24 says Flavio Bolsonaro, son of ex-president Jair Bolsonaro, beat Lula by a small margin in the first round.",
       "sources": [
         {
-          "outlet": "France 24",
-          "title": "World set to breach 1.5°C warming limit set by Paris Climate Agreement",
-          "url": "https://www.france24.com/en/video/20261021-world-set-to-breach-1-5%C2%B0c-warming-limit-set-by-paris-climate-agreement",
-          "time": "2026-10-21T15:56:00Z"
+          "outlet": "NPR",
+          "title": "Brazil's runoff: Lula's legacy vs. Bolsonaro's dynasty",
+          "url": "https://www.npr.org/2026/10/23/nx-s1-6004277/brazil-vote-runoff-lula-bolsonaro",
+          "time": "2026-10-23T09:00:00Z"
         },
         {
-          "outlet": "NPR",
-          "title": "DOJ's noncitizen voter list is unreliable, officials say. And, U.S. pollution rises",
-          "url": "https://www.npr.org/2026/10/21/g-s1-149068/up-first-newsletter-california-voter-roll-united-nations-emissions-us-crimes-ukraine-russia",
-          "time": "2026-10-21T11:46:00Z"
+          "outlet": "France 24",
+          "title": "Brazil: Why should you care about the country's elections?",
+          "url": "https://www.france24.com/en/video/20261023-brazil-why-should-you-care-about-the-country-s-elections",
+          "time": "2026-10-23T06:48:00Z"
         }
       ]
     },
@@ -356,398 +267,230 @@
       "thread": "ebola-2026",
       "topic": "Health",
       "region": "Africa",
-      "city": "Abuja",
+      "city": "Lagos",
       "country": "Nigeria",
       "places": [
-        "Uganda",
-        "Kenya",
         "DR Congo"
       ],
       "tz": "Africa/Lagos",
-      "lat": 9.08,
-      "lon": 7.4,
-      "title": "Nigeria confirms its first Ebola case, linked to the DR Congo outbreak",
-      "summary": "Health officials say the case matches the [[ebola-bundibugyo|Bundibugyo strain]] behind the deadly outbreak in DR Congo. The patient had travelled from Uganda, and officials are tracing 44 contacts, mostly health workers.",
-      "background": "DR Congo's outbreak began in mid-May and has recorded more than 9,000 cases and over 4,000 deaths, its deadliest on record. Uganda and Kenya have also had cases. There's no approved vaccine or specific treatment for this strain. Nigeria contained an earlier Ebola case in 2014, during the West African epidemic that killed more than 11,000 people.",
+      "lat": 6.52,
+      "lon": 3.38,
+      "title": "WHO warns of a 'complex' Ebola outbreak after the virus reaches Nigeria",
+      "summary": "The World Health Organization said on Thursday that Africa faces a 'complex' Ebola outbreak after the virus crossed from east Africa to Nigeria, the first case in the west of the continent.",
       "sources": [
         {
-          "outlet": "Al Jazeera",
-          "title": "Nigeria's first Ebola case matches DR Congo strain, health officials say",
-          "url": "https://www.aljazeera.com/news/2026/10/21/nigerias-first-ebola-case-matches-dr-congo-strain-health-officials-say",
-          "time": "2026-10-21T23:20:00Z"
-        },
-        {
           "outlet": "France 24",
-          "title": "Sudan's war escalates as UN warns of wider regional crisis",
-          "url": "https://www.france24.com/en/tv-shows/eye-on-africa/20261021-sudan-s-war-escalates-as-un-warns-of-wider-regional-crisis",
-          "time": "2026-10-21T22:41:00Z"
+          "title": "Africa faces 'complex' Ebola outbreak after spread to Nigeria: WHO",
+          "url": "https://www.france24.com/en/africa-faces-complex-ebola-outbreak-after-spread-to-nigeria-who",
+          "time": "2026-10-23T08:28:00Z"
         }
       ]
     },
     {
-      "id": "sudan",
-      "thread": "sudan-war",
-      "topic": "Conflict",
+      "id": "southafrica",
+      "topic": "Politics",
       "region": "Africa",
-      "city": "Abyei",
-      "country": "Sudan",
-      "places": [
-        "South Sudan"
-      ],
-      "tz": "Africa/Khartoum",
-      "lat": 9.6,
-      "lon": 28.44,
-      "title": "A drone strike on a market in Abyei reportedly kills at least 153 people",
-      "summary": "Local authorities blame Sudan's army for the strike on the Amiet market in [[abyei|Abyei]]. The UN warns that Sudan's war risks turning into a wider regional crisis, and an analyst told France 24 that neither the army nor the [[rsf|RSF]] shows any regard for civilian lives.",
-      "background": "Sudan's army and the RSF were once allies, but they went to war in April 2023 in a power struggle over the country's future. Abyei sits on the border with South Sudan, so a strike there raises the risk of the war pulling in neighbouring countries.",
+      "city": "Durban",
+      "country": "South Africa",
+      "tz": "Africa/Johannesburg",
+      "lat": -29.86,
+      "lon": 31.02,
+      "title": "Anti-migrant protests turn deadly in Durban as a foreign national is beaten to death",
+      "summary": "France 24 reports that xenophobic unrest in South Africa has turned deadly, with a foreign national beaten to death during a protest march in Durban, a city increasingly gripped by anti-migrant tensions.",
       "sources": [
         {
           "outlet": "France 24",
-          "title": "'Neither the Sudanese military, nor the RSF take any acknowledgement of human life in this war'",
-          "url": "https://www.france24.com/en/neither-the-sudanese-military-nor-the-rsf-take-any-acknowledgement-of-human-life-in-this-war",
-          "time": "2026-10-21T19:28:00Z"
-        },
-        {
-          "outlet": "France 24",
-          "title": "Sudan's war escalates as UN warns of wider regional crisis",
-          "url": "https://www.france24.com/en/tv-shows/eye-on-africa/20261021-sudan-s-war-escalates-as-un-warns-of-wider-regional-crisis",
-          "time": "2026-10-21T22:41:00Z"
+          "title": "South Africa gripped by anti-migrant protests as foreign national is killed",
+          "url": "https://www.france24.com/en/tv-shows/eye-on-africa/20261023-south-africa-gripped-by-anti-migrant-protests-as-foreign-national-is-killed",
+          "time": "2026-10-23T08:24:00Z"
         }
       ]
     },
     {
-      "id": "india",
-      "topic": "Politics",
-      "region": "Asia-Pacific",
-      "city": "New Delhi",
-      "country": "India",
-      "state": "Delhi",
-      "tz": "Asia/Kolkata",
-      "lat": 28.61,
-      "lon": 77.21,
-      "title": "About 130 million names have been struck off India's voter rolls",
-      "summary": "A nationwide [[sir|revision of the voter rolls]] has set off a political crisis. NPR calls it the largest disenfranchisement in history.",
-      "background": "The Election Commission says the revision removes duplicate, dead and relocated voters. Opposition parties say eligible voters, often poor or from minority communities, are losing the right to vote because they can't produce the documents required. Some of the figures are draft counts and may change after appeals.",
-      "sources": [
-        {
-          "outlet": "NPR",
-          "title": "Millions are struck off India's voter rolls in largest disenfranchisement in history",
-          "url": "https://www.npr.org/2026/10/21/nx-s1-5997960/india-voter-rolls",
-          "time": "2026-10-21T08:42:00Z"
-        }
-      ]
-    },
-    {
-      "id": "canada",
-      "topic": "Politics",
-      "region": "Americas",
-      "city": "Washington",
-      "country": "United States",
-      "state": "District of Columbia",
-      "places": [
-        "Canada",
-        "California"
-      ],
-      "tz": "America/New_York",
-      "lat": 38.91,
-      "lon": -77.04,
-      "title": "The US accuses Canada of interfering in the midterm elections",
-      "summary": "Washington points to Canadian tariffs, political meetings and anti-Trump advertising ahead of the [[midterms|midterms]]. Separately, officials say a Justice Department list of likely noncitizen voters in California is unreliable.",
-      "background": "Relations between the two neighbours have been strained by a trade war with tariffs on both sides. Election interference usually means covert action by a foreign government. The US complaint is about Canada's public trade measures and advertising.",
-      "sources": [
-        {
-          "outlet": "Al Jazeera",
-          "title": "US accuses Canada of election interference ahead of midterms",
-          "url": "https://www.aljazeera.com/news/2026/10/21/us-accuses-canada-of-election-interference-ahead-of-midterms",
-          "time": "2026-10-21T23:52:00Z"
-        },
-        {
-          "outlet": "NPR",
-          "title": "DOJ's noncitizen voter list is unreliable, officials say. And, U.S. pollution rises",
-          "url": "https://www.npr.org/2026/10/21/g-s1-149068/up-first-newsletter-california-voter-roll-united-nations-emissions-us-crimes-ukraine-russia",
-          "time": "2026-10-21T11:46:00Z"
-        }
-      ]
-    },
-    {
-      "id": "bigbend",
-      "topic": "Politics",
-      "region": "Americas",
-      "city": "Big Bend, Texas",
-      "country": "United States",
-      "state": "Texas",
-      "tz": "America/Chicago",
-      "lat": 29.25,
-      "lon": -103.25,
-      "title": "The Trump administration asks the Supreme Court to let it build a wall at Big Bend",
-      "summary": "A federal judge halted the border barrier. Officials now want the Supreme Court to let construction go ahead.",
-      "background": "Big Bend is a remote stretch of the Rio Grande in West Texas, home to a national park with steep canyons that have long been seen as a natural barrier. Asking the Supreme Court for emergency permission is a common move when a lower court blocks a government policy.",
-      "sources": [
-        {
-          "outlet": "Al Jazeera",
-          "title": "Trump administration seeks Supreme Court approval to build Big Bend wall",
-          "url": "https://www.aljazeera.com/news/2026/10/22/trump-administration-seeks-supreme-court-approval-to-build-big-bend-wall",
-          "time": "2026-10-22T03:19:00Z"
-        }
-      ]
-    },
-    {
-      "id": "westbank",
-      "topic": "Conflict",
-      "region": "Middle East",
-      "city": "West Bank",
-      "country": "Palestinian territories",
-      "places": [
-        "Israel",
-        "Palestine"
-      ],
-      "tz": "Asia/Hebron",
-      "lat": 31.95,
-      "lon": 35.3,
-      "title": "Israel releases dozens of Americans detained in the West Bank",
-      "summary": "They included Brad Lander, a Democratic nominee for Congress, along with rabbis and activists who were helping Palestinian farmers with the olive harvest in the [[west-bank|West Bank]].",
-      "background": "The autumn olive harvest is central to many Palestinian families' income. In recent years, activists have joined farmers in the groves to deter attacks by Israeli settlers, which have increased during the harvest.",
-      "sources": [
-        {
-          "outlet": "NPR",
-          "title": "Israel frees dozens of Americans, including U.S. Congress nominee, after West Bank detention",
-          "url": "https://www.npr.org/2026/10/21/nx-s1-6010460/brad-lander-detained-west-bank-israel-palestinians",
-          "time": "2026-10-21T13:28:00Z"
-        }
-      ]
-    },
-    {
-      "id": "aipac",
-      "topic": "Politics",
-      "region": "Americas",
-      "city": "Washington",
-      "country": "United States",
-      "state": "District of Columbia",
-      "places": [
-        "Israel"
-      ],
-      "tz": "America/New_York",
-      "lat": 38.91,
-      "lon": -77.04,
-      "title": "AIPAC stops endorsing candidates and giving directly to campaigns",
-      "summary": "The pro-Israel lobbying group's affiliated [[super-pac|super PAC]] will keep spending.",
-      "background": "AIPAC, the American Israel Public Affairs Committee, is one of the most influential lobbying groups in Washington. It began endorsing candidates and giving money directly in the 2022 election cycle, after decades of not doing so.",
-      "sources": [
-        {
-          "outlet": "NPR",
-          "title": "AIPAC halts endorsements and direct contributions to candidates",
-          "url": "https://www.npr.org/2026/10/21/nx-s1-6011531/aipac-campaign-contributions-israel-democrats",
-          "time": "2026-10-22T00:22:00Z"
-        }
-      ]
-    },
-    {
-      "id": "mexico",
-      "topic": "Politics",
-      "region": "Americas",
-      "city": "Mexico City",
-      "country": "Mexico",
-      "tz": "America/Mexico_City",
-      "lat": 19.43,
-      "lon": -99.13,
-      "title": "Mexico charges a prosecutor with treason over a drug raid involving US agents",
-      "summary": "US agents took part in the April operation, raising questions about whether Mexican law was followed.",
-      "background": "Mexican law strictly limits what foreign agents can do in the country, and US involvement in security operations has long been politically sensitive. Pressure from Washington to act against drug cartels has made the question more pressing.",
-      "sources": [
-        {
-          "outlet": "Al Jazeera",
-          "title": "Mexico charges prosecutor with treason over US involvement in drug raid",
-          "url": "https://www.aljazeera.com/news/2026/10/21/mexico-charges-prosecutor-with-treason-over-us-involvement-in-drug-raid",
-          "time": "2026-10-21T21:25:00Z"
-        }
-      ]
-    },
-    {
-      "id": "pope",
+      "id": "ivorycoast",
       "topic": "Health",
-      "region": "Europe",
-      "city": "Vatican City",
-      "country": "Vatican City",
-      "places": [
-        "Italy"
-      ],
-      "tz": "Europe/Rome",
-      "lat": 41.9,
-      "lon": 12.45,
-      "title": "Pope Leo XIV needs no more cancer treatment, his doctors say",
-      "summary": "Tests showed the cancer was localized. Surgery last week removed the lower lobe of the 71-year-old pope's right lung.",
-      "background": "Leo XIV, born Robert Prevost in Chicago, became the first American pope when he was elected in May 2025.",
+      "region": "Africa",
+      "city": "Abidjan",
+      "country": "Ivory Coast",
+      "tz": "Africa/Abidjan",
+      "lat": 5.36,
+      "lon": -4.01,
+      "title": "Children in Ivory Coast face serious health risks from lead in paint",
+      "summary": "A France 24 report says children in Ivory Coast face serious health risks from lead in paint.",
       "sources": [
         {
-          "outlet": "Al Jazeera",
-          "title": "Pope Leo needs no further treatment after cancer surgery, doctors say",
-          "url": "https://www.aljazeera.com/news/2026/10/21/pope-leo-needs-no-further-treatment-after-cancer-surgery-doctors-say",
-          "time": "2026-10-21T23:20:00Z"
-        },
-        {
           "outlet": "France 24",
-          "title": "Pope Leo XIV needs no further lung cancer treatment, Vatican says",
-          "url": "https://www.france24.com/en/europe/20261021-pope-leo-doctors-treatment-lung-cancer",
-          "time": "2026-10-21T21:41:00Z"
+          "title": "Ivory Coast: Children face serious health risks from lead in paint",
+          "url": "https://www.france24.com/en/ivory-coast-children-face-serious-health-risks-from-lead-in-paint",
+          "time": "2026-10-23T08:37:00Z"
         }
       ]
     },
     {
-      "id": "ireland",
-      "topic": "Politics",
-      "region": "Europe",
-      "city": "Dublin",
-      "country": "Ireland",
-      "tz": "Europe/Dublin",
-      "lat": 53.35,
-      "lon": -6.26,
-      "title": "Ireland drops the need for UN approval before sending peacekeepers abroad",
-      "summary": "Lawmakers narrowly passed the bill. Critics say it weakens Ireland's neutrality.",
-      "background": "Until now, Ireland's [[triple-lock|triple lock]] meant a UN mandate was needed for larger deployments. Supporters of the change say one veto in the UN Security Council could block Irish peacekeeping missions.",
-      "sources": [
-        {
-          "outlet": "France 24",
-          "title": "Ireland votes to end UN approval requirement for overseas peacekeeping missions",
-          "url": "https://www.france24.com/en/europe/20261022-ireland-votes-un-veto-overseas-peacekeeping-missions",
-          "time": "2026-10-22T00:35:00Z"
-        }
-      ]
-    },
-    {
-      "id": "eu",
-      "topic": "Politics",
-      "region": "Europe",
-      "city": "Brussels",
-      "country": "Belgium",
-      "places": [
-        "European Union",
-        "France"
-      ],
-      "tz": "Europe/Brussels",
-      "lat": 50.85,
-      "lon": 4.35,
-      "title": "EU prosecutors search the offices of the far-right Patriots for Europe group",
-      "summary": "The searches of [[patriots-for-europe|Patriots for Europe]] offices in Brussels and Strasbourg are part of a corruption inquiry into the group's defunct predecessor.",
-      "background": "The European Public Prosecutor's Office investigates crimes against the EU's budget. The European Parliament sits in both Brussels and Strasbourg, so its political groups have offices in both cities.",
-      "sources": [
-        {
-          "outlet": "France 24",
-          "title": "EU prosecutors search European Parliament offices of far-right group",
-          "url": "https://www.france24.com/en/eu-prosecutors-search-european-parliament-offices-of-far-right-group",
-          "time": "2026-10-21T20:21:00Z"
-        }
-      ]
-    },
-    {
-      "id": "meta",
-      "topic": "Tech",
+      "id": "canadafire",
+      "topic": "Conflict",
       "region": "Americas",
-      "city": "Santa Fe",
+      "city": "Wainwright",
+      "country": "Canada",
+      "state": "Alberta",
+      "tz": "America/Edmonton",
+      "lat": 52.83,
+      "lon": -110.86,
+      "title": "A grenade exercise sparked the deadly fire at a Canadian military base, the army says",
+      "summary": "A fire that killed four soldiers at the Wainwright base in Alberta was sparked by an exercise using live grenades, a military official said. High winds pushed the blaze across the base, and a later change in wind direction made it much fiercer. Firefighters could not fight it directly because it was in the range's permanent danger area.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "Grenade exercise sparked deadly fire at Canada military base, army says",
+          "url": "https://www.aljazeera.com/news/2026/10/23/grenade-exercise-sparked-deadly-fire-at-canada-military-base-army-says",
+          "time": "2026-10-23T04:41:00Z"
+        }
+      ]
+    },
+    {
+      "id": "midterms",
+      "topic": "Politics",
+      "region": "Americas",
+      "city": "Columbus",
       "country": "United States",
-      "state": "New Mexico",
-      "places": [
-        "Australia"
-      ],
-      "tz": "America/Denver",
-      "lat": 35.69,
-      "lon": -105.94,
-      "title": "Meta faces a $25bn fine and an Australian lawsuit as its revenue jumps 26%",
-      "summary": "A New Mexico judge ordered Meta to pay $25bn after a jury found it misled users about their data, in a case linked to [[cambridge-analytica|Cambridge Analytica]]. In Australia, a [[class-action|class action]] filed on behalf of eight plaintiffs says Facebook and Instagram's design harmed them as children; Meta says it will defend itself 'vigorously'. Its third-quarter revenue rose to $64.6bn.",
-      "background": "US states can sue companies under their own consumer protection laws, separately from federal regulators. In August, Meta agreed to pay $18bn to settle claims from nearly all US states that it designed social media to addict children. Australia banned social media for children under 16 in 2025.",
+      "state": "Ohio",
+      "tz": "America/New_York",
+      "lat": 39.96,
+      "lon": -83,
+      "title": "A controversial Ohio campaign ad against Amy Acton causes fresh headaches for Republicans",
+      "summary": "France 24 reports that backlash over an ad attacking Amy Acton, the Democratic nominee for governor of Ohio, has spread beyond the state, with less than two weeks to go before the [[midterms|midterm elections]]. NPR also reports that young candidates in both parties are campaigning on high housing costs.",
       "sources": [
         {
-          "outlet": "Al Jazeera",
-          "title": "Judge orders Meta to pay $25bn in fines for Facebook privacy violations",
-          "url": "https://www.aljazeera.com/news/2026/10/21/judge-orders-meta-to-pay-25bn-in-fines-for-facebook-privacy-violations",
-          "time": "2026-10-21T21:01:00Z"
-        },
-        {
           "outlet": "France 24",
-          "title": "Meta fined $25 billion in New Mexico over Cambridge Analytica scandal",
-          "url": "https://www.france24.com/en/technology/20261021-meta-fined-25-billion-new-mexico-cambridge-analytica-scandal",
-          "time": "2026-10-21T21:21:00Z"
+          "title": "United-States: Backlash over controversial Ohio midterms campaign ad",
+          "url": "https://www.france24.com/en/united-states-backlash-over-controversial-ohio-midterms-campaign-ad",
+          "time": "2026-10-23T08:04:00Z"
         },
         {
-          "outlet": "Al Jazeera",
-          "title": "Meta faces Australian lawsuit over alleged social media harm to children",
-          "url": "https://www.aljazeera.com/news/2026/10/22/meta-faces-australian-lawsuit-over-alleged-social-media-harm-to-children",
-          "time": "2026-10-22T07:23:00Z"
-        },
-        {
-          "outlet": "France 24",
-          "title": "Meta's Zuckerberg pitches AI successes to investors with 26% rise in quarterly revenue",
-          "url": "https://www.france24.com/en/tv-shows/business/20261022-meta-s-zuckerberg-pitches-ai-successes-to-investors-with-26-rise-in-quarterly-revenue",
-          "time": "2026-10-22T09:18:00Z"
+          "outlet": "NPR",
+          "title": "Gen Z candidates in both parties aim to tackle high housing costs",
+          "url": "https://www.npr.org/2026/10/23/nx-s1-5983813/gen-z-candidates-midterms-housing-affordability",
+          "time": "2026-10-23T09:00:00Z"
         }
       ]
     },
     {
-      "id": "starlink",
-      "topic": "Tech",
-      "region": "Europe",
-      "city": "Kyiv",
-      "country": "Ukraine",
-      "places": [
-        "United States"
-      ],
-      "tz": "Europe/Kyiv",
-      "lat": 50.45,
-      "lon": 30.52,
-      "title": "Rubio says Ukraine's access to Starlink is up to Elon Musk, not the White House",
-      "summary": "A Zelenskyy adviser said SpaceX limited [[starshield|Starshield]] for drones moving faster than 160km/h, disrupting Ukrainian missions, before service returned on 15 October. Reuters and the Wall Street Journal report the White House was involved, which the Trump administration denies; Trump said 'I was not involved'.",
-      "sources": [
-        {
-          "outlet": "Al Jazeera",
-          "title": "Ukraine's access to Starlink a decision for Elon Musk, Rubio says",
-          "url": "https://www.aljazeera.com/news/2026/10/22/ukraines-access-to-starlink-a-decision-for-elon-musk-rubio-says",
-          "time": "2026-10-22T05:54:00Z"
-        }
-      ]
-    },
-    {
-      "id": "debt",
-      "topic": "Business",
+      "id": "unsg",
+      "topic": "Politics",
       "region": "Global",
+      "city": "New York",
+      "country": "Worldwide",
+      "tz": "UTC",
+      "lat": null,
+      "lon": null,
+      "title": "The UN is searching for a new Secretary-General as Guterres's term ends",
+      "summary": "France 24 reports that the leading candidates to replace Antonio Guterres are struggling to secure the support they need.",
+      "sources": [
+        {
+          "outlet": "France 24",
+          "title": "UN searches for new Secretary-General as Antonio Guterres term comes to an end",
+          "url": "https://www.france24.com/en/video/20261023-un-searches-for-new-secretary-general-as-antonio-guterres-term-comes-to-an-end",
+          "time": "2026-10-23T10:43:00Z"
+        }
+      ]
+    },
+    {
+      "id": "gas",
+      "thread": "iran-gulf",
+      "topic": "Business",
+      "region": "Europe",
+      "city": "Berlin",
+      "country": "Germany",
+      "places": [
+        "Iran"
+      ],
+      "tz": "Europe/Berlin",
+      "lat": 52.52,
+      "lon": 13.4,
+      "title": "Europe enters winter with its lowest gas reserves on record, the IEA chief warns",
+      "summary": "Fatih Birol, head of the International Energy Agency, told Al Jazeera that Europe is entering winter with historically low gas stocks and cannot withstand further supply shocks as the Iran war disrupts global energy supplies. He said Europe will likely face rising costs for liquefied natural gas in the coming months even if peace returned to the Gulf today.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "EU entering winter with lowest gas reserves on record, IEA boss warns",
+          "url": "https://www.aljazeera.com/economy/2026/10/23/eu-entering-winter-with-lowest-gas-reserves-on-record-iea-boss-warns",
+          "time": "2026-10-23T06:02:00Z"
+        }
+      ]
+    },
+    {
+      "id": "heat",
+      "topic": "Climate",
+      "region": "Europe",
       "city": "Worldwide",
       "country": "Worldwide",
       "places": [
-        "France",
-        "Italy",
-        "Greece"
+        "Europe"
       ],
       "tz": "UTC",
       "lat": null,
       "lon": null,
-      "title": "Government debt is getting more expensive, and France now pays more to borrow than Italy and Greece",
-      "summary": "France pays around 5% to borrow for 10 years, against 3.41% for Germany, Al Jazeera reports. The US has the largest government debt, at $41.4 trillion, followed by China at $22.5 trillion.",
-      "background": "Governments borrow by selling bonds. When investors trust a country less, they demand a higher [[bond-yield|yield]], so interest costs rise and less is left for schools and hospitals. During the eurozone debt crisis of 2010 to 2012, yields above 7% pushed Ireland and Portugal into bailouts.",
+      "title": "A study says this summer's record heat helped kill more than 50,000 people in Europe",
+      "summary": "NPR reports that a new study found record heat in Europe this summer helped kill more than 50,000 people, with nearly two-thirds of the deaths blamed on human-caused climate change.",
       "sources": [
         {
-          "outlet": "Al Jazeera",
-          "title": "The world is $365 trillion in debt, and the interest bill is climbing",
-          "url": "https://www.aljazeera.com/news/2026/10/22/the-world-is-365-trillion-in-debt-and-the-interest-bill-is-climbing",
-          "time": "2026-10-22T05:59:00Z"
+          "outlet": "NPR",
+          "title": "Europe's heat claims 50,000 lives. Climate change blamed for two-thirds of deaths",
+          "url": "https://www.npr.org/2026/10/23/g-s1-149498/europe-heat-deaths",
+          "time": "2026-10-23T08:17:00Z"
         }
       ]
     },
     {
-      "id": "spain",
+      "id": "php",
       "topic": "Tech",
-      "region": "Europe",
-      "city": "Zaragoza",
-      "country": "Spain",
-      "state": "Aragon",
-      "tz": "Europe/Madrid",
-      "lat": 41.65,
-      "lon": -0.88,
-      "title": "US tech giants are building huge data centres in drought-hit northeast Spain",
-      "summary": "Amazon Web Services says it will spend almost $40bn on complexes in Aragon, and Microsoft and Blackstone have signed deals too. The regional government says they will bring jobs, while many residents and activists say they are causing an environmental crisis.",
+      "region": "Global",
+      "city": "Worldwide",
+      "country": "Worldwide",
+      "tz": "UTC",
+      "lat": null,
+      "lon": null,
+      "title": "Hacking attempts rise after AI finds serious flaws in the PHP programming language",
+      "summary": "Governments around the world are rushing to put safety measures in place after AI technology found 'severe' weaknesses in [[php|PHP]], a programming language that NPR says affects 70 percent of websites. Hacking attempts have risen since.",
       "sources": [
         {
           "outlet": "NPR",
-          "title": "See how Big Tech is transforming Spain's landscape",
-          "url": "https://www.npr.org/2026/10/22/nx-s1-5991641/ai-data-centers-spain-environmental-impact",
-          "time": "2026-10-22T09:00:00Z"
+          "title": "Hacking attempts rise after flaws found in program affecting 70 percent of websites",
+          "url": "https://www.npr.org/2026/10/23/g-s1-149503/hacking-php-flaws",
+          "time": "2026-10-23T09:37:00Z"
+        }
+      ]
+    },
+    {
+      "id": "techstocks",
+      "topic": "Business",
+      "region": "Americas",
+      "city": "New York",
+      "country": "United States",
+      "state": "New York",
+      "tz": "America/New_York",
+      "lat": 40.71,
+      "lon": -74.01,
+      "title": "US tech stocks tumble as investors worry about AI spending",
+      "summary": "The tech-heavy Nasdaq fell 2.6 percent as debate rages over whether AI is a bubble, Al Jazeera reports. NPR separately reports that Oracle's investors are unhappy with the growing debt the company has taken on to build up its AI capacity.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "US tech stocks tumble as investors fret over AI spending",
+          "url": "https://www.aljazeera.com/economy/2026/10/23/us-tech-stocks-tumble-as-investors-fret-over-ai-spending",
+          "time": "2026-10-23T03:13:00Z"
+        },
+        {
+          "outlet": "NPR",
+          "title": "Tech stocks dropped sharply. What it means for the rest of the economy",
+          "url": "https://www.npr.org/2026/10/23/nx-s1-6012831/tech-stocks-dropped-sharply-what-it-means-for-the-rest-of-the-economy",
+          "time": "2026-10-23T08:43:00Z"
+        },
+        {
+          "outlet": "NPR",
+          "title": "Oracle's debt is growing. The tech giant's investors are concerned",
+          "url": "https://www.npr.org/2026/10/22/nx-s1-6007863/oracles-debt-is-growing-the-tech-giants-investors-are-concerned",
+          "time": "2026-10-22T08:57:00Z"
         }
       ]
     },
@@ -762,7 +505,7 @@
       "lat": 30.27,
       "lon": -97.74,
       "title": "Elon Musk says SpaceX and Tesla are considering a merger",
-      "summary": "Musk says both companies have set up special committees to discuss the idea. A merger would need the approval of 50% of shareholders.",
+      "summary": "Musk said both companies have formed special committees to discuss the idea. NPR notes that a merger would need the approval of 50% of shareholders.",
       "sources": [
         {
           "outlet": "NPR",
@@ -773,88 +516,194 @@
       ]
     },
     {
-      "id": "php",
+      "id": "spain",
       "topic": "Tech",
-      "region": "Global",
-      "city": "Worldwide",
-      "country": "Worldwide",
-      "tz": "UTC",
-      "lat": null,
-      "lon": null,
-      "title": "AI helps researchers find two security flaws in PHP",
-      "summary": "[[php|PHP]] runs a large share of the world's websites, and governments are warning about the weaknesses.",
-      "background": "A flaw in a language as widespread as PHP can affect millions of sites at once, so the usual fix is to update PHP to a patched version as soon as one is released. AI tools are increasingly used to hunt for bugs like these, by defenders and attackers alike.",
+      "region": "Europe",
+      "city": "Zaragoza",
+      "country": "Spain",
+      "state": "Aragon",
+      "tz": "Europe/Madrid",
+      "lat": 41.65,
+      "lon": -0.88,
+      "title": "US tech giants are building huge data centres in drought-hit northeast Spain",
+      "summary": "NPR reports that a drought-stricken region of northeast Spain has become a focus for American companies looking for places to put data centres.",
       "sources": [
         {
-          "outlet": "Al Jazeera",
-          "title": "World leaders warn of security flaws found in PHP programming language",
-          "url": "https://www.aljazeera.com/news/2026/10/22/world-leaders-warn-against-security-flaw-found-in-php-computer-programming",
-          "time": "2026-10-22T00:10:00Z"
+          "outlet": "NPR",
+          "title": "See how Big Tech is transforming Spain's landscape",
+          "url": "https://www.npr.org/2026/10/22/nx-s1-5991641/ai-data-centers-spain-environmental-impact",
+          "time": "2026-10-22T09:00:00Z"
         }
       ]
     },
     {
-      "id": "charai",
+      "id": "meta",
       "topic": "Tech",
       "region": "Americas",
-      "city": "Silicon Valley",
+      "city": "Menlo Park",
       "country": "United States",
       "state": "California",
       "tz": "America/Los_Angeles",
-      "lat": 37.39,
-      "lon": -122.06,
-      "title": "Chatbot company Character.AI files for bankruptcy",
-      "summary": "It entered [[chapter-11|Chapter 11]] after legal challenges and the loss of key staff. NPR asks whether it's a warning sign for AI startups.",
-      "background": "Character.AI let people chat with custom AI characters and drew millions of users. In 2024 Google hired its founders and licensed its technology, a kind of deal that has let big tech companies take talent from startups without buying them outright.",
+      "lat": 37.45,
+      "lon": -122.18,
+      "title": "Meta will charge Facebook Pages that post more than two links a month",
+      "summary": "NPR's Planet Money reports that Meta has made it a subscription feature for a Facebook Page to post more than two hyperlinks per month, and explores why social media sites prefer to keep people from leaving.",
       "sources": [
         {
           "outlet": "NPR",
-          "title": "An AI chatbot files for bankruptcy. Is it a bad omen for the industry?",
-          "url": "https://www.npr.org/2026/10/21/nx-s1-6008078/an-ai-chatbot-files-for-bankruptcy-is-it-a-bad-omen-for-the-industry",
-          "time": "2026-10-21T08:40:00Z"
-        },
-        {
-          "outlet": "NPR",
-          "title": "What this bankruptcy says about AI startups",
-          "url": "https://www.npr.org/sections/planet-money/2026/10/16/nx-s1-6001828/what-this-bankruptcy-says-about-ai-startups",
-          "time": "2026-10-16T11:00:00Z"
+          "title": "Why Meta is charging to post more hyperlinks",
+          "url": "https://www.npr.org/sections/planet-money/2026/10/23/nx-s1-6012726/why-meta-is-charging-to-post-more-hyperlinks",
+          "time": "2026-10-23T11:00:00Z"
         }
       ]
     },
     {
-      "id": "boeing",
+      "id": "housing",
       "topic": "Business",
       "region": "Americas",
       "city": "Washington",
       "country": "United States",
-      "state": "District of Columbia",
       "tz": "America/New_York",
       "lat": 38.91,
       "lon": -77.04,
-      "title": "Boeing's 737 Max 10 is cleared for airlines to fly",
-      "summary": "The FAA certified the largest [[737-max|737 Max]] jet, nearly a decade after Boeing unveiled it.",
-      "background": "Certification was delayed by safety reviews after the 737 Max crashes and further scrutiny of Boeing's manufacturing. Airlines that ordered the Max 10 have been waiting years to fly it.",
+      "title": "Saving for a first home now takes renters 16 years, a new analysis finds",
+      "summary": "NPR reports that the average renter household now needs 16 years to save for a down payment and closing costs, twice as long as in 2019. Rising rents and other costs have taken a growing share of household budgets.",
       "sources": [
         {
           "outlet": "NPR",
-          "title": "FAA clears the way for airlines to put Boeing's long-delayed 737 Max 10 into service",
-          "url": "https://www.npr.org/2026/10/21/g-s1-149032/faa-boeing-737-max-10",
-          "time": "2026-10-21T06:05:00Z"
+          "title": "How long does it take to save up for a starter home? Twice as long as it did in 2019",
+          "url": "https://www.npr.org/2026/10/22/nx-s1-6009378/down-payment-real-estate-affordability",
+          "time": "2026-10-22T09:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "myanmar",
+      "topic": "Politics",
+      "region": "Asia-Pacific",
+      "city": "Naypyidaw",
+      "country": "Myanmar",
+      "tz": "Asia/Yangon",
+      "lat": 19.76,
+      "lon": 96.08,
+      "title": "After nearly six years, Aung San Suu Kyi's son hears her voice on the phone",
+      "summary": "Kim Aris told NPR his mother sounds strong but is in pain, and that she is held at a residence in the capital.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "After nearly 6 years, ex-Myanmar leader Aung San Suu Kyi's son hears her voice",
+          "url": "https://www.npr.org/2026/10/23/nx-s1-6012784/aung-san-suu-kyi-son-phone-call-myanmar",
+          "time": "2026-10-23T09:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "monet",
+      "topic": "Culture",
+      "region": "Europe",
+      "city": "Paris",
+      "country": "France",
+      "tz": "Europe/Paris",
+      "lat": 48.86,
+      "lon": 2.35,
+      "title": "Monet's 'Iris' sells for 50 million euros, a French auction record",
+      "summary": "The monumental Impressionist painting sold for 50 million euros ($56 million) including buyer fees in Paris on Thursday, making it the most expensive artwork ever sold at auction in France, France 24 reports.",
+      "sources": [
+        {
+          "outlet": "France 24",
+          "title": "Art: Claude Monet's 'Iris' fetches 50M euros at Paris auction",
+          "url": "https://www.france24.com/en/art-claude-monet-s-iris-fetches-50m-euros-at-paris-auction",
+          "time": "2026-10-23T10:47:00Z"
         }
       ]
     }
   ],
   "lighter": [
     {
-      "id": "owls",
+      "id": "iguazu",
+      "places": [
+        "Brazil"
+      ],
       "big": true,
+      "city": "Puerto Iguazú",
+      "country": "Argentina",
+      "tz": "America/Argentina/Buenos_Aires",
+      "lat": -25.69,
+      "lon": -54.44,
+      "title": "The Iguazú Falls are flowing at near-record rates after a rain-soaked October",
+      "summary": "The falls span more than a mile across Brazil and Argentina. NPR says scientists link the heavy rain to the Super El Niño.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "Greetings from the Brazil-Argentina border, where waterfalls are flowing at near-record rates",
+          "url": "https://www.npr.org/2026/10/22/g-s1-148553/argentina-brazil-iguazu-falls-waterfalls-super-el-nino",
+          "time": "2026-10-22T13:50:00Z"
+        }
+      ]
+    },
+    {
+      "id": "crows",
+      "city": "Worldwide",
+      "country": "Worldwide",
+      "tz": "UTC",
+      "lat": null,
+      "lon": null,
+      "title": "Crows turn what they see into decisions twice as fast as humans",
+      "summary": "New research in the journal Science finds crows process information in a way quite similar to humans, but much faster.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "Should 'bird brain' be a compliment? Here's how crows think fast",
+          "url": "https://www.npr.org/2026/10/22/nx-s1-6010587/should-bird-brain-be-a-compliment-heres-how-crows-think-fast",
+          "time": "2026-10-22T20:47:00Z"
+        }
+      ]
+    },
+    {
+      "id": "orangutans",
+      "city": "Jakarta",
+      "country": "Indonesia",
+      "tz": "Asia/Jakarta",
+      "lat": -6.2,
+      "lon": 106.85,
+      "title": "Dozens of critically endangered orangutans rescued from wildfires",
+      "summary": "Rescuers in Indonesia have saved dozens of the animals during a deadly wildfire season.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "Dozens of critically endangered orangutans rescued from Indonesian wildfires",
+          "url": "https://www.npr.org/2026/10/17/nx-s1-6004881/dozens-of-critically-endangered-orangutans-rescued-from-indonesian-wildfires",
+          "time": "2026-10-17T11:43:00Z"
+        }
+      ]
+    },
+    {
+      "id": "moon",
+      "city": "Worldwide",
+      "country": "Worldwide",
+      "tz": "UTC",
+      "lat": null,
+      "lon": null,
+      "title": "What time is it on the Moon?",
+      "summary": "NPR talks to a delegate of the International Bureau of Weights and Measures about why measuring time accurately on the Moon matters.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "What time is it on the moon?",
+          "url": "https://www.npr.org/2026/10/18/nx-s1-6003578/what-time-is-it-on-the-moon",
+          "time": "2026-10-18T21:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "owls",
+      "state": "New York",
       "city": "New York",
       "country": "United States",
-      "state": "New York",
       "tz": "America/New_York",
       "lat": 40.79,
       "lon": -73.97,
-      "title": "A family of rare barn owls has moved into a water tower on Manhattan's Upper West Side",
+      "title": "A family of rare barn owls has moved into a Manhattan water tower",
       "summary": "The nest near Central Park has become a neighbourhood attraction.",
       "sources": [
         {
@@ -866,50 +715,15 @@
       ]
     },
     {
-      "id": "moon",
-      "city": "The Moon",
-      "tz": null,
-      "lat": null,
-      "lon": null,
-      "title": "What time is it on the Moon?",
-      "summary": "A delegate to the International Bureau of Weights and Measures explains why lunar timekeeping matters.",
-      "sources": [
-        {
-          "outlet": "NPR",
-          "title": "What time is it on the moon?",
-          "url": "https://www.npr.org/2026/10/18/nx-s1-6003578/what-time-is-it-on-the-moon",
-          "time": "2026-10-18T21:00:00Z"
-        }
-      ]
-    },
-    {
-      "id": "orangutans",
-      "city": "Indonesia",
-      "country": "Indonesia",
-      "tz": "Asia/Jakarta",
-      "lat": -1,
-      "lon": 113.9,
-      "title": "Dozens of critically endangered orangutans rescued from wildfires",
-      "summary": "Rescuers pulled them out during a deadly fire season that threatens the species' habitat.",
-      "sources": [
-        {
-          "outlet": "NPR",
-          "title": "Dozens of critically endangered orangutans rescued from Indonesian wildfires",
-          "url": "https://www.npr.org/2026/10/17/nx-s1-6004881/dozens-of-critically-endangered-orangutans-rescued-from-indonesian-wildfires",
-          "time": "2026-10-17T11:43:00Z"
-        }
-      ]
-    },
-    {
       "id": "ultra",
-      "city": "Kembla Gorge",
-      "country": "Australia",
       "state": "New South Wales",
+      "city": "Kembla Grange",
+      "country": "Australia",
       "tz": "Australia/Sydney",
       "lat": -34.47,
-      "lon": 150.8,
+      "lon": 150.82,
       "title": "Runners kept going for 80 hours or more in a race with no finish line",
-      "summary": "At the Backyard Ultra team world championships, 900 runners keep looping until only one is left.",
+      "summary": "Fifteen Australians were among the 900 competitors in the Backyard Ultra World Team Championships.",
       "sources": [
         {
           "outlet": "ABC News",
@@ -920,38 +734,14 @@
       ]
     },
     {
-      "id": "kelvin",
-      "city": "US West Coast",
-      "country": "United States",
-      "places": [
-        "California",
-        "Oregon",
-        "Washington"
-      ],
-      "tz": "America/Los_Angeles",
-      "lat": 37.8,
-      "lon": -122.4,
-      "title": "An underwater Kelvin wave raised sea levels along the West Coast",
-      "summary": "Scientists link the [[kelvin-wave|Kelvin wave]] to [[el-nino|El Niño]] and expect more to come.",
-      "sources": [
-        {
-          "outlet": "NPR",
-          "title": "A Kelvin wave raised sea levels on the West Coast. More are coming",
-          "url": "https://www.npr.org/2026/10/19/nx-s1-6001744/el-nino-kelvin-wave-west-coast",
-          "time": "2026-10-19T09:00:00Z"
-        }
-      ]
-    },
-    {
       "id": "psychedelics",
-      "big": true,
       "city": "Worldwide",
       "country": "Worldwide",
       "tz": "UTC",
       "lat": null,
       "lon": null,
       "title": "Early human data suggests psychedelics may calm inflammation",
-      "summary": "[[psilocybin|Psilocybin]] and similar drugs could one day help people with neurodegenerative diseases such as Parkinson's, researchers say.",
+      "summary": "Lab studies showed psilocybin can lower inflammation. Researchers are now publishing some of the first human data pointing the same way.",
       "sources": [
         {
           "outlet": "NPR",
@@ -962,86 +752,72 @@
       ]
     },
     {
-      "id": "hurricanes",
-      "city": "Miami",
-      "country": "United States",
-      "state": "Florida",
-      "tz": "America/New_York",
-      "lat": 25.76,
-      "lon": -80.19,
-      "title": "AI models are changing how forecasters predict hurricane paths",
-      "summary": "For Hurricane Isaias, they produced some of the most accurate track forecasts.",
+      "id": "dakar",
+      "city": "Dakar",
+      "country": "Senegal",
+      "tz": "Africa/Dakar",
+      "lat": 14.72,
+      "lon": -17.47,
+      "title": "Senegal prepares to host Africa's first Olympic event, the Youth Olympic Games",
+      "summary": "France 24 reports that Dakar is pulling out all the stops to be ready on time for the first Olympic event ever organised in Africa.",
       "sources": [
         {
-          "outlet": "NPR",
-          "title": "AI models are changing how forecasters predict the paths of hurricanes",
-          "url": "https://www.npr.org/2026/10/19/nx-s1-5996666/ai-models-are-changing-how-forecasters-predict-the-paths-of-hurricanes",
-          "time": "2026-10-19T08:44:00Z"
-        }
-      ]
-    },
-    {
-      "id": "anthems",
-      "city": "Nagoya",
-      "country": "Japan",
-      "state": "Aichi",
-      "tz": "Asia/Tokyo",
-      "lat": 35.18,
-      "lon": 136.91,
-      "title": "Wrong national anthems were played three times at the Asian Para Games",
-      "summary": "Iran's anthem played for medal winners from Taiwan and Mongolia, and Nagoya's mayor apologised, calling it 'really just unacceptable'.",
-      "sources": [
-        {
-          "outlet": "Al Jazeera",
-          "title": "Wrong national anthems played three times at Asian Para Games in Japan",
-          "url": "https://www.aljazeera.com/sports/2026/10/22/wrong-national-anthems-played-three-times-at-asian-para-games-in-japan",
-          "time": "2026-10-22T07:10:00Z"
+          "outlet": "France 24",
+          "title": "Olympic fever grips Senegal as Dakar hosts Youth Olympic Games",
+          "url": "https://www.france24.com/en/tv-shows/reporters/20261023-olympic-fever-grips-senegal-as-dakar-hosts-youth-olympic-games-yog",
+          "time": "2026-10-23T09:58:00Z"
         }
       ]
     }
   ],
   "sport": [
     {
-      "result": "Real Madrid 4–1 RB Leipzig",
-      "note": "Mbappé scores his 12th goal of the season as Madrid win three from three in the Champions League.",
-      "outlet": "France 24",
-      "url": "https://www.france24.com/en/sport/20261022-real-madrid-thrash-rb-leipzig-as-mbappe-scores-in-champions-league-win"
-    },
-    {
-      "result": "Bayern Munich 2–2 Arsenal",
-      "note": "Eze put Arsenal ahead, Davies and a Kane penalty turned it round, and Declan Rice earned the draw.",
-      "outlet": "Al Jazeera",
-      "url": "https://www.aljazeera.com/sports/2026/10/21/declan-rice-grabs-arsenal-draw-at-bayern-munich-in-champions-league"
-    },
-    {
-      "result": "Como 4–1 Manchester United",
-      "note": "Captain Bruno Fernandes publicly criticised manager Michael Carrick's tactics after the loss.",
-      "outlet": "Al Jazeera",
-      "url": "https://www.aljazeera.com/sports/2026/10/21/man-united-captain-fernandes-slams-carricks-tactics-after-como-hammering"
-    },
-    {
-      "result": "F1: Antonelli could clinch the title this weekend",
-      "note": "If Kimi Antonelli wins the United States Grand Prix, he becomes Formula 1's youngest world champion.",
-      "outlet": "ABC News",
-      "url": "https://www.abc.net.au/news/2026-10-21/how-kimi-antonelli-can-win-the-f1-title/106998706"
-    },
-    {
-      "result": "Cricket: Head's century gives Australia hope of saving the second Test",
-      "note": "Travis Head passed 100 for only the second time in an overseas Test as Australia batted for a draw on day five in Gqeberha.",
+      "result": "South Africa beat Australia by an innings and 31 runs",
+      "note": "South Africa levelled the Test series at 1-1 in Gqeberha, and captain Pat Cummins admitted Australia were a long way from their best.",
       "outlet": "ABC News",
       "url": "https://www.abc.net.au/news/2026-10-22/test-cricket-live-updates-south-africa-vs-australia/107298268"
     },
     {
-      "result": "WNBA Finals: Atlanta lead Golden State 2–1",
-      "note": "Angel Reese became the only woman to record double-doubles in three straight WNBA Finals games, and Australian Izzy Borlase is one win closer to a title.",
-      "outlet": "Al Jazeera",
-      "url": "https://www.aljazeera.com/sports/2026/10/22/angel-reese-shines-again-as-dream-down-valkyries-to-lead-wnba-finals"
+      "result": "Sri Lanka chase down 430 against England",
+      "note": "England captain Harry Brook made a record-breaking ODI double century, but it was not enough.",
+      "outlet": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-10-23/cricket-sri-lanka-chases-430-england-harry-brook-double-century/107299378"
     },
     {
-      "result": "Gymnastics: China beat the US to women's team gold",
-      "note": "China finished 0.233 points ahead at the World Championships, ending the Americans' hopes of an eighth straight team title.",
+      "result": "Philadelphia 76ers 114–106 Cleveland Cavaliers",
+      "note": "LeBron James won his home debut for the 76ers hours after the US president called him a disgrace over his conduct during the national anthem.",
       "outlet": "Al Jazeera",
-      "url": "https://www.aljazeera.com/sports/2026/10/22/china-edge-usa-to-womens-team-gold-at-gymnastics-world-championships"
+      "url": "https://www.aljazeera.com/sports/2026/10/23/lebron-shrugs-off-trump-blast-in-home-debut-win-for-philadelphia-76ers"
+    },
+    {
+      "result": "Sturm Graz beat Marseille",
+      "note": "An early goal was enough for the hosts, and Marseille have now lost all three of their Europa League games.",
+      "outlet": "France 24",
+      "url": "https://www.france24.com/en/tv-shows/sports/20261023-marseille-s-european-slump-continues-with-defeat-to-sturm-graz"
+    },
+    {
+      "result": "Atlanta Dream lead WNBA Finals 2–1",
+      "note": "The Dream beat the Golden State Valkyries, with Australian Izzy Borlase on the winning side.",
+      "outlet": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-10-22/aussie-borlase-on-winning-side-atlanta-dream-leads-wnba-finals/107297062"
+    },
+    {
+      "result": "New Zealand beat Australia 62–50",
+      "note": "The Silver Ferns lead the four-game Constellation Cup netball series 2-0 after the win in Christchurch.",
+      "outlet": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-10-21/constellation-cup-netball-diamonds-silver-ferns-game-two/107293398"
+    },
+    {
+      "result": "Rooney calls Manchester United's players 'babies'",
+      "note": "The club legend criticised the current squad amid growing pressure on manager Michael Carrick.",
+      "outlet": "Al Jazeera",
+      "url": "https://www.aljazeera.com/sports/2026/10/23/manchester-united-labelled-clowns-by-club-legend-wayne-rooney"
+    },
+    {
+      "result": "Maradona death trial: verdict due December 22",
+      "note": "The trial of seven healthcare professionals accused of negligence in the footballer's death has concluded.",
+      "outlet": "Al Jazeera",
+      "url": "https://www.aljazeera.com/sports/2026/10/23/maradona-death-verdict-in-trial-to-be-delivered-on-december-22"
     }
   ]
 }
