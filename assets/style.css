@@ -63,7 +63,9 @@
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { scroll-padding-top: calc(var(--bar-h) + 16px); -webkit-text-size-adjust: 100%; }
+/* overflow-anchor: none stops the browser "keeping your place" while the maps redraw their labels and
+   open the stories-in-view list; that adjustment made the page jump up and down while zooming. */
+html { scroll-padding-top: calc(var(--bar-h) + 16px); -webkit-text-size-adjust: 100%; overflow-anchor: none; }
 body {
   margin: 0;
   background: var(--bg);
