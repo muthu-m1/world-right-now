@@ -584,13 +584,18 @@
   // api: canZoom(factor), zoomAt(factor, fx, fy), panBy(dxFraction, dyFraction), isZoomed(), settle().
   // factor < 1 zooms in. fx/fy are the pointer's position as a fraction of the element.
   function gestures(elm, api) {
+    // Over a map, scrolling never moves the page: vertical scroll and pinch zoom, a sideways swipe pans.
     elm.addEventListener("wheel", function (e) {
-      var r = elm.getBoundingClientRect();
-      var dy = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
-      var factor = Math.exp(dy * (e.ctrlKey ? 0.01 : 0.0025));
-      // At a limit (fully zoomed out and scrolling down, or fully in), let the page scroll.
-      if (!api.canZoom(factor)) return;
       e.preventDefault();
+      var r = elm.getBoundingClientRect();
+      var unit = e.deltaMode === 1 ? 16 : 1;
+      var dx = e.deltaX * unit, dy = e.deltaY * unit;
+      if (!e.ctrlKey && Math.abs(dx) > Math.abs(dy)) {
+        if (api.isZoomed()) { api.panBy(-dx / r.width, 0); api.settle(); }
+        return;
+      }
+      var factor = Math.exp(dy * (e.ctrlKey ? 0.01 : 0.0025));
+      if (!api.canZoom(factor)) return;
       api.zoomAt(factor, (e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height);
       api.settle();
     }, { passive: false });
@@ -630,7 +635,11 @@
       else if (e.touches.length === 1 && api.isZoomed()) t = { mode: "pan", x: e.touches[0].clientX, y: e.touches[0].clientY };
       else t = null;
     }
-    elm.addEventListener("touchstart", startTouch, { passive: true });
+    elm.addEventListener("touchstart", function (e) {
+      // Claim two-finger gestures straight away so the browser doesn't start scrolling or zooming the page.
+      if (e.touches.length >= 2) e.preventDefault();
+      startTouch(e);
+    }, { passive: false });
     elm.addEventListener("touchmove", function (e) {
       if (!t) return;
       var r = elm.getBoundingClientRect();
