@@ -232,6 +232,35 @@ main:focus { outline: none; }
 .pin:hover { color: var(--ink); }
 .pin.flip { flex-direction: row-reverse; transform: translate(calc(-100% + 6px), -6px); }
 .earth-cap { color: var(--ink-3); font-size: var(--t-micro); margin-top: -8px; position: relative; z-index: 2; }
+.earth-stage { cursor: zoom-in; }
+.pin-quiet .pin-label { display: none; }
+.pin-quiet .pin-dot { width: 10px; height: 10px; background: var(--violet); }
+.pin-quiet .pin-dot::after { display: none; }
+.earth-back {
+  position: absolute; z-index: 3; left: max(20px, env(safe-area-inset-left, 0px)); top: 18%;
+  display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 16px; border-radius: 999px;
+  background: rgba(10, 11, 17, .85); border: 1px solid var(--line-2); color: var(--ink); font-size: var(--t-small); cursor: pointer;
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); transition: border-color .2s, background-color .2s;
+}
+.earth-back:hover { border-color: rgba(139, 92, 246, .7); background: rgba(20, 16, 36, .92); }
+.earth-back .ico { width: 16px; height: 16px; color: var(--violet-hi); }
+
+/* Stories around a clicked point */
+.nearby { margin-top: 24px; padding: clamp(18px, 2.5vw, 28px); border: 1px solid rgba(139, 92, 246, .35); border-radius: var(--r-lg); background: var(--surface); display: grid; gap: 12px; }
+.nearby-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.nearby-head h3 { font-family: var(--serif); font-size: clamp(1.4rem, 1.2rem + .8vw, 1.875rem); letter-spacing: -.02em; line-height: 1.15; }
+.nearby-sub { color: var(--ink-2); font-size: var(--t-small); }
+.nearby-list { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; border-top: 1px solid var(--line); }
+.nearby-list li { border-bottom: 1px solid var(--line); }
+.nearby-item { width: 100%; display: grid; gap: 4px; padding: 14px 0; text-align: left; background: none; border: 0; cursor: pointer; color: inherit; }
+.nearby-item:hover .nearby-title { color: var(--violet-hi); }
+.nearby-where { display: flex; flex-wrap: wrap; gap: 2px 10px; font-size: var(--t-micro); color: var(--ink-3); }
+.nearby-where .city { color: var(--ink); font-weight: 500; }
+.nearby-where .tag { color: var(--violet-hi); }
+.nearby-title { font-family: var(--serif); font-size: 1.0625rem; line-height: 1.35; transition: color .2s; }
+.nearby .btn { justify-self: start; margin-top: 4px; }
+.map-frame svg { cursor: zoom-in; }
+.map-frame .mk { cursor: pointer; }
 
 .stats {
   display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -603,6 +632,9 @@ details > summary:hover { color: var(--ink); }
   .local-group .row-head { grid-template-columns: minmax(0, 1fr) 24px; }
   .local-group .row-body { grid-template-columns: 1fr; }
   .wider-actions, .wider-actions .btn { width: 100%; }
+  .nearby-list { grid-template-columns: 1fr; }
+  .nearby .btn { justify-self: stretch; }
+  .earth-back { top: 12px; }
   .wire-list a { font-size: 1rem; }
 
   .sec-head-row { align-items: flex-start; }

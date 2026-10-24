@@ -424,7 +424,43 @@
     earth.comp = comp;
     earth.at = Date.now();
   }
+  // When someone clicks the Earth it zooms to {lat, lon, span}; null means the whole-world view.
+  earth.zoom = null;
   function earthView() {
+    var base = baseEarthView();
+    var z = earth.zoom;
+    if (!z) return base;
+    var lonSpan = Math.min(360, z.span);
+    var latSpan = Math.min(180, lonSpan * base.H / base.W);
+    var latTop = Math.max(-90 + latSpan, Math.min(90, z.lat + latSpan / 2));
+    return { W: base.W, H: base.H, lon0: z.lon - lonSpan / 2, lonSpan: lonSpan, latTop: latTop, latSpan: latSpan, zoomed: true };
+  }
+  function viewCenter(v) {
+    return { lon: v.lon0 + v.lonSpan / 2, lat: v.latTop - v.latSpan / 2, span: v.lonSpan };
+  }
+  function zoomEarth(lat, lon, span) {
+    var from = viewCenter(earthView());
+    var to = span ? { lat: lat, lon: lon, span: span } : null;
+    var target = to || viewCenter(baseEarthView());
+    // Go the short way round the globe.
+    var dLon = ((target.lon - from.lon + 540) % 360) - 180;
+    var t0 = performance.now(), dur = reduceMotion ? 0 : 700;
+    function step(now) {
+      var t = dur ? Math.min(1, (now - t0) / dur) : 1;
+      var e = 1 - Math.pow(1 - t, 3);
+      earth.zoom = {
+        lat: from.lat + (target.lat - from.lat) * e,
+        lon: from.lon + dLon * e,
+        span: from.span * Math.pow(target.span / from.span, e),
+      };
+      if (t >= 1) earth.zoom = to;
+      drawEarth();
+      if (t < 1) frame(step);
+    }
+    frame(step);
+    $("earth-back").hidden = !to;
+  }
+  function baseEarthView() {
     var stage = $("earth-stage");
     var W = stage.clientWidth, H = stage.clientHeight;
     var latTop = 78, latBot = -58, latSpan = latTop - latBot;
@@ -468,17 +504,27 @@
   function placePins(v) {
     var wrap = $("earth-pins");
     wrap.textContent = "";
-    var boxes = [];
-    RANKED.slice(0, 3).forEach(function (s) {
-      if (s.lat == null) return;
+    var placed = [];
+    function pos(s) {
       var dx = ((s.lon - v.lon0) % 360 + 360) % 360;
-      if (dx > v.lonSpan) return;
-      var x = dx / v.lonSpan * v.W;
-      var y = (v.latTop - s.lat) / v.latSpan * v.H;
-      if (y < 10 || y > v.H - 10) return;
-      var a = link("", "#s-" + s.id, "pin");
-      a.style.left = x + "px";
-      a.style.top = y + "px";
+      if (dx > v.lonSpan) return null;
+      var x = dx / v.lonSpan * v.W, y = (v.latTop - s.lat) / v.latSpan * v.H;
+      return y < 10 || y > v.H - 10 ? null : { x: x, y: y };
+    }
+    // Whole world: the top three stories. Zoomed in: every story in view, labelled nearest the centre first.
+    var list;
+    if (v.zoomed) {
+      var c = viewCenter(v);
+      list = RANKED.filter(function (s) { return s.lat != null && pos(s); })
+        .sort(function (a, b) { return km(c.lat, c.lon, a.lat, a.lon) - km(c.lat, c.lon, b.lat, b.lon); });
+    } else {
+      list = RANKED.slice(0, 3).filter(function (s) { return s.lat != null && pos(s); });
+    }
+    list.forEach(function (s, i) {
+      var p = pos(s);
+      var a = link("", "#s-" + s.id, "pin" + (v.zoomed && i >= 5 ? " pin-quiet" : ""));
+      a.style.left = p.x + "px";
+      a.style.top = p.y + "px";
       a.appendChild(el("span", "pin-dot"));
       var lab = el("span", "pin-label");
       lab.appendChild(el("b", null, s.city));
@@ -487,21 +533,36 @@
       lab.appendChild(t);
       a.appendChild(lab);
       a.setAttribute("aria-label", s.city + ": " + s.title);
+      a.title = s.city + ": " + s.title;
       a.addEventListener("click", function (e) { e.preventDefault(); showStory(s.id); });
       wrap.appendChild(a);
+      placed.push({ a: a, lab: lab, x: p.x });
+    });
+    // Labels must not cover another label or another pin's dot.
+    var boxes = placed.map(function (q) { return q.a.querySelector(".pin-dot").getBoundingClientRect(); });
+    placed.forEach(function (q) {
+      if (q.a.classList.contains("pin-quiet")) return;
+      var a = q.a, lab = q.lab, x = q.x;
       // Keep labels apart: try the preferred side, the other side, then a little above or below.
       var prefer = x > v.W * 0.62;
       var h = lab.getBoundingClientRect().height;
       var options = [[prefer, 0], [!prefer, 0], [prefer, -0.7], [!prefer, -0.7], [prefer, 0.7], [!prefer, 0.7]];
+      var own = a.querySelector(".pin-dot").getBoundingClientRect();
       function hit() {
         var b = lab.getBoundingClientRect();
-        return boxes.some(function (o) { return !(b.right + 6 < o.left || b.left - 6 > o.right || b.bottom + 4 < o.top || b.top - 4 > o.bottom); });
+        return boxes.some(function (o) {
+          if (o.left === own.left && o.top === own.top) return false;
+          return !(b.right + 6 < o.left || b.left - 6 > o.right || b.bottom + 4 < o.top || b.top - 4 > o.bottom);
+        });
       }
-      for (var i = 0; i < options.length; i++) {
+      var fits = false;
+      for (var i = 0; i < options.length && !fits; i++) {
         a.classList.toggle("flip", options[i][0]);
         lab.style.transform = options[i][1] ? "translateY(" + (options[i][1] * h) + "px)" : "";
-        if (!hit()) break;
+        fits = !hit();
       }
+      // Where there's no free space (stories close together), keep just the dot; its name shows on hover.
+      if (!fits && v.zoomed) { a.classList.add("pin-quiet"); return; }
       boxes.push(lab.getBoundingClientRect());
     });
   }
@@ -512,10 +573,83 @@
       buildComposite();
       drawEarth();
       frame(function () { fig.classList.add("is-ready"); });
-      $("earth-cap").textContent = "Daylight and darkness across the Earth at " + utcNow() + " UTC, worked out from the current time and drawn with NASA imagery. Markers show today's top three stories.";
+      $("earth-cap").textContent = "Daylight and darkness across the Earth at " + utcNow() + " UTC, worked out from the current time and drawn with NASA imagery. Markers show today's top three stories. Click anywhere to zoom in and see the stories around it.";
+      var stage = $("earth-stage");
+      stage.addEventListener("click", function (e) {
+        if (e.target.closest(".pin, .earth-back")) return;
+        var v = earthView(), r = stage.getBoundingClientRect();
+        var lon = v.lon0 + (e.clientX - r.left) / r.width * v.lonSpan;
+        var lat = v.latTop - (e.clientY - r.top) / r.height * v.latSpan;
+        lon = ((lon + 540) % 360) - 180;
+        zoomEarth(lat, lon, v.zoomed ? Math.max(12, v.lonSpan / 1.8) : 44);
+        showNearby(lat, lon, "nearby-hero");
+      });
+      $("earth-back").addEventListener("click", function () {
+        zoomEarth(0, 0, null);
+        $("nearby-hero").hidden = true;
+      });
     }).catch(function () {
       fig.hidden = true;
     });
+  }
+
+  // ---------------------------------------------------------------- stories near a point
+  function km(lat1, lon1, lat2, lon2) {
+    var dLat = (lat2 - lat1) * RAD, dLon = (lon2 - lon1) * RAD;
+    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(lat1 * RAD) * Math.cos(lat2 * RAD) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    return 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  }
+  var fmtKm = new Intl.NumberFormat("en-GB", { maximumFractionDigits: 0 });
+  function showNearby(lat, lon, id) {
+    var box = $(id);
+    box.textContent = "";
+    box.hidden = false;
+    var near = RANKED.filter(function (s) { return s.lat != null; })
+      .map(function (s) { return { s: s, d: km(lat, lon, s.lat, s.lon) }; })
+      .sort(function (a, b) { return a.d - b.d; });
+    var within = near.filter(function (n) { return n.d <= 1500; }).slice(0, 12);
+    // Name the area after the nearest story, if it's close enough to be fair.
+    var first = near[0];
+    var area = first && first.d < 800 ? [first.s.state, first.s.country].filter(function (x) { return x && x !== "Worldwide"; }).join(", ") : "";
+    var head = el("div", "nearby-head");
+    head.appendChild(el("h3", null, area ? "Around " + area : "Around " + Math.abs(lat).toFixed(0) + "°" + (lat >= 0 ? "N" : "S") + ", " + Math.abs(lon).toFixed(0) + "°" + (lon >= 0 ? "E" : "W")));
+    var close = el("button", "icon-btn");
+    close.type = "button";
+    close.setAttribute("aria-label", "Close stories around here");
+    close.appendChild(icon("x"));
+    close.addEventListener("click", function () {
+      box.hidden = true;
+      if (id === "nearby-hero") zoomEarth(0, 0, null);
+    });
+    head.appendChild(close);
+    box.appendChild(head);
+    box.appendChild(el("p", "nearby-sub", within.length
+      ? within.length + (within.length === 1 ? " story" : " stories") + " in today's edition within 1,500 km, nearest first."
+      : "No stories in today's edition within 1,500 km of here." + (first ? " The nearest is in " + first.s.city + ", " + fmtKm.format(first.d) + " km away." : "")));
+    var ul = el("ul", "nearby-list");
+    (within.length ? within : near.slice(0, 1)).forEach(function (n) {
+      var li = el("li");
+      var b = el("button", "nearby-item");
+      b.type = "button";
+      var top = el("span", "nearby-where");
+      top.appendChild(el("span", "city", n.s.city));
+      top.appendChild(el("span", "num", n.d < 10 ? "right here" : fmtKm.format(n.d) + " km away"));
+      if (n.s.scale === "local") top.appendChild(el("span", "tag", "Local"));
+      b.appendChild(top);
+      b.appendChild(el("span", "nearby-title", n.s.title));
+      b.addEventListener("click", function () { showStory(n.s.id); });
+      li.appendChild(b);
+      ul.appendChild(li);
+    });
+    box.appendChild(ul);
+    // Offer the week's headlines for the country, which reach places the edition doesn't.
+    var country = first && first.d < 800 ? first.s.country : "";
+    if (country && country !== "Worldwide") {
+      var more = el("button", "btn btn-ghost", "Search this week's headlines from " + country);
+      more.type = "button";
+      more.addEventListener("click", function () { runSearch(country, true); });
+      box.appendChild(more);
+    }
   }
 
   // ---------------------------------------------------------------- stories
@@ -984,6 +1118,19 @@
     MAP.svg = svg;
     sizeMarkers();
 
+    // Click anywhere on the map to zoom in there and list the stories around it.
+    svg.addEventListener("click", function (e) {
+      if (e.target.closest(".mk")) return;
+      var pt = svg.createSVGPoint();
+      pt.x = e.clientX; pt.y = e.clientY;
+      var p = pt.matrixTransform(svg.getScreenCTM().inverse());
+      var lon = p.x / M.k - 180, lat = M.top - p.y / M.k;
+      var half = Math.max(8, MAP.vb[2] / M.k / 8); // each click zooms in further, down to about 16°
+      zoomToBox([lon - half, lon + half, lat + half * 0.66, lat - half * 0.66]);
+      Array.prototype.forEach.call($("map-zoom").children, function (c) { c.setAttribute("aria-pressed", "false"); });
+      showNearby(lat, lon, "nearby-map");
+    });
+
     var placed = MAP.markers.length;
     $("map-note").textContent = placed + " of " + D.stories.length + " stories on the map." +
       (unplaced.length ? " Not shown, because they have no single location: " + unplaced.join(", ") + "." : "");
@@ -997,6 +1144,7 @@
       b.setAttribute("aria-pressed", String(name === "World"));
       b.addEventListener("click", function () {
         Array.prototype.forEach.call(zoomWrap.children, function (c) { c.setAttribute("aria-pressed", String(c === b)); });
+        $("nearby-map").hidden = true;
         zoomTo(name);
       });
       zoomWrap.appendChild(b);
@@ -1020,9 +1168,9 @@
       m.halo.setAttribute("r", (m.top ? 15 : 10) * px * size);
     });
   }
-  function zoomTo(name) {
+  function zoomTo(name) { zoomToBox(ZOOMS[name]); }
+  function zoomToBox(z) {
     var M = window.WRN_MAP;
-    var z = ZOOMS[name];
     var x0 = mx(z[0]), x1 = mx(z[1]), y0 = Math.max(0, my(z[2])), y1 = Math.min(M.h, my(z[3]));
     // Keep the frame's aspect ratio: grow the box in one direction to fit.
     var aspect = M.w / M.h;
