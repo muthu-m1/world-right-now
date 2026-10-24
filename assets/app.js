@@ -573,23 +573,145 @@
       buildComposite();
       drawEarth();
       frame(function () { fig.classList.add("is-ready"); });
-      $("earth-cap").textContent = "Daylight and darkness across the Earth at " + utcNow() + " UTC, worked out from the current time and drawn with NASA imagery. Markers show today's top three stories. Click anywhere to zoom in and see the stories around it.";
-      var stage = $("earth-stage");
-      stage.addEventListener("click", function (e) {
-        if (e.target.closest(".pin, .earth-back")) return;
-        var v = earthView(), r = stage.getBoundingClientRect();
-        var lon = v.lon0 + (e.clientX - r.left) / r.width * v.lonSpan;
-        var lat = v.latTop - (e.clientY - r.top) / r.height * v.latSpan;
-        lon = ((lon + 540) % 360) - 180;
-        zoomEarth(lat, lon, v.zoomed ? Math.max(12, v.lonSpan / 1.8) : 44);
-        showNearby(lat, lon, "nearby-hero");
-      });
-      $("earth-back").addEventListener("click", function () {
-        zoomEarth(0, 0, null);
-        $("nearby-hero").hidden = true;
-      });
+      $("earth-cap").textContent = "Daylight and darkness across the Earth at " + utcNow() + " UTC, worked out from the current time and drawn with NASA imagery. Markers show today's top three stories. Pinch or scroll with two fingers to zoom, and drag to move around.";
+      setupEarthGestures();
     }).catch(function () {
       fig.hidden = true;
+    });
+  }
+
+  // ---------------------------------------------------------------- pinch, scroll and drag to zoom
+  // api: canZoom(factor), zoomAt(factor, fx, fy), panBy(dxFraction, dyFraction), isZoomed(), settle().
+  // factor < 1 zooms in. fx/fy are the pointer's position as a fraction of the element.
+  function gestures(elm, api) {
+    elm.addEventListener("wheel", function (e) {
+      var r = elm.getBoundingClientRect();
+      var dy = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
+      var factor = Math.exp(dy * (e.ctrlKey ? 0.01 : 0.0025));
+      // At a limit (fully zoomed out and scrolling down, or fully in), let the page scroll.
+      if (!api.canZoom(factor)) return;
+      e.preventDefault();
+      api.zoomAt(factor, (e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height);
+      api.settle();
+    }, { passive: false });
+
+    var drag = null, moved = false;
+    elm.addEventListener("pointerdown", function (e) {
+      if (e.pointerType !== "mouse" || e.button !== 0 || !api.isZoomed()) return;
+      drag = { x: e.clientX, y: e.clientY };
+      moved = false;
+    });
+    window.addEventListener("pointermove", function (e) {
+      if (!drag) return;
+      var r = elm.getBoundingClientRect();
+      var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+      if (!moved && Math.abs(dx) + Math.abs(dy) < 4) return;
+      moved = true;
+      elm.classList.add("dragging");
+      api.panBy(dx / r.width, dy / r.height);
+      drag = { x: e.clientX, y: e.clientY };
+    });
+    window.addEventListener("pointerup", function () {
+      if (!drag) return;
+      drag = null;
+      elm.classList.remove("dragging");
+      if (moved) api.settle();
+    });
+    // A drag shouldn't also count as clicking a marker.
+    elm.addEventListener("click", function (e) {
+      if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; }
+    }, true);
+
+    var t = null;
+    function dist(e) { return Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY); }
+    function mid(e) { return { x: (e.touches[0].clientX + e.touches[1].clientX) / 2, y: (e.touches[0].clientY + e.touches[1].clientY) / 2 }; }
+    function startTouch(e) {
+      if (e.touches.length === 2) t = { mode: "pinch", d: dist(e), m: mid(e) };
+      else if (e.touches.length === 1 && api.isZoomed()) t = { mode: "pan", x: e.touches[0].clientX, y: e.touches[0].clientY };
+      else t = null;
+    }
+    elm.addEventListener("touchstart", startTouch, { passive: true });
+    elm.addEventListener("touchmove", function (e) {
+      if (!t) return;
+      var r = elm.getBoundingClientRect();
+      if (t.mode === "pinch" && e.touches.length === 2) {
+        e.preventDefault();
+        var d = dist(e), m = mid(e);
+        api.zoomAt(t.d / d, (m.x - r.left) / r.width, (m.y - r.top) / r.height);
+        api.panBy((m.x - t.m.x) / r.width, (m.y - t.m.y) / r.height);
+        t.d = d; t.m = m;
+      } else if (t.mode === "pan" && e.touches.length === 1) {
+        e.preventDefault();
+        var x = e.touches[0].clientX, y = e.touches[0].clientY;
+        if (Math.abs(x - t.x) + Math.abs(y - t.y) > 3) moved = true;
+        api.panBy((x - t.x) / r.width, (y - t.y) / r.height);
+        t.x = x; t.y = y;
+      }
+    }, { passive: false });
+    elm.addEventListener("touchend", function (e) {
+      if (!t) return;
+      if (e.touches.length) { startTouch(e); return; }
+      t = null;
+      api.settle();
+      setTimeout(function () { moved = false; }, 50);
+    }, { passive: true });
+  }
+
+  function setupEarthGestures() {
+    var stage = $("earth-stage");
+    var pending = false;
+    function redraw() {
+      if (pending) return;
+      pending = true;
+      frame(function () { pending = false; drawEarth(); });
+    }
+    function setView(lonCenter, latCenter, span) {
+      var base = baseEarthView();
+      if (span >= base.lonSpan * 0.999) earth.zoom = null;
+      else {
+        earth.zoom = { lat: latCenter, lon: ((lonCenter + 540) % 360) - 180, span: span };
+        // Keep the view inside the poles.
+        var c = viewCenter(earthView());
+        earth.zoom.lat = c.lat;
+      }
+      stage.classList.toggle("zoomed", !!earth.zoom);
+      $("earth-back").hidden = !earth.zoom;
+      redraw();
+    }
+    var api = {
+      canZoom: function (f) {
+        var v = earthView(), max = baseEarthView().lonSpan;
+        return f < 1 ? v.lonSpan > 8.01 : v.lonSpan < max * 0.999;
+      },
+      zoomAt: function (f, fx, fy) {
+        var v = earthView(), max = baseEarthView().lonSpan;
+        var lonAt = v.lon0 + fx * v.lonSpan, latAt = v.latTop - fy * v.latSpan;
+        var span = Math.max(8, Math.min(max, v.lonSpan * f));
+        var latSpan = Math.min(180, span * v.H / v.W);
+        setView(lonAt - fx * span + span / 2, latAt + fy * latSpan - latSpan / 2, span);
+      },
+      panBy: function (dx, dy) {
+        if (!earth.zoom) return;
+        var v = earthView(), c = viewCenter(v);
+        setView(c.lon - dx * v.lonSpan, c.lat + dy * v.latSpan, v.lonSpan);
+      },
+      isZoomed: function () { return !!earth.zoom; },
+      settle: debounce(function () {
+        if (!earth.zoom) { $("nearby-hero").hidden = true; return; }
+        var v = earthView(), c = viewCenter(v);
+        showNearby(c.lat, c.lon, "nearby-hero", function (s) {
+          var dx = ((s.lon - v.lon0) % 360 + 360) % 360;
+          return dx <= v.lonSpan && s.lat <= v.latTop && s.lat >= v.latTop - v.latSpan;
+        });
+      }, 300),
+    };
+    gestures(stage, api);
+    $("earth-in").addEventListener("click", function () { api.zoomAt(0.6, 0.5, 0.5); api.settle(); });
+    $("earth-out").addEventListener("click", function () { if (api.canZoom(1.6)) { api.zoomAt(1 / 0.6, 0.5, 0.5); api.settle(); } });
+    $("earth-back").addEventListener("click", function () {
+      zoomEarth(0, 0, null);
+      stage.classList.remove("zoomed");
+      $("nearby-hero").hidden = true;
     });
   }
 
@@ -600,14 +722,15 @@
     return 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   }
   var fmtKm = new Intl.NumberFormat("en-GB", { maximumFractionDigits: 0 });
-  function showNearby(lat, lon, id) {
+  // Lists stories near (lat, lon). With inView, it lists the stories inside the zoomed view instead of a radius.
+  function showNearby(lat, lon, id, inView) {
     var box = $(id);
     box.textContent = "";
     box.hidden = false;
     var near = RANKED.filter(function (s) { return s.lat != null; })
       .map(function (s) { return { s: s, d: km(lat, lon, s.lat, s.lon) }; })
       .sort(function (a, b) { return a.d - b.d; });
-    var within = near.filter(function (n) { return n.d <= 1500; }).slice(0, 12);
+    var within = near.filter(function (n) { return inView ? inView(n.s) : n.d <= 1500; }).slice(0, 12);
     // Name the area after the nearest story, if it's close enough to be fair.
     var first = near[0];
     var area = first && first.d < 800 ? [first.s.state, first.s.country].filter(function (x) { return x && x !== "Worldwide"; }).join(", ") : "";
@@ -619,13 +742,15 @@
     close.appendChild(icon("x"));
     close.addEventListener("click", function () {
       box.hidden = true;
-      if (id === "nearby-hero") zoomEarth(0, 0, null);
+      if (id === "nearby-hero") $("earth-back").click();
+      else $("map-reset").click();
     });
     head.appendChild(close);
     box.appendChild(head);
+    var span = inView ? "in this view" : "within 1,500 km";
     box.appendChild(el("p", "nearby-sub", within.length
-      ? within.length + (within.length === 1 ? " story" : " stories") + " in today's edition within 1,500 km, nearest first."
-      : "No stories in today's edition within 1,500 km of here." + (first ? " The nearest is in " + first.s.city + ", " + fmtKm.format(first.d) + " km away." : "")));
+      ? within.length + (within.length === 1 ? " story" : " stories") + " in today's edition " + span + ", nearest the centre first."
+      : "No stories in today's edition " + span + "." + (first ? " The nearest is in " + first.s.city + ", " + fmtKm.format(first.d) + " km from the centre." : "")));
     var ul = el("ul", "nearby-list");
     (within.length ? within : near.slice(0, 1)).forEach(function (n) {
       var li = el("li");
@@ -633,7 +758,7 @@
       b.type = "button";
       var top = el("span", "nearby-where");
       top.appendChild(el("span", "city", n.s.city));
-      top.appendChild(el("span", "num", n.d < 10 ? "right here" : fmtKm.format(n.d) + " km away"));
+      top.appendChild(el("span", "num", n.d < 10 ? "at the centre" : fmtKm.format(n.d) + " km from the centre"));
       if (n.s.scale === "local") top.appendChild(el("span", "tag", "Local"));
       b.appendChild(top);
       b.appendChild(el("span", "nearby-title", n.s.title));
@@ -1118,17 +1243,49 @@
     MAP.svg = svg;
     sizeMarkers();
 
-    // Click anywhere on the map to zoom in there and list the stories around it.
-    svg.addEventListener("click", function (e) {
-      if (e.target.closest(".mk")) return;
-      var pt = svg.createSVGPoint();
-      pt.x = e.clientX; pt.y = e.clientY;
-      var p = pt.matrixTransform(svg.getScreenCTM().inverse());
-      var lon = p.x / M.k - 180, lat = M.top - p.y / M.k;
-      var half = Math.max(8, MAP.vb[2] / M.k / 8); // each click zooms in further, down to about 16°
-      zoomToBox([lon - half, lon + half, lat + half * 0.66, lat - half * 0.66]);
+    // Pinch, scroll and drag to zoom and move; the stories in view are listed under the map.
+    var minW = 14 * M.k; // about 14° across at most zoom
+    function applyVb(x, y, w) {
+      w = Math.max(minW, Math.min(M.w, w));
+      var h = w * M.h / M.w;
+      MAP.vb = [Math.max(0, Math.min(M.w - w, x)), Math.max(0, Math.min(M.h - h, y)), w, h];
+      svg.setAttribute("viewBox", MAP.vb.map(function (v) { return v.toFixed(2); }).join(" "));
+      sizeMarkers();
+      $("map-frame").classList.toggle("zoomed", w < M.w - 1);
       Array.prototype.forEach.call($("map-zoom").children, function (c) { c.setAttribute("aria-pressed", "false"); });
-      showNearby(lat, lon, "nearby-map");
+    }
+    MAP.api = {
+      canZoom: function (f) { return f < 1 ? MAP.vb[2] > minW + 0.01 : MAP.vb[2] < M.w - 0.01; },
+      zoomAt: function (f, fx, fy) {
+        var vb = MAP.vb, w = Math.max(minW, Math.min(M.w, vb[2] * f)), h = w * M.h / M.w;
+        applyVb(vb[0] + fx * vb[2] - fx * w, vb[1] + fy * vb[3] - fy * h, w);
+      },
+      panBy: function (dx, dy) {
+        var vb = MAP.vb;
+        applyVb(vb[0] - dx * vb[2], vb[1] - dy * vb[3], vb[2]);
+      },
+      isZoomed: function () { return MAP.vb[2] < M.w - 1; },
+      settle: debounce(function () {
+        var vb = MAP.vb, zoomed = vb[2] < M.w - 1;
+        if (!zoomed) {
+          Array.prototype.forEach.call($("map-zoom").children, function (c) { c.setAttribute("aria-pressed", String(c.dataset.val === "World")); });
+          $("nearby-map").hidden = true;
+          return;
+        }
+        var lon = (vb[0] + vb[2] / 2) / M.k - 180, lat = M.top - (vb[1] + vb[3] / 2) / M.k;
+        showNearby(lat, lon, "nearby-map", function (s) {
+          var x = mx(s.lon), y = my(s.lat);
+          return x >= vb[0] && x <= vb[0] + vb[2] && y >= vb[1] && y <= vb[1] + vb[3];
+        });
+      }, 300),
+    };
+    gestures($("map-frame"), MAP.api);
+    $("map-in").addEventListener("click", function () { MAP.api.zoomAt(0.6, 0.5, 0.5); MAP.api.settle(); });
+    $("map-out").addEventListener("click", function () { MAP.api.zoomAt(1 / 0.6, 0.5, 0.5); MAP.api.settle(); });
+    $("map-reset").addEventListener("click", function () {
+      $("nearby-map").hidden = true;
+      zoomTo("World");
+      Array.prototype.forEach.call($("map-zoom").children, function (c) { c.setAttribute("aria-pressed", String(c.dataset.val === "World")); });
     });
 
     var placed = MAP.markers.length;
@@ -1144,8 +1301,8 @@
       b.setAttribute("aria-pressed", String(name === "World"));
       b.addEventListener("click", function () {
         Array.prototype.forEach.call(zoomWrap.children, function (c) { c.setAttribute("aria-pressed", String(c === b)); });
-        $("nearby-map").hidden = true;
         zoomTo(name);
+        setTimeout(MAP.api.settle, reduceMotion ? 0 : 700);
       });
       zoomWrap.appendChild(b);
     });
@@ -1159,7 +1316,7 @@
     var frameW = $("map-frame").clientWidth || 1000;
     var px = MAP.vb[2] / frameW; // viewBox units per screen pixel
     // Smaller markers on small maps so nearby stories stay apart; slightly larger when zoomed in.
-    var size = Math.max(0.55, Math.min(1, frameW / 900)) * Math.max(1, 0.9 / Math.sqrt(s));
+    var size = Math.max(0.55, Math.min(1, frameW / 900)) * Math.min(1.3, Math.max(1, 0.9 / Math.sqrt(s)));
     MAP.markers.forEach(function (m) {
       var x = m.x + m.n * 13 * px * size;
       m.core.setAttribute("cx", x); m.core.setAttribute("cy", m.y);
@@ -1186,6 +1343,7 @@
       MAP.vb = from.map(function (v, i) { return v + (to[i] - v) * e; });
       MAP.svg.setAttribute("viewBox", MAP.vb.map(function (v) { return v.toFixed(2); }).join(" "));
       sizeMarkers();
+      $("map-frame").classList.toggle("zoomed", MAP.vb[2] < M.w - 1);
       if (t < 1) frame(step);
     }
     frame(step);

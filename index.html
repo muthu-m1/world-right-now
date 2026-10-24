@@ -13,7 +13,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=2026-10-24c">
+<link rel="stylesheet" href="assets/style.css?v=2026-10-24d">
 <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -81,10 +81,14 @@
       <div class="earth-stage" id="earth-stage">
         <canvas id="earth-canvas" aria-hidden="true"></canvas>
         <div class="earth-pins" id="earth-pins"></div>
-        <button class="earth-back" type="button" id="earth-back" hidden>
-          <svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg>
-          <span>Whole world</span>
-        </button>
+        <div class="zoom-ctl earth-ctl" role="group" aria-label="Zoom the Earth">
+          <button class="zoom-btn" type="button" id="earth-in" aria-label="Zoom in">+</button>
+          <button class="zoom-btn" type="button" id="earth-out" aria-label="Zoom out">−</button>
+          <button class="zoom-btn zoom-reset" type="button" id="earth-back" hidden>
+            <svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg>
+            <span>Whole world</span>
+          </button>
+        </div>
       </div>
       <figcaption class="wrap earth-cap" id="earth-cap">Daylight and darkness across the Earth right now, from NASA satellite imagery.</figcaption>
     </figure>
@@ -172,7 +176,7 @@
       <div class="sec-head sec-head-row">
         <div>
           <h2 id="map-h">The map</h2>
-          <p class="sec-sub">Every located story, with the part of the world in darkness right now shaded. Select a marker to read a story, or click anywhere to zoom in and see the stories around it.</p>
+          <p class="sec-sub">Every located story, with the part of the world in darkness right now shaded. Pinch or scroll with two fingers to zoom, drag to move, and select a marker to read a story.</p>
         </div>
         <label class="switch">
           <input type="checkbox" id="night-toggle" checked>
@@ -183,6 +187,14 @@
       <div class="chips map-zoom" id="map-zoom" role="group" aria-label="Zoom the map to a region"></div>
       <div class="map-frame" id="map-frame">
         <div class="map-tip" id="map-tip" hidden></div>
+        <div class="zoom-ctl map-ctl" role="group" aria-label="Zoom the map">
+          <button class="zoom-btn" type="button" id="map-in" aria-label="Zoom in">+</button>
+          <button class="zoom-btn" type="button" id="map-out" aria-label="Zoom out">−</button>
+          <button class="zoom-btn zoom-reset" type="button" id="map-reset">
+            <svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg>
+            <span>Whole world</span>
+          </button>
+        </div>
       </div>
       <div class="map-foot">
         <ul class="legend" aria-label="Map key">
@@ -328,7 +340,7 @@
   <a id="term-pop-link" href="#key-terms">See all key terms</a>
 </div>
 
-<script src="assets/map.js?v=2026-10-24c"></script>
-<script src="assets/app.js?v=2026-10-24c"></script>
+<script src="assets/map.js?v=2026-10-24d"></script>
+<script src="assets/app.js?v=2026-10-24d"></script>
 </body>
 </html>
