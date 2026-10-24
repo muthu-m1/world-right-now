@@ -1,0 +1,782 @@
+{
+  "date": "2026-10-24",
+  "snapshot": "2026-10-24T13:00:00Z",
+  "outlets": [
+    "NPR",
+    "Al Jazeera",
+    "France 24",
+    "ABC News"
+  ],
+  "stories": [
+    {
+      "id": "iran",
+      "thread": "iran-gulf",
+      "topic": "Conflict",
+      "region": "Middle East",
+      "city": "Tehran",
+      "country": "Iran",
+      "places": [
+        "United States",
+        "Israel"
+      ],
+      "tz": "Asia/Tehran",
+      "lat": 35.69,
+      "lon": 51.39,
+      "title": "Trump says the US may launch another strike on Iran as reinforcements head to the Middle East",
+      "summary": "At a rally in Florida on Friday, President Donald Trump said the US 'may do another little [[epic-fury|Epic Fury]]' on Iran, France 24 reports. NPR says military reinforcements are moving to the Middle East while some personnel have left the region, which it says points to a possible attack. France 24 adds that the war is nearing its eight-month mark and that rising fuel prices are weighing on the US [[midterms|midterm elections]].",
+      "background": "The US and Israel launched a war on Iran on 28 February 2026. A ceasefire has not held: Iran has blocked the [[strait-of-hormuz|Strait of Hormuz]] and targeted commercial ships, and the US has blockaded Iranian ports and oil shipments.",
+      "sources": [
+        {
+          "outlet": "France 24",
+          "title": "Trump says US may launch ‘another little Epic Fury’ attack on Iran",
+          "url": "https://www.france24.com/en/americas/20261023-trump-says-us-may-launch-another-little-epic-fury-attack-iran",
+          "time": "2026-10-23T20:50:00Z"
+        },
+        {
+          "outlet": "NPR",
+          "title": "Military reinforcements move to Mideast. And, millions of Americans vote early",
+          "url": "https://www.npr.org/2026/10/23/g-s1-149514/up-first-newsletter-iran-war-midterm-voting-trump-bbc",
+          "time": "2026-10-23T11:22:00Z"
+        }
+      ],
+      "lead": "main"
+    },
+    {
+      "id": "westbank",
+      "topic": "Conflict",
+      "region": "Middle East",
+      "city": "Hebron",
+      "country": "West Bank",
+      "tz": "Asia/Hebron",
+      "lat": 31.53,
+      "lon": 35.1,
+      "title": "Israel launches a days-long operation in Hebron and shuts the West Bank after a deadly checkpoint attack",
+      "summary": "Al Jazeera reports that two Israeli soldiers were killed in an attack at a checkpoint near Hebron on Friday and that the two suspected Palestinian gunmen were shot dead. Prime Minister Benjamin Netanyahu ordered a full lockdown of the [[west-bank|West Bank]] and said forces would go house to house in the gunmen's neighbourhood, adding 'we will act to destroy this place'. Israel's military says the operation will last several days and include mass arrests and demolitions. The Israeli rights group B'Tselem warns that it amounts to collective punishment that could constitute war crimes.",
+      "background": "Israel has occupied the West Bank since 1967. France 24 notes that Netanyahu is weighing the operation ahead of an Israeli election, and says the olive harvest, which began on 15 October, has coincided with more violence against Palestinians by settlers and soldiers.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "Why is Israel launching a new military operation in the occupied West Bank?",
+          "url": "https://www.aljazeera.com/news/2026/10/24/why-is-israel-launching-a-new-military-operation-in-the-occupied-west-bank",
+          "time": "2026-10-24T09:14:00Z"
+        },
+        {
+          "outlet": "France 24",
+          "title": "Netanyahu orders West Bank operation",
+          "url": "https://www.france24.com/en/netanyahu-orders-west-bank-operation",
+          "time": "2026-10-24T10:33:00Z"
+        },
+        {
+          "outlet": "NPR",
+          "title": "Israel orders closure of West Bank after soldiers kill 2 men behind an alleged attack",
+          "url": "https://www.npr.org/2026/10/23/nx-s1-6013333/netanyahu-closure-west-bank",
+          "time": "2026-10-23T09:40:00Z"
+        }
+      ],
+      "lead": "side"
+    },
+    {
+      "id": "france",
+      "thread": "france-unrest",
+      "topic": "Politics",
+      "region": "Europe",
+      "city": "Paris",
+      "country": "France",
+      "state": "Île-de-France",
+      "tz": "Europe/Paris",
+      "lat": 48.86,
+      "lon": 2.35,
+      "title": "France holds a second Saturday of mass protests under the watch of 70,000 police",
+      "summary": "Interior Minister Laurent Nunez said police had arrested 135 people and seized weapons such as metal balls, fireworks and slingshots, but that there had been no major incident so far, according to France 24. The marches were called by [[yellow-vests|Yellow Vests]], trade unions and students after looting and unrest a week earlier, and some major Paris museums closed. Al Jazeera says rights groups objected to bans on several planned marches, and France 24 reports that the far-right [[national-rally|National Rally]] drew thousands of counter-protesters in Orléans, where it is holding its annual congress.",
+      "background": "The protests began over conditions in schools and grew into a wider movement over the cost of living. Last weekend's unrest involved looting and damage to public buildings, France 24 reports, and the government has imposed curfews in several cities.",
+      "sources": [
+        {
+          "outlet": "France 24",
+          "title": "Live: French police seize weapons and arrest 135 people on the sidelines of new protests",
+          "url": "https://www.france24.com/en/france/20261024-live-hundreds-of-protests-expected-in-france-amid-high-tensions-and-heavy-police-presence",
+          "time": "2026-10-24T04:59:00Z"
+        },
+        {
+          "outlet": "France 24",
+          "title": "French police deploy in large numbers, major Paris museums close ahead of new protests",
+          "url": "https://www.france24.com/en/france/20261024-french-police-deploy-in-big-numbers-and-paris-shuts-major-museums-ahead-of-new-protests",
+          "time": "2026-10-24T05:27:00Z"
+        },
+        {
+          "outlet": "Al Jazeera",
+          "title": "France braces for another day of mass protests as security on high alert",
+          "url": "https://www.aljazeera.com/news/2026/10/24/france-braces-for-another-day-of-mass-protests-as-security-on-high-alert",
+          "time": "2026-10-24T10:04:00Z"
+        }
+      ],
+      "lead": "side"
+    },
+    {
+      "id": "jordan",
+      "topic": "Conflict",
+      "region": "Middle East",
+      "city": "Karak",
+      "country": "Jordan",
+      "tz": "Asia/Amman",
+      "lat": 31.18,
+      "lon": 35.7,
+      "title": "Gunmen attack a funeral at a church in Jordan, killing seven and wounding 40",
+      "summary": "Gunmen opened fire during a funeral at a Greek Orthodox church in Karak, about 90 kilometres south of the capital Amman, on Friday, authorities said, as reported by NPR and the Associated Press. State television footage shows three armed men approaching the church. A government statement blamed 'unknown assailants' and said investigations were under way, and Jordan declared three days of national mourning.",
+      "background": "The Associated Press could not independently confirm how many attackers there were, and Jordanian security services had not yet released details.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "Gunmen open fire at a church during a funeral in Jordan, killing 7 and wounding 40",
+          "url": "https://www.npr.org/2026/10/24/nx-s1-6015414/shooting-church-jordan",
+          "time": "2026-10-24T11:59:00Z"
+        }
+      ]
+    },
+    {
+      "id": "europeprotests",
+      "topic": "Politics",
+      "region": "Europe",
+      "city": "Rome",
+      "country": "Italy",
+      "places": [
+        "Spain"
+      ],
+      "tz": "Europe/Rome",
+      "lat": 41.9,
+      "lon": 12.5,
+      "title": "Cost-of-living protests spread across Europe, from Italian cities to a 250,000-strong march in Madrid",
+      "summary": "Italy deployed drones, helicopters and extra soldiers for protests planned in eight cities including Rome and Milan, after some marches turned violent last weekend, France 24 reports. The protests come amid anger from students, truck drivers and farmers over budget cuts, housing and fuel prices. Spanish authorities told AFP that 250,000 people marched in Madrid to demand protection for the state pension and to protest the cost of living.",
+      "background": "A group calling itself the 'October 17 Movement' called the Italian protests and said it would reveal each location only half an hour before the start. Spain holds a parliamentary election next month, according to France 24.",
+      "sources": [
+        {
+          "outlet": "France 24",
+          "title": "Protests against cost of living expected in Italy under heavy security",
+          "url": "https://www.france24.com/en/europe/20261024-protests-against-cost-of-living-expected-in-italy-under-heavy-security",
+          "time": "2026-10-24T07:08:00Z"
+        },
+        {
+          "outlet": "France 24",
+          "title": "Live: French police seize weapons and arrest 135 people on the sidelines of new protests",
+          "url": "https://www.france24.com/en/france/20261024-live-hundreds-of-protests-expected-in-france-amid-high-tensions-and-heavy-police-presence",
+          "time": "2026-10-24T04:59:00Z"
+        }
+      ]
+    },
+    {
+      "id": "alaska",
+      "topic": "Politics",
+      "region": "Americas",
+      "city": "Anchorage",
+      "country": "United States",
+      "state": "Alaska",
+      "tz": "America/Anchorage",
+      "lat": 61.22,
+      "lon": -149.9,
+      "title": "Trump administration sues to delay the result of Alaska's Senate race over two candidates named Dan Sullivan",
+      "summary": "The Justice Department filed a lawsuit in federal court in Anchorage asking to block the state from certifying its US Senate result if Republican Dan S. Sullivan narrowly loses to Democrat Mary Peltola on 3 November, saying voters could be confused by a second Republican named Daniel J. Sullivan Jr. on the ballot. Al Jazeera notes that Alaska's Supreme Court has already ruled that both men may stay on the ballot. France 24 says the case raises questions about whether Trump would accept a [[midterms|midterm]] defeat.",
+      "background": "Al Jazeera reports that Peltola led Sullivan in August's primary, 49.5% to about 41%, and that Trump won Alaska by roughly 13 points in 2024. Control of the Senate could come down to this race, France 24 reports.",
+      "sources": [
+        {
+          "outlet": "France 24",
+          "title": "Trump administration sues to block possible Democratic win in Alaska Senate race",
+          "url": "https://www.france24.com/en/americas/20261024-trump-administration-sues-to-block-possible-democratic-win-in-alaska-senate-race",
+          "time": "2026-10-24T11:40:00Z"
+        },
+        {
+          "outlet": "Al Jazeera",
+          "title": "Dan Sullivan vs Dan Sullivan: Why is Trump’s DOJ suing in Alaska?",
+          "url": "https://www.aljazeera.com/news/2026/10/24/dan-sullivan-vs-dan-sullivan-why-is-trumps-doj-suing-in-alaska",
+          "time": "2026-10-24T08:11:00Z"
+        }
+      ]
+    },
+    {
+      "id": "cuba",
+      "topic": "Politics",
+      "region": "Americas",
+      "city": "Havana",
+      "country": "Cuba",
+      "places": [
+        "United States"
+      ],
+      "tz": "America/Havana",
+      "lat": 23.11,
+      "lon": -82.37,
+      "title": "Rubio urges Cubans seeking change to work with the CIA",
+      "summary": "US Secretary of State Marco Rubio wrote on X that 'now is the time' for people seeking change in Cuba, inviting them to seize the chance through 'a discreet partnership with the CIA', Al Jazeera reports. France 24 says Havana responded by mocking what it called the Trump administration's 'desperation'.",
+      "background": "Al Jazeera says Trump and other senior US officials have hinted for months at military intervention in Cuba, and that Washington has stepped up pressure since the US military captured then-Venezuelan President Nicolas Maduro earlier this year.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "Rubio calls on Cubans to partner with CIA ‘to create positive change’",
+          "url": "https://www.aljazeera.com/news/2026/10/24/rubio-calls-on-cubans-to-partner-with-cia-to-create-positive-change",
+          "time": "2026-10-24T08:28:00Z"
+        },
+        {
+          "outlet": "France 24",
+          "title": "US seeks to topple Cuba's government",
+          "url": "https://www.france24.com/en/us-seeks-to-topple-cuba-s-government",
+          "time": "2026-10-24T11:43:00Z"
+        }
+      ]
+    },
+    {
+      "id": "ukraine",
+      "thread": "ukraine-talks",
+      "topic": "Conflict",
+      "region": "Europe",
+      "city": "Kyiv",
+      "country": "Ukraine",
+      "places": [
+        "United States"
+      ],
+      "tz": "Europe/Kyiv",
+      "lat": 50.45,
+      "lon": 30.52,
+      "title": "Ukraine says its Starlink connection is stable again after a week of restrictions",
+      "summary": "Defence Minister Evhenii Khmara said on Saturday that [[starshield|Starlink and Starshield]] were back to normal speeds after more than a week of restrictions that Ukrainian officials say hurt the army's ability to intercept Russian attack drones. Neither SpaceX boss Elon Musk nor the US government has acknowledged responsibility for the limits, France 24 reports.",
+      "background": "The restrictions were first reported on 14 October, France 24 says, after Trump announced a deal to buy Russian diesel, waived new sanctions on Moscow and pressed Ukraine to stop striking Russian oil refineries.",
+      "sources": [
+        {
+          "outlet": "France 24",
+          "title": "Ukraine says Starlink and Starshield connection 'stable' again",
+          "url": "https://www.france24.com/en/europe/20261024-ukraine-says-starlink-and-starshield-connection-stable-again",
+          "time": "2026-10-24T09:48:00Z"
+        }
+      ]
+    },
+    {
+      "id": "serbia",
+      "topic": "Politics",
+      "region": "Europe",
+      "city": "Belgrade",
+      "country": "Serbia",
+      "tz": "Europe/Belgrade",
+      "lat": 44.79,
+      "lon": 20.45,
+      "title": "Serbia votes on Sunday in an election that tests a student-led movement",
+      "summary": "NPR reports that students who have protested across Europe have chosen candidates to run for parliament and want to end 14 years of government by the populist leader Aleksandar Vucic. Al Jazeera says the election is a test of the student movement demanding justice for 16 victims.",
+      "background": "In November 2024 the collapse of a concrete canopy at a railway station in Novi Sad killed 16 people. Demands for accountability grew into a nationwide movement against alleged corruption, with students as its driving force.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "European student protests take aim at Serbia's elections",
+          "url": "https://www.npr.org/2026/10/24/nx-s1-6012799/european-student-protests-take-aim-at-serbias-elections",
+          "time": "2026-10-24T11:42:00Z"
+        },
+        {
+          "outlet": "Al Jazeera",
+          "title": "Serbia elections test student movement demanding justice for 16 victims",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/serbia-elections-test-student-movement-demanding-justice-for-16-victims",
+          "time": "2026-10-24T12:18:00Z"
+        }
+      ]
+    },
+    {
+      "id": "brazil",
+      "topic": "Politics",
+      "region": "Americas",
+      "city": "Rio de Janeiro",
+      "country": "Brazil",
+      "tz": "America/Sao_Paulo",
+      "lat": -22.91,
+      "lon": -43.17,
+      "title": "Lula and Flavio Bolsonaro trade attacks in the last debate before Brazil's runoff",
+      "summary": "President Luiz Inacio Lula da Silva and Senator Flavio Bolsonaro questioned each other on the economy, infrastructure and regional development in Friday's debate in Rio de Janeiro, two days before Sunday's vote, Al Jazeera reports. Lula criticised Bolsonaro's plan to take a 'chainsaw' to public spending, while Bolsonaro accused Lula of letting organised crime expand and failing to address living costs. Polls show the two neck and neck.",
+      "background": "Flavio Bolsonaro is the son of former president Jair Bolsonaro. NPR describes the race as a battle over the country's political future.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "Brazil’s Lula and Bolsonaro debate policy proposals before run-off",
+          "url": "https://www.aljazeera.com/news/2026/10/24/brazils-lula-and-bolsonaro-debate-policy-proposals-before-run-off",
+          "time": "2026-10-24T09:41:00Z"
+        },
+        {
+          "outlet": "NPR",
+          "title": "Brazil's runoff: Lula's legacy vs. Bolsonaro's dynasty",
+          "url": "https://www.npr.org/2026/10/23/nx-s1-6004277/brazil-vote-runoff-lula-bolsonaro",
+          "time": "2026-10-23T09:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "kimchina",
+      "topic": "Politics",
+      "region": "Asia-Pacific",
+      "city": "Dandong",
+      "country": "China",
+      "places": [
+        "North Korea"
+      ],
+      "tz": "Asia/Shanghai",
+      "lat": 40.12,
+      "lon": 124.38,
+      "title": "Kim Jong Un visits China across a newly opened bridge",
+      "summary": "South Korean officials say North Korean leader Kim Jong Un arrived in the Chinese border city of Dandong on Saturday over the New Yalu River Bridge, which officially opened about a week ago, Al Jazeera reports. Reuters, quoted by Al Jazeera, says Chinese Premier Li Qiang met Kim there. China's foreign ministry had not yet responded to requests for comment.",
+      "background": "The bridge was finished 12 years ago, according to Al Jazeera, and the visit comes a day before the anniversary of China joining the 1950-1953 Korean War. China is an important trading partner for North Korea.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "North Korea’s Kim Jong Un visits China via newly opened bridge",
+          "url": "https://www.aljazeera.com/news/2026/10/24/north-koreas-kim-jong-un-arrives-in-china-south-korean-media-says",
+          "time": "2026-10-24T07:07:00Z"
+        }
+      ]
+    },
+    {
+      "id": "ebola",
+      "thread": "ebola-2026",
+      "topic": "Health",
+      "region": "Africa",
+      "city": "Abuja",
+      "country": "Nigeria",
+      "places": [
+        "Kenya",
+        "Uganda",
+        "Democratic Republic of Congo"
+      ],
+      "tz": "Africa/Lagos",
+      "lat": 9.08,
+      "lon": 7.4,
+      "title": "Officials probe whether the first Ebola patients in Nigeria and Kenya crossed paths at an airport",
+      "summary": "Health officials say Nigeria's first Ebola patient, the Ugandan-born wife of a diplomat, may have crossed paths with Kenya's first patient at a Ugandan airport, NPR reports. She is being treated and 44 people she had close contact with are in quarantine. France 24 reports that Kenya says a second Ebola death has been recorded.",
+      "background": "Congo's outbreak began in May in the east of the country and has become the fastest-spreading on record, NPR says, with at least 4,600 deaths and about 9,700 infections there. Nigeria is the fourth African country to report a case and the first in West Africa.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "Authorities investigating whether first Kenya and Nigeria Ebola cases crossed paths",
+          "url": "https://www.npr.org/2026/10/23/g-s1-149515/africa-ebola-outbreak",
+          "time": "2026-10-23T12:41:00Z"
+        },
+        {
+          "outlet": "France 24",
+          "title": "Building collapse in Nairobi search for survivors under way",
+          "url": "https://www.france24.com/en/building-collapse-in-nairobi-search-for-survivors-under-way",
+          "time": "2026-10-23T20:31:00Z"
+        }
+      ]
+    },
+    {
+      "id": "nairobi",
+      "topic": "Culture",
+      "region": "Africa",
+      "city": "Nairobi",
+      "country": "Kenya",
+      "tz": "Africa/Nairobi",
+      "lat": -1.29,
+      "lon": 36.82,
+      "title": "Rescuers search for survivors after a building under construction collapses in Nairobi",
+      "summary": "France 24 reports that crews scrambled through rubble to reach trapped survivors after a building of more than 10 storeys that was being built in the Kenyan capital came down on Friday evening.",
+      "sources": [
+        {
+          "outlet": "France 24",
+          "title": "Building collapse in Nairobi search for survivors under way",
+          "url": "https://www.france24.com/en/building-collapse-in-nairobi-search-for-survivors-under-way",
+          "time": "2026-10-23T20:31:00Z"
+        }
+      ]
+    },
+    {
+      "id": "mexicofire",
+      "topic": "Climate",
+      "region": "Americas",
+      "city": "León",
+      "country": "Mexico",
+      "state": "Guanajuato",
+      "tz": "America/Mexico_City",
+      "lat": 21.12,
+      "lon": -101.68,
+      "title": "A huge chemical plant fire forces mass evacuations in León, Mexico",
+      "summary": "Al Jazeera reports that an explosive fire broke out on Friday at a chemical plant in León, Mexico, triggering mass evacuations.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "Massive chemical plant fire triggers mass evacuations in Mexico",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/massive-chemical-plant-fire-triggers-mass-evacuations-in-mexico",
+          "time": "2026-10-24T08:14:00Z"
+        }
+      ]
+    },
+    {
+      "id": "eaglesnest",
+      "topic": "Culture",
+      "region": "Europe",
+      "city": "Berchtesgaden",
+      "country": "Germany",
+      "state": "Bavaria",
+      "tz": "Europe/Berlin",
+      "lat": 47.61,
+      "lon": 13.04,
+      "title": "Fire destroys Hitler's former Alpine retreat, the Eagle's Nest, and police detain a man",
+      "summary": "About 200 firefighters tackled a blaze that engulfed the Kehlsteinhaus, known as the Eagle's Nest, in Bavaria overnight, and no injuries were reported, Al Jazeera says. Police have detained a man and are examining whether he was involved. German media reported that investigators suspect arson, but no cause has been announced.",
+      "background": "The building high in the Alps, at more than 1,800 metres, was Adolf Hitler's mountain retreat and now operates as a mountain guesthouse, according to Al Jazeera.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "German police detain suspect after fire engulfs Hitler’s Eagle’s Nest",
+          "url": "https://www.aljazeera.com/news/2026/10/24/german-police-detain-suspect-after-fire-engulfs-hitlers-eagles-nest",
+          "time": "2026-10-24T11:01:00Z"
+        }
+      ]
+    },
+    {
+      "id": "czech",
+      "topic": "Politics",
+      "region": "Europe",
+      "city": "Prague",
+      "country": "Czech Republic",
+      "tz": "Europe/Prague",
+      "lat": 50.08,
+      "lon": 14.44,
+      "title": "The Czech government moves ahead with changing how public media is paid for",
+      "summary": "In an overnight vote, the governing coalition sent a bill to committees that would scrap the household broadcasting fee and fund public media from the state budget instead, Al Jazeera reports. Critics say it would weaken broadcasters' independence, and journalists are preparing to strike. Prime Minister Andrej Babis says the new model would be fairer to poorer households.",
+      "background": "Public media staff already staged a strike against the plan in June. Opposition parties compare it with reforms under Hungary's former prime minister Viktor Orban, Al Jazeera reports.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "Czech Republic advances media funding overhaul despite criticism",
+          "url": "https://www.aljazeera.com/news/2026/10/24/czech-republic-advances-media-funding-overhaul-despite-criticism",
+          "time": "2026-10-24T11:50:00Z"
+        }
+      ]
+    },
+    {
+      "id": "taiz",
+      "topic": "Conflict",
+      "region": "Middle East",
+      "city": "Taiz",
+      "country": "Yemen",
+      "tz": "Asia/Aden",
+      "lat": 13.58,
+      "lon": 44.02,
+      "title": "Drinking water runs short in Yemen's Taiz as Houthi forces tighten their siege",
+      "summary": "NPR reports that Taiz, in south-western Yemen, faces a severe water crisis as [[houthis|Houthi]] rebels backed by Iran tighten their encirclement. The city has struggled with water for more than a decade, but NPR says the situation has worsened in recent weeks.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "Drinking water supplies dwindle in Yemeni city besieged by Houthi rebels",
+          "url": "https://www.npr.org/2026/10/24/g-s1-149729/drinking-water-supplies-dwindle-in-yemeni-city-besieged-by-houthi-rebels",
+          "time": "2026-10-24T07:04:00Z"
+        }
+      ]
+    },
+    {
+      "id": "typhoon",
+      "topic": "Climate",
+      "region": "Asia-Pacific",
+      "city": "Taipei",
+      "country": "Taiwan",
+      "places": [
+        "China",
+        "Japan"
+      ],
+      "tz": "Asia/Taipei",
+      "lat": 25.03,
+      "lon": 121.57,
+      "title": "Typhoon Champi batters Taiwan and heads for China and Japan",
+      "summary": "France 24 reports that Typhoon Champi hit Taiwan on Friday with heavy rain and winds of up to 180 kilometres an hour, leaving 56,000 households without power. The storm is now heading towards China and Japan.",
+      "sources": [
+        {
+          "outlet": "France 24",
+          "title": "Typhoon Champi batters Taiwan",
+          "url": "https://www.france24.com/en/typhoon-champi-batters-taiwan",
+          "time": "2026-10-24T10:33:00Z"
+        }
+      ]
+    },
+    {
+      "id": "php",
+      "topic": "Tech",
+      "region": "Global",
+      "city": "Worldwide",
+      "country": "Worldwide",
+      "tz": "UTC",
+      "lat": null,
+      "lon": null,
+      "title": "Hackers exploit a serious web flaw that AI found, after news of it leaked",
+      "summary": "NPR reports that AI discovered a vulnerability nicknamed PHP2SHELL in [[php|PHP]], a language behind a large share of websites. Security researchers rushed to fix it, but news of the flaw leaked and hackers have swooped in. Governments around the world are rushing to put protections in place, NPR says.",
+      "background": "NPR reports that the affected program runs on about 70% of websites.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "AI found the flaw. Hackers found the leak: The race to save 'PHP2SHELL'",
+          "url": "https://www.npr.org/2026/10/24/nx-s1-6012327/ai-found-the-flaw-hackers-found-the-leak-the-race-to-save-php2shell",
+          "time": "2026-10-24T11:42:00Z"
+        },
+        {
+          "outlet": "NPR",
+          "title": "Hacking attempts rise after flaws found in program affecting 70% of websites",
+          "url": "https://www.npr.org/2026/10/23/g-s1-149503/hacking-php-flaws",
+          "time": "2026-10-23T09:37:00Z"
+        }
+      ]
+    },
+    {
+      "id": "openai",
+      "topic": "Tech",
+      "region": "Americas",
+      "city": "San Francisco",
+      "country": "United States",
+      "state": "California",
+      "tz": "America/Los_Angeles",
+      "lat": 37.77,
+      "lon": -122.42,
+      "title": "Fired OpenAI researchers say independent safety checks are not going well",
+      "summary": "In their first interview since being fired, OpenAI safety researchers Mikita Balesni and Tomek Korbak told NPR they were let go for putting safety ahead of the company's short-term interests. They say independent safety audits of AI systems are not going well. NPR's report does not include a response from OpenAI.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "Fired OpenAI researchers say independent safety audits aren't going well",
+          "url": "https://www.npr.org/2026/10/23/nx-s1-6012235/fired-openai-researchers-say-independent-safety-audits-arent-going-well",
+          "time": "2026-10-23T21:33:00Z"
+        }
+      ]
+    },
+    {
+      "id": "waze",
+      "topic": "Tech",
+      "region": "Asia-Pacific",
+      "city": "Kuala Lumpur",
+      "country": "Malaysia",
+      "places": [
+        "Israel"
+      ],
+      "tz": "Asia/Kuala_Lumpur",
+      "lat": 3.14,
+      "lon": 101.69,
+      "title": "Malaysia considers a full ban on the Israel-linked navigation app Waze",
+      "summary": "Al Jazeera reports that Malaysia has already barred civil servants from using Waze for official duties because of the app's links to Israel, and is now considering a complete ban.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "Malaysia considers complete ban on Israel-based navigation app Waze",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/malaysia-waze-israel-ban",
+          "time": "2026-10-24T12:30:00Z"
+        }
+      ]
+    },
+    {
+      "id": "barcelona",
+      "topic": "Politics",
+      "region": "Europe",
+      "city": "Barcelona",
+      "country": "Spain",
+      "tz": "Europe/Madrid",
+      "lat": 41.39,
+      "lon": 2.17,
+      "title": "Police evict housing activists from a Barcelona building",
+      "summary": "Al Jazeera reports that housing activists in Barcelona had taken over a mostly empty building to house vulnerable families and create a community hub. Police evicted them from it.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "Barcelona housing activists evicted by police from residential building",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/barcelona-housing-activists-evicted-by-police-from-residential-building",
+          "time": "2026-10-24T12:14:00Z"
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "topic": "Science",
+      "region": "Europe",
+      "city": "Bern",
+      "country": "Switzerland",
+      "tz": "Europe/Zurich",
+      "lat": 46.95,
+      "lon": 7.45,
+      "title": "Scientists vote to change how the world keeps time, though most people will not notice",
+      "summary": "Scientists have voted to change how the world keeps time, NPR reports, but most people will not even notice. NPR's Scott Simon spoke to Philippe Richard, director of Switzerland's Federal Institute of Metrology, about the change.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "Time expert Philippe Richard on why scientists are changing how we keep time",
+          "url": "https://www.npr.org/2026/10/24/nx-s1-6011081/time-expert-philippe-richard-on-why-scientists-are-changing-how-we-keep-time",
+          "time": "2026-10-24T11:42:00Z"
+        }
+      ]
+    }
+  ],
+  "lighter": [
+    {
+      "id": "crows",
+      "big": true,
+      "topic": "Science",
+      "city": "Worldwide",
+      "country": "Worldwide",
+      "tz": "UTC",
+      "lat": null,
+      "lon": null,
+      "title": "Crows turn what they see into decisions twice as fast as humans",
+      "summary": "New research in the journal Science finds crows process visual information into decisions twice as fast as humans and other primates, NPR reports, and in a similar way to humans.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "Should 'bird brain' be a compliment? Here's how crows think fast",
+          "url": "https://www.npr.org/2026/10/22/nx-s1-6010587/should-bird-brain-be-a-compliment-heres-how-crows-think-fast",
+          "time": "2026-10-22T20:47:00Z"
+        }
+      ]
+    },
+    {
+      "id": "mahjong",
+      "places": [
+        "United States"
+      ],
+      "city": "Taixing",
+      "country": "China",
+      "tz": "Asia/Shanghai",
+      "lat": 32.17,
+      "lon": 120.02,
+      "title": "America's mahjong craze is giving a Chinese factory town a lifeline",
+      "summary": "NPR reports that shoppers in the US will pay hundreds of dollars for a mahjong set, and manufacturers in the eastern Chinese city of Taixing can barely keep up with demand.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "How America's mahjong craze is throwing a Chinese manufacturing town a lifeline",
+          "url": "https://www.npr.org/2026/10/22/nx-s1-6000127/china-mahjong-tile-game-taixing-manufacturing",
+          "time": "2026-10-22T20:53:00Z"
+        }
+      ]
+    },
+    {
+      "id": "orangutans",
+      "city": "Kalimantan",
+      "country": "Indonesia",
+      "tz": "Asia/Jakarta",
+      "lat": -1.68,
+      "lon": 113.38,
+      "title": "Rescuers save dozens of critically endangered orangutans from Indonesian wildfires",
+      "summary": "NPR reports that rescuers in Indonesia have saved dozens of orangutans, a critically endangered species, during a deadly wildfire season.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "Dozens of critically endangered orangutans rescued from Indonesian wildfires",
+          "url": "https://www.npr.org/2026/10/17/nx-s1-6004881/dozens-of-critically-endangered-orangutans-rescued-from-indonesian-wildfires",
+          "time": "2026-10-17T11:43:00Z"
+        }
+      ]
+    },
+    {
+      "id": "psychedelics",
+      "city": "Worldwide",
+      "country": "Worldwide",
+      "tz": "UTC",
+      "lat": null,
+      "lon": null,
+      "title": "First human data hints that psychedelics could help calm inflammation",
+      "summary": "Lab studies have shown that psychedelics such as psilocybin can lower inflammation, NPR reports, and researchers are now publishing some of the first human data suggesting the same potential.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "New human data hints at psychedelics' potential to combat inflammation",
+          "url": "https://www.npr.org/2026/10/21/nx-s1-6009441/psychedelics-brain-inflammation-immune-system",
+          "time": "2026-10-21T15:33:00Z"
+        }
+      ]
+    },
+    {
+      "id": "moontime",
+      "city": "Worldwide",
+      "country": "Worldwide",
+      "tz": "UTC",
+      "lat": null,
+      "lon": null,
+      "title": "What time is it on the Moon? Why measuring lunar time matters",
+      "summary": "NPR spoke to James Olthoff, a delegate to the International Bureau of Weights and Measures, about why it is important to measure time accurately on the Moon.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "What time is it on the moon?",
+          "url": "https://www.npr.org/2026/10/18/nx-s1-6003578/what-time-is-it-on-the-moon",
+          "time": "2026-10-18T21:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "bossdms",
+      "places": [
+        "United States"
+      ],
+      "city": "Worldwide",
+      "country": "Worldwide",
+      "tz": "UTC",
+      "lat": null,
+      "lon": null,
+      "title": "A consultant goes viral for sharing the cringe-worthy messages bosses send workers",
+      "summary": "NPR reports that a management consultant has gone viral by sharing anonymous direct messages that employees received from their bosses, including some sent on their wedding days.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "A consultant is going viral for exposing the cringe-worthy DMs bosses send employees",
+          "url": "https://www.npr.org/2026/10/24/nx-s1-6012795/a-consultant-is-going-viral-for-exposing-the-cringe-worthy-dms-bosses-send-employees",
+          "time": "2026-10-24T11:42:00Z"
+        }
+      ]
+    },
+    {
+      "id": "justeat",
+      "places": [
+        "United Kingdom"
+      ],
+      "city": "Worldwide",
+      "country": "Worldwide",
+      "tz": "UTC",
+      "lat": null,
+      "lon": null,
+      "title": "Just Eat apologises after its AI-made food pictures go viral for the wrong reasons",
+      "summary": "Al Jazeera reports that Just Eat has apologised after AI-generated images of food on its platform went viral for badly misrepresenting menu items.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "Just Eat apologises after AI-generated images blunder",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/just-eat-apologises-after-ai-generated-images-blunder",
+          "time": "2026-10-24T09:29:00Z"
+        }
+      ]
+    }
+  ],
+  "sport": [
+    {
+      "result": "Australia's Jillaroos thrash England 78-0",
+      "note": "The win came at the Women's Rugby League World Cup, but centre Julia Robinson went to hospital.",
+      "outlet": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-10-24/jillaroos-england-rugby-league-world-cup-live/107305106"
+    },
+    {
+      "result": "Marathon champion Peres Jepchirchir gets a provisional ban",
+      "note": "The Kenyan world champion, who won this year's Sydney marathon by three minutes, tested positive for EPO.",
+      "outlet": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-10-24/sydney-marathon-champion-jepchirchir-provisional-ban-epo/107304266"
+    },
+    {
+      "result": "Bayern coach Vincent Kompany is in hospital after a collapse",
+      "note": "Bayern Munich say he is stable but will be out for weeks.",
+      "outlet": "Al Jazeera",
+      "url": "https://www.aljazeera.com/sports/2026/10/24/bayern-say-coach-kompany-stable-in-hospital-but-will-be-out-for-weeks"
+    },
+    {
+      "result": "Molly Picklum tops the surfing standings after winning in Portugal",
+      "note": "The Australian is in pole position for a second straight world title.",
+      "outlet": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-10-24/aussie-picklum-back-on-top-wsl-standings-portugal-win/107304474"
+    },
+    {
+      "result": "Wallaroos beat Scotland in Canberra",
+      "note": "Emily Chancellor and Cecilia Smith retired from international rugby after the match.",
+      "outlet": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-10-24/wallaroos-send-retiring-pair-out-with-win-over-scotland/107304368"
+    },
+    {
+      "result": "Bulls beat Bucks while Tatum scores 36",
+      "note": "Boston also sent the Knicks to a second straight loss, and the Lakers beat the Clippers.",
+      "outlet": "Al Jazeera",
+      "url": "https://www.aljazeera.com/sports/2026/10/24/chicago-bulls-storm-back-from-early-deficit-to-beat-milwaukee-bucks-in-nba"
+    },
+    {
+      "result": "Tonga and Samoa are star draws at the Rugby League World Cup",
+      "note": "Once seen as minnows, both sides are now among the tournament's top attractions.",
+      "outlet": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-10-24/one-time-minnows-tonga-and-samoa-now-star-world-cup-attractions/107296364"
+    }
+  ]
+}

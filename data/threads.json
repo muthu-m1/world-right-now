@@ -72,6 +72,14 @@
           "outlet": "France 24",
           "url": "https://www.france24.com/en/russia-ready-for-talks-on-plans-for-final-ukraine-deal-not-truce-putin"
         }
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Ukraine's defence minister says Starlink and Starshield connections are stable again after more than a week of restrictions.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/europe/20261024-ukraine-says-starlink-and-starshield-connection-stable-again"
+        }
       }
     ]
   },
@@ -156,6 +164,14 @@
           "outlet": "France 24",
           "url": "https://www.france24.com/en/nyt-reports-plans-for-fresh-strikes-on-iran-after-the-us-midterm-elections"
         }
+      },
+      {
+        "date": "2026-10-23",
+        "text": "Trump says the US 'may do another little Epic Fury' on Iran, and NPR reports military reinforcements moving to the Middle East.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/americas/20261023-trump-says-us-may-launch-another-little-epic-fury-attack-iran"
+        }
       }
     ]
   },
@@ -224,6 +240,14 @@
           "outlet": "France 24",
           "url": "https://www.france24.com/en/europe/20261023-macron-meets-with-student-representatives-and-law-enforcement-ahead-of-new-protests"
         }
+      },
+      {
+        "date": "2026-10-24",
+        "text": "A second Saturday of protests passes under 70,000 police. The interior minister reports 135 arrests and no major incident so far.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/france/20261024-live-hundreds-of-protests-expected-in-france-amid-high-tensions-and-heavy-police-presence"
+        }
       }
     ]
   },
@@ -275,6 +299,14 @@
         "source": {
           "outlet": "France 24",
           "url": "https://www.france24.com/en/africa-faces-complex-ebola-outbreak-after-spread-to-nigeria-who"
+        }
+      },
+      {
+        "date": "2026-10-23",
+        "text": "Officials investigate whether the first Ebola patients in Nigeria and Kenya crossed paths at a Ugandan airport, and Kenya reports a second Ebola death.",
+        "source": {
+          "outlet": "NPR",
+          "url": "https://www.npr.org/2026/10/23/g-s1-149515/africa-ebola-outbreak"
         }
       }
     ]
