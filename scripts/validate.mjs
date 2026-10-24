@@ -37,6 +37,7 @@ if (D && TERMS && THREADS) {
   if (!Array.isArray(D.stories) || D.stories.length < 5) fail("latest.json: expected at least 5 stories");
 
   const regions = ["Europe", "Middle East", "Africa", "Asia-Pacific", "Americas", "Global"];
+  var TOPICS = ["Conflict", "Politics", "Business", "Tech", "Science", "Health", "Climate", "Culture", "Community", "Farming", "Weather", "Nature"];
   const ids = new Set();
   let main = 0;
   for (const s of D.stories || []) {
@@ -48,6 +49,8 @@ if (D && TERMS && THREADS) {
     if (s.state != null && typeof s.state !== "string") fail(`${w}: state must be text`);
     if (s.places != null && (!Array.isArray(s.places) || s.places.some((p) => typeof p !== "string"))) fail(`${w}: places must be a list of names`);
     if (s.title && s.title.length > 110) fail(`${w}: title is ${s.title.length} characters; keep it under 110`);
+    if (s.scale != null && !["international", "national", "local"].includes(s.scale)) fail(`${w}: scale must be international, national or local`);
+    if (!TOPICS.includes(s.topic)) fail(`${w}: topic must be one of ${TOPICS.join(", ")}`);
     if (!regions.includes(s.region)) fail(`${w}: region must be one of ${regions.join(", ")}`);
     if (!tzOK(s.tz)) fail(`${w}: unknown time zone "${s.tz}"`);
     if ((s.lat == null) !== (s.lon == null)) fail(`${w}: give both lat and lon, or neither`);
@@ -60,6 +63,16 @@ if (D && TERMS && THREADS) {
     checkSources(s.sources, w);
   }
   if (main !== 1) fail(`latest.json: exactly one story needs lead "main" (found ${main})`);
+
+  // Breadth: local reporting from across the world, not only the big international stories.
+  const local = (D.stories || []).filter((s) => s.scale === "local");
+  if (local.length < 20) fail(`latest.json: needs at least 20 local stories (found ${local.length})`);
+  for (const r of ["Africa", "Asia-Pacific", "Americas", "Europe"]) {
+    const n = local.filter((s) => s.region === r).length;
+    if (n < 3) fail(`latest.json: needs at least 3 local stories from ${r} (found ${n})`);
+  }
+  const conflict = (D.stories || []).filter((s) => s.topic === "Conflict").length;
+  if (conflict > (D.stories || []).length * 0.35) fail(`latest.json: ${conflict} conflict stories is too many; keep them under about a third`);
 
   for (const s of D.lighter || []) {
     const w = `lighter "${s.id}"`;

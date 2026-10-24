@@ -42,6 +42,7 @@
     </a>
     <nav class="nav" id="nav" aria-label="Sections">
       <a href="#today">Stories</a>
+      <a href="#local">Local</a>
       <a href="#map">Map</a>
       <a href="#ongoing">Timelines</a>
       <a href="#key-terms">Key terms</a>
@@ -117,6 +118,45 @@
         <h3 class="more-h" id="more-h">More stories</h3>
         <ol class="more-list" id="more"></ol>
       </div>
+
+      <div class="wire" id="wire-wrap" hidden>
+        <h3 class="more-h">Headlines from local and regional outlets</h3>
+        <p class="wire-sub" id="wire-sub"></p>
+        <ul class="wire-list" id="wire"></ul>
+        <p><button class="btn btn-ghost" type="button" id="wire-more" hidden>Show more headlines</button></p>
+      </div>
+
+      <div class="wider" id="wider" hidden>
+        <div class="wider-head">
+          <div>
+            <h3 class="wider-h" id="wider-h">Search further</h3>
+            <p class="wider-sub">Look for recent reporting that mentions this place in news sites worldwide, in many languages. These results come live from the GDELT Project's news index; World Right Now hasn't checked or summarized them.</p>
+          </div>
+          <div class="wider-actions">
+            <button class="btn" type="button" id="gdelt-go">
+              <svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg>
+              <span>Search worldwide news</span>
+            </button>
+            <a class="btn btn-ghost" id="gnews" href="https://news.google.com/" target="_blank" rel="noopener">
+              <span>Open in Google News</span>
+              <svg class="ico" aria-hidden="true"><use href="#i-out"/></svg>
+            </a>
+          </div>
+        </div>
+        <p class="wider-status" id="gdelt-status" aria-live="polite"></p>
+        <ul class="wire-list" id="gdelt"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="localsec" id="local" aria-labelledby="local-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="local-h">Local news from around the world</h2>
+        <p class="sec-sub" id="local-sub">Villages, districts, towns and neighbourhoods: the news that rarely makes international headlines, from local and national outlets in every region.</p>
+      </div>
+      <p class="empty" id="local-note" hidden>Local stories are included in your search results above. Clear the search to see them by region.</p>
+      <div class="local-groups" id="local-groups"></div>
     </div>
   </section>
 
@@ -141,6 +181,7 @@
         <ul class="legend" aria-label="Map key">
           <li><span class="key key-top" aria-hidden="true"></span>Top story</li>
           <li><span class="key key-dot" aria-hidden="true"></span>Story</li>
+          <li><span class="key key-loc" aria-hidden="true"></span>Local story</li>
           <li><span class="key key-night" aria-hidden="true"></span><span id="night-label">Night now</span></li>
         </ul>
         <p class="map-note" id="map-note"></p>
@@ -205,14 +246,19 @@
       <div class="about-grid">
         <div class="block" id="how">
           <h3>How it's made</h3>
-          <p>Every morning, Claude, an AI model made by Anthropic, reads the public news feeds of <a href="https://www.npr.org/sections/world/">NPR</a>, <a href="https://www.aljazeera.com/">Al Jazeera</a>, <a href="https://www.france24.com/en/">France 24</a> and <a href="https://www.abc.net.au/news">ABC News (Australia)</a>. It rewrites each story in plain words and adds background, key terms and timelines. Every story links to the original reports so you can check them. AI can make mistakes, so the reports are the final word.</p>
-          <p>The news is a daily edition, not a live feed. What does update live is the clock: local times and the day-and-night shading are worked out in your browser from the current time.</p>
+          <p>Every morning, Claude, an AI model made by Anthropic, reads the public news feeds of <span id="source-count">dozens of</span> outlets, from international broadcasters to city and district pages of local newspapers. It picks the day's biggest stories and at least twenty local ones from every region, rewrites each in plain words, and adds background, key terms and timelines. Every story links to the original reports so you can check them. AI can make mistakes, so the reports are the final word.</p>
+          <p>Every headline it reads also goes into a week-long index you can search by place, so towns and neighbourhoods that didn't make the edition can still turn up. The news is a daily edition, not a live feed. What does update live is the clock: local times and the day-and-night shading are worked out in your browser from the current time.</p>
+        </div>
+        <div class="block block-wide" id="sources">
+          <h3>Sources we read</h3>
+          <div class="source-list" id="source-list"><p>The list of sources loads with the page.</p></div>
         </div>
         <div class="block" id="privacy">
           <h3>Privacy</h3>
           <ul>
             <li>The site collects no personal information. There are no accounts, forms, trackers or analytics.</li>
             <li>The only thing it saves is the region and topic you last filtered by. That stays in your own browser so your choice is still set next time, and it never leaves your device. Searches aren't saved.</li>
+            <li>Searching the site happens in your browser. Only if you press "Search worldwide news" are your search words sent to the <a href="https://www.gdeltproject.org/">GDELT Project</a>'s free news index to fetch results; nothing else about you is sent. "Open in Google News" is an ordinary link to Google's site.</li>
             <li>The site is hosted on GitHub Pages. Like any web host, GitHub may log visitors' IP addresses for security; see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</li>
             <li>Links to news sites take you to those sites, which have their own privacy policies.</li>
             <li>Because the site collects nothing from anyone, it doesn't ask for anyone's age, including children's.</li>
@@ -220,7 +266,7 @@
         </div>
         <div class="block" id="cookies">
           <h3>Cookies and storage</h3>
-          <p>This site sets no cookies and loads nothing from other websites: its typefaces, map and pictures are part of the site. The filter it remembers is stored only because you picked it, so there's no consent banner to click through.</p>
+          <p>This site sets no cookies and loads nothing from other websites unless you ask it to search worldwide news: its typefaces, map and pictures are part of the site. The filter it remembers is stored only because you picked it, so there's no consent banner to click through.</p>
         </div>
         <div class="block" id="your-data">
           <h3>Your data</h3>

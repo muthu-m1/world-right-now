@@ -4,8 +4,9 @@
 (function () {
   "use strict";
 
-  var D, TERMS, THREADS;
+  var D, TERMS, THREADS, SOURCES = null;
   var RANKED = [];
+  var WIRE = null, wireLoading = null, wireShown = 30;
   var REGIONS = ["All", "Europe", "Middle East", "Africa", "Asia-Pacific", "Americas", "Global"];
   var reduceMotion = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -203,11 +204,14 @@
     if (norm(s.region) === q) return 2;
     return textOf(s).indexOf(q) >= 0 ? 1 : 0;
   }
+  function filtering() { return !!(state.q || state.region !== "All" || state.topic !== "All"); }
   function results() {
     var q = norm(state.q);
     return RANKED
       .map(function (s) { return { s: s, m: matchLevel(s, q) }; })
       .filter(function (r) {
+        // Without a search or filter, local stories live in their own section below.
+        if (!filtering() && r.s.scale === "local") return false;
         return r.m > 0 && (state.region === "All" || r.s.region === state.region) && (state.topic === "All" || r.s.topic === state.topic);
       })
       .sort(function (a, b) { return b.m - a.m || score(b.s) - score(a.s); })
@@ -324,13 +328,19 @@
     }
 
     // Example searches taken from today's own stories.
+    // One big story's place, then places from the local stories in two different regions.
     var picks = [];
     var top = RANKED[0];
     if (top) picks.push(top.city);
-    var withState = RANKED.find(function (s) { return s.state && s.country === "United States"; });
-    if (withState) picks.push(withState.state);
-    var other = RANKED.find(function (s) { return s.country && s.country !== "Worldwide" && picks.indexOf(s.country) < 0 && s.country !== (top && top.country) && s.country !== "United States"; });
-    if (other) picks.push(other.country);
+    var locals = RANKED.filter(function (s) { return s.scale === "local" && s.lat != null; });
+    var seenRegion = {};
+    locals.forEach(function (s) {
+      if (picks.length >= 3 || seenRegion[s.region]) return;
+      var name = (s.places && s.places[0]) || s.city.split(",")[0];
+      if (picks.indexOf(name) >= 0) return;
+      seenRegion[s.region] = 1;
+      picks.push(name);
+    });
     var hint = $("hint");
     hint.textContent = "";
     if (picks.length) {
@@ -351,11 +361,12 @@
       s.sources.forEach(function (x) { outlets[x.outlet] = 1; });
       if (s.country && s.country !== "Worldwide") countries[s.country] = 1;
     });
+    var read = SOURCES ? SOURCES.feeds.reduce(function (m, f) { m[f.outlet] = 1; return m; }, {}) : outlets;
     var stats = [
       [D.stories.length, "Stories today"],
-      [Object.keys(outlets).length, "News outlets"],
+      [D.stories.filter(function (s) { return s.scale === "local"; }).length, "Local stories"],
       [Object.keys(countries).length, "Countries and territories"],
-      [Object.keys(THREADS).length, "Ongoing timelines"],
+      [Object.keys(read).length, "News outlets read"],
     ];
     var dlEl = $("stats");
     stats.forEach(function (x) {
@@ -529,14 +540,14 @@
     a.appendChild(b);
     return a;
   }
-  function row(s) {
+  function row(s, full) {
     var li = el("li", "row");
     li.id = "s-" + s.id;
     var head = el("button", "row-head");
     head.type = "button";
     head.setAttribute("aria-expanded", "false");
     head.setAttribute("aria-controls", "rb-" + s.id);
-    head.appendChild(dateline(s, { short: true, inline: true }));
+    head.appendChild(dateline(s, { short: !full, inline: true }));
     head.appendChild(el("span", "row-title", s.title));
     head.appendChild(metaLine(s, true));
     head.appendChild(chev());
@@ -544,7 +555,7 @@
     body.id = "rb-" + s.id;
     body.hidden = true;
     var where = [s.state, s.country].filter(function (x) { return x && x !== s.city && x !== "Worldwide"; }).join(", ");
-    if (where) body.appendChild(el("p", "meta", where));
+    if (where && !full) body.appendChild(el("p", "meta", where));
     body.appendChild(rich(s.summary, "p", "sum"));
     var w = whyBlock(s, false);
     if (w) body.appendChild(w);
@@ -585,7 +596,7 @@
     if (!list.length) {
       var e = el("p", "empty");
       e.textContent = state.q
-        ? "No stories in today's edition mention “" + state.q + "”" + (state.region !== "All" || state.topic !== "All" ? " with these filters" : "") + ". Try a nearby country, a region, or clear the search."
+        ? "No stories in today's edition mention “" + state.q + "”" + (state.region !== "All" || state.topic !== "All" ? " with these filters" : "") + ". Check the week's headlines and the wider search below, or try the nearest city, district or state."
         : "No stories match these filters today.";
       featured.appendChild(e);
     }
@@ -614,6 +625,9 @@
       });
     });
     $("clear-q").hidden = !state.q;
+    renderLocal();
+    renderWire();
+    renderWider();
     reveal();
     // Position the location pictures now that they have their real size.
     frame(function () { insets.forEach(paintInset); });
@@ -691,6 +705,183 @@
     });
   }
 
+  // ---------------------------------------------------------------- local news, by region
+  var LOCAL_ORDER = ["Africa", "Asia-Pacific", "Americas", "Europe", "Middle East", "Global"];
+  var REGION_NAME = { "Asia-Pacific": "Asia and the Pacific", Global: "Worldwide" };
+  function renderLocal() {
+    var wrap = $("local-groups");
+    wrap.textContent = "";
+    var f = filtering();
+    $("local-note").hidden = !f;
+    if (f) return;
+    var locals = RANKED.filter(function (s) { return s.scale === "local"; });
+    LOCAL_ORDER.forEach(function (r) {
+      var list = locals.filter(function (s) { return s.region === r; });
+      if (!list.length) return;
+      // Cluster by country (most stories first), newest first within each.
+      var count = {};
+      list.forEach(function (s) { count[s.country] = (count[s.country] || 0) + 1; });
+      list.sort(function (a, b) {
+        return (count[b.country] - count[a.country]) || a.country.localeCompare(b.country) || (latest(b) < latest(a) ? -1 : 1);
+      });
+      var g = el("section", "local-group rv");
+      g.setAttribute("aria-label", "Local news: " + (REGION_NAME[r] || r));
+      var head = el("div", "local-head");
+      head.appendChild(el("h3", null, REGION_NAME[r] || r));
+      var countries = Object.keys(count).sort(function (a, b) { return count[b] - count[a]; });
+      head.appendChild(el("p", "local-places", list.length + (list.length === 1 ? " story from " : " stories from ") + countries.join(", ")));
+      g.appendChild(head);
+      var ol = el("ol", "more-list");
+      list.forEach(function (s) { ol.appendChild(row(s, true)); });
+      g.appendChild(ol);
+      wrap.appendChild(g);
+    });
+  }
+
+  // ---------------------------------------------------------------- the week's headlines, searchable by place
+  function loadWire() {
+    if (!wireLoading) {
+      wireLoading = getJSON("data/wire.json")
+        .then(function (w) { WIRE = w; return w; })
+        .catch(function () { WIRE = { items: [], days: 7, failed: true }; return WIRE; });
+    }
+    return wireLoading;
+  }
+  function placeHit(p, q) {
+    if (!p) return false;
+    var n = norm(p);
+    return n === q || n.indexOf(q) === 0 || (q.length > 3 && n.indexOf(q) >= 0);
+  }
+  function renderWire() {
+    var box = $("wire-wrap");
+    if (!state.q) { box.hidden = true; return; }
+    box.hidden = false;
+    var asked = state.q;
+    $("wire").textContent = "";
+    $("wire-more").hidden = true;
+    $("wire-sub").textContent = "Searching this week's headlines…";
+    loadWire().then(function () {
+      if (state.q !== asked) return;
+      var q = norm(asked);
+      var hits = WIRE.items.filter(function (i) {
+        if (state.region !== "All" && i.r !== state.region) return false;
+        i._t = norm(i.t).indexOf(q) >= 0;
+        return i._t || placeHit(i.ci, q) || placeHit(i.s, q) || placeHit(i.c, q);
+      });
+      // Headlines that name the place come before ones that are only from an outlet there.
+      hits.sort(function (a, b) { return (b._t - a._t) || b.at.localeCompare(a.at); });
+      var sub = $("wire-sub");
+      if (WIRE.failed) { sub.textContent = "This week's headlines didn't load. Refresh the page to try again."; return; }
+      sub.textContent = hits.length
+        ? (hits.length === 1
+            ? "1 headline from the past " + WIRE.days + " days mentions “" + asked + "” or comes from an outlet there."
+            : hits.length + " headlines from the past " + WIRE.days + " days mention “" + asked + "” or come from outlets there.") +
+          " They link to the original reports and haven't been summarized."
+        : "No headlines from the past " + WIRE.days + " days mention “" + asked + "”. Try a nearby town, the district or the state, or search further below.";
+      wireShown = 30;
+      function draw() {
+        var ul = $("wire");
+        ul.textContent = "";
+        hits.slice(0, wireShown).forEach(function (i) { ul.appendChild(wireItem(i.t, i.u, [i.o, [i.ci, i.s, i.c].filter(Boolean).join(", "), ago(i.at)])); });
+        var more = $("wire-more");
+        more.hidden = hits.length <= wireShown;
+        more.onclick = function () { wireShown += 30; draw(); };
+      }
+      draw();
+    });
+  }
+  function wireItem(title, url, bits) {
+    var li = el("li");
+    var a = link("", url);
+    a.appendChild(document.createTextNode(title));
+    a.appendChild(icon("out"));
+    li.appendChild(a);
+    li.appendChild(el("span", "wire-meta", bits.filter(Boolean).join(" · ")));
+    return li;
+  }
+
+  // ---------------------------------------------------------------- search further (only when asked)
+  var gdelt = { q: null, at: 0 };
+  function renderWider() {
+    var box = $("wider");
+    if (!state.q) { box.hidden = true; return; }
+    box.hidden = false;
+    $("wider-h").textContent = "Search further for “" + state.q + "”";
+    $("gnews").href = "https://news.google.com/search?q=" + encodeURIComponent(state.q);
+    if (gdelt.q !== state.q) { $("gdelt").textContent = ""; $("gdelt-status").textContent = ""; }
+  }
+  function gdeltDate(s) {
+    var m = /^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z$/.exec(s || "");
+    return m ? m[1] + "-" + m[2] + "-" + m[3] + "T" + m[4] + ":" + m[5] + ":" + m[6] + "Z" : null;
+  }
+  function searchWorldwide() {
+    var q = state.q;
+    var status = $("gdelt-status"), list = $("gdelt");
+    if (!q) return;
+    var wait = 6000 - (Date.now() - gdelt.at);
+    if (wait > 0) { status.textContent = "The worldwide index allows one search every few seconds. Try again in " + Math.ceil(wait / 1000) + " s."; return; }
+    gdelt.at = Date.now();
+    gdelt.q = q;
+    list.textContent = "";
+    status.textContent = "Searching news sites worldwide…";
+    var phrase = /\s/.test(q) ? "\"" + q + "\"" : q;
+    var url = "https://api.gdeltproject.org/api/v2/doc/doc?query=" + encodeURIComponent(phrase) +
+      "&mode=artlist&format=json&maxrecords=30&sort=datedesc&timespan=1month";
+    var ctl = new AbortController();
+    var timer = setTimeout(function () { ctl.abort(); }, 25000);
+    fetch(url, { signal: ctl.signal }).then(function (r) { return r.text(); }).then(function (t) {
+      clearTimeout(timer);
+      if (state.q !== q) return;
+      var j = null;
+      try { j = JSON.parse(t); } catch (e) {}
+      if (!j) {
+        status.textContent = /limit requests/i.test(t)
+          ? "The worldwide index is busy right now. Wait a minute and try again, or open the search in Google News."
+          : "The worldwide index couldn't run that search. Try a different spelling, or open it in Google News.";
+        return;
+      }
+      var arts = j.articles || [];
+      status.textContent = arts.length
+        ? arts.length + " articles from the past month, newest first. Live from the GDELT Project; not checked or summarized by World Right Now."
+        : "The worldwide index found nothing for “" + q + "” in the past month. Google News may have more.";
+      arts.forEach(function (a) {
+        var at = gdeltDate(a.seendate);
+        list.appendChild(wireItem(a.title, a.url, [a.domain, a.sourcecountry, a.language !== "English" ? a.language : "", at ? ago(at) : ""]));
+      });
+    }).catch(function () {
+      clearTimeout(timer);
+      if (state.q !== q) return;
+      status.textContent = "The worldwide index didn't respond. It may be busy; try again in a minute, or open the search in Google News.";
+    });
+  }
+  $("gdelt-go").addEventListener("click", searchWorldwide);
+
+  // ---------------------------------------------------------------- sources we read
+  function renderSources() {
+    var box = $("source-list");
+    if (!SOURCES) return;
+    box.textContent = "";
+    var outlets = {};
+    SOURCES.feeds.forEach(function (f) { outlets[f.outlet] = 1; });
+    $("source-count").textContent = Object.keys(outlets).length;
+    LOCAL_ORDER.forEach(function (r) {
+      var seen = {}, names = [];
+      SOURCES.feeds.filter(function (f) { return f.region === r && f.section !== "sport"; }).forEach(function (f) {
+        var label = f.outlet + (f.country && r !== "Global" ? " (" + [f.state, f.country].filter(Boolean).join(", ") + ")" : "");
+        if (f.scope === "local" && f.city) label = f.outlet + " (" + f.city + ")";
+        if (!seen[label]) { seen[label] = 1; names.push({ label: label, url: new URL(f.url).origin }); }
+      });
+      if (!names.length) return;
+      var p = el("p");
+      p.appendChild(el("strong", null, (REGION_NAME[r] || r) + ": "));
+      names.forEach(function (n, i) {
+        if (i) p.appendChild(document.createTextNode(", "));
+        p.appendChild(link(n.label, n.url));
+      });
+      box.appendChild(p);
+    });
+  }
+
   // ---------------------------------------------------------------- map
   var MAP = { svg: null, vb: null, markers: [], s: 1 };
   var ZOOMS = {
@@ -761,7 +952,7 @@
       var top = topIds.indexOf(s.id) >= 0;
       var a = document.createElementNS(NS, "a");
       a.setAttribute("href", "#s-" + s.id);
-      a.setAttribute("class", "mk" + (top ? " top" : ""));
+      a.setAttribute("class", "mk" + (top ? " top" : s.scale === "local" ? " loc" : ""));
       a.setAttribute("aria-label", s.city + ": " + s.title);
       var halo = document.createElementNS(NS, "circle");
       halo.setAttribute("class", "halo");
@@ -1097,9 +1288,13 @@
     });
   }
 
-  Promise.all([getJSON("data/latest.json"), getJSON("data/terms.json"), getJSON("data/threads.json")])
+  Promise.all([
+    getJSON("data/latest.json"), getJSON("data/terms.json"), getJSON("data/threads.json"),
+    getJSON("data/sources.json").catch(function () { return null; }),
+  ])
     .then(function (res) {
-      D = res[0]; TERMS = res[1]; THREADS = res[2];
+      D = res[0]; TERMS = res[1]; THREADS = res[2]; SOURCES = res[3];
+      renderSources();
       RANKED = D.stories.slice().sort(function (a, b) { return score(b) - score(a); });
       renderHero();
       startEarth();

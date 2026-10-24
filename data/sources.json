@@ -1,0 +1,554 @@
+{
+  "about": "News feeds read by the daily update. scope is how wide the outlet's beat is: international, regional, national or local. region and country say where it reports from; local outlets are where most village, district and neighbourhood news comes from.",
+  "feeds": [
+    {
+      "outlet": "NPR",
+      "name": "NPR World",
+      "url": "https://feeds.npr.org/1004/rss.xml",
+      "scope": "international",
+      "region": "Global"
+    },
+    {
+      "outlet": "NPR",
+      "name": "NPR US",
+      "url": "https://feeds.npr.org/1003/rss.xml",
+      "scope": "national",
+      "region": "Americas",
+      "country": "United States"
+    },
+    {
+      "outlet": "NPR",
+      "name": "NPR Business",
+      "url": "https://feeds.npr.org/1006/rss.xml",
+      "scope": "international",
+      "region": "Global"
+    },
+    {
+      "outlet": "NPR",
+      "name": "NPR Science",
+      "url": "https://feeds.npr.org/1007/rss.xml",
+      "scope": "international",
+      "region": "Global"
+    },
+    {
+      "outlet": "NPR",
+      "name": "NPR Technology",
+      "url": "https://feeds.npr.org/1019/rss.xml",
+      "scope": "international",
+      "region": "Global"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "name": "Al Jazeera",
+      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "scope": "international",
+      "region": "Global"
+    },
+    {
+      "outlet": "France 24",
+      "name": "France 24",
+      "url": "https://www.france24.com/en/rss",
+      "scope": "international",
+      "region": "Global"
+    },
+    {
+      "outlet": "BBC News",
+      "name": "BBC World",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "scope": "international",
+      "region": "Global"
+    },
+    {
+      "outlet": "The Guardian",
+      "name": "Guardian World",
+      "url": "https://www.theguardian.com/world/rss",
+      "scope": "international",
+      "region": "Global"
+    },
+    {
+      "outlet": "DW",
+      "name": "DW",
+      "url": "https://rss.dw.com/rdf/rss-en-all",
+      "scope": "international",
+      "region": "Global"
+    },
+    {
+      "outlet": "Rest of World",
+      "name": "Rest of World",
+      "url": "https://restofworld.org/feed/latest/",
+      "scope": "international",
+      "region": "Global"
+    },
+    {
+      "outlet": "Global Voices",
+      "name": "Global Voices",
+      "url": "https://globalvoices.org/feed/",
+      "scope": "international",
+      "region": "Global"
+    },
+    {
+      "outlet": "Mongabay",
+      "name": "Mongabay",
+      "url": "https://news.mongabay.com/feed/",
+      "scope": "international",
+      "region": "Global"
+    },
+    {
+      "outlet": "The New Humanitarian",
+      "name": "The New Humanitarian",
+      "url": "https://www.thenewhumanitarian.org/rss/all.xml",
+      "scope": "international",
+      "region": "Global"
+    },
+    {
+      "outlet": "BBC News",
+      "name": "BBC Africa",
+      "url": "https://feeds.bbci.co.uk/news/world/africa/rss.xml",
+      "scope": "regional",
+      "region": "Africa"
+    },
+    {
+      "outlet": "Africanews",
+      "name": "Africanews",
+      "url": "https://www.africanews.com/feed/rss",
+      "scope": "regional",
+      "region": "Africa"
+    },
+    {
+      "outlet": "AllAfrica",
+      "name": "AllAfrica latest",
+      "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+      "scope": "regional",
+      "region": "Africa"
+    },
+    {
+      "outlet": "Premium Times",
+      "name": "Premium Times Nigeria",
+      "url": "https://www.premiumtimesng.com/feed",
+      "scope": "national",
+      "region": "Africa",
+      "country": "Nigeria"
+    },
+    {
+      "outlet": "Nation",
+      "name": "Nation Kenya",
+      "url": "https://nation.africa/kenya/rss.xml",
+      "scope": "national",
+      "region": "Africa",
+      "country": "Kenya"
+    },
+    {
+      "outlet": "Daily Maverick",
+      "name": "Daily Maverick South Africa",
+      "url": "https://www.dailymaverick.co.za/dmrss/",
+      "scope": "national",
+      "region": "Africa",
+      "country": "South Africa"
+    },
+    {
+      "outlet": "BBC News",
+      "name": "BBC Middle East",
+      "url": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml",
+      "scope": "regional",
+      "region": "Middle East"
+    },
+    {
+      "outlet": "BBC News",
+      "name": "BBC Europe",
+      "url": "https://feeds.bbci.co.uk/news/world/europe/rss.xml",
+      "scope": "regional",
+      "region": "Europe"
+    },
+    {
+      "outlet": "Euronews",
+      "name": "Euronews",
+      "url": "https://www.euronews.com/rss",
+      "scope": "regional",
+      "region": "Europe"
+    },
+    {
+      "outlet": "BBC News",
+      "name": "BBC Asia",
+      "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+      "scope": "regional",
+      "region": "Asia-Pacific"
+    },
+    {
+      "outlet": "The Straits Times",
+      "name": "Straits Times Asia",
+      "url": "https://www.straitstimes.com/news/asia/rss.xml",
+      "scope": "regional",
+      "region": "Asia-Pacific"
+    },
+    {
+      "outlet": "The Japan Times",
+      "name": "Japan Times",
+      "url": "https://www.japantimes.co.jp/feed/",
+      "scope": "national",
+      "region": "Asia-Pacific",
+      "country": "Japan"
+    },
+    {
+      "outlet": "Dawn",
+      "name": "Dawn Pakistan",
+      "url": "https://www.dawn.com/feeds/home",
+      "scope": "national",
+      "region": "Asia-Pacific",
+      "country": "Pakistan"
+    },
+    {
+      "outlet": "The Kathmandu Post",
+      "name": "Kathmandu Post",
+      "url": "https://kathmandupost.com/rss",
+      "scope": "national",
+      "region": "Asia-Pacific",
+      "country": "Nepal"
+    },
+    {
+      "outlet": "Rappler",
+      "name": "Rappler Philippines",
+      "url": "https://www.rappler.com/feed/",
+      "scope": "national",
+      "region": "Asia-Pacific",
+      "country": "Philippines"
+    },
+    {
+      "outlet": "RNZ",
+      "name": "RNZ Pacific",
+      "url": "https://www.rnz.co.nz/rss/pacific.xml",
+      "scope": "regional",
+      "region": "Asia-Pacific"
+    },
+    {
+      "outlet": "ABC News",
+      "name": "ABC News Australia",
+      "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+      "scope": "national",
+      "region": "Asia-Pacific",
+      "country": "Australia"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu India",
+      "url": "https://www.thehindu.com/news/national/feeder/default.rss",
+      "scope": "national",
+      "region": "Asia-Pacific",
+      "country": "India"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu Tamil Nadu",
+      "url": "https://www.thehindu.com/news/national/tamil-nadu/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "Tamil Nadu"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu Kerala",
+      "url": "https://www.thehindu.com/news/national/kerala/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "Kerala"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu Karnataka",
+      "url": "https://www.thehindu.com/news/national/karnataka/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "Karnataka"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu Andhra Pradesh",
+      "url": "https://www.thehindu.com/news/national/andhra-pradesh/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "Andhra Pradesh"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu Telangana",
+      "url": "https://www.thehindu.com/news/national/telangana/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "Telangana"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu other states",
+      "url": "https://www.thehindu.com/news/national/other-states/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu Chennai",
+      "url": "https://www.thehindu.com/news/cities/chennai/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Chennai"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu Madurai",
+      "url": "https://www.thehindu.com/news/cities/Madurai/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Madurai"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu Coimbatore",
+      "url": "https://www.thehindu.com/news/cities/Coimbatore/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu Bengaluru",
+      "url": "https://www.thehindu.com/news/cities/bangalore/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "Karnataka",
+      "city": "Bengaluru"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu Delhi",
+      "url": "https://www.thehindu.com/news/cities/Delhi/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "Delhi",
+      "city": "Delhi"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu Mumbai",
+      "url": "https://www.thehindu.com/news/cities/mumbai/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Mumbai"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu Kolkata",
+      "url": "https://www.thehindu.com/news/cities/kolkata/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "West Bengal",
+      "city": "Kolkata"
+    },
+    {
+      "outlet": "The Hindu",
+      "name": "The Hindu Hyderabad",
+      "url": "https://www.thehindu.com/news/cities/Hyderabad/feeder/default.rss",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "Telangana",
+      "city": "Hyderabad"
+    },
+    {
+      "outlet": "The Indian Express",
+      "name": "Indian Express India",
+      "url": "https://indianexpress.com/section/india/feed/",
+      "scope": "national",
+      "region": "Asia-Pacific",
+      "country": "India"
+    },
+    {
+      "outlet": "Scroll",
+      "name": "Scroll",
+      "url": "https://feeds.feedburner.com/ScrollinArticles.rss",
+      "scope": "national",
+      "region": "Asia-Pacific",
+      "country": "India"
+    },
+    {
+      "outlet": "Mongabay India",
+      "name": "Mongabay India",
+      "url": "https://india.mongabay.com/feed/",
+      "scope": "national",
+      "region": "Asia-Pacific",
+      "country": "India"
+    },
+    {
+      "outlet": "The Times of India",
+      "name": "Times of India Chennai",
+      "url": "https://timesofindia.indiatimes.com/rssfeeds/2950623.cms",
+      "scope": "local",
+      "region": "Asia-Pacific",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Chennai"
+    },
+    {
+      "outlet": "BBC News",
+      "name": "BBC US and Canada",
+      "url": "https://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml",
+      "scope": "regional",
+      "region": "Americas"
+    },
+    {
+      "outlet": "BBC News",
+      "name": "BBC Latin America",
+      "url": "https://feeds.bbci.co.uk/news/world/latin_america/rss.xml",
+      "scope": "regional",
+      "region": "Americas"
+    },
+    {
+      "outlet": "CBC News",
+      "name": "CBC Canada",
+      "url": "https://www.cbc.ca/webfeed/rss/rss-canada",
+      "scope": "national",
+      "region": "Americas",
+      "country": "Canada"
+    },
+    {
+      "outlet": "The Daily Yonder",
+      "name": "Daily Yonder (rural US)",
+      "url": "https://dailyyonder.com/feed/",
+      "scope": "local",
+      "region": "Americas",
+      "country": "United States"
+    },
+    {
+      "outlet": "Buenos Aires Times",
+      "name": "Buenos Aires Times",
+      "url": "https://www.batimes.com.ar/feed",
+      "scope": "national",
+      "region": "Americas",
+      "country": "Argentina"
+    },
+    {
+      "outlet": "Mexico News Daily",
+      "name": "Mexico News Daily",
+      "url": "https://mexiconewsdaily.com/feed/",
+      "scope": "national",
+      "region": "Americas",
+      "country": "Mexico"
+    },
+    {
+      "outlet": "Agência Brasil",
+      "name": "Agência Brasil (English)",
+      "url": "https://agenciabrasil.ebc.com.br/en/rss/ultimasnoticias/feed.xml",
+      "scope": "national",
+      "region": "Americas",
+      "country": "Brazil"
+    },
+    {
+      "outlet": "MercoPress",
+      "name": "MercoPress",
+      "url": "https://en.mercopress.com/rss/",
+      "scope": "regional",
+      "region": "Americas"
+    },
+    {
+      "outlet": "RTÉ News",
+      "name": "RTÉ Ireland",
+      "url": "https://www.rte.ie/feeds/rss/?index=/news/",
+      "scope": "national",
+      "region": "Europe",
+      "country": "Ireland"
+    },
+    {
+      "outlet": "BBC News",
+      "name": "BBC England",
+      "url": "https://feeds.bbci.co.uk/news/england/rss.xml",
+      "scope": "local",
+      "region": "Europe",
+      "country": "United Kingdom",
+      "state": "England"
+    },
+    {
+      "outlet": "Balkan Insight",
+      "name": "Balkan Insight",
+      "url": "https://balkaninsight.com/feed/",
+      "scope": "regional",
+      "region": "Europe"
+    },
+    {
+      "outlet": "Notes from Poland",
+      "name": "Notes from Poland",
+      "url": "https://notesfrompoland.com/feed/",
+      "scope": "national",
+      "region": "Europe",
+      "country": "Poland"
+    },
+    {
+      "outlet": "The Kyiv Independent",
+      "name": "Kyiv Independent",
+      "url": "https://kyivindependent.com/news-archive/rss/",
+      "scope": "national",
+      "region": "Europe",
+      "country": "Ukraine"
+    },
+    {
+      "outlet": "The Local",
+      "name": "The Local Spain",
+      "url": "https://feeds.thelocal.com/rss/es",
+      "scope": "national",
+      "region": "Europe",
+      "country": "Spain"
+    },
+    {
+      "outlet": "The National",
+      "name": "The National UAE",
+      "url": "https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml",
+      "scope": "regional",
+      "region": "Middle East"
+    },
+    {
+      "outlet": "The Times of Israel",
+      "name": "Times of Israel",
+      "url": "https://www.timesofisrael.com/feed/",
+      "scope": "national",
+      "region": "Middle East",
+      "country": "Israel"
+    },
+    {
+      "outlet": "VnExpress International",
+      "name": "VnExpress",
+      "url": "https://e.vnexpress.net/rss/news.rss",
+      "scope": "national",
+      "region": "Asia-Pacific",
+      "country": "Vietnam"
+    },
+    {
+      "outlet": "Colombia One",
+      "name": "Colombia One",
+      "url": "https://colombiaone.com/feed/",
+      "scope": "national",
+      "region": "Americas",
+      "country": "Colombia"
+    },
+    {
+      "outlet": "ABC News",
+      "name": "ABC Sport",
+      "url": "https://www.abc.net.au/news/feed/2942460/rss.xml",
+      "scope": "international",
+      "region": "Global",
+      "section": "sport"
+    }
+  ]
+}

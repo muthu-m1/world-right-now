@@ -2,10 +2,23 @@
   "date": "2026-10-24",
   "snapshot": "2026-10-24T13:00:00Z",
   "outlets": [
+    "France 24",
     "NPR",
     "Al Jazeera",
-    "France 24",
-    "ABC News"
+    "Africanews",
+    "Nation",
+    "AllAfrica",
+    "Daily Maverick",
+    "The Hindu",
+    "The Kathmandu Post",
+    "RNZ",
+    "Rappler",
+    "Mongabay",
+    "CBC News",
+    "Buenos Aires Times",
+    "Mexico News Daily",
+    "Global Voices",
+    "Dawn"
   ],
   "stories": [
     {
@@ -592,6 +605,872 @@
           "title": "Time expert Philippe Richard on why scientists are changing how we keep time",
           "url": "https://www.npr.org/2026/10/24/nx-s1-6011081/time-expert-philippe-richard-on-why-scientists-are-changing-how-we-keep-time",
           "time": "2026-10-24T11:42:00Z"
+        }
+      ]
+    },
+    {
+      "id": "nairobi-collapse",
+      "scale": "local",
+      "topic": "Community",
+      "region": "Africa",
+      "city": "Eastleigh, Nairobi",
+      "country": "Kenya",
+      "state": "Nairobi County",
+      "places": [
+        "Nairobi",
+        "Eastleigh"
+      ],
+      "tz": "Africa/Nairobi",
+      "lat": -1.276,
+      "lon": 36.85,
+      "title": "A 16-storey building under construction collapses in Nairobi's Eastleigh",
+      "summary": "Police used tear gas to disperse looters and onlookers after the high-rise came down in Kenya's capital, with many feared trapped, Africanews reports. Nairobi's governor, Johnson Sakaja, says construction was going ahead without approval.",
+      "sources": [
+        {
+          "outlet": "Africanews",
+          "title": "Police dispel crowds with tear gas after 16-storey building collapses in Nairobi",
+          "url": "https://www.africanews.com/2026/10/24/16-storey-building-collapses-in-nairobi-many-fear-trapped-in-rubble/",
+          "time": "2026-10-24T07:29:49Z"
+        },
+        {
+          "outlet": "Nation",
+          "title": "Sakaja: Construction of Eastleigh building that collapsed was going on without approval",
+          "url": "https://nation.africa/kenya/videos/sakaja-construction-of-eastleigh-building-that-collapsed-was-going-on-without-approval-5643908",
+          "time": "2026-10-24T08:42:00Z"
+        }
+      ]
+    },
+    {
+      "id": "bunia-ebola",
+      "scale": "local",
+      "thread": "ebola-2026",
+      "topic": "Health",
+      "region": "Africa",
+      "city": "Bunia",
+      "country": "DR Congo",
+      "state": "Ituri",
+      "places": [
+        "Democratic Republic of the Congo"
+      ],
+      "tz": "Africa/Lubumbashi",
+      "lat": 1.56,
+      "lon": 30.25,
+      "title": "A trial of new Ebola vaccines begins in Bunia, in eastern DR Congo",
+      "summary": "The TUMAini clinical trial in Ituri province will test candidate vaccines against the [[ebola-bundibugyo|Bundibugyo strain]], which is behind the current outbreak, Africanews reports.",
+      "sources": [
+        {
+          "outlet": "Africanews",
+          "title": "New Tumaini Ebola vaccine trial launches in Bunia as DRC struggles",
+          "url": "https://www.africanews.com/2026/10/24/new-tumaini-ebola-vaccine-trial-launches-in-bunia-as-drc-struggles/",
+          "time": "2026-10-24T08:38:44Z"
+        }
+      ]
+    },
+    {
+      "id": "kenya-soil",
+      "scale": "local",
+      "topic": "Farming",
+      "region": "Africa",
+      "city": "Rural Kenya",
+      "country": "Kenya",
+      "tz": "Africa/Nairobi",
+      "lat": 0.3,
+      "lon": 37.6,
+      "title": "Kenya maps its soils to help farmers grow more",
+      "summary": "A new Kenyan initiative is helping farmers understand their soil to improve crop yields as climate shocks intensify, UN News reports, via AllAfrica.",
+      "sources": [
+        {
+          "outlet": "AllAfrica",
+          "title": "Kenya: Soil Mapping Aims to Boost Agricultural Production in Kenya",
+          "url": "https://allafrica.com/stories/202610230643.html",
+          "time": "2026-10-23T23:47:27Z"
+        }
+      ]
+    },
+    {
+      "id": "nakuru-fishing",
+      "scale": "local",
+      "topic": "Nature",
+      "region": "Africa",
+      "city": "Nakuru",
+      "country": "Kenya",
+      "state": "Nakuru County",
+      "places": [
+        "Lake Nakuru"
+      ],
+      "tz": "Africa/Nairobi",
+      "lat": -0.37,
+      "lon": 36.09,
+      "title": "A Kenyan court pauses a plan to let fishermen back into Lake Nakuru",
+      "summary": "The High Court in Nakuru temporarily suspended a directive by Cabinet Secretary Hassan Joho that allowed fishing to resume in Lake Nakuru National Park, Capital FM reports, via AllAfrica.",
+      "sources": [
+        {
+          "outlet": "AllAfrica",
+          "title": "Kenya: High Court Suspends Joho's Directive Allowing Fishing in Lake Nakuru",
+          "url": "https://allafrica.com/stories/202610230539.html",
+          "time": "2026-10-23T17:15:09Z"
+        }
+      ]
+    },
+    {
+      "id": "kenya-periods",
+      "scale": "local",
+      "topic": "Community",
+      "region": "Africa",
+      "city": "Kenya",
+      "country": "Kenya",
+      "tz": "Africa/Nairobi",
+      "lat": -0.6,
+      "lon": 34.8,
+      "title": "Kenyan girls miss days of school every month because of period pain and stigma",
+      "summary": "Millions of Kenyan girls miss nearly a week of school each month because they can't afford what they need, the Nation reports, and pain and stigma make it worse.",
+      "sources": [
+        {
+          "outlet": "Nation",
+          "title": "It's not just about pads: Pain, stigma and the school days girls lose",
+          "url": "https://nation.africa/kenya/news/gender/it-s-not-just-about-pads-pain-stigma-and-the-school-days-girls-lose-5637692",
+          "time": "2026-10-24T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "lekwa-teemane",
+      "scale": "local",
+      "topic": "Community",
+      "region": "Africa",
+      "city": "Lekwa-Teemane",
+      "country": "South Africa",
+      "state": "North West",
+      "places": [
+        "Christiana",
+        "Bloemhof"
+      ],
+      "tz": "Africa/Johannesburg",
+      "lat": -27.91,
+      "lon": 25.17,
+      "title": "In South Africa's Lekwa-Teemane, failing local services leave taps dry",
+      "summary": "Ahead of local elections, Daily Maverick visited the municipality, where residents describe dry taps, flooded yards and stalled infrastructure since local government collapsed. 'We are moving backwards,' one says.",
+      "sources": [
+        {
+          "outlet": "Daily Maverick",
+          "title": "LOCAL ELECTIONS TOUR: 'We are moving backwards' — Lekwa-Teemane's collapse bleeds into residents' daily lives",
+          "url": "https://www.dailymaverick.co.za/article/2026-10-24-we-are-moving-backwards-lekwa-teemanes-collapse-bleeds-into-residents-daily-lives/",
+          "time": "2026-10-24T06:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "kruger-heat",
+      "scale": "local",
+      "topic": "Weather",
+      "region": "Africa",
+      "city": "Kruger National Park",
+      "country": "South Africa",
+      "state": "Mpumalanga",
+      "places": [
+        "Limpopo"
+      ],
+      "tz": "Africa/Johannesburg",
+      "lat": -24,
+      "lon": 31.5,
+      "title": "South Africa's weather service warns of a hot El Niño summer in the north-east",
+      "summary": "The alert covers the north-east of the country, including Kruger National Park, Daily Maverick reports, noting that [[el-nino|El Niño]] phases have grown stronger in recent decades.",
+      "sources": [
+        {
+          "outlet": "Daily Maverick",
+          "title": "SUMMER SCORCHER: Weather service sounds El Niño alarm for North-East, including Kruger Park",
+          "url": "https://www.dailymaverick.co.za/article/2026-10-23-weather-service-sounds-el-nino-alarm-for-north-east-including-kruger-park/",
+          "time": "2026-10-23T16:40:33Z"
+        }
+      ]
+    },
+    {
+      "id": "kzn-doctors",
+      "scale": "local",
+      "topic": "Health",
+      "region": "Africa",
+      "city": "KwaZulu-Natal",
+      "country": "South Africa",
+      "state": "KwaZulu-Natal",
+      "places": [
+        "Durban",
+        "Pietermaritzburg"
+      ],
+      "tz": "Africa/Johannesburg",
+      "lat": -29.6,
+      "lon": 30.4,
+      "title": "Qualified doctors can't find jobs while KwaZulu-Natal's hospitals go understaffed",
+      "summary": "Scores of doctors in KwaZulu-Natal are growing desperate because government hospitals and clinics have no posts for them, Daily Maverick reports.",
+      "sources": [
+        {
+          "outlet": "Daily Maverick",
+          "title": "FROZEN POSTS: Qualified doctors desperate for jobs as KZN's public hospitals go understaffed",
+          "url": "https://www.dailymaverick.co.za/article/2026-10-23-qualified-doctors-desperate-for-jobs-as-kzns-public-hospitals-go-understaffed/",
+          "time": "2026-10-23T13:46:59Z"
+        }
+      ]
+    },
+    {
+      "id": "chennai-ashok-nagar",
+      "scale": "local",
+      "topic": "Community",
+      "region": "Asia-Pacific",
+      "city": "Ashok Nagar, Chennai",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "places": [
+        "Chennai",
+        "Ashok Nagar"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 13.037,
+      "lon": 80.212,
+      "title": "A tree falls near a school in Chennai's Ashok Nagar, and students have a lucky escape",
+      "summary": "In a reader's letter to The Hindu, Mohammed Yusufdeen says the near miss shows the need to prune the area's trees.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "Tree falls near school in Ashok Nagar; a lucky escape for students",
+          "url": "https://www.thehindu.com/news/cities/chennai/tree-falls-near-school-in-ashok-nagar-a-lucky-escape-for-students/article71619782.ece",
+          "time": "2026-10-24T11:42:33Z"
+        }
+      ]
+    },
+    {
+      "id": "kolathur-bus",
+      "scale": "local",
+      "topic": "Community",
+      "region": "Asia-Pacific",
+      "city": "Kolathur, Chennai",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "places": [
+        "Chennai",
+        "Kolathur",
+        "Kumaran Nagar"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 13.123,
+      "lon": 80.212,
+      "title": "A Chennai reader asks for Kolathur's Kumaran Nagar bus terminus to be spruced up",
+      "summary": "In a letter to The Hindu, N. Kothandan points to the poor upkeep of the bus terminus in north Chennai.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "Kumaran Nagar bus terminus in Kolathur needs sprucing up",
+          "url": "https://www.thehindu.com/news/cities/chennai/kumaran-nagar-bus-terminus-in-kolathur-needs-sprucing-up/article71619847.ece",
+          "time": "2026-10-24T11:50:09Z"
+        }
+      ]
+    },
+    {
+      "id": "ambattur-water",
+      "scale": "local",
+      "topic": "Community",
+      "region": "Asia-Pacific",
+      "city": "Ambattur, Chennai",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "places": [
+        "Chennai",
+        "Ambattur",
+        "Karukku"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 13.114,
+      "lon": 80.155,
+      "title": "Karukku Old Road in Ambattur has started to flood, a Chennai resident says",
+      "summary": "In a letter to The Hindu, K. N. Srinivas says that until two years ago the road never flooded, even in heavy downpours.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "'Waterlogging is a new problem on Karukku Old Road in Ambattur'",
+          "url": "https://www.thehindu.com/news/cities/chennai/waterlogging-is-a-new-problem-on-karukku-old-road-in-ambattur/article71619742.ece",
+          "time": "2026-10-24T11:41:18Z"
+        }
+      ]
+    },
+    {
+      "id": "burliyar-landslip",
+      "scale": "local",
+      "topic": "Weather",
+      "region": "Asia-Pacific",
+      "city": "Burliyar",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "places": [
+        "Nilgiris",
+        "Coonoor",
+        "Mettupalayam"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 11.34,
+      "lon": 76.84,
+      "title": "A bus driver is killed by a landslip on the Mettupalayam–Coonoor ghat road",
+      "summary": "A Tamil Nadu state transport bus was caught in the landslip at Burliyar, and more than 300 people were stranded along the hill road after several landslips, The Hindu reports.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "TNSTC driver killed as bus caught in landslip at Burliyar on Mettupalayam-Coonoor ghat road",
+          "url": "https://www.thehindu.com/news/national/tamil-nadu/tnstc-driver-killed-as-bus-gets-caught-in-landslip-at-burliyar-on-mettupalayam-coonoor-ghat-road/article71619473.ece",
+          "time": "2026-10-24T09:39:56Z"
+        }
+      ]
+    },
+    {
+      "id": "virudhunagar-rain",
+      "scale": "local",
+      "topic": "Weather",
+      "region": "Asia-Pacific",
+      "city": "Virudhunagar",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "tz": "Asia/Kolkata",
+      "lat": 9.58,
+      "lon": 77.96,
+      "title": "A girl dies in a wall collapse as heavy rain hits Virudhunagar district",
+      "summary": "A state minister visited her parents and handed over a ₹4 lakh relief order, The Hindu reports. The rain also flooded a bus depot in the district.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "Girl dies in wall collapse in Virudhunagar district; Minister consoles parents; gives ₹4 lakh relief order",
+          "url": "https://www.thehindu.com/news/cities/Madurai/girl-dies-in-wall-collapse-in-virudhunagar-district-minister-consoles-parents-gives-4-lakh-relief-order/article71617301.ece",
+          "time": "2026-10-23T16:15:43Z"
+        },
+        {
+          "outlet": "The Hindu",
+          "title": "Rain lashes Virudhunagar district; bus depot submerged in rainwater",
+          "url": "https://www.thehindu.com/news/cities/Madurai/rain-lashes-virudhunagar-district-bus-depot-submerged-in-rainwater/article71617327.ece",
+          "time": "2026-10-23T16:17:17Z"
+        }
+      ]
+    },
+    {
+      "id": "mullaperiyar",
+      "scale": "local",
+      "topic": "Farming",
+      "region": "Asia-Pacific",
+      "city": "Mullaperiyar dam",
+      "country": "India",
+      "state": "Kerala",
+      "places": [
+        "Tamil Nadu",
+        "Theni",
+        "Idukki",
+        "Madurai"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 9.53,
+      "lon": 77.14,
+      "title": "Water in the Mullaperiyar dam stands at 120.25 feet as farmers welcome the rain",
+      "summary": "The Hindu's Madurai edition reports the dam's level and, separately, farmers expressing happiness over continuous rainfall.",
+      "background": "The Mullaperiyar dam sits in Kerala's Idukki district but is operated by Tamil Nadu, whose farmers in districts such as Theni and Madurai rely on its water. Its water level is closely watched by both states.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "Water level in Mullaperiyar dam stands at 120.25 feet",
+          "url": "https://www.thehindu.com/news/cities/Madurai/water-level-in-mullaperiyar-dam-stands-at-12025-feet-on-october-24-2026/article71620078.ece",
+          "time": "2026-10-24T12:59:13Z"
+        },
+        {
+          "outlet": "The Hindu",
+          "title": "Farmers express happiness over continuous rainfall",
+          "url": "https://www.thehindu.com/news/cities/Madurai/farmers-express-happiness-over-continuous-rainfall/article71617396.ece",
+          "time": "2026-10-24T12:52:11Z"
+        }
+      ]
+    },
+    {
+      "id": "hasanur-leopards",
+      "scale": "local",
+      "topic": "Nature",
+      "region": "Asia-Pacific",
+      "city": "Hasanur",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "places": [
+        "Erode",
+        "Sathyamangalam"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 11.68,
+      "lon": 77.03,
+      "title": "Three leopards are captured in Tamil Nadu's Hasanur forest division",
+      "summary": "Forest officials in the Hasanur division, in Erode district, captured the three leopards, The Hindu reports.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "Three leopards captured in Hasanur forest division",
+          "url": "https://www.thehindu.com/news/cities/Coimbatore/three-leopards-captured-in-hasanur-forest-division/article71616503.ece",
+          "time": "2026-10-24T06:11:40Z"
+        }
+      ]
+    },
+    {
+      "id": "bay-of-bengal-storm",
+      "scale": "local",
+      "topic": "Weather",
+      "region": "Asia-Pacific",
+      "city": "Bay of Bengal",
+      "country": "India",
+      "places": [
+        "Andhra Pradesh",
+        "Odisha",
+        "Tamil Nadu"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 15.5,
+      "lon": 85.5,
+      "title": "A storm forming in the Bay of Bengal could reach India's east coast on 28 October",
+      "summary": "The India Meteorological Department expects the low-pressure area to become a depression and then a cyclonic storm, The Hindu reports. Andhra Pradesh's chief minister has put officials on alert.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "Low pressure over Bay of Bengal likely to turn into cyclonic storm, landfall expected on Oct. 28",
+          "url": "https://www.thehindu.com/news/national/bay-of-bengal-cyclonic-storm-landfall-on-october-28-weather-odisha-and-andhra-pradesh/article71619250.ece",
+          "time": "2026-10-24T06:31:27Z"
+        }
+      ]
+    },
+    {
+      "id": "asr-explosion",
+      "scale": "local",
+      "topic": "Community",
+      "region": "Asia-Pacific",
+      "city": "Alluri Sitharama Raju district",
+      "country": "India",
+      "state": "Andhra Pradesh",
+      "places": [
+        "ASR district",
+        "Visakhapatnam"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 18.1,
+      "lon": 82.65,
+      "title": "Seven killed, including a teacher, in a fuel blaze in Andhra Pradesh's ASR district",
+      "summary": "The fire reportedly started while diesel was being poured into a truck from a tipper, The Hindu reports. A government school teacher was among those killed.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "Government school teacher among seven killed in explosion involving fuel-laden vehicle in ASR district",
+          "url": "https://www.thehindu.com/news/cities/Visakhapatnam/several-killed-as-two-vehicles-catch-fire-in-asr-district-andhra-pradesh/article71619070.ece",
+          "time": "2026-10-24T09:05:53Z"
+        }
+      ]
+    },
+    {
+      "id": "rr-nagar",
+      "scale": "local",
+      "topic": "Community",
+      "region": "Asia-Pacific",
+      "city": "RR Nagar, Bengaluru",
+      "country": "India",
+      "state": "Karnataka",
+      "places": [
+        "Bengaluru",
+        "Bangalore",
+        "Rajarajeshwari Nagar"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 12.92,
+      "lon": 77.52,
+      "title": "A cylinder explosion in Bengaluru's RR Nagar injures three, including a boy",
+      "summary": "The blast happened at a godown where a man originally from Bihar stored materials for his pani puri business, The Hindu reports. A nine-year-old boy was among the injured.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "Cylinder explosion in RR Nagar injures three, including nine-year-old boy",
+          "url": "https://www.thehindu.com/news/cities/bangalore/cylinder-explosion-in-rr-nagar-injures-three-including-nine-year-old-boy/article71619279.ece",
+          "time": "2026-10-24T07:03:14Z"
+        }
+      ]
+    },
+    {
+      "id": "cauvery",
+      "scale": "local",
+      "topic": "Farming",
+      "region": "Asia-Pacific",
+      "city": "Cauvery basin",
+      "country": "India",
+      "state": "Karnataka",
+      "places": [
+        "Tamil Nadu",
+        "Cauvery",
+        "Kaveri"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 12.42,
+      "lon": 76.57,
+      "title": "Karnataka is told to release 3,000 cusecs of Cauvery water to Tamil Nadu",
+      "summary": "The Cauvery panel's order covers the next 15 days. Tamil Nadu had asked for 14,236 cusecs a day, including a claimed backlog, while Karnataka cites severe drought, The Hindu reports.",
+      "background": "Karnataka and Tamil Nadu have long disputed how to share the Cauvery river, which farmers in both states depend on. Releases are set by bodies created to manage the river after a Supreme Court ruling in 2018.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "Cauvery panel directs Karnataka to release water at the rate of 3,000 cusecs to Tamil Nadu for next 15 days",
+          "url": "https://www.thehindu.com/news/national/karnataka/cauvery-panel-directs-karnataka-to-release-water-at-the-rate-of-3000-cusecs-to-tamil-nadu-for-next-15-days/article71619307.ece",
+          "time": "2026-10-24T08:52:03Z"
+        }
+      ]
+    },
+    {
+      "id": "palakkad-lynching",
+      "scale": "local",
+      "topic": "Community",
+      "region": "Asia-Pacific",
+      "city": "Palakkad",
+      "country": "India",
+      "state": "Kerala",
+      "places": [
+        "Moolathara",
+        "Keralam"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 10.72,
+      "lon": 76.83,
+      "title": "Another man is lynched by a mob in Kerala's Palakkad",
+      "summary": "The victim, an unidentified man with a hearing impairment, was killed near the Moolathara dam, The Hindu reports, in a case that has shaken the region.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "When mob takes law into its own hands: another man lynched in Keralam's Palakkad",
+          "url": "https://www.thehindu.com/news/national/kerala/when-mob-takes-law-into-its-own-hands-another-man-lynched-in-keralams-palakkad/article71608681.ece",
+          "time": "2026-10-24T07:17:13Z"
+        }
+      ]
+    },
+    {
+      "id": "jajarkot-bus",
+      "scale": "local",
+      "topic": "Community",
+      "region": "Asia-Pacific",
+      "city": "Jajarkot",
+      "country": "Nepal",
+      "state": "Karnali Province",
+      "places": [
+        "Kathmandu"
+      ],
+      "tz": "Asia/Kathmandu",
+      "lat": 28.7,
+      "lon": 82.2,
+      "title": "A modern night bus service now links Jajarkot, in Nepal's hills, with Kathmandu",
+      "summary": "Six buses run on the route, with fares of Rs3,500, below the government rate of Rs4,066, The Kathmandu Post reports.",
+      "sources": [
+        {
+          "outlet": "The Kathmandu Post",
+          "title": "Modern night bus service begins between Jajarkot and Kathmandu",
+          "url": "https://kathmandupost.com/national/2026/10/24/modern-night-bus-service-begins-between-jajarkot-and-kathmandu",
+          "time": "2026-10-24T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "vanuatu-quake",
+      "scale": "local",
+      "topic": "Science",
+      "region": "Asia-Pacific",
+      "city": "Vanuatu",
+      "country": "Vanuatu",
+      "places": [
+        "Pacific"
+      ],
+      "tz": "Pacific/Efate",
+      "lat": -17.7,
+      "lon": 168.3,
+      "title": "A tsunami warning is cancelled after a magnitude 7.2 earthquake off Vanuatu",
+      "summary": "The warning was lifted after the quake struck offshore, RNZ reports.",
+      "sources": [
+        {
+          "outlet": "RNZ",
+          "title": "Tsunami warning cancelled after magnitude 7.2 quake off Vanuatu",
+          "url": "https://www.rnz.co.nz/news/world/2127034/magnitude-7-point-2-quake-off-vanuatu-triggers-tsunami-warning",
+          "time": "2026-10-24T06:29:51Z"
+        }
+      ]
+    },
+    {
+      "id": "albay-theatre",
+      "scale": "local",
+      "topic": "Culture",
+      "region": "Asia-Pacific",
+      "city": "Albay",
+      "country": "Philippines",
+      "state": "Bicol",
+      "places": [
+        "Bicol"
+      ],
+      "tz": "Asia/Manila",
+      "lat": 13.18,
+      "lon": 123.53,
+      "title": "A Bicol theatre group takes local stories, and disaster relief, to communities",
+      "summary": "Sining Banwa, from Albay province, performs grassroots stories in communities. Veteran actor Julie DM Vega says local governments should invest in their artists, Rappler reports.",
+      "sources": [
+        {
+          "outlet": "Rappler",
+          "title": "This Bicolano theater group brings grassroots stories — and disaster relief — to communities",
+          "url": "https://www.rappler.com/people/actors/bicolano-theater-sining-banwa-grassroots-stories-communities/",
+          "time": "2026-10-24T08:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "bangladesh-migrants",
+      "scale": "local",
+      "topic": "Climate",
+      "region": "Asia-Pacific",
+      "city": "Dhaka",
+      "country": "Bangladesh",
+      "tz": "Asia/Dhaka",
+      "lat": 23.81,
+      "lon": 90.41,
+      "title": "Bangladesh's climate migrants arrive in cities that can't protect them",
+      "summary": "Disasters displaced 2.4 million people within Bangladesh in 2024, Mongabay reports, and the IMF predicts rising seas could swallow more than a seventh of the country's land.",
+      "sources": [
+        {
+          "outlet": "Mongabay",
+          "title": "Bangladesh's climate migrants are arriving in cities unprepared to protect them",
+          "url": "https://news.mongabay.com/2026/10/bangladeshs-climate-migrants-are-arriving-in-cities-unprepared-to-protect-them/",
+          "time": "2026-10-23T19:36:02Z"
+        }
+      ]
+    },
+    {
+      "id": "pacific-parkinsons",
+      "scale": "local",
+      "topic": "Health",
+      "region": "Asia-Pacific",
+      "city": "New Zealand",
+      "country": "New Zealand",
+      "places": [
+        "Pacific",
+        "Auckland"
+      ],
+      "tz": "Pacific/Auckland",
+      "lat": -36.85,
+      "lon": 174.76,
+      "title": "A rare form of Parkinson's is far more common in Pacific communities than thought",
+      "summary": "A form of the disease once considered rare is much more common among Pacific people than previously recognised, RNZ reports.",
+      "sources": [
+        {
+          "outlet": "RNZ",
+          "title": "Rare Parkinson's form more common in Pacific communities",
+          "url": "https://www.rnz.co.nz/news/science-and-technology/2030543/our-changing-world-the-pink1-clue-in-parkinson-s-disease",
+          "time": "2026-10-23T22:53:57Z"
+        }
+      ]
+    },
+    {
+      "id": "lascension-road",
+      "scale": "local",
+      "topic": "Community",
+      "region": "Americas",
+      "city": "L'Ascension",
+      "country": "Canada",
+      "state": "Quebec",
+      "tz": "America/Toronto",
+      "lat": 46.55,
+      "lon": -74.83,
+      "title": "82 days on, repairs haven't started on a washed-out road in a small Quebec town",
+      "summary": "August flooding washed away part of the main road in L'Ascension, and the mayor blames the delay on bureaucracy between levels of government, CBC reports.",
+      "sources": [
+        {
+          "outlet": "CBC News",
+          "title": "82 days later, no repairs started on washed-out road dividing small Quebec town",
+          "url": "https://www.cbc.ca/news/canada/montreal/flooding-damages-major-road-in-lascension-and-bureaucracy-slows-repairs-9.7392956",
+          "time": "2026-10-24T08:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "argentina-floods",
+      "scale": "local",
+      "topic": "Weather",
+      "region": "Americas",
+      "city": "North-east Argentina",
+      "country": "Argentina",
+      "tz": "America/Argentina/Buenos_Aires",
+      "lat": -28.5,
+      "lon": -59,
+      "title": "More than 2,000 people are evacuated as El Niño floods hit north-east Argentina",
+      "summary": "Two people have died, and authorities warn that river levels could keep rising for months, the Buenos Aires Times reports.",
+      "sources": [
+        {
+          "outlet": "Buenos Aires Times",
+          "title": "More than 2,000 evacuated as El Niño floods hit Argentina",
+          "url": "https://www.batimes.com.ar/news/argentina/more-than-2000-evacuated-as-el-nino-floods-hit-argentina.phtml",
+          "time": "2026-10-24T00:25:53Z"
+        }
+      ]
+    },
+    {
+      "id": "mexico-drought",
+      "scale": "local",
+      "topic": "Weather",
+      "region": "Americas",
+      "city": "Northern Mexico",
+      "country": "Mexico",
+      "places": [
+        "Chihuahua",
+        "Sonora"
+      ],
+      "tz": "America/Chihuahua",
+      "lat": 28.6,
+      "lon": -106.1,
+      "title": "Hurricanes and extra rain weren't enough to stop drought spreading in Mexico",
+      "summary": "This year's [[el-nino|El Niño]] is pushing up temperatures in Mexico's north, Mexico News Daily reports, and passing hurricanes and low-pressure troughs haven't changed that.",
+      "sources": [
+        {
+          "outlet": "Mexico News Daily",
+          "title": "Hurricanes? Above-average rainfall? They weren't enough to prevent more drought in Mexico",
+          "url": "https://mexiconewsdaily.com/news/hurricanes-above-average-rainfall-werent-enough-to-prevent-more-drought-mexico/",
+          "time": "2026-10-23T19:58:19Z"
+        }
+      ]
+    },
+    {
+      "id": "peru-amazon-water",
+      "scale": "local",
+      "topic": "Nature",
+      "region": "Americas",
+      "city": "Southern Peruvian Amazon",
+      "country": "Peru",
+      "places": [
+        "Madre de Dios",
+        "Amazon"
+      ],
+      "tz": "America/Lima",
+      "lat": -12.6,
+      "lon": -70.1,
+      "title": "Amazon communities are running short of water as mining and deforestation reshape rivers",
+      "summary": "Indigenous Harakmbut residents of the southern Peruvian Amazon describe losing access to water, Mongabay reports.",
+      "sources": [
+        {
+          "outlet": "Mongabay",
+          "title": "Amazon communities lose water as mining and deforestation reshape rivers",
+          "url": "https://news.mongabay.com/2026/10/amazon-communities-lose-water-as-mining-and-deforestation-reshape-rivers/",
+          "time": "2026-10-23T18:15:44Z"
+        }
+      ]
+    },
+    {
+      "id": "sian-kaan",
+      "scale": "local",
+      "topic": "Nature",
+      "region": "Americas",
+      "city": "Sian Ka'an",
+      "country": "Mexico",
+      "state": "Quintana Roo",
+      "places": [
+        "Tulum"
+      ],
+      "tz": "America/Cancun",
+      "lat": 19.6,
+      "lon": -87.6,
+      "title": "Critics want road building halted in Mexico's Sian Ka'an Biosphere Reserve",
+      "summary": "Mexico's environment ministry said in early October it would minimise infrastructure inside the protected area on the Caribbean coast, but critics are calling for road construction there to stop, Mongabay reports.",
+      "sources": [
+        {
+          "outlet": "Mongabay",
+          "title": "Critics call for halt to road construction in Mexico's Sian Ka'an Biosphere Reserve",
+          "url": "https://news.mongabay.com/2026/10/critics-call-for-halt-to-road-construction-in-mexicos-sian-kaan-biosphere-reserve/",
+          "time": "2026-10-23T18:47:31Z"
+        }
+      ]
+    },
+    {
+      "id": "bialowieza",
+      "scale": "local",
+      "topic": "Nature",
+      "region": "Europe",
+      "city": "Białowieża Forest",
+      "country": "Poland",
+      "places": [
+        "Belarus",
+        "Bialowieza"
+      ],
+      "tz": "Europe/Warsaw",
+      "lat": 52.7,
+      "lon": 23.85,
+      "title": "Poland is restoring part of the ancient Białowieża Forest on its border with Belarus",
+      "summary": "One of Europe's last primeval forests straddles the border, and Mongabay reports on efforts to restore it that are also meant to help defend Poland's frontier.",
+      "sources": [
+        {
+          "outlet": "Mongabay",
+          "title": "Restoring a 12,000-year-old forest to help defend Poland's border",
+          "url": "https://news.mongabay.com/video/2026/10/restoring-a-12000-year-old-forest-to-help-defend-polands-border/",
+          "time": "2026-10-24T07:30:26Z"
+        }
+      ]
+    },
+    {
+      "id": "portugal-elephant",
+      "scale": "local",
+      "topic": "Nature",
+      "region": "Europe",
+      "city": "Alentejo",
+      "country": "Portugal",
+      "tz": "Europe/Lisbon",
+      "lat": 38.57,
+      "lon": -7.91,
+      "title": "Portugal's last circus elephant starts a new life at a sanctuary in Alentejo",
+      "summary": "The elephant, Julie, is settling into a wildlife sanctuary in southern Portugal, Africanews reports.",
+      "sources": [
+        {
+          "outlet": "Africanews",
+          "title": "Portugal's last circus elephant begins a new life at wildlife sanctuary",
+          "url": "https://www.africanews.com/2026/10/23/portugals-last-circus-elephant-begins-a-new-life-at-wildlife-sanctuary/",
+          "time": "2026-10-23T19:52:59Z"
+        }
+      ]
+    },
+    {
+      "id": "bosnia-game",
+      "scale": "local",
+      "topic": "Community",
+      "region": "Europe",
+      "city": "Bosnia and Herzegovina",
+      "country": "Bosnia and Herzegovina",
+      "places": [
+        "Bosnia",
+        "Sarajevo"
+      ],
+      "tz": "Europe/Sarajevo",
+      "lat": 43.86,
+      "lon": 18.41,
+      "title": "In Bosnia and Herzegovina, children with Down syndrome learn internet safety through a game",
+      "summary": "Global Voices reports on the video game, which helps them use the internet safely and take part in everyday life online.",
+      "sources": [
+        {
+          "outlet": "Global Voices",
+          "title": "In Bosnia and Herzegovina, children with Down syndrome are using a video game to safely navigate the internet",
+          "url": "https://globalvoices.org/2026/10/23/in-bosnia-and-herzegovina-children-with-down-syndrome-are-using-a-video-game-to-safely-navigate-the-internet/",
+          "time": "2026-10-23T22:05:56Z"
+        }
+      ]
+    },
+    {
+      "id": "rak-oil",
+      "scale": "local",
+      "topic": "Nature",
+      "region": "Middle East",
+      "city": "Ras Al Khaimah",
+      "country": "United Arab Emirates",
+      "places": [
+        "UAE",
+        "Sharjah",
+        "Umm Al Quwain"
+      ],
+      "tz": "Asia/Dubai",
+      "lat": 25.79,
+      "lon": 55.94,
+      "title": "Ras Al Khaimah shuts all its beaches after an offshore oil leak",
+      "summary": "The beaches are closed until further notice, a day after the leak shut beaches in neighbouring Umm Al Quwain and Sharjah, Dawn reports.",
+      "sources": [
+        {
+          "outlet": "Dawn",
+          "title": "UAE's Ras Al Khaimah shuts all beaches as neighbours grapple with oil spill",
+          "url": "https://www.dawn.com/news/2039491/uaes-ras-al-khaimah-shuts-all-beaches-as-neighbours-grapple-with-oil-spill",
+          "time": "2026-10-24T12:28:14Z"
         }
       ]
     }

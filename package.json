@@ -6,7 +6,8 @@
     "map": "node scripts/build-map.mjs",
     "validate": "node scripts/validate.mjs",
     "digest": "node scripts/digest.mjs",
-    "serve": "node scripts/serve.mjs"
+    "serve": "node scripts/serve.mjs",
+    "feeds": "node scripts/fetch-feeds.mjs"
   },
   "devDependencies": {
     "d3-geo": "3.1.1",
