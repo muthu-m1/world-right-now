@@ -162,5 +162,17 @@
   "austrac": {
     "term": "AUSTRAC",
     "definition": "Australia's financial intelligence agency, which supervises businesses such as casinos for money-laundering and terrorism-financing risks."
+  },
+  "federal-reserve": {
+    "term": "Federal Reserve",
+    "definition": "The central bank of the United States. It sets a key interest rate that influences borrowing costs across the economy and, through them, prices, jobs and the value of the dollar."
+  },
+  "legislative-council": {
+    "term": "Legislative Council",
+    "definition": "The upper house of the legislature in some Indian states, such as Karnataka, Uttar Pradesh and Bihar. Its members, called MLCs, are chosen partly by elected legislators and partly by graduates, teachers and local bodies."
+  },
+  "ndrf": {
+    "term": "NDRF",
+    "definition": "India's National Disaster Response Force, a specialist national unit that rescues people and gives relief during floods, cyclones, earthquakes and other disasters. Each state also has its own response force, the SDRF."
   }
 }

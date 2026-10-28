@@ -104,6 +104,22 @@
           "outlet": "BBC News",
           "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo"
         }
+      },
+      {
+        "date": "2026-10-27",
+        "text": "A local ceasefire begins in the Russian-occupied city of Oleshky and is later extended across Kherson region, with no breaches reported.",
+        "source": {
+          "outlet": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/c6lye1w9p2l8o"
+        }
+      },
+      {
+        "date": "2026-10-28",
+        "text": "Norway's prime minister says her 90-minute call with Putin was an effort to present European views ahead of expected Ukraine–Russia talks in Abu Dhabi next month.",
+        "source": {
+          "outlet": "The Kathmandu Post",
+          "url": "https://kathmandupost.com/world/2026/10/28/norway-s-premier-says-call-with-putin-was-effort-to-present-european-views"
+        }
       }
     ]
   },
@@ -211,6 +227,14 @@
         "source": {
           "outlet": "Euronews",
           "url": "https://www.euronews.com/2026/10/27/egypts-parliament-approves-military-support-for-saudi-arabia-amid-houthi-attacks"
+        }
+      },
+      {
+        "date": "2026-10-28",
+        "text": "An official says Qatari mediators gave Iran a new draft deal to end the war on Sunday, with a reply expected by the end of the week; Pentagon data puts US war costs above $47 billion.",
+        "source": {
+          "outlet": "Daily Maverick",
+          "url": "https://www.dailymaverick.co.za/article/2026-10-28-qatari-mediators-present-iran-with-new-deal-to-end-the-war-official-says/"
         }
       }
     ]
@@ -364,6 +388,14 @@
           "outlet": "BBC News",
           "url": "https://www.bbc.co.uk/news/articles/c693z948px0jo"
         }
+      },
+      {
+        "date": "2026-10-28",
+        "text": "DR Congo's outbreak passes 10,000 cases and nearly 4,900 deaths; the Africa CDC warns it could spread as far as the UK without more funding.",
+        "source": {
+          "outlet": "The Guardian",
+          "url": "https://www.theguardian.com/global-development/2026/oct/28/africa-ebola-outbreak-could-reach-uk-says-top-health-official"
+        }
       }
     ]
   },
@@ -442,6 +474,14 @@
           "outlet": "France 24",
           "url": "https://www.france24.com/en/middle-east/20261027-israel-election-record-turnout-netanyahu-eisenkot-deadlock"
         }
+      },
+      {
+        "date": "2026-10-28",
+        "text": "With about 84% of ballots counted, Likud's bloc has 54 seats, Eisenkot's 49 and Arab parties 17, so neither side has the 61 needed.",
+        "source": {
+          "outlet": "The Times of Israel",
+          "url": "https://www.timesofisrael.com/liveblog-october-28-2026/"
+        }
       }
     ]
   },
@@ -479,6 +519,14 @@
         "source": {
           "outlet": "RTÉ",
           "url": "https://www.rte.ie/news/world/2026/1027/1596998-bolsonaro-passports/"
+        }
+      },
+      {
+        "date": "2026-10-28",
+        "text": "Argentina says Flávio Bolsonaro crossed into the country and is on his way to Ecuador.",
+        "source": {
+          "outlet": "RTÉ",
+          "url": "https://www.rte.ie/news/2026/1028/1597039-bolsonaro-brazil/"
         }
       }
     ]
