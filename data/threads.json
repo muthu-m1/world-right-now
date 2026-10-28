@@ -80,6 +80,30 @@
           "outlet": "France 24",
           "url": "https://www.france24.com/en/europe/20261024-ukraine-says-starlink-and-starshield-connection-stable-again"
         }
+      },
+      {
+        "date": "2026-10-26",
+        "text": "Russia says it will open a humanitarian corridor to the occupied town of Oleshky, where residents are trapped by minefields, shelling and drones.",
+        "source": {
+          "outlet": "NPR",
+          "url": "https://www.npr.org/2026/10/26/nx-s1-6014540/russia-says-it-will-open-humanitarian-corridor-to-ukrainian-town"
+        }
+      },
+      {
+        "date": "2026-10-27",
+        "text": "A local ceasefire around Oleshky takes effect ahead of a humanitarian mission the White House says was brokered by Melania Trump, while missile attacks resume on Kyiv.",
+        "source": {
+          "outlet": "NPR",
+          "url": "https://www.npr.org/2026/10/27/g-s1-150037/russia-ukraine-war"
+        }
+      },
+      {
+        "date": "2026-10-27",
+        "text": "The leaders of Finland and Norway hold a rare call with Putin, drawing criticism from Denmark.",
+        "source": {
+          "outlet": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo"
+        }
       }
     ]
   },
@@ -171,6 +195,22 @@
         "source": {
           "outlet": "France 24",
           "url": "https://www.france24.com/en/americas/20261023-trump-says-us-may-launch-another-little-epic-fury-attack-iran"
+        }
+      },
+      {
+        "date": "2026-10-27",
+        "text": "Qatar's foreign minister says Iran must show good faith and reopen the Strait of Hormuz; another ship is struck in the Strait.",
+        "source": {
+          "outlet": "The Times of Israel",
+          "url": "https://www.timesofisrael.com/qatar-iran-discuss-war-and-hormuz-in-moscow-meeting-as-another-ship-struck-in-strait/"
+        }
+      },
+      {
+        "date": "2026-10-27",
+        "text": "Egypt's parliament approves military support for Saudi Arabia if it is requested, as Houthi attacks threaten the kingdom.",
+        "source": {
+          "outlet": "Euronews",
+          "url": "https://www.euronews.com/2026/10/27/egypts-parliament-approves-military-support-for-saudi-arabia-amid-houthi-attacks"
         }
       }
     ]
@@ -308,6 +348,22 @@
           "outlet": "NPR",
           "url": "https://www.npr.org/2026/10/23/g-s1-149515/africa-ebola-outbreak"
         }
+      },
+      {
+        "date": "2026-10-27",
+        "text": "Congo reports more than 10,000 Ebola cases and nearly 4,900 deaths, with no approved vaccine for the Bundibugyo virus.",
+        "source": {
+          "outlet": "DW",
+          "url": "https://www.dw.com/en/dr-congo-reports-over-10-000-ebola-cases-as-the-outbreak-spreads-abroad-with-no-approved-vaccine-or-specific-treatment-for-the-bundibugyo-virus/a-79773667"
+        }
+      },
+      {
+        "date": "2026-10-27",
+        "text": "Kenya has confirmed nine cases and released the first group of 20 contacts of its first patient; the European disease control centre sends experts to Nigeria.",
+        "source": {
+          "outlet": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/c693z948px0jo"
+        }
       }
     ]
   },
@@ -339,6 +395,90 @@
         "source": {
           "outlet": "France 24",
           "url": "https://www.france24.com/en/neither-the-sudanese-military-nor-the-rsf-take-any-acknowledgement-of-human-life-in-this-war"
+        }
+      },
+      {
+        "date": "2026-10-27",
+        "text": "MSF says a Sudanese Armed Forces drone strike on a busy market in Nyala killed at least 36 people.",
+        "source": {
+          "outlet": "The National",
+          "url": "https://www.thenationalnews.com/news/mena/2026/10/27/saf-drone-strike-on-sudanese-busy-market-kills-dozens-says-msf/"
+        }
+      },
+      {
+        "date": "2026-10-27",
+        "text": "Western governments warn of a risk of famine as conflict, drought and funding cuts deepen the crisis.",
+        "source": {
+          "outlet": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/cj5ynkk6v3pzo"
+        }
+      }
+    ]
+  },
+  "israel-election": {
+    "title": "Israel's election",
+    "intro": "Israel held its first general election since the Hamas-led attacks of 7 October 2023 on 27 October 2026, in a vote widely seen as a referendum on Prime Minister Benjamin Netanyahu.",
+    "events": [
+      {
+        "date": "2023-10",
+        "text": "Hamas-led attacks on Israel trigger a chain of conflicts across the region.",
+        "source": {
+          "outlet": "NPR",
+          "url": "https://www.npr.org/2026/10/27/g-s1-149944/israel-election-guide"
+        }
+      },
+      {
+        "date": "2026-10-27",
+        "text": "Israelis vote in record numbers; turnout reaches about 77.7%, the highest in more than two decades.",
+        "source": {
+          "outlet": "Rappler",
+          "url": "https://www.rappler.com/world/middle-east/israeli-exit-polls-deadlock-setback-netanyahu/"
+        }
+      },
+      {
+        "date": "2026-10-27",
+        "text": "Exit polls show opposition leader Gadi Eisenkot's bloc narrowly ahead of Netanyahu's, 52 seats to 50, with Arab parties projected to win a combined 18 seats and no clear path to a government.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/middle-east/20261027-israel-election-record-turnout-netanyahu-eisenkot-deadlock"
+        }
+      }
+    ]
+  },
+  "brazil-2026": {
+    "title": "Brazil's presidential election",
+    "intro": "President Luiz Inácio Lula da Silva beat Senator Flávio Bolsonaro in a close runoff on 25 October 2026, and the loser's refusal to concede has turned into a legal and diplomatic dispute.",
+    "events": [
+      {
+        "date": "2026-10-25",
+        "text": "Lula wins the runoff with 51.78% of valid votes to 48.22% for Flávio Bolsonaro; Bolsonaro says he will not recognise the result and will seek to annul the election.",
+        "source": {
+          "outlet": "MercoPress",
+          "url": "https://en.mercopress.com/2026/10/26/lula-wins-brazil-s-presidency-for-a-fourth-time-with-51.8-of-the-vote"
+        }
+      },
+      {
+        "date": "2026-10-26",
+        "text": "The electoral court's president rejects Bolsonaro's case for annulment; Trump questions the result, while most Latin American governments congratulate Lula.",
+        "source": {
+          "outlet": "MercoPress",
+          "url": "https://en.mercopress.com/2026/10/26/a-judge-appointed-by-jair-bolsonaro-rejects-his-son-s-case-for-annulling-the-election"
+        }
+      },
+      {
+        "date": "2026-10-27",
+        "text": "Bolsonaro's party acknowledges Lula's victory, but Flávio Bolsonaro does not concede; Brazil's Federal Police revoke his passports after he misses a deadline to hand them in.",
+        "source": {
+          "outlet": "NPR",
+          "url": "https://www.npr.org/2026/10/27/nx-s1-6019217/bolsonaro-flavio-lula-brazil-election-trump"
+        }
+      },
+      {
+        "date": "2026-10-27",
+        "text": "Reports say Bolsonaro has left for the United States, and the US State Department says it will issue visas to him and his family.",
+        "source": {
+          "outlet": "RTÉ",
+          "url": "https://www.rte.ie/news/world/2026/1027/1596998-bolsonaro-passports/"
         }
       }
     ]

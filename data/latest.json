@@ -1,265 +1,306 @@
 {
-  "date": "2026-10-24",
-  "snapshot": "2026-10-24T13:00:00Z",
+  "date": "2026-10-28",
+  "snapshot": "2026-10-28T00:15:00Z",
   "outlets": [
     "France 24",
-    "NPR",
     "Al Jazeera",
+    "Rappler",
+    "The Times of Israel",
+    "MercoPress",
+    "NPR",
+    "Agência Brasil",
+    "RTÉ",
+    "DW",
+    "BBC News",
+    "Euronews",
+    "The Kyiv Independent",
+    "Balkan Insight",
+    "Scroll",
+    "The Guardian",
+    "Colombia One",
+    "The National",
     "Africanews",
+    "The Kathmandu Post",
+    "Dawn",
+    "The Hindu",
+    "The Straits Times",
+    "The Indian Express",
+    "Daily Maverick",
+    "RNZ",
+    "The Japan Times",
+    "Buenos Aires Times",
+    "ABC News",
+    "The Local Spain",
     "Nation",
     "AllAfrica",
-    "Daily Maverick",
-    "The Hindu",
-    "The Kathmandu Post",
-    "RNZ",
-    "Rappler",
-    "Mongabay",
-    "CBC News",
-    "Buenos Aires Times",
-    "Mexico News Daily",
     "Global Voices",
-    "Dawn"
+    "The Times of India",
+    "Mongabay",
+    "VnExpress",
+    "CBC News",
+    "Mexico News Daily"
   ],
   "stories": [
     {
-      "id": "iran",
+      "id": "israel-election",
+      "thread": "israel-election",
+      "scale": "international",
+      "topic": "Politics",
+      "region": "Middle East",
+      "city": "Jerusalem",
+      "country": "Israel",
+      "places": [
+        "Palestine"
+      ],
+      "tz": "Asia/Jerusalem",
+      "lat": 31.77,
+      "lon": 35.21,
+      "title": "Israel's election looks deadlocked, with a narrow exit-poll lead for the opposition",
+      "summary": "Israelis voted in record numbers on Tuesday, with turnout of about 77.7%, the highest in more than two decades, Rappler reports. France 24 says exit polls put the bloc led by opposition leader Gadi Eisenkot narrowly ahead of Prime Minister Benjamin Netanyahu's camp, 52 seats to 50, with neither side clearly able to form a government. Al Jazeera says Arab parties are projected to win a combined 18 [[knesset|Knesset]] seats, and President Isaac Herzog will choose the candidate he thinks best placed to try to form a government once results are in.",
+      "background": "This was Israel's first general election since the Hamas-led attacks of 7 October 2023 and the chain of conflicts that followed, and it was widely described as a referendum on Netanyahu's leadership.",
+      "lead": "main",
+      "sources": [
+        {
+          "outlet": "France 24",
+          "title": "Israel election: Record turnout as Netanyahu and Eisenkot remain deadlocked",
+          "url": "https://www.france24.com/en/middle-east/20261027-israel-election-record-turnout-netanyahu-eisenkot-deadlock",
+          "time": "2026-10-27T22:58:00Z"
+        },
+        {
+          "outlet": "Al Jazeera",
+          "title": "No clear mandate projected in Israel election: What's next?",
+          "url": "https://www.aljazeera.com/news/2026/10/27/no-clear-mandate-projected-in-israel-election-whats-next",
+          "time": "2026-10-27T23:06:00Z"
+        },
+        {
+          "outlet": "Rappler",
+          "title": "Israeli exit polls show deadlock, setback for Netanyahu",
+          "url": "https://www.rappler.com/world/middle-east/israeli-exit-polls-deadlock-setback-netanyahu/",
+          "time": "2026-10-27T22:31:00Z"
+        },
+        {
+          "outlet": "The Times of Israel",
+          "title": "Exit polls show Israeli rejection of current Netanyahu coalition, but uncertainty on its replacement",
+          "url": "https://www.timesofisrael.com/exit-polls-show-israeli-rejection-of-current-netanyahu-coalition-but-uncertainty-on-its-replacement/",
+          "time": "2026-10-27T23:55:00Z"
+        }
+      ]
+    },
+    {
+      "id": "brazil-lula",
+      "thread": "brazil-2026",
+      "scale": "international",
+      "topic": "Politics",
+      "region": "Americas",
+      "city": "Brasília",
+      "country": "Brazil",
+      "places": [
+        "United States"
+      ],
+      "tz": "America/Sao_Paulo",
+      "lat": -15.79,
+      "lon": -47.88,
+      "title": "Lula wins a fourth term in Brazil; defeated rival Flávio Bolsonaro leaves for the US",
+      "summary": "Brazil's electoral court says Luiz Inácio Lula da Silva won Sunday's runoff with 51.78% of valid votes to 48.22% for Senator Flávio Bolsonaro, MercoPress reports. Bolsonaro's party has accepted the result, but NPR says he has not conceded. Agência Brasil, citing Reuters, reports that he left for the United States after missing a deadline to hand over his passports in a money-laundering investigation, and that the Federal Police have revoked them. RTÉ says the US State Department will issue visas to him and his family. NPR adds that President Trump called the vote 'rigged' without offering evidence.",
+      "background": "Flávio Bolsonaro is the son of former president Jair Bolsonaro. On Sunday night he said he would seek to annul the vote over the extension of voting hours, and the electoral court's president rejected that case on Monday, MercoPress reports.",
+      "lead": "side",
+      "sources": [
+        {
+          "outlet": "MercoPress",
+          "title": "Lula wins Brazil's presidency for a fourth time with 51.8% of the vote",
+          "url": "https://en.mercopress.com/2026/10/26/lula-wins-brazil-s-presidency-for-a-fourth-time-with-51.8-of-the-vote",
+          "time": "2026-10-26T09:01:00Z"
+        },
+        {
+          "outlet": "NPR",
+          "title": "Bolsonaro's party accepts Brazil election defeat, but he refuses to concede",
+          "url": "https://www.npr.org/2026/10/27/nx-s1-6019217/bolsonaro-flavio-lula-brazil-election-trump",
+          "time": "2026-10-27T14:41:00Z"
+        },
+        {
+          "outlet": "Agência Brasil",
+          "title": "Flávio Bolsonaro fled to US, Reuters reports",
+          "url": "https://agenciabrasil.ebc.com.br/en/politica/noticia/2026-10/flavio-bolsonaro-fled-us-reuters-reports",
+          "time": "2026-10-27T18:36:00Z"
+        },
+        {
+          "outlet": "RTÉ",
+          "title": "US to issue Bolsonaro visa amid reports he fled Brazil",
+          "url": "https://www.rte.ie/news/world/2026/1027/1596998-bolsonaro-passports/",
+          "time": "2026-10-27T16:30:00Z"
+        }
+      ]
+    },
+    {
+      "id": "ebola",
+      "thread": "ebola-2026",
+      "scale": "international",
+      "topic": "Health",
+      "region": "Africa",
+      "city": "Kinshasa",
+      "country": "Democratic Republic of Congo",
+      "places": [
+        "Kenya",
+        "Nigeria"
+      ],
+      "tz": "Africa/Kinshasa",
+      "lat": -4.44,
+      "lon": 15.27,
+      "title": "Congo's Ebola outbreak passes 10,000 cases, with no approved vaccine for the virus behind it",
+      "summary": "DW reports that the Democratic Republic of Congo has recorded more than 10,000 Ebola cases and nearly 4,900 deaths, and that there is no approved vaccine or specific treatment for the [[ebola-bundibugyo|Bundibugyo]] virus causing it. NPR calls it a record-breaking outbreak that has spread with great speed. The BBC says Kenya has confirmed nine cases, and Euronews reports that the European disease control centre has sent experts to Nigeria, where a case has also been reported.",
+      "background": "NPR says the outbreak was first identified in the Democratic Republic of Congo. Health officials have been investigating how the first patients in Kenya and Nigeria may have been linked.",
+      "lead": "side",
+      "sources": [
+        {
+          "outlet": "DW",
+          "title": "DR Congo reports over 10,000 Ebola cases as the outbreak spreads abroad, with no approved vaccine or specific treatment for the Bundibugyo virus",
+          "url": "https://www.dw.com/en/dr-congo-reports-over-10-000-ebola-cases-as-the-outbreak-spreads-abroad-with-no-approved-vaccine-or-specific-treatment-for-the-bundibugyo-virus/a-79773667",
+          "time": "2026-10-27T11:15:00Z"
+        },
+        {
+          "outlet": "NPR",
+          "title": "The Ebola outbreak is breaking records -- and just marked a grim milestone",
+          "url": "https://www.npr.org/2026/10/27/g-s1-150136/ebola-outbreak-milestone-democratic-republic-congo-vaccine",
+          "time": "2026-10-27T19:53:00Z"
+        },
+        {
+          "outlet": "BBC News",
+          "title": "Is Ebola under control in Kenya after nine cases confirmed?",
+          "url": "https://www.bbc.co.uk/news/articles/c693z948px0jo",
+          "time": "2026-10-27T19:19:00Z"
+        },
+        {
+          "outlet": "Euronews",
+          "title": "European disease control center sends experts to Nigeria while Ebola cases surpass 10,000 in Congo",
+          "url": "https://www.euronews.com/2026/10/27/european-disease-control-center-sends-experts-to-nigeria-while-ebola-cases-surpass-10000-i",
+          "time": "2026-10-27T16:17:00Z"
+        }
+      ]
+    },
+    {
+      "id": "iran-hormuz",
       "thread": "iran-gulf",
+      "scale": "international",
       "topic": "Conflict",
       "region": "Middle East",
       "city": "Tehran",
       "country": "Iran",
       "places": [
-        "United States",
-        "Israel"
+        "Qatar",
+        "Saudi Arabia",
+        "Egypt",
+        "Russia"
       ],
       "tz": "Asia/Tehran",
       "lat": 35.69,
       "lon": 51.39,
-      "title": "Trump says the US may launch another strike on Iran as reinforcements head to the Middle East",
-      "summary": "At a rally in Florida on Friday, President Donald Trump said the US 'may do another little [[epic-fury|Epic Fury]]' on Iran, France 24 reports. NPR says military reinforcements are moving to the Middle East while some personnel have left the region, which it says points to a possible attack. France 24 adds that the war is nearing its eight-month mark and that rising fuel prices are weighing on the US [[midterms|midterm elections]].",
-      "background": "The US and Israel launched a war on Iran on 28 February 2026. A ceasefire has not held: Iran has blocked the [[strait-of-hormuz|Strait of Hormuz]] and targeted commercial ships, and the US has blockaded Iranian ports and oil shipments.",
+      "title": "Regional powers press Iran to reopen the Strait of Hormuz as another ship is struck",
+      "summary": "Qatar's foreign minister says it is now up to Tehran to show good faith, reopen the [[strait-of-hormuz|Strait of Hormuz]] and stop threatening its neighbours, while another ship was struck in the Strait, The Times of Israel reports. Euronews says Saudi Arabia, Pakistan and Turkey have also held talks in Tehran, and that Egypt's parliament approved military help for Saudi Arabia if it asks, as [[houthis|Houthi]] attacks threaten the kingdom. Al Jazeera says Iran's president, Masoud Pezeshkian, argued the Middle East can solve its own problems without the US.",
+      "background": "The US and Israel launched a war on Iran on 28 February 2026. Iran has blocked the Strait of Hormuz and targeted commercial ships, and the US has blockaded Iranian ports and oil shipments.",
       "sources": [
         {
-          "outlet": "France 24",
-          "title": "Trump says US may launch ‘another little Epic Fury’ attack on Iran",
-          "url": "https://www.france24.com/en/americas/20261023-trump-says-us-may-launch-another-little-epic-fury-attack-iran",
-          "time": "2026-10-23T20:50:00Z"
+          "outlet": "The Times of Israel",
+          "title": "Qatar, Iran discuss war and Hormuz in Moscow meeting as another ship struck in Strait",
+          "url": "https://www.timesofisrael.com/qatar-iran-discuss-war-and-hormuz-in-moscow-meeting-as-another-ship-struck-in-strait/",
+          "time": "2026-10-27T14:52:00Z"
         },
         {
-          "outlet": "NPR",
-          "title": "Military reinforcements move to Mideast. And, millions of Americans vote early",
-          "url": "https://www.npr.org/2026/10/23/g-s1-149514/up-first-newsletter-iran-war-midterm-voting-trump-bbc",
-          "time": "2026-10-23T11:22:00Z"
-        }
-      ],
-      "lead": "main"
-    },
-    {
-      "id": "westbank",
-      "topic": "Conflict",
-      "region": "Middle East",
-      "city": "Hebron",
-      "country": "West Bank",
-      "tz": "Asia/Hebron",
-      "lat": 31.53,
-      "lon": 35.1,
-      "title": "Israel launches a days-long operation in Hebron and shuts the West Bank after a deadly checkpoint attack",
-      "summary": "Al Jazeera reports that two Israeli soldiers were killed in an attack at a checkpoint near Hebron on Friday and that the two suspected Palestinian gunmen were shot dead. Prime Minister Benjamin Netanyahu ordered a full lockdown of the [[west-bank|West Bank]] and said forces would go house to house in the gunmen's neighbourhood, adding 'we will act to destroy this place'. Israel's military says the operation will last several days and include mass arrests and demolitions. The Israeli rights group B'Tselem warns that it amounts to collective punishment that could constitute war crimes.",
-      "background": "Israel has occupied the West Bank since 1967. France 24 notes that Netanyahu is weighing the operation ahead of an Israeli election, and says the olive harvest, which began on 15 October, has coincided with more violence against Palestinians by settlers and soldiers.",
-      "sources": [
-        {
-          "outlet": "Al Jazeera",
-          "title": "Why is Israel launching a new military operation in the occupied West Bank?",
-          "url": "https://www.aljazeera.com/news/2026/10/24/why-is-israel-launching-a-new-military-operation-in-the-occupied-west-bank",
-          "time": "2026-10-24T09:14:00Z"
-        },
-        {
-          "outlet": "France 24",
-          "title": "Netanyahu orders West Bank operation",
-          "url": "https://www.france24.com/en/netanyahu-orders-west-bank-operation",
-          "time": "2026-10-24T10:33:00Z"
-        },
-        {
-          "outlet": "NPR",
-          "title": "Israel orders closure of West Bank after soldiers kill 2 men behind an alleged attack",
-          "url": "https://www.npr.org/2026/10/23/nx-s1-6013333/netanyahu-closure-west-bank",
-          "time": "2026-10-23T09:40:00Z"
-        }
-      ],
-      "lead": "side"
-    },
-    {
-      "id": "france",
-      "thread": "france-unrest",
-      "topic": "Politics",
-      "region": "Europe",
-      "city": "Paris",
-      "country": "France",
-      "state": "Île-de-France",
-      "tz": "Europe/Paris",
-      "lat": 48.86,
-      "lon": 2.35,
-      "title": "France holds a second Saturday of mass protests under the watch of 70,000 police",
-      "summary": "Interior Minister Laurent Nunez said police had arrested 135 people and seized weapons such as metal balls, fireworks and slingshots, but that there had been no major incident so far, according to France 24. The marches were called by [[yellow-vests|Yellow Vests]], trade unions and students after looting and unrest a week earlier, and some major Paris museums closed. Al Jazeera says rights groups objected to bans on several planned marches, and France 24 reports that the far-right [[national-rally|National Rally]] drew thousands of counter-protesters in Orléans, where it is holding its annual congress.",
-      "background": "The protests began over conditions in schools and grew into a wider movement over the cost of living. Last weekend's unrest involved looting and damage to public buildings, France 24 reports, and the government has imposed curfews in several cities.",
-      "sources": [
-        {
-          "outlet": "France 24",
-          "title": "Live: French police seize weapons and arrest 135 people on the sidelines of new protests",
-          "url": "https://www.france24.com/en/france/20261024-live-hundreds-of-protests-expected-in-france-amid-high-tensions-and-heavy-police-presence",
-          "time": "2026-10-24T04:59:00Z"
-        },
-        {
-          "outlet": "France 24",
-          "title": "French police deploy in large numbers, major Paris museums close ahead of new protests",
-          "url": "https://www.france24.com/en/france/20261024-french-police-deploy-in-big-numbers-and-paris-shuts-major-museums-ahead-of-new-protests",
-          "time": "2026-10-24T05:27:00Z"
+          "outlet": "Euronews",
+          "title": "Egypt's parliament approves military support for Saudi Arabia amid Houthi attacks",
+          "url": "https://www.euronews.com/2026/10/27/egypts-parliament-approves-military-support-for-saudi-arabia-amid-houthi-attacks",
+          "time": "2026-10-27T18:57:00Z"
         },
         {
           "outlet": "Al Jazeera",
-          "title": "France braces for another day of mass protests as security on high alert",
-          "url": "https://www.aljazeera.com/news/2026/10/24/france-braces-for-another-day-of-mass-protests-as-security-on-high-alert",
-          "time": "2026-10-24T10:04:00Z"
-        }
-      ],
-      "lead": "side"
-    },
-    {
-      "id": "jordan",
-      "topic": "Conflict",
-      "region": "Middle East",
-      "city": "Karak",
-      "country": "Jordan",
-      "tz": "Asia/Amman",
-      "lat": 31.18,
-      "lon": 35.7,
-      "title": "Gunmen attack a funeral at a church in Jordan, killing seven and wounding 40",
-      "summary": "Gunmen opened fire during a funeral at a Greek Orthodox church in Karak, about 90 kilometres south of the capital Amman, on Friday, authorities said, as reported by NPR and the Associated Press. State television footage shows three armed men approaching the church. A government statement blamed 'unknown assailants' and said investigations were under way, and Jordan declared three days of national mourning.",
-      "background": "The Associated Press could not independently confirm how many attackers there were, and Jordanian security services had not yet released details.",
-      "sources": [
-        {
-          "outlet": "NPR",
-          "title": "Gunmen open fire at a church during a funeral in Jordan, killing 7 and wounding 40",
-          "url": "https://www.npr.org/2026/10/24/nx-s1-6015414/shooting-church-jordan",
-          "time": "2026-10-24T11:59:00Z"
+          "title": "Iran war live: Pezeshkian says Middle East can solve own issues without US",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/10/27/iran-war-live-pezeshkian-says-middle-east-can-solve-own-issues-without-us",
+          "time": "2026-10-27T22:29:00Z"
         }
       ]
     },
     {
-      "id": "europeprotests",
-      "topic": "Politics",
-      "region": "Europe",
-      "city": "Rome",
-      "country": "Italy",
-      "places": [
-        "Spain"
-      ],
-      "tz": "Europe/Rome",
-      "lat": 41.9,
-      "lon": 12.5,
-      "title": "Cost-of-living protests spread across Europe, from Italian cities to a 250,000-strong march in Madrid",
-      "summary": "Italy deployed drones, helicopters and extra soldiers for protests planned in eight cities including Rome and Milan, after some marches turned violent last weekend, France 24 reports. The protests come amid anger from students, truck drivers and farmers over budget cuts, housing and fuel prices. Spanish authorities told AFP that 250,000 people marched in Madrid to demand protection for the state pension and to protest the cost of living.",
-      "background": "A group calling itself the 'October 17 Movement' called the Italian protests and said it would reveal each location only half an hour before the start. Spain holds a parliamentary election next month, according to France 24.",
-      "sources": [
-        {
-          "outlet": "France 24",
-          "title": "Protests against cost of living expected in Italy under heavy security",
-          "url": "https://www.france24.com/en/europe/20261024-protests-against-cost-of-living-expected-in-italy-under-heavy-security",
-          "time": "2026-10-24T07:08:00Z"
-        },
-        {
-          "outlet": "France 24",
-          "title": "Live: French police seize weapons and arrest 135 people on the sidelines of new protests",
-          "url": "https://www.france24.com/en/france/20261024-live-hundreds-of-protests-expected-in-france-amid-high-tensions-and-heavy-police-presence",
-          "time": "2026-10-24T04:59:00Z"
-        }
-      ]
-    },
-    {
-      "id": "alaska",
-      "topic": "Politics",
-      "region": "Americas",
-      "city": "Anchorage",
-      "country": "United States",
-      "state": "Alaska",
-      "tz": "America/Anchorage",
-      "lat": 61.22,
-      "lon": -149.9,
-      "title": "Trump administration sues to delay the result of Alaska's Senate race over two candidates named Dan Sullivan",
-      "summary": "The Justice Department filed a lawsuit in federal court in Anchorage asking to block the state from certifying its US Senate result if Republican Dan S. Sullivan narrowly loses to Democrat Mary Peltola on 3 November, saying voters could be confused by a second Republican named Daniel J. Sullivan Jr. on the ballot. Al Jazeera notes that Alaska's Supreme Court has already ruled that both men may stay on the ballot. France 24 says the case raises questions about whether Trump would accept a [[midterms|midterm]] defeat.",
-      "background": "Al Jazeera reports that Peltola led Sullivan in August's primary, 49.5% to about 41%, and that Trump won Alaska by roughly 13 points in 2024. Control of the Senate could come down to this race, France 24 reports.",
-      "sources": [
-        {
-          "outlet": "France 24",
-          "title": "Trump administration sues to block possible Democratic win in Alaska Senate race",
-          "url": "https://www.france24.com/en/americas/20261024-trump-administration-sues-to-block-possible-democratic-win-in-alaska-senate-race",
-          "time": "2026-10-24T11:40:00Z"
-        },
-        {
-          "outlet": "Al Jazeera",
-          "title": "Dan Sullivan vs Dan Sullivan: Why is Trump’s DOJ suing in Alaska?",
-          "url": "https://www.aljazeera.com/news/2026/10/24/dan-sullivan-vs-dan-sullivan-why-is-trumps-doj-suing-in-alaska",
-          "time": "2026-10-24T08:11:00Z"
-        }
-      ]
-    },
-    {
-      "id": "cuba",
-      "topic": "Politics",
-      "region": "Americas",
-      "city": "Havana",
-      "country": "Cuba",
-      "places": [
-        "United States"
-      ],
-      "tz": "America/Havana",
-      "lat": 23.11,
-      "lon": -82.37,
-      "title": "Rubio urges Cubans seeking change to work with the CIA",
-      "summary": "US Secretary of State Marco Rubio wrote on X that 'now is the time' for people seeking change in Cuba, inviting them to seize the chance through 'a discreet partnership with the CIA', Al Jazeera reports. France 24 says Havana responded by mocking what it called the Trump administration's 'desperation'.",
-      "background": "Al Jazeera says Trump and other senior US officials have hinted for months at military intervention in Cuba, and that Washington has stepped up pressure since the US military captured then-Venezuelan President Nicolas Maduro earlier this year.",
-      "sources": [
-        {
-          "outlet": "Al Jazeera",
-          "title": "Rubio calls on Cubans to partner with CIA ‘to create positive change’",
-          "url": "https://www.aljazeera.com/news/2026/10/24/rubio-calls-on-cubans-to-partner-with-cia-to-create-positive-change",
-          "time": "2026-10-24T08:28:00Z"
-        },
-        {
-          "outlet": "France 24",
-          "title": "US seeks to topple Cuba's government",
-          "url": "https://www.france24.com/en/us-seeks-to-topple-cuba-s-government",
-          "time": "2026-10-24T11:43:00Z"
-        }
-      ]
-    },
-    {
-      "id": "ukraine",
+      "id": "oleshky-ceasefire",
       "thread": "ukraine-talks",
+      "scale": "international",
       "topic": "Conflict",
       "region": "Europe",
-      "city": "Kyiv",
+      "city": "Oleshky",
       "country": "Ukraine",
+      "state": "Kherson region",
       "places": [
+        "Russia",
         "United States"
       ],
       "tz": "Europe/Kyiv",
-      "lat": 50.45,
-      "lon": 30.52,
-      "title": "Ukraine says its Starlink connection is stable again after a week of restrictions",
-      "summary": "Defence Minister Evhenii Khmara said on Saturday that [[starshield|Starlink and Starshield]] were back to normal speeds after more than a week of restrictions that Ukrainian officials say hurt the army's ability to intercept Russian attack drones. Neither SpaceX boss Elon Musk nor the US government has acknowledged responsibility for the limits, France 24 reports.",
-      "background": "The restrictions were first reported on 14 October, France 24 says, after Trump announced a deal to buy Russian diesel, waived new sanctions on Moscow and pressed Ukraine to stop striking Russian oil refineries.",
+      "lat": 46.62,
+      "lon": 32.72,
+      "title": "A local ceasefire begins around besieged Oleshky while missiles hit Kyiv again",
+      "summary": "NPR reports that a local ceasefire between Ukraine and Russia took effect early Tuesday ahead of a humanitarian mission to Oleshky, a Russian-occupied town where residents have been eating weeds and pickles to survive, while missile attacks resumed on Kyiv. The BBC says the White House credited US first lady Melania Trump with securing the truce. The Kyiv Independent says a Russian ballistic missile hit Kyiv's Southern Bridge, leaving a large hole and closing it to road and rail traffic.",
+      "background": "Russia's full-scale invasion began in February 2022. The Kremlin has said three-way talks with the US and Ukraine could resume in mid-November, possibly in Abu Dhabi.",
       "sources": [
         {
-          "outlet": "France 24",
-          "title": "Ukraine says Starlink and Starshield connection 'stable' again",
-          "url": "https://www.france24.com/en/europe/20261024-ukraine-says-starlink-and-starshield-connection-stable-again",
-          "time": "2026-10-24T09:48:00Z"
+          "outlet": "NPR",
+          "title": "Local ceasefire brokered by Melania Trump starts in southern Ukraine",
+          "url": "https://www.npr.org/2026/10/27/g-s1-150037/russia-ukraine-war",
+          "time": "2026-10-27T05:26:00Z"
+        },
+        {
+          "outlet": "BBC News",
+          "title": "Truce begins in Ukraine city where residents ate weeds to survive",
+          "url": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo",
+          "time": "2026-10-27T15:13:00Z"
+        },
+        {
+          "outlet": "The Kyiv Independent",
+          "title": "Kyiv approves alternative Dnipro crossings after Russian strikes on bridges",
+          "url": "https://kyivindependent.com/kyiv-approves-alternative-dnipro-crossings-after-russian-strikes-on-bridges/",
+          "time": "2026-10-27T15:45:00Z"
         }
       ]
     },
     {
-      "id": "serbia",
+      "id": "nordic-putin-call",
+      "thread": "ukraine-talks",
+      "scale": "international",
+      "topic": "Politics",
+      "region": "Europe",
+      "city": "Helsinki",
+      "country": "Finland",
+      "places": [
+        "Norway",
+        "Denmark",
+        "Sweden",
+        "Russia"
+      ],
+      "tz": "Europe/Helsinki",
+      "lat": 60.17,
+      "lon": 24.94,
+      "title": "Finland's and Norway's leaders phone Putin, splitting Nordic opinion",
+      "summary": "The leaders of Finland and Norway held a rare 90-minute call with Vladimir Putin, the BBC and Euronews report. Finland's president, Alexander Stubb, said ending the war in Ukraine 'will not be achieved through silence'. Euronews says the Danish and Swedish prime ministers publicly cast doubt on the move, and DW reports that Denmark's Mette Frederiksen criticised the two countries for not coordinating with allies, even though they had consulted Ukraine. The call came ahead of planned US-led peace talks.",
+      "sources": [
+        {
+          "outlet": "BBC News",
+          "title": "Norway and Finland leaders hold rare call with Putin",
+          "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo",
+          "time": "2026-10-27T18:28:00Z"
+        },
+        {
+          "outlet": "Euronews",
+          "title": "Putin call pits Finland and Norway against Denmark and Sweden",
+          "url": "https://www.euronews.com/2026/10/27/putin-call-pits-finland-and-norway-against-denmark-and-sweden",
+          "time": "2026-10-27T16:20:00Z"
+        },
+        {
+          "outlet": "DW",
+          "title": "Denmark's Frederiksen criticizes Finland and Norway for calling Putin without coordinating with allies, despite consultation with Ukraine",
+          "url": "https://www.dw.com/en/denmark-s-frederiksen-criticizes-finland-and-norway-for-calling-putin-without-coordinating-with-allies-despite-consultation-with-ukraine/a-79776208",
+          "time": "2026-10-27T12:54:00Z"
+        }
+      ]
+    },
+    {
+      "id": "serbia-students",
+      "scale": "international",
       "topic": "Politics",
       "region": "Europe",
       "city": "Belgrade",
@@ -267,350 +308,708 @@
       "tz": "Europe/Belgrade",
       "lat": 44.79,
       "lon": 20.45,
-      "title": "Serbia votes on Sunday in an election that tests a student-led movement",
-      "summary": "NPR reports that students who have protested across Europe have chosen candidates to run for parliament and want to end 14 years of government by the populist leader Aleksandar Vucic. Al Jazeera says the election is a test of the student movement demanding justice for 16 victims.",
-      "background": "In November 2024 the collapse of a concrete canopy at a railway station in Novi Sad killed 16 people. Demands for accountability grew into a nationwide movement against alleged corruption, with students as its driving force.",
+      "title": "Serbia's student-led list wins a majority, ending Vučić's party's 14-year rule",
+      "summary": "Balkan Insight reports that the opposition Student List won an outright majority in Serbia's parliamentary elections, ending the 14 years in power of Aleksandar Vučić's Serbian Progressive Party. The BBC says Vučić said it was 'clear' his party had lost, and people celebrated in cities across the country. Scroll notes that the Student List has no single leader and fielded candidates without political experience from across Serbian society.",
+      "background": "The BBC says the student movement took just under two years to end the party's long political dominance. Balkan Insight reports that European leaders have welcomed the result and hope it will speed Serbia's progress towards EU membership.",
       "sources": [
         {
-          "outlet": "NPR",
-          "title": "European student protests take aim at Serbia's elections",
-          "url": "https://www.npr.org/2026/10/24/nx-s1-6012799/european-student-protests-take-aim-at-serbias-elections",
-          "time": "2026-10-24T11:42:00Z"
+          "outlet": "Balkan Insight",
+          "title": "Student List Wins Outright Majority in Serbian Parliamentary Polls",
+          "url": "https://balkaninsight.com/2026/10/26/student-list-wins-outright-majority-in-serbian-parliamentary-polls/bi/",
+          "time": "2026-10-26T11:07:00Z"
         },
         {
-          "outlet": "Al Jazeera",
-          "title": "Serbia elections test student movement demanding justice for 16 victims",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/serbia-elections-test-student-movement-demanding-justice-for-16-victims",
-          "time": "2026-10-24T12:18:00Z"
+          "outlet": "BBC News",
+          "title": "Celebrations in Serbia after veteran ruler Vučić loses election to student-led protest movement",
+          "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo",
+          "time": "2026-10-26T14:34:00Z"
+        },
+        {
+          "outlet": "Scroll",
+          "title": "As Serbian student movement ends ruling party's 12-year reign, here are the challenges they face",
+          "url": "https://scroll.in/article/1096675/as-serbian-student-movement-ends-ruling-partys-12-year-reign-here-are-the-challenges-they-face",
+          "time": "2026-10-27T16:30:00Z"
         }
       ]
     },
     {
-      "id": "brazil",
+      "id": "us-midterms",
+      "scale": "international",
       "topic": "Politics",
       "region": "Americas",
-      "city": "Rio de Janeiro",
-      "country": "Brazil",
-      "tz": "America/Sao_Paulo",
-      "lat": -22.91,
-      "lon": -43.17,
-      "title": "Lula and Flavio Bolsonaro trade attacks in the last debate before Brazil's runoff",
-      "summary": "President Luiz Inacio Lula da Silva and Senator Flavio Bolsonaro questioned each other on the economy, infrastructure and regional development in Friday's debate in Rio de Janeiro, two days before Sunday's vote, Al Jazeera reports. Lula criticised Bolsonaro's plan to take a 'chainsaw' to public spending, while Bolsonaro accused Lula of letting organised crime expand and failing to address living costs. Polls show the two neck and neck.",
-      "background": "Flavio Bolsonaro is the son of former president Jair Bolsonaro. NPR describes the race as a battle over the country's political future.",
+      "city": "Washington",
+      "country": "United States",
+      "places": [
+        "Venezuela",
+        "Iran"
+      ],
+      "tz": "America/New_York",
+      "lat": 38.91,
+      "lon": -77.04,
+      "title": "A week before the US midterms, Democrats hold a slim edge in polling",
+      "summary": "A new NPR/PBS News/Marist poll shows Democrats with a slight edge with Election Day a week away, though NPR says lagging enthusiasm among key groups suggests gains may not come easily. The Times of Israel reports that the Iran war, now eight months old, has pushed up gas prices and left voters frustrated. At a rally in Texas, President Trump said he had been willing to go to war with Iran even if oil rose sharply, the Guardian reports. The BBC says Trump calls voter fraud 'rampant', while its fact-checkers say evidence suggests it is extremely rare.",
+      "background": "The midterms on 3 November will decide control of Congress for the last two years of Trump's term, according to The Times of Israel.",
       "sources": [
         {
-          "outlet": "Al Jazeera",
-          "title": "Brazil’s Lula and Bolsonaro debate policy proposals before run-off",
-          "url": "https://www.aljazeera.com/news/2026/10/24/brazils-lula-and-bolsonaro-debate-policy-proposals-before-run-off",
-          "time": "2026-10-24T09:41:00Z"
+          "outlet": "NPR",
+          "title": "Democrats still poised to make gains, but poll shows warning signs for just how many",
+          "url": "https://www.npr.org/2026/10/27/nx-s1-6017479/2026-midterms-npr-poll-democrats-trump-approval",
+          "time": "2026-10-27T09:00:00Z"
         },
         {
-          "outlet": "NPR",
-          "title": "Brazil's runoff: Lula's legacy vs. Bolsonaro's dynasty",
-          "url": "https://www.npr.org/2026/10/23/nx-s1-6004277/brazil-vote-runoff-lula-bolsonaro",
-          "time": "2026-10-23T09:00:00Z"
+          "outlet": "The Times of Israel",
+          "title": "How Trump's 'little detour' to Iran became a roadblock in the US midterm elections",
+          "url": "https://www.timesofisrael.com/how-trumps-little-detour-to-iran-became-a-roadblock-in-the-us-midterm-elections/",
+          "time": "2026-10-27T15:31:00Z"
+        },
+        {
+          "outlet": "The Guardian",
+          "title": "Trump, campaigning in Texas for Republicans, touts Iran war and '51st state' Venezuela: 'I knew that oil would go up' – live",
+          "url": "https://www.theguardian.com/us-news/live/2026/oct/27/comey-trump-rubio-texas-vance-israel-midterms-politics-latest-news-updates",
+          "time": "2026-10-27T23:38:00Z"
+        },
+        {
+          "outlet": "BBC News",
+          "title": "Trump says US voter fraud is 'rampant' - evidence suggests it is extremely rare",
+          "url": "https://www.bbc.co.uk/news/articles/ckeq3vezxlx1o",
+          "time": "2026-10-27T21:46:00Z"
         }
       ]
     },
     {
-      "id": "kimchina",
+      "id": "venezuela-machado",
+      "scale": "international",
       "topic": "Politics",
-      "region": "Asia-Pacific",
-      "city": "Dandong",
-      "country": "China",
-      "places": [
-        "North Korea"
-      ],
-      "tz": "Asia/Shanghai",
-      "lat": 40.12,
-      "lon": 124.38,
-      "title": "Kim Jong Un visits China across a newly opened bridge",
-      "summary": "South Korean officials say North Korean leader Kim Jong Un arrived in the Chinese border city of Dandong on Saturday over the New Yalu River Bridge, which officially opened about a week ago, Al Jazeera reports. Reuters, quoted by Al Jazeera, says Chinese Premier Li Qiang met Kim there. China's foreign ministry had not yet responded to requests for comment.",
-      "background": "The bridge was finished 12 years ago, according to Al Jazeera, and the visit comes a day before the anniversary of China joining the 1950-1953 Korean War. China is an important trading partner for North Korea.",
-      "sources": [
-        {
-          "outlet": "Al Jazeera",
-          "title": "North Korea’s Kim Jong Un visits China via newly opened bridge",
-          "url": "https://www.aljazeera.com/news/2026/10/24/north-koreas-kim-jong-un-arrives-in-china-south-korean-media-says",
-          "time": "2026-10-24T07:07:00Z"
-        }
-      ]
-    },
-    {
-      "id": "ebola",
-      "thread": "ebola-2026",
-      "topic": "Health",
-      "region": "Africa",
-      "city": "Abuja",
-      "country": "Nigeria",
-      "places": [
-        "Kenya",
-        "Uganda",
-        "Democratic Republic of Congo"
-      ],
-      "tz": "Africa/Lagos",
-      "lat": 9.08,
-      "lon": 7.4,
-      "title": "Officials probe whether the first Ebola patients in Nigeria and Kenya crossed paths at an airport",
-      "summary": "Health officials say Nigeria's first Ebola patient, the Ugandan-born wife of a diplomat, may have crossed paths with Kenya's first patient at a Ugandan airport, NPR reports. She is being treated and 44 people she had close contact with are in quarantine. France 24 reports that Kenya says a second Ebola death has been recorded.",
-      "background": "Congo's outbreak began in May in the east of the country and has become the fastest-spreading on record, NPR says, with at least 4,600 deaths and about 9,700 infections there. Nigeria is the fourth African country to report a case and the first in West Africa.",
-      "sources": [
-        {
-          "outlet": "NPR",
-          "title": "Authorities investigating whether first Kenya and Nigeria Ebola cases crossed paths",
-          "url": "https://www.npr.org/2026/10/23/g-s1-149515/africa-ebola-outbreak",
-          "time": "2026-10-23T12:41:00Z"
-        },
-        {
-          "outlet": "France 24",
-          "title": "Building collapse in Nairobi search for survivors under way",
-          "url": "https://www.france24.com/en/building-collapse-in-nairobi-search-for-survivors-under-way",
-          "time": "2026-10-23T20:31:00Z"
-        }
-      ]
-    },
-    {
-      "id": "nairobi",
-      "topic": "Culture",
-      "region": "Africa",
-      "city": "Nairobi",
-      "country": "Kenya",
-      "tz": "Africa/Nairobi",
-      "lat": -1.29,
-      "lon": 36.82,
-      "title": "Rescuers search for survivors after a building under construction collapses in Nairobi",
-      "summary": "France 24 reports that crews scrambled through rubble to reach trapped survivors after a building of more than 10 storeys that was being built in the Kenyan capital came down on Friday evening.",
-      "sources": [
-        {
-          "outlet": "France 24",
-          "title": "Building collapse in Nairobi search for survivors under way",
-          "url": "https://www.france24.com/en/building-collapse-in-nairobi-search-for-survivors-under-way",
-          "time": "2026-10-23T20:31:00Z"
-        }
-      ]
-    },
-    {
-      "id": "mexicofire",
-      "topic": "Climate",
       "region": "Americas",
-      "city": "León",
-      "country": "Mexico",
-      "state": "Guanajuato",
-      "tz": "America/Mexico_City",
-      "lat": 21.12,
-      "lon": -101.68,
-      "title": "A huge chemical plant fire forces mass evacuations in León, Mexico",
-      "summary": "Al Jazeera reports that an explosive fire broke out on Friday at a chemical plant in León, Mexico, triggering mass evacuations.",
+      "city": "Caracas",
+      "country": "Venezuela",
+      "places": [
+        "United States"
+      ],
+      "tz": "America/Caracas",
+      "lat": 10.48,
+      "lon": -66.9,
+      "title": "María Corina Machado returns to Venezuela as Trump hails an oil deal with its new government",
+      "summary": "Venezuelan opposition leader María Corina Machado has returned after more than ten months in exile, and crowds welcomed her, the BBC reports. At a Texas rally, President Trump showed off a tanker he said carried a million barrels of oil, called the deal with Venezuela's post-Maduro government the 'greatest oil victory in history' and floated Venezuela as a '51st state', according to the Guardian. Colombia One reports that Secretary of State Marco Rubio spoke about a US plan for Venezuela that includes changing its electoral infrastructure and calling elections.",
+      "background": "The BBC says Machado left Venezuela by speedboat a month before the US government seized President Nicolás Maduro.",
       "sources": [
         {
-          "outlet": "Al Jazeera",
-          "title": "Massive chemical plant fire triggers mass evacuations in Mexico",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/massive-chemical-plant-fire-triggers-mass-evacuations-in-mexico",
-          "time": "2026-10-24T08:14:00Z"
+          "outlet": "BBC News",
+          "title": "Opposition leader María Machado returns from exile to a Venezuela reshaped by Trump",
+          "url": "https://www.bbc.co.uk/news/articles/c8vgx3pvdeq1o",
+          "time": "2026-10-27T00:31:00Z"
+        },
+        {
+          "outlet": "The Guardian",
+          "title": "Trump shows off tanker with '1m barrels of oil' and floats Venezuela as 51st state",
+          "url": "https://www.theguardian.com/us-news/2026/oct/27/trump-oil-tanker-venezuela",
+          "time": "2026-10-27T23:07:00Z"
+        },
+        {
+          "outlet": "Colombia One",
+          "title": "Changing Electoral Infrastructure and Calling Elections: US Plan for Venezuela",
+          "url": "https://colombiaone.com/2026/10/27/changing-electoral-infrastructure-and-calling-elections-u-s-plan-for-venezuela/",
+          "time": "2026-10-27T22:43:00Z"
         }
       ]
     },
     {
-      "id": "eaglesnest",
-      "topic": "Culture",
-      "region": "Europe",
-      "city": "Berchtesgaden",
-      "country": "Germany",
-      "state": "Bavaria",
-      "tz": "Europe/Berlin",
-      "lat": 47.61,
-      "lon": 13.04,
-      "title": "Fire destroys Hitler's former Alpine retreat, the Eagle's Nest, and police detain a man",
-      "summary": "About 200 firefighters tackled a blaze that engulfed the Kehlsteinhaus, known as the Eagle's Nest, in Bavaria overnight, and no injuries were reported, Al Jazeera says. Police have detained a man and are examining whether he was involved. German media reported that investigators suspect arson, but no cause has been announced.",
-      "background": "The building high in the Alps, at more than 1,800 metres, was Adolf Hitler's mountain retreat and now operates as a mountain guesthouse, according to Al Jazeera.",
-      "sources": [
-        {
-          "outlet": "Al Jazeera",
-          "title": "German police detain suspect after fire engulfs Hitler’s Eagle’s Nest",
-          "url": "https://www.aljazeera.com/news/2026/10/24/german-police-detain-suspect-after-fire-engulfs-hitlers-eagles-nest",
-          "time": "2026-10-24T11:01:00Z"
-        }
-      ]
-    },
-    {
-      "id": "czech",
+      "id": "cuba-un-embargo",
+      "scale": "international",
       "topic": "Politics",
-      "region": "Europe",
-      "city": "Prague",
-      "country": "Czech Republic",
-      "tz": "Europe/Prague",
-      "lat": 50.08,
-      "lon": 14.44,
-      "title": "The Czech government moves ahead with changing how public media is paid for",
-      "summary": "In an overnight vote, the governing coalition sent a bill to committees that would scrap the household broadcasting fee and fund public media from the state budget instead, Al Jazeera reports. Critics say it would weaken broadcasters' independence, and journalists are preparing to strike. Prime Minister Andrej Babis says the new model would be fairer to poorer households.",
-      "background": "Public media staff already staged a strike against the plan in June. Opposition parties compare it with reforms under Hungary's former prime minister Viktor Orban, Al Jazeera reports.",
+      "region": "Americas",
+      "city": "New York",
+      "country": "United States",
+      "places": [
+        "Cuba"
+      ],
+      "tz": "America/New_York",
+      "lat": 40.75,
+      "lon": -73.97,
+      "title": "US and Cuban envoys trade accusations at the UN during the embargo debate",
+      "summary": "The US ambassador to the UN, Mike Waltz, and Cuba's foreign minister, Bruno Rodríguez Parrilla, clashed during a General Assembly debate on the long-running US embargo against Cuba, The National reports. The BBC says Waltz claimed Havana has profited from the forced labour of its citizens, and Cuban delegates shouted back 'You're lying'.",
       "sources": [
         {
-          "outlet": "Al Jazeera",
-          "title": "Czech Republic advances media funding overhaul despite criticism",
-          "url": "https://www.aljazeera.com/news/2026/10/24/czech-republic-advances-media-funding-overhaul-despite-criticism",
-          "time": "2026-10-24T11:50:00Z"
+          "outlet": "The National",
+          "title": "US and Cuban envoys in shouting match during UN embargo debate",
+          "url": "https://www.thenationalnews.com/news/us/2026/10/27/cuba-us-argument-un/",
+          "time": "2026-10-27T19:22:00Z"
+        },
+        {
+          "outlet": "BBC News",
+          "title": "'You're lying' - US and Cuban officials get into shouting match at UN",
+          "url": "https://www.bbc.co.uk/news/videos/ck5yn5rlz978o",
+          "time": "2026-10-27T20:52:00Z"
         }
       ]
     },
     {
-      "id": "taiz",
+      "id": "mada-masr",
+      "scale": "international",
+      "topic": "Politics",
+      "region": "Africa",
+      "city": "Cairo",
+      "country": "Egypt",
+      "tz": "Africa/Cairo",
+      "lat": 30.04,
+      "lon": 31.24,
+      "title": "Egyptian court orders independent news site Mada Masr closed and fines its editor",
+      "summary": "An Egyptian court has ordered Mada Masr, one of the country's last independent outlets, to close and fined its editor-in-chief, Lina Attalah, about $53,400, The Times of Israel reports; she was detained until the fine is paid. The conviction is for operating without a licence, although the outlet says it has sought one for years. The BBC reports that Amnesty International called the verdict 'a crushing blow to press freedom'.",
+      "sources": [
+        {
+          "outlet": "The Times of Israel",
+          "title": "Egyptian court orders one of last independent media outlets to close; editor held, fined",
+          "url": "https://www.timesofisrael.com/egyptian-court-orders-one-of-last-independent-media-outlets-to-close-editor-held-fined/",
+          "time": "2026-10-27T19:10:00Z"
+        },
+        {
+          "outlet": "BBC News",
+          "title": "Egypt court fines journalist Lina Attalah and orders news site's closure",
+          "url": "https://www.bbc.co.uk/news/articles/cw8rz14k1jvxo",
+          "time": "2026-10-27T20:44:00Z"
+        },
+        {
+          "outlet": "DW",
+          "title": "Egypt orders closure of independent news site Mada Masr",
+          "url": "https://www.dw.com/en/egypt-orders-closure-of-independent-news-site-mada-masr/a-79781842",
+          "time": "2026-10-27T23:16:00Z"
+        }
+      ]
+    },
+    {
+      "id": "sudan-nyala",
+      "thread": "sudan-war",
+      "scale": "international",
+      "topic": "Conflict",
+      "region": "Africa",
+      "city": "Nyala",
+      "country": "Sudan",
+      "state": "South Darfur",
+      "tz": "Africa/Khartoum",
+      "lat": 12.05,
+      "lon": 24.88,
+      "title": "A drone strike on a busy market in Nyala kills at least 36, MSF says",
+      "summary": "Doctors Without Borders (MSF) says a drone strike by the Sudanese Armed Forces on Monday hit a busy market in Nyala, the capital of South Darfur, killing at least 36 people, The National reports. Separately, the BBC says Western governments are warning of a risk of famine in Sudan, where millions face acute hunger as conflict, drought and funding cuts compound the crisis.",
+      "sources": [
+        {
+          "outlet": "The National",
+          "title": "SAF drone strike on busy Sudanese market kills dozens, says MSF",
+          "url": "https://www.thenationalnews.com/news/mena/2026/10/27/saf-drone-strike-on-sudanese-busy-market-kills-dozens-says-msf/",
+          "time": "2026-10-27T19:34:00Z"
+        },
+        {
+          "outlet": "BBC News",
+          "title": "West warns of famine risk in Sudan as civil war grinds on",
+          "url": "https://www.bbc.co.uk/news/articles/cj5ynkk6v3pzo",
+          "time": "2026-10-27T15:41:00Z"
+        }
+      ]
+    },
+    {
+      "id": "kabila-m23",
+      "scale": "international",
+      "topic": "Conflict",
+      "region": "Africa",
+      "city": "Kinshasa",
+      "country": "Democratic Republic of Congo",
+      "places": [
+        "Rwanda"
+      ],
+      "tz": "Africa/Kinshasa",
+      "lat": -4.44,
+      "lon": 15.27,
+      "title": "Congo's president calls ex-leader Kabila a Rwandan 'proxy' after he joined M23",
+      "summary": "President Félix Tshisekedi told lawmakers that his predecessor Joseph Kabila is a Rwandan 'stooge', Africanews reports. Kabila joined forces this month with the M23 armed group, which is backed by Kigali and has been leading an insurgency in the east.",
+      "sources": [
+        {
+          "outlet": "Africanews",
+          "title": "DRC's former leader Kabila is Rwandan 'proxy,' Tshisekedi tells lawmakers",
+          "url": "https://www.africanews.com/2026/10/27/drcs-former-leader-kabila-is-rwandan-proxy-tshisekedi-tells-lawmakers/",
+          "time": "2026-10-27T15:39:00Z"
+        }
+      ]
+    },
+    {
+      "id": "ethiopia-oromia",
+      "scale": "international",
+      "topic": "Conflict",
+      "region": "Africa",
+      "city": "Merti",
+      "country": "Ethiopia",
+      "state": "Oromia",
+      "tz": "Africa/Addis_Ababa",
+      "lat": 8,
+      "lon": 39.5,
+      "title": "Attackers kill 60 people in Ethiopia's Oromia region, the Orthodox church says",
+      "summary": "The Holy Synod of the Ethiopian Orthodox Tewahedo Church says 14 believers were killed in Merti Woreda on 20 October and 46 in Sherka Woreda on 24 October, according to a report carried by The Kathmandu Post.",
+      "sources": [
+        {
+          "outlet": "The Kathmandu Post",
+          "title": "Attackers kill 60 people in Ethiopia's conflict-hit Oromiya region, Orthodox church says",
+          "url": "https://kathmandupost.com/world/2026/10/27/attackers-kill-60-people-in-ethiopia-s-conflict-hit-oromiya-region-orthodox-church-says",
+          "time": "2026-10-27T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "jordan-syria-strike",
+      "scale": "international",
       "topic": "Conflict",
       "region": "Middle East",
-      "city": "Taiz",
-      "country": "Yemen",
-      "tz": "Asia/Aden",
-      "lat": 13.58,
-      "lon": 44.02,
-      "title": "Drinking water runs short in Yemen's Taiz as Houthi forces tighten their siege",
-      "summary": "NPR reports that Taiz, in south-western Yemen, faces a severe water crisis as [[houthis|Houthi]] rebels backed by Iran tighten their encirclement. The city has struggled with water for more than a decade, but NPR says the situation has worsened in recent weeks.",
-      "sources": [
-        {
-          "outlet": "NPR",
-          "title": "Drinking water supplies dwindle in Yemeni city besieged by Houthi rebels",
-          "url": "https://www.npr.org/2026/10/24/g-s1-149729/drinking-water-supplies-dwindle-in-yemeni-city-besieged-by-houthi-rebels",
-          "time": "2026-10-24T07:04:00Z"
-        }
-      ]
-    },
-    {
-      "id": "typhoon",
-      "topic": "Climate",
-      "region": "Asia-Pacific",
-      "city": "Taipei",
-      "country": "Taiwan",
+      "city": "Hmoud",
+      "country": "Jordan",
       "places": [
-        "China",
-        "Japan"
+        "Syria"
       ],
-      "tz": "Asia/Taipei",
-      "lat": 25.03,
-      "lon": 121.57,
-      "title": "Typhoon Champi batters Taiwan and heads for China and Japan",
-      "summary": "France 24 reports that Typhoon Champi hit Taiwan on Friday with heavy rain and winds of up to 180 kilometres an hour, leaving 56,000 households without power. The storm is now heading towards China and Japan.",
+      "tz": "Asia/Amman",
+      "lat": 31.95,
+      "lon": 35.93,
+      "title": "Jordan strikes a village in Syria after a deadly attack on a church",
+      "summary": "The BBC reports that Jordan carried out a strike in Syria in response to a Friday shooting attack on a church in the village of Hmoud that left nine Christians dead; Syrian health officials say the strike killed five people, including women and children. Jordan has arrested three men after a shootout, and no group has claimed the attack. DW says a Jordanian government spokesman expressed 'regret' over civilian casualties in the strike, which Jordan said targeted 'Islamic State' militants.",
       "sources": [
         {
-          "outlet": "France 24",
-          "title": "Typhoon Champi batters Taiwan",
-          "url": "https://www.france24.com/en/typhoon-champi-batters-taiwan",
-          "time": "2026-10-24T10:33:00Z"
-        }
-      ]
-    },
-    {
-      "id": "php",
-      "topic": "Tech",
-      "region": "Global",
-      "city": "Worldwide",
-      "country": "Worldwide",
-      "tz": "UTC",
-      "lat": null,
-      "lon": null,
-      "title": "Hackers exploit a serious web flaw that AI found, after news of it leaked",
-      "summary": "NPR reports that AI discovered a vulnerability nicknamed PHP2SHELL in [[php|PHP]], a language behind a large share of websites. Security researchers rushed to fix it, but news of the flaw leaked and hackers have swooped in. Governments around the world are rushing to put protections in place, NPR says.",
-      "background": "NPR reports that the affected program runs on about 70% of websites.",
-      "sources": [
-        {
-          "outlet": "NPR",
-          "title": "AI found the flaw. Hackers found the leak: The race to save 'PHP2SHELL'",
-          "url": "https://www.npr.org/2026/10/24/nx-s1-6012327/ai-found-the-flaw-hackers-found-the-leak-the-race-to-save-php2shell",
-          "time": "2026-10-24T11:42:00Z"
+          "outlet": "BBC News",
+          "title": "Jordan carries out deadly strike in Syria in retaliation for church attack",
+          "url": "https://www.bbc.co.uk/news/articles/cq8ezg6dy6xlo",
+          "time": "2026-10-27T02:40:00Z"
         },
         {
-          "outlet": "NPR",
-          "title": "Hacking attempts rise after flaws found in program affecting 70% of websites",
-          "url": "https://www.npr.org/2026/10/23/g-s1-149503/hacking-php-flaws",
-          "time": "2026-10-23T09:37:00Z"
-        }
-      ]
-    },
-    {
-      "id": "openai",
-      "topic": "Tech",
-      "region": "Americas",
-      "city": "San Francisco",
-      "country": "United States",
-      "state": "California",
-      "tz": "America/Los_Angeles",
-      "lat": 37.77,
-      "lon": -122.42,
-      "title": "Fired OpenAI researchers say independent safety checks are not going well",
-      "summary": "In their first interview since being fired, OpenAI safety researchers Mikita Balesni and Tomek Korbak told NPR they were let go for putting safety ahead of the company's short-term interests. They say independent safety audits of AI systems are not going well. NPR's report does not include a response from OpenAI.",
-      "sources": [
+          "outlet": "BBC News",
+          "title": "Jordan arrests three men suspected of deadly church attack after shootout",
+          "url": "https://www.bbc.co.uk/news/articles/cm4g17qq8wz4o",
+          "time": "2026-10-26T11:01:00Z"
+        },
         {
-          "outlet": "NPR",
-          "title": "Fired OpenAI researchers say independent safety audits aren't going well",
-          "url": "https://www.npr.org/2026/10/23/nx-s1-6012235/fired-openai-researchers-say-independent-safety-audits-arent-going-well",
-          "time": "2026-10-23T21:33:00Z"
+          "outlet": "DW",
+          "title": "Jordan acknowledges civilian casualties in Syria airstrike against 'Islamic State'",
+          "url": "https://www.dw.com/en/jordan-acknowledges-civilian-casualties-in-syria-airstrike-against-islamic-state/a-79775653",
+          "time": "2026-10-27T12:24:00Z"
         }
       ]
     },
     {
-      "id": "waze",
-      "topic": "Tech",
-      "region": "Asia-Pacific",
-      "city": "Kuala Lumpur",
-      "country": "Malaysia",
+      "id": "gaza-un-report",
+      "scale": "international",
+      "topic": "Conflict",
+      "region": "Middle East",
+      "city": "Gaza",
+      "country": "Palestine",
       "places": [
         "Israel"
       ],
-      "tz": "Asia/Kuala_Lumpur",
-      "lat": 3.14,
-      "lon": 101.69,
-      "title": "Malaysia considers a full ban on the Israel-linked navigation app Waze",
-      "summary": "Al Jazeera reports that Malaysia has already barred civil servants from using Waze for official duties because of the app's links to Israel, and is now considering a complete ban.",
+      "tz": "Asia/Gaza",
+      "lat": 31.5,
+      "lon": 34.47,
+      "title": "A UN inquiry says Israel kept committing genocide in Gaza after last October's truce",
+      "summary": "The UN Independent International Commission of Inquiry says in a report published Monday that Israel continued to commit genocide in Gaza after the US-brokered ceasefire of October 2025, Dawn reports.",
       "sources": [
         {
-          "outlet": "Al Jazeera",
-          "title": "Malaysia considers complete ban on Israel-based navigation app Waze",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/malaysia-waze-israel-ban",
-          "time": "2026-10-24T12:30:00Z"
+          "outlet": "Dawn",
+          "title": "UN inquiry says Israel kept committing genocide in Gaza after Oct 2025 truce",
+          "url": "https://www.dawn.com/news/2040240/un-inquiry-says-israel-kept-committing-genocide-in-gaza-after-oct-2025-truce",
+          "time": "2026-10-27T15:19:00Z"
         }
       ]
     },
     {
-      "id": "barcelona",
+      "id": "cyclone-arnab",
+      "scale": "national",
+      "topic": "Weather",
+      "region": "Asia-Pacific",
+      "city": "Narsapur",
+      "country": "India",
+      "state": "Andhra Pradesh",
+      "places": [
+        "Odisha",
+        "Visakhapatnam"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 16.45,
+      "lon": 81.7,
+      "title": "Cyclone Arnab makes landfall on India's Andhra Pradesh coast after mass evacuations",
+      "summary": "The Hindu reports that very severe cyclonic storm Arnab began landfall near Narsapur on Tuesday night. Andhra Pradesh's chief minister, N. Chandrababu Naidu, says 290 cyclone shelters were set up and 84,396 people evacuated; one man died after touching snapped live wires. Scroll reports more than 60 trains were cancelled and gusts of up to 150 km/h were expected, and The Hindu says 30,000 fishing boats were brought ashore while Odisha began large-scale evacuations.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "Very severe cyclonic storm 'Arnab' begins landfall near Narsapur; Vizag battered by rain",
+          "url": "https://www.thehindu.com/news/national/andhra-pradesh/cyclone-arnab-landfall-updates/article71633266.ece",
+          "time": "2026-10-27T21:45:00Z"
+        },
+        {
+          "outlet": "The Hindu",
+          "title": "Cyclone Arnab: very heavy rainfall batters northern districts of A.P., one dead",
+          "url": "https://www.thehindu.com/news/national/andhra-pradesh/cyclone-arnab-very-heavy-rainfall-batters-northern-districts-of-ap-one-dead/article71632422.ece",
+          "time": "2026-10-27T18:01:00Z"
+        },
+        {
+          "outlet": "Scroll",
+          "title": "Cyclone Arnab: Over 89,000 evacuated, NDRF teams deployed ahead of Andhra landfall",
+          "url": "https://scroll.in/latest/1096686/cyclone-arnab-over-89000-evacuated-ndrf-teams-deployed-ahead-of-andhra-landfall",
+          "time": "2026-10-27T12:42:00Z"
+        },
+        {
+          "outlet": "The Straits Times",
+          "title": "Cyclone Arnab begins making landfall in India's Andhra Pradesh state",
+          "url": "https://www.straitstimes.com/asia/south-asia/cyclone-arnab-begins-making-landfall-in-indias-andhra-pradesh-state",
+          "time": "2026-10-27T23:31:00Z"
+        }
+      ]
+    },
+    {
+      "id": "india-sir-rolls",
+      "scale": "national",
       "topic": "Politics",
-      "region": "Europe",
-      "city": "Barcelona",
-      "country": "Spain",
-      "tz": "Europe/Madrid",
-      "lat": 41.39,
-      "lon": 2.17,
-      "title": "Police evict housing activists from a Barcelona building",
-      "summary": "Al Jazeera reports that housing activists in Barcelona had taken over a mostly empty building to house vulnerable families and create a community hub. Police evicted them from it.",
+      "region": "Asia-Pacific",
+      "city": "New Delhi",
+      "country": "India",
+      "state": "Delhi",
+      "places": [
+        "Karnataka",
+        "Bengaluru"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 28.61,
+      "lon": 77.21,
+      "title": "India's voter-roll revision removes nearly a crore names in Karnataka and sparks protests",
+      "summary": "Scroll reports that Karnataka's final voter list, after the [[sir|Special Intensive Revision]], is down to about 4.5 crore electors from 5.5 crore, a fall of 17.9%. The Hindu says Bengaluru's electorate fell from 1.03 crore to 59 lakh, and an audit of one Delhi roll found that about one in three of 1,236 deletions in Trilokpuri were wrongly made. The Hindu also reports the CPI formed a human chain in Delhi demanding the chief election commissioner's resignation, and police have registered 40 FIRs over protests; The Indian Express says the Congress plans a 'public impeachment' of Gyanesh Kumar on Friday.",
       "sources": [
         {
-          "outlet": "Al Jazeera",
-          "title": "Barcelona housing activists evicted by police from residential building",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/barcelona-housing-activists-evicted-by-police-from-residential-building",
-          "time": "2026-10-24T12:14:00Z"
+          "outlet": "Scroll",
+          "title": "Karnataka SIR: Nearly 1 crore names deleted from final voter list",
+          "url": "https://scroll.in/latest/1096680/karnataka-sir-nearly-1-crore-names-deleted-from-final-voter-list",
+          "time": "2026-10-27T12:15:00Z"
+        },
+        {
+          "outlet": "The Hindu",
+          "title": "Bengaluru's electorate plunges from 1.03 crore to 59 lakh after SIR",
+          "url": "https://www.thehindu.com/news/cities/bangalore/bengalurus-electorate-plunges-from-103-crore-to-59-lakh-after-sir/article71632927.ece",
+          "time": "2026-10-27T16:38:00Z"
+        },
+        {
+          "outlet": "The Hindu",
+          "title": "Delhi SIR: 1 in 3 of 1,236 deletions in Trilokpuri roll 'wrongly removed', reveals audit",
+          "url": "https://www.thehindu.com/news/cities/Delhi/delhi-sir-1-in-3-of-1236-deletions-in-trilokpuri-roll-wrongly-removed-reveals-audit/article71632937.ece",
+          "time": "2026-10-27T21:48:00Z"
+        },
+        {
+          "outlet": "The Indian Express",
+          "title": "Will hold 'public impeachment' of Gyanesh Kumar at Mallikarjun Kharge's residence on Friday: Congress",
+          "url": "https://indianexpress.com/article/india/public-impeachment-gyanesh-kumar-mallikarjun-kharges-residence-congress-10939530/",
+          "time": "2026-10-27T18:43:00Z"
         }
       ]
     },
     {
-      "id": "time",
-      "topic": "Science",
-      "region": "Europe",
-      "city": "Bern",
-      "country": "Switzerland",
-      "tz": "Europe/Zurich",
-      "lat": 46.95,
-      "lon": 7.45,
-      "title": "Scientists vote to change how the world keeps time, though most people will not notice",
-      "summary": "Scientists have voted to change how the world keeps time, NPR reports, but most people will not even notice. NPR's Scott Simon spoke to Philippe Richard, director of Switzerland's Federal Institute of Metrology, about the change.",
+      "id": "arunachal-dam",
+      "scale": "national",
+      "topic": "Politics",
+      "region": "Asia-Pacific",
+      "city": "Upper Siang",
+      "country": "India",
+      "state": "Arunachal Pradesh",
+      "places": [
+        "China",
+        "Assam"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 28.9,
+      "lon": 95,
+      "title": "India sends extra forces to the northeast after protests over a mega dam near the Chinese border",
+      "summary": "India has deployed hundreds of additional security personnel in its remote northeast after youth protesters clashed with police last week over a plan to build a mega dam on the Chinese border, The Straits Times reports. Scroll says 69 people have been arrested under an Arunachal anti-terror law in the Upper Siang, Siang and East Siang districts, facing charges including rioting, torching vehicles and vandalism.",
+      "sources": [
+        {
+          "outlet": "The Straits Times",
+          "title": "India deploys extra forces after protests over dam on Chinese border escalate",
+          "url": "https://www.straitstimes.com/asia/india-deploys-extra-forces-after-protests-over-dam-on-chinese-border-escalate",
+          "time": "2026-10-27T11:25:00Z"
+        },
+        {
+          "outlet": "Scroll",
+          "title": "69 arrested under Arunachal anti-terror law after protests against dam project turn violent",
+          "url": "https://scroll.in/latest/1096673/sixty-nine-arrested-under-arunachal-anti-terror-law-after-protests-against-dam-project-turn-violent",
+          "time": "2026-10-27T10:12:00Z"
+        }
+      ]
+    },
+    {
+      "id": "el-nino-impacts",
+      "scale": "international",
+      "topic": "Climate",
+      "region": "Global",
+      "city": "Worldwide",
+      "country": "Worldwide",
+      "places": [
+        "South Africa",
+        "Papua New Guinea",
+        "Philippines",
+        "Kenya"
+      ],
+      "tz": "UTC",
+      "lat": null,
+      "lon": null,
+      "title": "An intensifying El Niño is already changing farming, floods and weather around the world",
+      "summary": "Daily Maverick reports that South African farmers are swapping maize for faster-growing, drought-tolerant sunflower as an intense [[el-nino|El Niño]] threatens the summer grain belt. RNZ says many parts of Papua New Guinea are suffering drought from the Highlands to the coast. Rappler reports that the Philippines' northeast monsoon may bring less pronounced cold surges, and NPR says workers in Nairobi's 'Green Army' are preparing for floods.",
+      "sources": [
+        {
+          "outlet": "Daily Maverick",
+          "title": "AGRICULTURAL SECTOR: SA farmers swap maize for sunflower as 'Godzilla' El Niño threatens harvests",
+          "url": "https://www.dailymaverick.co.za/article/2026-10-27-sa-farmers-swap-maize-for-sunflower-as-godzilla-el-nino-threatens-harvests/",
+          "time": "2026-10-27T22:00:00Z"
+        },
+        {
+          "outlet": "RNZ",
+          "title": "PNG communities stuggle with El Niño drought",
+          "url": "https://www.rnz.co.nz/news/pacific/2168659/png-communities-stuggle-with-el-nino-drought",
+          "time": "2026-10-26T02:05:00Z"
+        },
+        {
+          "outlet": "Rappler",
+          "title": "With El Niño, 2026-2027 northeast monsoon may not be as cold",
+          "url": "https://www.rappler.com/philippines/weather/pagasa-northeast-monsoon-amihan-start-october-2026/",
+          "time": "2026-10-27T12:40:00Z"
+        },
+        {
+          "outlet": "NPR",
+          "title": "A 'Green Army' is out to thwart El Niño flooding",
+          "url": "https://www.npr.org/2026/10/27/nx-s1-6010370/el-nino-floods-nairobi-green-army",
+          "time": "2026-10-27T14:12:00Z"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-ipo",
+      "scale": "international",
+      "topic": "Business",
+      "region": "Americas",
+      "city": "United States",
+      "country": "United States",
+      "tz": null,
+      "lat": null,
+      "lon": null,
+      "title": "AI company Anthropic files for a stock-market listing that could be one of the biggest ever",
+      "summary": "NPR reports that Anthropic, which makes the Claude chatbot, has filed for an initial public offering that could be one of the largest ever. The BBC says the prospectus runs to 355 pages and contains company information that had not been disclosed before.",
       "sources": [
         {
           "outlet": "NPR",
-          "title": "Time expert Philippe Richard on why scientists are changing how we keep time",
-          "url": "https://www.npr.org/2026/10/24/nx-s1-6011081/time-expert-philippe-richard-on-why-scientists-are-changing-how-we-keep-time",
-          "time": "2026-10-24T11:42:00Z"
+          "title": "AI giant Anthropic files for an IPO that could break records",
+          "url": "https://www.npr.org/2026/10/26/nx-s1-6014772/anthropic-ai-ipo-could-break-records",
+          "time": "2026-10-26T14:16:00Z"
+        },
+        {
+          "outlet": "BBC News",
+          "title": "Anthropic's blockbuster share listing - 5 surprising things we now know",
+          "url": "https://www.bbc.co.uk/news/articles/cwn8d7g29vd9o",
+          "time": "2026-10-26T19:57:00Z"
         }
       ]
     },
     {
-      "id": "nairobi-collapse",
+      "id": "china-plenum",
+      "scale": "international",
+      "topic": "Politics",
+      "region": "Asia-Pacific",
+      "city": "Beijing",
+      "country": "China",
+      "tz": "Asia/Shanghai",
+      "lat": 39.9,
+      "lon": 116.4,
+      "title": "China's Communist Party leaders meet behind closed doors as Xi seeks stricter discipline",
+      "summary": "NPR reports that the closed-door [[plenum|plenum]] began on Monday, about a year before Xi Jinping is expected to secure a fourth term and personnel changes to key leadership bodies. The BBC says the four-day meeting could see Xi 'tighten discipline' in the party. The Straits Times reports that China sentenced a former anti-graft official at the securities regulator to death with a two-year reprieve over corruption.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "What to know about China's plenum as Xi seeks stronger party discipline",
+          "url": "https://www.npr.org/2026/10/26/g-s1-149918/what-to-know-about-chinas-plenum-as-xi-seeks-stronger-party-discipline",
+          "time": "2026-10-26T13:20:00Z"
+        },
+        {
+          "outlet": "BBC News",
+          "title": "China's big political meeting could see Xi 'tighten discipline' in party",
+          "url": "https://www.bbc.co.uk/news/articles/c6n8djd1078ro",
+          "time": "2026-10-26T07:40:00Z"
+        },
+        {
+          "outlet": "The Straits Times",
+          "title": "China hands former security regulator anti-graft official suspended death sentence",
+          "url": "https://www.straitstimes.com/asia/east-asia/china-hands-former-security-regulator-anti-graft-official-suspended-death-sentence",
+          "time": "2026-10-27T10:31:00Z"
+        }
+      ]
+    },
+    {
+      "id": "mbappe-mao",
+      "scale": "international",
+      "topic": "Culture",
+      "region": "Asia-Pacific",
+      "city": "Beijing",
+      "country": "China",
+      "places": [
+        "France",
+        "Spain"
+      ],
+      "tz": "Asia/Shanghai",
+      "lat": 39.9,
+      "lon": 116.4,
+      "title": "Mbappé apologises after Chinese sponsors drop him over a remark about Mao",
+      "summary": "French footballer Kylian Mbappé has apologised after apparently calling Mao Zedong a 'dictator' in an interview about memes, DW and the BBC report. DW says Chinese sponsors have dropped him and state television has suspended Spanish league broadcasts. The BBC quotes him calling the remark 'ill-judged'.",
+      "background": "The Japan Times notes that jokes about Mao, China's founding leader who died in 1976, are considered disrespectful in China and remain a social taboo.",
+      "sources": [
+        {
+          "outlet": "DW",
+          "title": "Mbappe apologizes as Chinese sponsors drop him and TV broadcasts are halted over Mao dictator remark",
+          "url": "https://www.dw.com/en/mbappe-apologizes-as-chinese-sponsors-drop-him-and-tv-broadcasts-are-halted-over-mao-dictator-remark/a-79779831",
+          "time": "2026-10-27T16:49:00Z"
+        },
+        {
+          "outlet": "BBC News",
+          "title": "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
+          "url": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo",
+          "time": "2026-10-27T13:25:00Z"
+        },
+        {
+          "outlet": "The Japan Times",
+          "title": "Mbappe dropped by Chinese brands for 'offending national sentiments'",
+          "url": "https://www.japantimes.co.jp/sports/2026/10/27/soccer/mbappe-china-brands/",
+          "time": "2026-10-27T08:26:00Z"
+        }
+      ]
+    },
+    {
+      "id": "eu-frontex",
+      "scale": "international",
+      "topic": "Politics",
+      "region": "Europe",
+      "city": "Brussels",
+      "country": "Belgium",
+      "tz": "Europe/Brussels",
+      "lat": 50.85,
+      "lon": 4.35,
+      "title": "The EU proposes turning Frontex into a 'European returns agency' with new powers",
+      "summary": "The European Commission has proposed giving the [[frontex|Frontex]] border agency more resources and powers to ensure the return of irregular migrants, including by supporting non-EU countries, DW reports. Balkan Insight says Frontex would become a 'European returns agency' able to step in during border emergencies and operate beyond Europe. DW says the move follows the tragedy in Ceuta.",
+      "sources": [
+        {
+          "outlet": "DW",
+          "title": "EU proposes giving Frontex border agency new major powers",
+          "url": "https://www.dw.com/en/eu-proposes-giving-frontex-border-agency-new-major-powers/a-79779690",
+          "time": "2026-10-27T17:44:00Z"
+        },
+        {
+          "outlet": "Balkan Insight",
+          "title": "EU Commission Unveils Reforms to Beef Up Border Agency",
+          "url": "https://balkaninsight.com/2026/10/27/eu-commission-unveils-reforms-to-beef-up-border-agency/rd/",
+          "time": "2026-10-27T14:11:00Z"
+        }
+      ]
+    },
+    {
+      "id": "uk-budget",
+      "scale": "national",
+      "topic": "Politics",
+      "region": "Europe",
+      "city": "London",
+      "country": "United Kingdom",
+      "tz": "Europe/London",
+      "lat": 51.5,
+      "lon": -0.13,
+      "title": "UK chancellor targets the cost of living in a budget for a 'difficult moment'",
+      "summary": "Chancellor John Healey has acknowledged that the UK faces a 'difficult moment' and says he wants to give 'hope for the future', the Guardian reports. It says only modest policies are expected, with important decisions on tax and spending deferred, and that the budget will focus on help with the cost of living.",
+      "sources": [
+        {
+          "outlet": "The Guardian",
+          "title": "Chancellor targets cost of living crisis in budget for a 'difficult moment'",
+          "url": "https://www.theguardian.com/uk-news/2026/oct/27/john-healey-budget-help-with-cost-of-living-deferring-decisions-on-tax-and-spending",
+          "time": "2026-10-27T22:34:00Z"
+        }
+      ]
+    },
+    {
+      "id": "argentina-imf",
+      "scale": "national",
+      "topic": "Business",
+      "region": "Americas",
+      "city": "Buenos Aires",
+      "country": "Argentina",
+      "tz": "America/Argentina/Buenos_Aires",
+      "lat": -34.6,
+      "lon": -58.38,
+      "title": "IMF staff reach a preliminary deal on Argentina's third review, opening the way to about $900 million",
+      "summary": "Buenos Aires Times reports that IMF staff backed President Javier Milei's reforms in the third review of Argentina's programme, which paves the way for a disbursement of about US$900 million once the Fund's executive board approves it. It adds that the staff toned down their language about Argentina's return to international credit markets.",
+      "sources": [
+        {
+          "outlet": "Buenos Aires Times",
+          "title": "IMF backs Milei's reforms in third review of Argentina deal",
+          "url": "https://www.batimes.com.ar/news/economy/imf-approves-third-review-of-argentinas-programme.phtml",
+          "time": "2026-10-27T21:32:00Z"
+        },
+        {
+          "outlet": "Buenos Aires Times",
+          "title": "IMF strikes preliminary Argentina deal as market return dims",
+          "url": "https://www.batimes.com.ar/news/economy/imf-strikes-preliminary-argentina-deal-as-market-return-dims.phtml",
+          "time": "2026-10-27T23:38:00Z"
+        }
+      ]
+    },
+    {
+      "id": "star-casino-fine",
+      "scale": "national",
+      "topic": "Business",
+      "region": "Asia-Pacific",
+      "city": "Sydney",
+      "country": "Australia",
+      "tz": "Australia/Sydney",
+      "lat": -33.87,
+      "lon": 151.21,
+      "title": "Star Entertainment is fined $260 million over money-laundering breaches",
+      "summary": "ABC News reports that Star Casino has been fined $260 million for money-laundering violations. [[austrac|AUSTRAC]], Australia's financial intelligence agency, had sought a much steeper penalty that could have pushed the casino company into financial collapse.",
+      "sources": [
+        {
+          "outlet": "ABC News",
+          "title": "Breaking: Star Casino fined $260m for money laundering violations",
+          "url": "https://www.abc.net.au/news/2026-10-28/star-entertainment-fined-over-casino-money-laundering-austrac/107317384",
+          "time": "2026-10-27T23:45:00Z"
+        }
+      ]
+    },
+    {
+      "id": "iberia-housing",
+      "scale": "international",
+      "topic": "Community",
+      "region": "Europe",
+      "city": "Lisbon",
+      "country": "Portugal",
+      "places": [
+        "Spain",
+        "Madrid"
+      ],
+      "tz": "Europe/Lisbon",
+      "lat": 38.72,
+      "lon": -9.14,
+      "title": "Housing protests spread in Lisbon and Madrid as Spain's election nears",
+      "summary": "Euronews reports that demonstrators gathered outside Portugal's parliament to protest the housing crisis and police violence during recent clearances of camps; the president has called for dialogue while defending the police. In Spain, The Local says Madrid's 'tent city' has entered its second month, and that polls show the right-wing Vox rising a month before the general election.",
+      "sources": [
+        {
+          "outlet": "Euronews",
+          "title": "Portugal: Lisbon housing crisis sparks protest outside parliament",
+          "url": "https://www.euronews.com/video/2026/10/28/portugal-lisbon-housing-crisis-sparks-protest-outside-parliament",
+          "time": "2026-10-27T23:12:00Z"
+        },
+        {
+          "outlet": "The Local Spain",
+          "title": "Today in Spain: A roundup of the latest news on Tuesday",
+          "url": "https://www.thelocal.es/20261027/today-in-spain-a-roundup-of-the-latest-news-on-tuesday-102",
+          "time": "2026-10-27T07:41:00Z"
+        },
+        {
+          "outlet": "The Local Spain",
+          "title": "Vox rising: What latest polls say a month away from Spain's election",
+          "url": "https://www.thelocal.es/20261026/vox-rising-what-latest-polls-say-a-month-away-from-spains-election",
+          "time": "2026-10-26T15:17:00Z"
+        }
+      ]
+    },
+    {
       "scale": "local",
+      "id": "nairobi-collapse",
       "topic": "Community",
       "region": "Africa",
       "city": "Eastleigh, Nairobi",
@@ -623,1039 +1022,1103 @@
       "tz": "Africa/Nairobi",
       "lat": -1.276,
       "lon": 36.85,
-      "title": "A 16-storey building under construction collapses in Nairobi's Eastleigh",
-      "summary": "Police used tear gas to disperse looters and onlookers after the high-rise came down in Kenya's capital, with many feared trapped, Africanews reports. Nairobi's governor, Johnson Sakaja, says construction was going ahead without approval.",
-      "sources": [
-        {
-          "outlet": "Africanews",
-          "title": "Police dispel crowds with tear gas after 16-storey building collapses in Nairobi",
-          "url": "https://www.africanews.com/2026/10/24/16-storey-building-collapses-in-nairobi-many-fear-trapped-in-rubble/",
-          "time": "2026-10-24T07:29:49Z"
-        },
-        {
-          "outlet": "Nation",
-          "title": "Sakaja: Construction of Eastleigh building that collapsed was going on without approval",
-          "url": "https://nation.africa/kenya/videos/sakaja-construction-of-eastleigh-building-that-collapsed-was-going-on-without-approval-5643908",
-          "time": "2026-10-24T08:42:00Z"
-        }
-      ]
-    },
-    {
-      "id": "bunia-ebola",
-      "scale": "local",
-      "thread": "ebola-2026",
-      "topic": "Health",
-      "region": "Africa",
-      "city": "Bunia",
-      "country": "DR Congo",
-      "state": "Ituri",
-      "places": [
-        "Democratic Republic of the Congo"
-      ],
-      "tz": "Africa/Lubumbashi",
-      "lat": 1.56,
-      "lon": 30.25,
-      "title": "A trial of new Ebola vaccines begins in Bunia, in eastern DR Congo",
-      "summary": "The TUMAini clinical trial in Ituri province will test candidate vaccines against the [[ebola-bundibugyo|Bundibugyo strain]], which is behind the current outbreak, Africanews reports.",
-      "sources": [
-        {
-          "outlet": "Africanews",
-          "title": "New Tumaini Ebola vaccine trial launches in Bunia as DRC struggles",
-          "url": "https://www.africanews.com/2026/10/24/new-tumaini-ebola-vaccine-trial-launches-in-bunia-as-drc-struggles/",
-          "time": "2026-10-24T08:38:44Z"
-        }
-      ]
-    },
-    {
-      "id": "kenya-soil",
-      "scale": "local",
-      "topic": "Farming",
-      "region": "Africa",
-      "city": "Rural Kenya",
-      "country": "Kenya",
-      "tz": "Africa/Nairobi",
-      "lat": 0.3,
-      "lon": 37.6,
-      "title": "Kenya maps its soils to help farmers grow more",
-      "summary": "A new Kenyan initiative is helping farmers understand their soil to improve crop yields as climate shocks intensify, UN News reports, via AllAfrica.",
-      "sources": [
-        {
-          "outlet": "AllAfrica",
-          "title": "Kenya: Soil Mapping Aims to Boost Agricultural Production in Kenya",
-          "url": "https://allafrica.com/stories/202610230643.html",
-          "time": "2026-10-23T23:47:27Z"
-        }
-      ]
-    },
-    {
-      "id": "nakuru-fishing",
-      "scale": "local",
-      "topic": "Nature",
-      "region": "Africa",
-      "city": "Nakuru",
-      "country": "Kenya",
-      "state": "Nakuru County",
-      "places": [
-        "Lake Nakuru"
-      ],
-      "tz": "Africa/Nairobi",
-      "lat": -0.37,
-      "lon": 36.09,
-      "title": "A Kenyan court pauses a plan to let fishermen back into Lake Nakuru",
-      "summary": "The High Court in Nakuru temporarily suspended a directive by Cabinet Secretary Hassan Joho that allowed fishing to resume in Lake Nakuru National Park, Capital FM reports, via AllAfrica.",
-      "sources": [
-        {
-          "outlet": "AllAfrica",
-          "title": "Kenya: High Court Suspends Joho's Directive Allowing Fishing in Lake Nakuru",
-          "url": "https://allafrica.com/stories/202610230539.html",
-          "time": "2026-10-23T17:15:09Z"
-        }
-      ]
-    },
-    {
-      "id": "kenya-periods",
-      "scale": "local",
-      "topic": "Community",
-      "region": "Africa",
-      "city": "Kenya",
-      "country": "Kenya",
-      "tz": "Africa/Nairobi",
-      "lat": -0.6,
-      "lon": 34.8,
-      "title": "Kenyan girls miss days of school every month because of period pain and stigma",
-      "summary": "Millions of Kenyan girls miss nearly a week of school each month because they can't afford what they need, the Nation reports, and pain and stigma make it worse.",
+      "title": "Twenty people are still missing after the Eastleigh building collapse in Nairobi",
+      "summary": "Families say the search for those trapped is too slow, with 20 people still missing, the Nation reports. Capital FM says the Kenya Defence Forces sent specialised rescue teams, sniffer dogs and equipment to help.",
       "sources": [
         {
           "outlet": "Nation",
-          "title": "It's not just about pads: Pain, stigma and the school days girls lose",
-          "url": "https://nation.africa/kenya/news/gender/it-s-not-just-about-pads-pain-stigma-and-the-school-days-girls-lose-5637692",
-          "time": "2026-10-24T10:00:00Z"
-        }
-      ]
-    },
-    {
-      "id": "lekwa-teemane",
-      "scale": "local",
-      "topic": "Community",
-      "region": "Africa",
-      "city": "Lekwa-Teemane",
-      "country": "South Africa",
-      "state": "North West",
-      "places": [
-        "Christiana",
-        "Bloemhof"
-      ],
-      "tz": "Africa/Johannesburg",
-      "lat": -27.91,
-      "lon": 25.17,
-      "title": "In South Africa's Lekwa-Teemane, failing local services leave taps dry",
-      "summary": "Ahead of local elections, Daily Maverick visited the municipality, where residents describe dry taps, flooded yards and stalled infrastructure since local government collapsed. 'We are moving backwards,' one says.",
-      "sources": [
-        {
-          "outlet": "Daily Maverick",
-          "title": "LOCAL ELECTIONS TOUR: 'We are moving backwards' — Lekwa-Teemane's collapse bleeds into residents' daily lives",
-          "url": "https://www.dailymaverick.co.za/article/2026-10-24-we-are-moving-backwards-lekwa-teemanes-collapse-bleeds-into-residents-daily-lives/",
-          "time": "2026-10-24T06:00:00Z"
-        }
-      ]
-    },
-    {
-      "id": "kruger-heat",
-      "scale": "local",
-      "topic": "Weather",
-      "region": "Africa",
-      "city": "Kruger National Park",
-      "country": "South Africa",
-      "state": "Mpumalanga",
-      "places": [
-        "Limpopo"
-      ],
-      "tz": "Africa/Johannesburg",
-      "lat": -24,
-      "lon": 31.5,
-      "title": "South Africa's weather service warns of a hot El Niño summer in the north-east",
-      "summary": "The alert covers the north-east of the country, including Kruger National Park, Daily Maverick reports, noting that [[el-nino|El Niño]] phases have grown stronger in recent decades.",
-      "sources": [
-        {
-          "outlet": "Daily Maverick",
-          "title": "SUMMER SCORCHER: Weather service sounds El Niño alarm for North-East, including Kruger Park",
-          "url": "https://www.dailymaverick.co.za/article/2026-10-23-weather-service-sounds-el-nino-alarm-for-north-east-including-kruger-park/",
-          "time": "2026-10-23T16:40:33Z"
-        }
-      ]
-    },
-    {
-      "id": "kzn-doctors",
-      "scale": "local",
-      "topic": "Health",
-      "region": "Africa",
-      "city": "KwaZulu-Natal",
-      "country": "South Africa",
-      "state": "KwaZulu-Natal",
-      "places": [
-        "Durban",
-        "Pietermaritzburg"
-      ],
-      "tz": "Africa/Johannesburg",
-      "lat": -29.6,
-      "lon": 30.4,
-      "title": "Qualified doctors can't find jobs while KwaZulu-Natal's hospitals go understaffed",
-      "summary": "Scores of doctors in KwaZulu-Natal are growing desperate because government hospitals and clinics have no posts for them, Daily Maverick reports.",
-      "sources": [
-        {
-          "outlet": "Daily Maverick",
-          "title": "FROZEN POSTS: Qualified doctors desperate for jobs as KZN's public hospitals go understaffed",
-          "url": "https://www.dailymaverick.co.za/article/2026-10-23-qualified-doctors-desperate-for-jobs-as-kzns-public-hospitals-go-understaffed/",
-          "time": "2026-10-23T13:46:59Z"
-        }
-      ]
-    },
-    {
-      "id": "chennai-ashok-nagar",
-      "scale": "local",
-      "topic": "Community",
-      "region": "Asia-Pacific",
-      "city": "Ashok Nagar, Chennai",
-      "country": "India",
-      "state": "Tamil Nadu",
-      "places": [
-        "Chennai",
-        "Ashok Nagar"
-      ],
-      "tz": "Asia/Kolkata",
-      "lat": 13.037,
-      "lon": 80.212,
-      "title": "A tree falls near a school in Chennai's Ashok Nagar, and students have a lucky escape",
-      "summary": "In a reader's letter to The Hindu, Mohammed Yusufdeen says the near miss shows the need to prune the area's trees.",
-      "sources": [
-        {
-          "outlet": "The Hindu",
-          "title": "Tree falls near school in Ashok Nagar; a lucky escape for students",
-          "url": "https://www.thehindu.com/news/cities/chennai/tree-falls-near-school-in-ashok-nagar-a-lucky-escape-for-students/article71619782.ece",
-          "time": "2026-10-24T11:42:33Z"
-        }
-      ]
-    },
-    {
-      "id": "kolathur-bus",
-      "scale": "local",
-      "topic": "Community",
-      "region": "Asia-Pacific",
-      "city": "Kolathur, Chennai",
-      "country": "India",
-      "state": "Tamil Nadu",
-      "places": [
-        "Chennai",
-        "Kolathur",
-        "Kumaran Nagar"
-      ],
-      "tz": "Asia/Kolkata",
-      "lat": 13.123,
-      "lon": 80.212,
-      "title": "A Chennai reader asks for Kolathur's Kumaran Nagar bus terminus to be spruced up",
-      "summary": "In a letter to The Hindu, N. Kothandan points to the poor upkeep of the bus terminus in north Chennai.",
-      "sources": [
-        {
-          "outlet": "The Hindu",
-          "title": "Kumaran Nagar bus terminus in Kolathur needs sprucing up",
-          "url": "https://www.thehindu.com/news/cities/chennai/kumaran-nagar-bus-terminus-in-kolathur-needs-sprucing-up/article71619847.ece",
-          "time": "2026-10-24T11:50:09Z"
-        }
-      ]
-    },
-    {
-      "id": "ambattur-water",
-      "scale": "local",
-      "topic": "Community",
-      "region": "Asia-Pacific",
-      "city": "Ambattur, Chennai",
-      "country": "India",
-      "state": "Tamil Nadu",
-      "places": [
-        "Chennai",
-        "Ambattur",
-        "Karukku"
-      ],
-      "tz": "Asia/Kolkata",
-      "lat": 13.114,
-      "lon": 80.155,
-      "title": "Karukku Old Road in Ambattur has started to flood, a Chennai resident says",
-      "summary": "In a letter to The Hindu, K. N. Srinivas says that until two years ago the road never flooded, even in heavy downpours.",
-      "sources": [
-        {
-          "outlet": "The Hindu",
-          "title": "'Waterlogging is a new problem on Karukku Old Road in Ambattur'",
-          "url": "https://www.thehindu.com/news/cities/chennai/waterlogging-is-a-new-problem-on-karukku-old-road-in-ambattur/article71619742.ece",
-          "time": "2026-10-24T11:41:18Z"
-        }
-      ]
-    },
-    {
-      "id": "burliyar-landslip",
-      "scale": "local",
-      "topic": "Weather",
-      "region": "Asia-Pacific",
-      "city": "Burliyar",
-      "country": "India",
-      "state": "Tamil Nadu",
-      "places": [
-        "Nilgiris",
-        "Coonoor",
-        "Mettupalayam"
-      ],
-      "tz": "Asia/Kolkata",
-      "lat": 11.34,
-      "lon": 76.84,
-      "title": "A bus driver is killed by a landslip on the Mettupalayam–Coonoor ghat road",
-      "summary": "A Tamil Nadu state transport bus was caught in the landslip at Burliyar, and more than 300 people were stranded along the hill road after several landslips, The Hindu reports.",
-      "sources": [
-        {
-          "outlet": "The Hindu",
-          "title": "TNSTC driver killed as bus caught in landslip at Burliyar on Mettupalayam-Coonoor ghat road",
-          "url": "https://www.thehindu.com/news/national/tamil-nadu/tnstc-driver-killed-as-bus-gets-caught-in-landslip-at-burliyar-on-mettupalayam-coonoor-ghat-road/article71619473.ece",
-          "time": "2026-10-24T09:39:56Z"
-        }
-      ]
-    },
-    {
-      "id": "virudhunagar-rain",
-      "scale": "local",
-      "topic": "Weather",
-      "region": "Asia-Pacific",
-      "city": "Virudhunagar",
-      "country": "India",
-      "state": "Tamil Nadu",
-      "tz": "Asia/Kolkata",
-      "lat": 9.58,
-      "lon": 77.96,
-      "title": "A girl dies in a wall collapse as heavy rain hits Virudhunagar district",
-      "summary": "A state minister visited her parents and handed over a ₹4 lakh relief order, The Hindu reports. The rain also flooded a bus depot in the district.",
-      "sources": [
-        {
-          "outlet": "The Hindu",
-          "title": "Girl dies in wall collapse in Virudhunagar district; Minister consoles parents; gives ₹4 lakh relief order",
-          "url": "https://www.thehindu.com/news/cities/Madurai/girl-dies-in-wall-collapse-in-virudhunagar-district-minister-consoles-parents-gives-4-lakh-relief-order/article71617301.ece",
-          "time": "2026-10-23T16:15:43Z"
+          "title": "Eastleigh tragedy: 20 still missing as distraught families decry slow search",
+          "url": "https://nation.africa/kenya/counties/nairobi/eastleigh-tragedy-20-still-missing-as-distraught-families-decry-slow-search--5648092",
+          "time": "2026-10-27T18:52:00Z"
         },
         {
-          "outlet": "The Hindu",
-          "title": "Rain lashes Virudhunagar district; bus depot submerged in rainwater",
-          "url": "https://www.thehindu.com/news/cities/Madurai/rain-lashes-virudhunagar-district-bus-depot-submerged-in-rainwater/article71617327.ece",
-          "time": "2026-10-23T16:17:17Z"
+          "outlet": "AllAfrica",
+          "title": "Kenya: Specialised Rescue Team Deployed to Eastleigh Building Collapse",
+          "url": "https://allafrica.com/stories/202610270463.html",
+          "time": "2026-10-27T12:22:00Z"
         }
       ]
     },
     {
-      "id": "mullaperiyar",
       "scale": "local",
+      "id": "minna-detention",
+      "topic": "Community",
+      "region": "Africa",
+      "city": "Minna",
+      "country": "Nigeria",
+      "state": "Niger State",
+      "places": [
+        "Niger State"
+      ],
+      "tz": "Africa/Lagos",
+      "lat": 9.61,
+      "lon": 6.55,
+      "title": "Inquiry says 33 young miners died in a crowded Nigerian cell from preventable causes",
+      "summary": "Investigators say overcrowding and poor ventilation caused the deaths of 33 detainees held on suspicion of illegal gold mining in central Nigeria, the BBC reports. Africanews says they described the treatment as 'cruel and inhuman'.",
+      "sources": [
+        {
+          "outlet": "BBC News",
+          "title": "Deaths in detention cells in Nigeria were entirely preventable, inquiry finds",
+          "url": "https://www.bbc.co.uk/news/articles/cmgel8pqj5rwo",
+          "time": "2026-10-27T19:01:00Z"
+        },
+        {
+          "outlet": "Africanews",
+          "title": "Nigeria jail conditions blamed for deaths of 33 miners",
+          "url": "https://www.africanews.com/2026/10/27/nigeria-jail-conditions-blamed-for-deaths-of-33-miners/",
+          "time": "2026-10-27T16:56:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "joburg-water-protests",
+      "topic": "Community",
+      "region": "Africa",
+      "city": "Johannesburg",
+      "country": "South Africa",
+      "state": "Gauteng",
+      "places": [
+        "Gauteng"
+      ],
+      "tz": "Africa/Johannesburg",
+      "lat": -26.2,
+      "lon": 28.05,
+      "title": "Johannesburg residents hold four protests in four days over water cuts",
+      "summary": "Daily Maverick reports that a home for disabled residents saw dirty linen and nappies pile up during a five-day outage, while elsewhere residents are breaking open fire hydrants illegally and officials have warned about private water sales.",
+      "sources": [
+        {
+          "outlet": "Daily Maverick",
+          "title": "DRY CITY: Four days, four protests — Desperate Joburg residents hit the streets over water cuts",
+          "url": "https://www.dailymaverick.co.za/article/2026-10-27-four-days-four-protests-desperate-joburg-residents-hit-the-streets-over-water-cuts/",
+          "time": "2026-10-27T21:17:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "sa-sunflower-switch",
       "topic": "Farming",
-      "region": "Asia-Pacific",
-      "city": "Mullaperiyar dam",
-      "country": "India",
-      "state": "Kerala",
-      "places": [
-        "Tamil Nadu",
-        "Theni",
-        "Idukki",
-        "Madurai"
-      ],
-      "tz": "Asia/Kolkata",
-      "lat": 9.53,
-      "lon": 77.14,
-      "title": "Water in the Mullaperiyar dam stands at 120.25 feet as farmers welcome the rain",
-      "summary": "The Hindu's Madurai edition reports the dam's level and, separately, farmers expressing happiness over continuous rainfall.",
-      "background": "The Mullaperiyar dam sits in Kerala's Idukki district but is operated by Tamil Nadu, whose farmers in districts such as Theni and Madurai rely on its water. Its water level is closely watched by both states.",
+      "region": "Africa",
+      "city": "South Africa's summer grain belt",
+      "country": "South Africa",
+      "tz": "Africa/Johannesburg",
+      "lat": null,
+      "lon": null,
+      "title": "South African grain farmers switch from maize to sunflower",
+      "summary": "As an intense El Niño threatens the summer harvest, farmers are moving to faster-growing, drought-tolerant sunflower while facing mounting economic pressure, Daily Maverick reports.",
       "sources": [
         {
-          "outlet": "The Hindu",
-          "title": "Water level in Mullaperiyar dam stands at 120.25 feet",
-          "url": "https://www.thehindu.com/news/cities/Madurai/water-level-in-mullaperiyar-dam-stands-at-12025-feet-on-october-24-2026/article71620078.ece",
-          "time": "2026-10-24T12:59:13Z"
-        },
-        {
-          "outlet": "The Hindu",
-          "title": "Farmers express happiness over continuous rainfall",
-          "url": "https://www.thehindu.com/news/cities/Madurai/farmers-express-happiness-over-continuous-rainfall/article71617396.ece",
-          "time": "2026-10-24T12:52:11Z"
+          "outlet": "Daily Maverick",
+          "title": "AGRICULTURAL SECTOR: SA farmers swap maize for sunflower as 'Godzilla' El Niño threatens harvests",
+          "url": "https://www.dailymaverick.co.za/article/2026-10-27-sa-farmers-swap-maize-for-sunflower-as-godzilla-el-nino-threatens-harvests/",
+          "time": "2026-10-27T22:00:00Z"
         }
       ]
     },
     {
-      "id": "hasanur-leopards",
       "scale": "local",
+      "id": "gqeberha-tortoises",
       "topic": "Nature",
-      "region": "Asia-Pacific",
-      "city": "Hasanur",
-      "country": "India",
-      "state": "Tamil Nadu",
+      "region": "Africa",
+      "city": "Chatty, Gqeberha",
+      "country": "South Africa",
+      "state": "Eastern Cape",
       "places": [
-        "Erode",
-        "Sathyamangalam"
+        "Gqeberha",
+        "Port Elizabeth"
       ],
-      "tz": "Asia/Kolkata",
-      "lat": 11.68,
-      "lon": 77.03,
-      "title": "Three leopards are captured in Tamil Nadu's Hasanur forest division",
-      "summary": "Forest officials in the Hasanur division, in Erode district, captured the three leopards, The Hindu reports.",
+      "tz": "Africa/Johannesburg",
+      "lat": -33.88,
+      "lon": 25.57,
+      "title": "Police rescue 15 wild tortoises kept illegally in a Gqeberha enclosure",
+      "summary": "Police found the tortoises in a makeshift enclosure on a property in Chatty and released them into a nature reserve; four others were found dead, Daily Maverick reports.",
       "sources": [
         {
-          "outlet": "The Hindu",
-          "title": "Three leopards captured in Hasanur forest division",
-          "url": "https://www.thehindu.com/news/cities/Coimbatore/three-leopards-captured-in-hasanur-forest-division/article71616503.ece",
-          "time": "2026-10-24T06:11:40Z"
+          "outlet": "Daily Maverick",
+          "title": "WILDLIFE CONSERVATION: Police rescue 15 wild tortoises from Gqeberha property, four others found dead",
+          "url": "https://www.dailymaverick.co.za/article/2026-10-27-police-rescue-15-wild-tortoises-from-gqeberha-property-four-others-found-dead/",
+          "time": "2026-10-27T21:24:00Z"
         }
       ]
     },
     {
-      "id": "bay-of-bengal-storm",
       "scale": "local",
+      "id": "bonnievale-lodge-fine",
+      "topic": "Nature",
+      "region": "Africa",
+      "city": "Bonnievale",
+      "country": "South Africa",
+      "state": "Western Cape",
+      "places": [
+        "Western Cape"
+      ],
+      "tz": "Africa/Johannesburg",
+      "lat": -33.93,
+      "lon": 20.1,
+      "title": "A luxury safari lodge near Bonnievale is fined R15 million for breaking environmental law",
+      "summary": "GroundUp, carried by AllAfrica, reports that the Goats Window lodge built 23 units without environmental authorisation and cleared 4,000 square metres of endangered renosterveld.",
+      "sources": [
+        {
+          "outlet": "AllAfrica",
+          "title": "South Africa: Luxury Lodge Fined R15-Million for Flouting Environmental Laws",
+          "url": "https://allafrica.com/stories/202610270513.html",
+          "time": "2026-10-27T12:55:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "homa-bay-farmer",
+      "topic": "Farming",
+      "region": "Africa",
+      "city": "Homa Bay",
+      "country": "Kenya",
+      "state": "Homa Bay County",
+      "places": [
+        "Homa Bay County"
+      ],
+      "tz": "Africa/Nairobi",
+      "lat": -0.53,
+      "lon": 34.46,
+      "title": "A 29-year-old farmer from Homa Bay is named Kenya's UN Person of the Year",
+      "summary": "Bornface Otieno Owino was recognised for using agriculture to fight poverty, the Nation reports.",
+      "sources": [
+        {
+          "outlet": "Nation",
+          "title": "From Homa Bay to the World: Meet the young farmer named Kenya's UN Person of the Year",
+          "url": "https://nation.africa/kenya/news/from-homa-bay-to-the-world-meet-the-young-farmer-named-kenya-s-un-person-of-the-year-5647992",
+          "time": "2026-10-27T16:23:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "mtwara-gas",
+      "topic": "Business",
+      "region": "Africa",
+      "city": "Mtwara",
+      "country": "Tanzania",
+      "state": "Mtwara Region",
+      "places": [
+        "Mtwara Region"
+      ],
+      "tz": "Africa/Dar_es_Salaam",
+      "lat": -10.27,
+      "lon": 40.18,
+      "title": "Tanzania prepares to announce a new natural gas discovery in Mtwara",
+      "summary": "Energy Minister Juma Homera has begun an official tour of Mtwara Region mainly to announce a major gas discovery, the Daily News reports in a story carried by AllAfrica.",
+      "sources": [
+        {
+          "outlet": "AllAfrica",
+          "title": "Tanzania: Tanzania Readies to Announce New Discovery of Natural Gas in Mtwara Region",
+          "url": "https://allafrica.com/stories/202610270573.html",
+          "time": "2026-10-27T13:39:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "cameroon-offshore",
+      "topic": "Nature",
+      "region": "Africa",
+      "city": "Cameroon's coast",
+      "country": "Cameroon",
+      "tz": "Africa/Douala",
+      "lat": null,
+      "lon": null,
+      "title": "Coastal communities in Cameroon report fewer fish and tar balls near offshore platforms",
+      "summary": "A Global Voices report describes fish scarcity, tar balls and stranded dolphins, and says oil rigs threaten biodiversity and the well-being of coastal and Indigenous communities even as oil and gas contribute to the national budget.",
+      "sources": [
+        {
+          "outlet": "Global Voices",
+          "title": "Fish scarcity, tar balls, and stranded dolphins: The hidden costs of offshore platforms in Cameroon waters",
+          "url": "https://globalvoices.org/2026/10/27/fish-scarcity-tar-balls-and-displaced-dolphins-the-hidden-costs-of-offshore-platforms-in-cameroon-waters/",
+          "time": "2026-10-27T08:59:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "vizag-arnab-rain",
       "topic": "Weather",
       "region": "Asia-Pacific",
-      "city": "Bay of Bengal",
-      "country": "India",
-      "places": [
-        "Andhra Pradesh",
-        "Odisha",
-        "Tamil Nadu"
-      ],
-      "tz": "Asia/Kolkata",
-      "lat": 15.5,
-      "lon": 85.5,
-      "title": "A storm forming in the Bay of Bengal could reach India's east coast on 28 October",
-      "summary": "The India Meteorological Department expects the low-pressure area to become a depression and then a cyclonic storm, The Hindu reports. Andhra Pradesh's chief minister has put officials on alert.",
-      "sources": [
-        {
-          "outlet": "The Hindu",
-          "title": "Low pressure over Bay of Bengal likely to turn into cyclonic storm, landfall expected on Oct. 28",
-          "url": "https://www.thehindu.com/news/national/bay-of-bengal-cyclonic-storm-landfall-on-october-28-weather-odisha-and-andhra-pradesh/article71619250.ece",
-          "time": "2026-10-24T06:31:27Z"
-        }
-      ]
-    },
-    {
-      "id": "asr-explosion",
-      "scale": "local",
-      "topic": "Community",
-      "region": "Asia-Pacific",
-      "city": "Alluri Sitharama Raju district",
+      "city": "Visakhapatnam",
       "country": "India",
       "state": "Andhra Pradesh",
       "places": [
-        "ASR district",
-        "Visakhapatnam"
+        "Vizag"
       ],
       "tz": "Asia/Kolkata",
-      "lat": 18.1,
-      "lon": 82.65,
-      "title": "Seven killed, including a teacher, in a fuel blaze in Andhra Pradesh's ASR district",
-      "summary": "The fire reportedly started while diesel was being poured into a truck from a tipper, The Hindu reports. A government school teacher was among those killed.",
+      "lat": 17.69,
+      "lon": 83.22,
+      "title": "Cyclone Arnab's rain brings Visakhapatnam to a standstill",
+      "summary": "The Hindu reports fallen trees, waterlogged roads and power interruptions, with bus services cancelled and beaches closed. Visakhapatnam district received 147.9 mm of rain between 8.30 a.m. and 9 p.m.",
       "sources": [
         {
           "outlet": "The Hindu",
-          "title": "Government school teacher among seven killed in explosion involving fuel-laden vehicle in ASR district",
-          "url": "https://www.thehindu.com/news/cities/Visakhapatnam/several-killed-as-two-vehicles-catch-fire-in-asr-district-andhra-pradesh/article71619070.ece",
-          "time": "2026-10-24T09:05:53Z"
+          "title": "Cyclone Arnab: heavy rain brings Vizag to standstill; civic agencies on high alert",
+          "url": "https://www.thehindu.com/news/national/andhra-pradesh/cyclone-arnab-heavy-rain-brings-vizag-to-standstill-civic-agencies-on-high-alert/article71632812.ece",
+          "time": "2026-10-27T18:46:00Z"
         }
       ]
     },
     {
-      "id": "rr-nagar",
       "scale": "local",
-      "topic": "Community",
-      "region": "Asia-Pacific",
-      "city": "RR Nagar, Bengaluru",
-      "country": "India",
-      "state": "Karnataka",
-      "places": [
-        "Bengaluru",
-        "Bangalore",
-        "Rajarajeshwari Nagar"
-      ],
-      "tz": "Asia/Kolkata",
-      "lat": 12.92,
-      "lon": 77.52,
-      "title": "A cylinder explosion in Bengaluru's RR Nagar injures three, including a boy",
-      "summary": "The blast happened at a godown where a man originally from Bihar stored materials for his pani puri business, The Hindu reports. A nine-year-old boy was among the injured.",
-      "sources": [
-        {
-          "outlet": "The Hindu",
-          "title": "Cylinder explosion in RR Nagar injures three, including nine-year-old boy",
-          "url": "https://www.thehindu.com/news/cities/bangalore/cylinder-explosion-in-rr-nagar-injures-three-including-nine-year-old-boy/article71619279.ece",
-          "time": "2026-10-24T07:03:14Z"
-        }
-      ]
-    },
-    {
-      "id": "cauvery",
-      "scale": "local",
+      "id": "telangana-drought",
       "topic": "Farming",
       "region": "Asia-Pacific",
-      "city": "Cauvery basin",
+      "city": "Hyderabad",
       "country": "India",
-      "state": "Karnataka",
+      "state": "Telangana",
       "places": [
-        "Tamil Nadu",
-        "Cauvery",
-        "Kaveri"
+        "Telangana"
       ],
       "tz": "Asia/Kolkata",
-      "lat": 12.42,
-      "lon": 76.57,
-      "title": "Karnataka is told to release 3,000 cusecs of Cauvery water to Tamil Nadu",
-      "summary": "The Cauvery panel's order covers the next 15 days. Tamil Nadu had asked for 14,236 cusecs a day, including a claimed backlog, while Karnataka cites severe drought, The Hindu reports.",
-      "background": "Karnataka and Tamil Nadu have long disputed how to share the Cauvery river, which farmers in both states depend on. Releases are set by bodies created to manage the river after a Supreme Court ruling in 2018.",
+      "lat": 17.39,
+      "lon": 78.49,
+      "title": "Telangana declares 365 mandals drought-affected, 111 of them severely",
+      "summary": "The Hindu reports that the state's drought assessment found the kharif crop area affected in 18 of Telangana's 33 districts.",
       "sources": [
         {
           "outlet": "The Hindu",
-          "title": "Cauvery panel directs Karnataka to release water at the rate of 3,000 cusecs to Tamil Nadu for next 15 days",
-          "url": "https://www.thehindu.com/news/national/karnataka/cauvery-panel-directs-karnataka-to-release-water-at-the-rate-of-3000-cusecs-to-tamil-nadu-for-next-15-days/article71619307.ece",
-          "time": "2026-10-24T08:52:03Z"
+          "title": "Telangana declares 365 mandals drought-affected, of which 111 severely drought-affected",
+          "url": "https://www.thehindu.com/news/national/telangana/telangana-declares-365-mandals-drought-affected-of-which-111-severely-drought-affected/article71632836.ece",
+          "time": "2026-10-27T16:48:00Z"
         }
       ]
     },
     {
-      "id": "palakkad-lynching",
       "scale": "local",
+      "id": "jodhpur-village-poll",
       "topic": "Community",
       "region": "Asia-Pacific",
-      "city": "Palakkad",
+      "city": "Jodhpur",
       "country": "India",
-      "state": "Kerala",
+      "state": "Rajasthan",
       "places": [
-        "Moolathara",
-        "Keralam"
+        "Rajasthan"
       ],
       "tz": "Asia/Kolkata",
-      "lat": 10.72,
-      "lon": 76.83,
-      "title": "Another man is lynched by a mob in Kerala's Palakkad",
-      "summary": "The victim, an unidentified man with a hearing impairment, was killed near the Moolathara dam, The Hindu reports, in a case that has shaken the region.",
+      "lat": 26.24,
+      "lon": 73.02,
+      "title": "A Jodhpur Instagram star with 21 lakh followers wins only 33 votes in a village poll",
+      "summary": "The Indian Express reports that the social media personality got 33 of about 1,600 votes in a village election.",
       "sources": [
         {
-          "outlet": "The Hindu",
-          "title": "When mob takes law into its own hands: another man lynched in Keralam's Palakkad",
-          "url": "https://www.thehindu.com/news/national/kerala/when-mob-takes-law-into-its-own-hands-another-man-lynched-in-keralams-palakkad/article71608681.ece",
-          "time": "2026-10-24T07:17:13Z"
+          "outlet": "The Indian Express",
+          "title": "Jodhpur's Instagram star with 21 lakh followers crushed in village poll, gets 33 votes out of 1,600",
+          "url": "https://indianexpress.com/article/india/jodhpurs-instagram-star-21-lakh-followers-crushed-village-poll-gets-33-votes-out-1600-10939217/",
+          "time": "2026-10-27T17:33:00Z"
         }
       ]
     },
     {
-      "id": "jajarkot-bus",
       "scale": "local",
+      "id": "dewas-liquor-deaths",
+      "topic": "Health",
+      "region": "Asia-Pacific",
+      "city": "Dewas",
+      "country": "India",
+      "state": "Madhya Pradesh",
+      "places": [
+        "Madhya Pradesh"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 22.97,
+      "lon": 76.05,
+      "title": "Officials in Dewas are transferred after the administration denied deaths from spurious liquor",
+      "summary": "The Indian Express reports a shake-up of the Dewas administration in Madhya Pradesh, with officials transferred, after it had denied that people died from spurious liquor.",
+      "sources": [
+        {
+          "outlet": "The Indian Express",
+          "title": "After denying hooch deaths, administration in Madhya Pradesh's Dewas faces shake-up",
+          "url": "https://indianexpress.com/article/india/madhya-pradesh-dewas-spurious-liquor-deaths-officials-transferred-10939625/",
+          "time": "2026-10-27T23:36:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "kuno-cheetah-cub",
+      "topic": "Nature",
+      "region": "Asia-Pacific",
+      "city": "Kuno National Park",
+      "country": "India",
+      "state": "Madhya Pradesh",
+      "places": [
+        "Madhya Pradesh"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 25.8,
+      "lon": 77,
+      "title": "A cheetah cub at Kuno dies of pellet injuries",
+      "summary": "Scroll reports it is the first killing of a cheetah since the animal was reintroduced to India in 2022.",
+      "sources": [
+        {
+          "outlet": "Scroll",
+          "title": "Kuno cheetah cub dies of pellet injuries",
+          "url": "https://scroll.in/latest/1096688/kuno-cheetah-cub-dies-of-pellet-injuries",
+          "time": "2026-10-27T15:01:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "theni-jailbreak",
       "topic": "Community",
       "region": "Asia-Pacific",
-      "city": "Jajarkot",
+      "city": "Theni",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "places": [
+        "Tamil Nadu"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 10.01,
+      "lon": 77.48,
+      "title": "Thirteen of 17 prisoners who broke out of Theni jail are recaptured after a drone manhunt",
+      "summary": "The Times of India calls it the biggest jailbreak in Tamil Nadu in 30 years and says the prisoners overpowered guards. It also reports that the opposition has criticised the state government and that the case exposes a long-running staff shortage in prisons.",
+      "sources": [
+        {
+          "outlet": "The Times of India",
+          "title": "Theni jailbreak: 13 of 17 escapees caught after manhunt using drones",
+          "url": "https://timesofindia.indiatimes.com/city/chennai/theni-jailbreak-13-of-17-escapees-caught-after-manhunt-using-drones/articleshow/135244893.cms",
+          "time": "2026-10-27T19:14:00Z"
+        },
+        {
+          "outlet": "The Times of India",
+          "title": "Theni jailbreak exposes 30 years manpower crunch in TN prisons",
+          "url": "https://timesofindia.indiatimes.com/city/chennai/theni-jailbreak-exposes-30-years-manpower-crunch-in-tn-prisons/articleshow/135245216.cms",
+          "time": "2026-10-27T19:43:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "ladakh-dry-ut",
+      "topic": "Community",
+      "region": "Asia-Pacific",
+      "city": "Ladakh",
+      "country": "India",
+      "state": "Ladakh",
+      "places": [
+        "Leh",
+        "Kargil"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 34.15,
+      "lon": 77.58,
+      "title": "Women's protests push Ladakh's administration to discuss declaring the region 'dry'",
+      "summary": "The Hindu reports that officials said only one retail liquor vendor was functioning this year, while the number of bars attached to restaurants rose after 17 new licences were issued.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "Women protests force Ladakh administration to discuss 'declaring region a dry UT'",
+          "url": "https://www.thehindu.com/news/national/jammu-and-kashmir/women-protests-force-ladakh-administration-to-discuss-declaring-region-a-dry-ut/article71632294.ece",
+          "time": "2026-10-27T19:16:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "mumbai-rail-fire",
+      "topic": "Community",
+      "region": "Asia-Pacific",
+      "city": "Kanjurmarg, Mumbai",
+      "country": "India",
+      "state": "Maharashtra",
+      "places": [
+        "Mumbai",
+        "Central Railway"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 19.13,
+      "lon": 72.93,
+      "title": "A signalling-hut fire in Mumbai disrupts Central Railway; three deaths reported",
+      "summary": "The Hindu says the 26 October fire at Kanjurmarg damaged signalling and telecom equipment and left services disrupted for hours, and that a probe has been ordered. Three people have died amid the disruption, and a student's family is seeking compensation.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "Three deaths reported amid Central Railway disruption; student's family seeks compensation",
+          "url": "https://www.thehindu.com/news/cities/mumbai/three-deaths-reported-amid-central-railway-disruption-students-family-seeks-compensation/article71630680.ece",
+          "time": "2026-10-27T10:59:00Z"
+        },
+        {
+          "outlet": "The Hindu",
+          "title": "Fire at Kanjurmarg signalling hut disrupts Central Railway services for hours; probe ordered",
+          "url": "https://www.thehindu.com/news/cities/mumbai/fire-at-kanjurmarg-signalling-hut-disrupts-central-railway-services-for-hours-probe-ordered/article71628492.ece",
+          "time": "2026-10-26T18:03:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "kashmir-springs",
+      "topic": "Climate",
+      "region": "Asia-Pacific",
+      "city": "Cherwan, Ganderbal",
+      "country": "India",
+      "state": "Jammu and Kashmir",
+      "places": [
+        "Kashmir",
+        "Srinagar"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 34.23,
+      "lon": 74.77,
+      "title": "Kashmir's springs are drying up, and scientists say the fix starts uphill",
+      "summary": "Mongabay India's report begins in Cherwan village in Ganderbal district, where 40-year-old Shafeeqa remembers a spring that once flowed strongly enough to divert water to fields.",
+      "sources": [
+        {
+          "outlet": "Mongabay",
+          "title": "Kashmir's springs are drying up. Scientists say saving them starts uphill",
+          "url": "https://news.mongabay.com/2026/10/kashmirs-springs-are-drying-up-scientists-say-saving-them-starts-uphill/",
+          "time": "2026-10-27T22:19:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "delhi-chhath-ghats",
+      "topic": "Culture",
+      "region": "Asia-Pacific",
+      "city": "Delhi",
+      "country": "India",
+      "state": "Delhi",
+      "places": [
+        "New Delhi"
+      ],
+      "tz": "Asia/Kolkata",
+      "lat": 28.61,
+      "lon": 77.21,
+      "title": "Delhi plans more than 1,400 ghats for Chhath Puja",
+      "summary": "Chief Minister Rekha Gupta has told officials to finish preparations by 6 November, The Hindu reports.",
+      "sources": [
+        {
+          "outlet": "The Hindu",
+          "title": "Delhi to set up over 1,400 ghats for Chhath Puja; CM Rekha Gupta directs officials to complete preparations by November 6",
+          "url": "https://www.thehindu.com/news/cities/Delhi/delhi-to-set-up-over-1400-ghats-for-chhath-puja-cm-rekha-gupta-directs-officials-to-complete-preparations-by-november-6/article71632342.ece",
+          "time": "2026-10-27T15:37:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "seoul-guryong-fire",
+      "topic": "Community",
+      "region": "Asia-Pacific",
+      "city": "Guryong village, Seoul",
+      "country": "South Korea",
+      "places": [
+        "Gangnam"
+      ],
+      "tz": "Asia/Seoul",
+      "lat": 37.47,
+      "lon": 127.07,
+      "title": "A fire in Seoul's Guryong shantytown burns for nearly 13 hours",
+      "summary": "The Straits Times reports that the fire in the village in Gangnam district affected 77 households and 107 people.",
+      "sources": [
+        {
+          "outlet": "The Straits Times",
+          "title": "Seoul shantytown fire extinguished after nearly 13 hours: Report",
+          "url": "https://www.straitstimes.com/asia/east-asia/seoul-shantytown-fire-extinguished-after-nearly-13-hours-report",
+          "time": "2026-10-27T22:44:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "hcmc-tide-flood",
+      "topic": "Weather",
+      "region": "Asia-Pacific",
+      "city": "Ho Chi Minh City",
+      "country": "Vietnam",
+      "tz": "Asia/Ho_Chi_Minh",
+      "lat": 10.78,
+      "lon": 106.7,
+      "title": "High tide floods Ho Chi Minh City streets at rush hour",
+      "summary": "VnExpress says a tide peaking at 1.75 m, above the highest alert level, flooded many streets on Tuesday evening, stalling vehicles and snarling traffic.",
+      "sources": [
+        {
+          "outlet": "VnExpress",
+          "title": "Ho Chi Minh City commuters wade through floodwater as tide exceeds highest alert level",
+          "url": "https://e.vnexpress.net/photo/environment/ho-chi-minh-city-commuters-wade-through-floodwater-as-tide-exceeds-highest-alert-level-5137606.html",
+          "time": "2026-10-27T13:14:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "nuwakot-flood-victims",
+      "topic": "Community",
+      "region": "Asia-Pacific",
+      "city": "Nuwakot",
       "country": "Nepal",
-      "state": "Karnali Province",
       "places": [
         "Kathmandu"
       ],
       "tz": "Asia/Kathmandu",
-      "lat": 28.7,
-      "lon": 82.2,
-      "title": "A modern night bus service now links Jajarkot, in Nepal's hills, with Kathmandu",
-      "summary": "Six buses run on the route, with fares of Rs3,500, below the government rate of Rs4,066, The Kathmandu Post reports.",
+      "lat": 27.91,
+      "lon": 85.17,
+      "title": "Nuwakot flood victims form a committee to press for resettlement help",
+      "summary": "The Kathmandu Post says victims criticise what they call a lackadaisical approach from Kathmandu to resettling displaced people.",
       "sources": [
         {
           "outlet": "The Kathmandu Post",
-          "title": "Modern night bus service begins between Jajarkot and Kathmandu",
-          "url": "https://kathmandupost.com/national/2026/10/24/modern-night-bus-service-begins-between-jajarkot-and-kathmandu",
-          "time": "2026-10-24T00:00:00Z"
+          "title": "Nuwakot flood victims form struggle committee to pressure federal government for help",
+          "url": "https://kathmandupost.com/national/2026/10/27/nuwakot-flood-victims-form-struggle-committee-to-pressure-federal-government-for-help",
+          "time": "2026-10-27T12:00:00Z"
         }
       ]
     },
     {
-      "id": "vanuatu-quake",
       "scale": "local",
-      "topic": "Science",
-      "region": "Asia-Pacific",
-      "city": "Vanuatu",
-      "country": "Vanuatu",
-      "places": [
-        "Pacific"
-      ],
-      "tz": "Pacific/Efate",
-      "lat": -17.7,
-      "lon": 168.3,
-      "title": "A tsunami warning is cancelled after a magnitude 7.2 earthquake off Vanuatu",
-      "summary": "The warning was lifted after the quake struck offshore, RNZ reports.",
-      "sources": [
-        {
-          "outlet": "RNZ",
-          "title": "Tsunami warning cancelled after magnitude 7.2 quake off Vanuatu",
-          "url": "https://www.rnz.co.nz/news/world/2127034/magnitude-7-point-2-quake-off-vanuatu-triggers-tsunami-warning",
-          "time": "2026-10-24T06:29:51Z"
-        }
-      ]
-    },
-    {
-      "id": "albay-theatre",
-      "scale": "local",
+      "id": "achham-npl-signal",
       "topic": "Culture",
       "region": "Asia-Pacific",
-      "city": "Albay",
-      "country": "Philippines",
-      "state": "Bicol",
+      "city": "Achham",
+      "country": "Nepal",
       "places": [
-        "Bicol"
+        "Sudurpashchim"
       ],
-      "tz": "Asia/Manila",
-      "lat": 13.18,
-      "lon": 123.53,
-      "title": "A Bicol theatre group takes local stories, and disaster relief, to communities",
-      "summary": "Sining Banwa, from Albay province, performs grassroots stories in communities. Veteran actor Julie DM Vega says local governments should invest in their artists, Rappler reports.",
+      "tz": "Asia/Kathmandu",
+      "lat": 29.05,
+      "lon": 81.25,
+      "title": "Cricket fans in Nepal's Achham travel to market towns to find a signal for the NPL",
+      "summary": "While the Nepal Premier League is played in Kathmandu, supporters in remote villages are going to nearby settlements and market centres to watch their teams, the Kathmandu Post reports.",
       "sources": [
         {
-          "outlet": "Rappler",
-          "title": "This Bicolano theater group brings grassroots stories — and disaster relief — to communities",
-          "url": "https://www.rappler.com/people/actors/bicolano-theater-sining-banwa-grassroots-stories-communities/",
-          "time": "2026-10-24T08:00:00Z"
+          "outlet": "The Kathmandu Post",
+          "title": "The NPL is on, but fans in Achham can't get a signal",
+          "url": "https://kathmandupost.com/national/2026/10/27/the-npl-is-on-but-fans-in-achham-can-t-get-a-signal",
+          "time": "2026-10-27T12:00:00Z"
         }
       ]
     },
     {
-      "id": "bangladesh-migrants",
       "scale": "local",
-      "topic": "Climate",
+      "id": "tokelau-tide-gauge",
+      "topic": "Science",
       "region": "Asia-Pacific",
-      "city": "Dhaka",
-      "country": "Bangladesh",
-      "tz": "Asia/Dhaka",
-      "lat": 23.81,
-      "lon": 90.41,
-      "title": "Bangladesh's climate migrants arrive in cities that can't protect them",
-      "summary": "Disasters displaced 2.4 million people within Bangladesh in 2024, Mongabay reports, and the IMF predicts rising seas could swallow more than a seventh of the country's land.",
-      "sources": [
-        {
-          "outlet": "Mongabay",
-          "title": "Bangladesh's climate migrants are arriving in cities unprepared to protect them",
-          "url": "https://news.mongabay.com/2026/10/bangladeshs-climate-migrants-are-arriving-in-cities-unprepared-to-protect-them/",
-          "time": "2026-10-23T19:36:02Z"
-        }
-      ]
-    },
-    {
-      "id": "pacific-parkinsons",
-      "scale": "local",
-      "topic": "Health",
-      "region": "Asia-Pacific",
-      "city": "New Zealand",
-      "country": "New Zealand",
-      "places": [
-        "Pacific",
-        "Auckland"
-      ],
-      "tz": "Pacific/Auckland",
-      "lat": -36.85,
-      "lon": 174.76,
-      "title": "A rare form of Parkinson's is far more common in Pacific communities than thought",
-      "summary": "A form of the disease once considered rare is much more common among Pacific people than previously recognised, RNZ reports.",
+      "city": "Nukunonu",
+      "country": "Tokelau",
+      "tz": "Pacific/Fakaofo",
+      "lat": -9.17,
+      "lon": -171.85,
+      "title": "A new tide gauge on Tokelau's Nukunonu atoll boosts weather and sea monitoring",
+      "summary": "RNZ says the gauge is meant to strengthen the territory's meteorological systems.",
       "sources": [
         {
           "outlet": "RNZ",
-          "title": "Rare Parkinson's form more common in Pacific communities",
-          "url": "https://www.rnz.co.nz/news/science-and-technology/2030543/our-changing-world-the-pink1-clue-in-parkinson-s-disease",
-          "time": "2026-10-23T22:53:57Z"
+          "title": "New tide gauges to improve Tokelau's meteorological capacity",
+          "url": "https://www.rnz.co.nz/news/pacific/2175513/new-tide-gauges-to-improve-tokelau-s-meteorological-capacity",
+          "time": "2026-10-27T23:44:00Z"
         }
       ]
     },
     {
-      "id": "lascension-road",
       "scale": "local",
-      "topic": "Community",
+      "id": "four-corners-floods",
+      "topic": "Weather",
       "region": "Americas",
-      "city": "L'Ascension",
+      "city": "Four Corners region",
+      "country": "United States",
+      "state": "New Mexico",
+      "places": [
+        "Colorado",
+        "Utah",
+        "Arizona"
+      ],
+      "tz": "America/Denver",
+      "lat": 36.99,
+      "lon": -109.05,
+      "title": "Floods in the US Southwest cause hundreds of millions of dollars of damage in New Mexico alone",
+      "summary": "NPR says intense rain linked to a very active El Niño-driven Pacific hurricane season has displaced thousands of people across the Four Corners states.",
+      "sources": [
+        {
+          "outlet": "NPR",
+          "title": "Southwest flood damage estimates are hundreds of millions for New Mexico alone",
+          "url": "https://www.npr.org/2026/10/27/nx-s1-6019352/southwest-flood-damage-estimates-are-hundreds-of-millions-for-new-mexico-alone",
+          "time": "2026-10-27T21:17:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "lytton-mayor-draw",
+      "topic": "Politics",
+      "region": "Americas",
+      "city": "Lytton",
       "country": "Canada",
-      "state": "Quebec",
-      "tz": "America/Toronto",
-      "lat": 46.55,
-      "lon": -74.83,
-      "title": "82 days on, repairs haven't started on a washed-out road in a small Quebec town",
-      "summary": "August flooding washed away part of the main road in L'Ascension, and the mayor blames the delay on bureaucracy between levels of government, CBC reports.",
+      "state": "British Columbia",
+      "places": [
+        "B.C."
+      ],
+      "tz": "America/Vancouver",
+      "lat": 50.23,
+      "lon": -121.58,
+      "title": "A random draw settles Lytton's tied mayoral election",
+      "summary": "Jennifer Thoss was named mayor of Lytton, B.C., after the draw on Tuesday, CBC reports.",
       "sources": [
         {
           "outlet": "CBC News",
-          "title": "82 days later, no repairs started on washed-out road dividing small Quebec town",
-          "url": "https://www.cbc.ca/news/canada/montreal/flooding-damages-major-road-in-lascension-and-bureaucracy-slows-repairs-9.7392956",
-          "time": "2026-10-24T08:00:00Z"
+          "title": "Jennifer Thoss named Lytton's mayor after random draw breaks election tie",
+          "url": "https://www.cbc.ca/news/canada/british-columbia/lytton-next-mayor-random-draw-9.7398797",
+          "time": "2026-10-27T23:20:00Z"
         }
       ]
     },
     {
-      "id": "argentina-floods",
       "scale": "local",
-      "topic": "Weather",
+      "id": "ottawa-council-women",
+      "topic": "Politics",
       "region": "Americas",
-      "city": "North-east Argentina",
-      "country": "Argentina",
-      "tz": "America/Argentina/Buenos_Aires",
-      "lat": -28.5,
-      "lon": -59,
-      "title": "More than 2,000 people are evacuated as El Niño floods hit north-east Argentina",
-      "summary": "Two people have died, and authorities warn that river levels could keep rising for months, the Buenos Aires Times reports.",
+      "city": "Ottawa",
+      "country": "Canada",
+      "state": "Ontario",
+      "tz": "America/Toronto",
+      "lat": 45.42,
+      "lon": -75.7,
+      "title": "Ottawa elects a city council with more women than men for the first time",
+      "summary": "CBC calls the result historic and says it has drawn happy reaction.",
       "sources": [
         {
-          "outlet": "Buenos Aires Times",
-          "title": "More than 2,000 evacuated as El Niño floods hit Argentina",
-          "url": "https://www.batimes.com.ar/news/argentina/more-than-2000-evacuated-as-el-nino-floods-hit-argentina.phtml",
-          "time": "2026-10-24T00:25:53Z"
+          "outlet": "CBC News",
+          "title": "Ottawa makes history by electing city council that's mostly women",
+          "url": "https://www.cbc.ca/news/canada/ottawa/ottawa-city-council-2026-women-elect-9.7398153",
+          "time": "2026-10-27T21:19:00Z"
         }
       ]
     },
     {
-      "id": "mexico-drought",
       "scale": "local",
-      "topic": "Weather",
+      "id": "guadalajara-water-protest",
+      "topic": "Community",
       "region": "Americas",
-      "city": "Northern Mexico",
+      "city": "Guadalajara",
       "country": "Mexico",
-      "places": [
-        "Chihuahua",
-        "Sonora"
-      ],
-      "tz": "America/Chihuahua",
-      "lat": 28.6,
-      "lon": -106.1,
-      "title": "Hurricanes and extra rain weren't enough to stop drought spreading in Mexico",
-      "summary": "This year's [[el-nino|El Niño]] is pushing up temperatures in Mexico's north, Mexico News Daily reports, and passing hurricanes and low-pressure troughs haven't changed that.",
+      "state": "Jalisco",
+      "tz": "America/Mexico_City",
+      "lat": 20.67,
+      "lon": -103.35,
+      "title": "Protesters over foul tap water in Guadalajara file torture complaints against state police",
+      "summary": "Mexico News Daily reports that demonstrators allege Jalisco officers abused dozens of people at an 11 October protest and held them for hours in poor conditions.",
       "sources": [
         {
           "outlet": "Mexico News Daily",
-          "title": "Hurricanes? Above-average rainfall? They weren't enough to prevent more drought in Mexico",
-          "url": "https://mexiconewsdaily.com/news/hurricanes-above-average-rainfall-werent-enough-to-prevent-more-drought-mexico/",
-          "time": "2026-10-23T19:58:19Z"
+          "title": "Protesters file complaints with Attorney General's Office alleging torture at hands of Jalisco state police officers",
+          "url": "https://mexiconewsdaily.com/news/protesters-file-complaints-attorney-generals-office-torture-jalisco-state-police/",
+          "time": "2026-10-27T23:54:00Z"
         }
       ]
     },
     {
-      "id": "peru-amazon-water",
       "scale": "local",
-      "topic": "Nature",
+      "id": "michoacan-dinosaur-prints",
+      "topic": "Science",
       "region": "Americas",
-      "city": "Southern Peruvian Amazon",
-      "country": "Peru",
-      "places": [
-        "Madre de Dios",
-        "Amazon"
-      ],
-      "tz": "America/Lima",
-      "lat": -12.6,
-      "lon": -70.1,
-      "title": "Amazon communities are running short of water as mining and deforestation reshape rivers",
-      "summary": "Indigenous Harakmbut residents of the southern Peruvian Amazon describe losing access to water, Mongabay reports.",
-      "sources": [
-        {
-          "outlet": "Mongabay",
-          "title": "Amazon communities lose water as mining and deforestation reshape rivers",
-          "url": "https://news.mongabay.com/2026/10/amazon-communities-lose-water-as-mining-and-deforestation-reshape-rivers/",
-          "time": "2026-10-23T18:15:44Z"
-        }
-      ]
-    },
-    {
-      "id": "sian-kaan",
-      "scale": "local",
-      "topic": "Nature",
-      "region": "Americas",
-      "city": "Sian Ka'an",
+      "city": "Michoacán",
       "country": "Mexico",
-      "state": "Quintana Roo",
-      "places": [
-        "Tulum"
-      ],
-      "tz": "America/Cancun",
+      "state": "Michoacán",
+      "tz": "America/Mexico_City",
+      "lat": 19.57,
+      "lon": -101.7,
+      "title": "Rural Michoacán residents lead researchers to dinosaur footprints",
+      "summary": "Mexico News Daily says the prints appear to come from three different species, and that only about 30 footprint sites are known nationwide.",
+      "sources": [
+        {
+          "outlet": "Mexico News Daily",
+          "title": "Rural Michoacán residents lead researchers to previously undiscovered dinosaur footprints",
+          "url": "https://mexiconewsdaily.com/news/michoacan-residents-lead-researchers-dinosaur-footprints/",
+          "time": "2026-10-27T23:11:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "patzcuaro-restoration",
+      "topic": "Nature",
+      "region": "Americas",
+      "city": "Lake Pátzcuaro",
+      "country": "Mexico",
+      "state": "Michoacán",
+      "tz": "America/Mexico_City",
       "lat": 19.6,
-      "lon": -87.6,
-      "title": "Critics want road building halted in Mexico's Sian Ka'an Biosphere Reserve",
-      "summary": "Mexico's environment ministry said in early October it would minimise infrastructure inside the protected area on the Caribbean coast, but critics are calling for road construction there to stop, Mongabay reports.",
+      "lon": -101.64,
+      "title": "Mexico invests $60 million to restore polluted, drought-hit Lake Pátzcuaro",
+      "summary": "Mexico News Daily says four new wastewater plants are being built and six renovated for the country's third-largest lake.",
       "sources": [
         {
-          "outlet": "Mongabay",
-          "title": "Critics call for halt to road construction in Mexico's Sian Ka'an Biosphere Reserve",
-          "url": "https://news.mongabay.com/2026/10/critics-call-for-halt-to-road-construction-in-mexicos-sian-kaan-biosphere-reserve/",
-          "time": "2026-10-23T18:47:31Z"
+          "outlet": "Mexico News Daily",
+          "title": "Government invests US $60M to restore polluted, drought-impacted Lake Pátzcuaro",
+          "url": "https://mexiconewsdaily.com/news/government-invests-restore-lake-patzcuaro/",
+          "time": "2026-10-27T17:48:00Z"
         }
       ]
     },
     {
-      "id": "bialowieza",
       "scale": "local",
-      "topic": "Nature",
-      "region": "Europe",
-      "city": "Białowieża Forest",
-      "country": "Poland",
-      "places": [
-        "Belarus",
-        "Bialowieza"
-      ],
-      "tz": "Europe/Warsaw",
-      "lat": 52.7,
-      "lon": 23.85,
-      "title": "Poland is restoring part of the ancient Białowieża Forest on its border with Belarus",
-      "summary": "One of Europe's last primeval forests straddles the border, and Mongabay reports on efforts to restore it that are also meant to help defend Poland's frontier.",
-      "sources": [
-        {
-          "outlet": "Mongabay",
-          "title": "Restoring a 12,000-year-old forest to help defend Poland's border",
-          "url": "https://news.mongabay.com/video/2026/10/restoring-a-12000-year-old-forest-to-help-defend-polands-border/",
-          "time": "2026-10-24T07:30:26Z"
-        }
-      ]
-    },
-    {
-      "id": "portugal-elephant",
-      "scale": "local",
-      "topic": "Nature",
-      "region": "Europe",
-      "city": "Alentejo",
-      "country": "Portugal",
-      "tz": "Europe/Lisbon",
-      "lat": 38.57,
-      "lon": -7.91,
-      "title": "Portugal's last circus elephant starts a new life at a sanctuary in Alentejo",
-      "summary": "The elephant, Julie, is settling into a wildlife sanctuary in southern Portugal, Africanews reports.",
-      "sources": [
-        {
-          "outlet": "Africanews",
-          "title": "Portugal's last circus elephant begins a new life at wildlife sanctuary",
-          "url": "https://www.africanews.com/2026/10/23/portugals-last-circus-elephant-begins-a-new-life-at-wildlife-sanctuary/",
-          "time": "2026-10-23T19:52:59Z"
-        }
-      ]
-    },
-    {
-      "id": "bosnia-game",
-      "scale": "local",
+      "id": "konotop-blackout",
       "topic": "Community",
       "region": "Europe",
-      "city": "Bosnia and Herzegovina",
-      "country": "Bosnia and Herzegovina",
-      "places": [
-        "Bosnia",
-        "Sarajevo"
-      ],
-      "tz": "Europe/Sarajevo",
-      "lat": 43.86,
-      "lon": 18.41,
-      "title": "In Bosnia and Herzegovina, children with Down syndrome learn internet safety through a game",
-      "summary": "Global Voices reports on the video game, which helps them use the internet safely and take part in everyday life online.",
+      "city": "Konotop",
+      "country": "Ukraine",
+      "state": "Sumy Oblast",
+      "tz": "Europe/Kyiv",
+      "lat": 51.24,
+      "lon": 33.2,
+      "title": "Konotop's blackout enters a fourth day, with water rationed to six hours a day",
+      "summary": "The Kyiv Independent quotes Mayor Artem Semenikhin on the water rationing and says there is no end in sight to the power cut.",
       "sources": [
         {
-          "outlet": "Global Voices",
-          "title": "In Bosnia and Herzegovina, children with Down syndrome are using a video game to safely navigate the internet",
-          "url": "https://globalvoices.org/2026/10/23/in-bosnia-and-herzegovina-children-with-down-syndrome-are-using-a-video-game-to-safely-navigate-the-internet/",
-          "time": "2026-10-23T22:05:56Z"
+          "outlet": "The Kyiv Independent",
+          "title": "Blackout in Sumy Oblast's Konotop enters fourth day with no end in sight",
+          "url": "https://kyivindependent.com/blackout-in-konotop-enters-fourth-day-with-no-end-in-sight/",
+          "time": "2026-10-27T14:39:00Z"
         }
       ]
     },
     {
-      "id": "rak-oil",
       "scale": "local",
-      "topic": "Nature",
-      "region": "Middle East",
-      "city": "Ras Al Khaimah",
-      "country": "United Arab Emirates",
+      "id": "drumcree-poll",
+      "topic": "Politics",
+      "region": "Europe",
+      "city": "Portadown",
+      "country": "United Kingdom",
+      "state": "Northern Ireland",
       "places": [
-        "UAE",
-        "Sharjah",
-        "Umm Al Quwain"
+        "Drumcree",
+        "Garvaghy Road"
       ],
-      "tz": "Asia/Dubai",
-      "lat": 25.79,
-      "lon": 55.94,
-      "title": "Ras Al Khaimah shuts all its beaches after an offshore oil leak",
-      "summary": "The beaches are closed until further notice, a day after the leak shut beaches in neighbouring Umm Al Quwain and Sharjah, Dawn reports.",
+      "tz": "Europe/London",
+      "lat": 54.42,
+      "lon": -6.45,
+      "title": "A narrow majority in Northern Ireland opposes the Drumcree parade decision, a poll finds",
+      "summary": "RTÉ reports that a survey suggests most people think the Parades Commission was wrong to allow the first Orange Order parade along Garvaghy Road in almost 30 years.",
       "sources": [
         {
-          "outlet": "Dawn",
-          "title": "UAE's Ras Al Khaimah shuts all beaches as neighbours grapple with oil spill",
-          "url": "https://www.dawn.com/news/2039491/uaes-ras-al-khaimah-shuts-all-beaches-as-neighbours-grapple-with-oil-spill",
-          "time": "2026-10-24T12:28:14Z"
+          "outlet": "RTÉ",
+          "title": "Majority in NI back ban on Drumcree parade - survey",
+          "url": "https://www.rte.ie/news/ireland/2026/1028/1597003-drumcree-poll/",
+          "time": "2026-10-28T00:01:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "somerset-zebra-bee",
+      "topic": "Nature",
+      "region": "Europe",
+      "city": "Somerset",
+      "country": "United Kingdom",
+      "state": "England",
+      "tz": "Europe/London",
+      "lat": 51.1,
+      "lon": -2.9,
+      "title": "A zebra-striped bee is seen in Somerset for the first time",
+      "summary": "The BBC says the sighting is a 'huge surprise' and offers hope for restored saltmarshes.",
+      "sources": [
+        {
+          "outlet": "BBC News",
+          "title": "Tiny zebra-striped bee sighting a 'huge surprise'",
+          "url": "https://www.bbc.co.uk/news/articles/c3dxwjx7xpj0o",
+          "time": "2026-10-27T16:50:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "barcelona-looting",
+      "topic": "Community",
+      "region": "Europe",
+      "city": "Barcelona",
+      "country": "Spain",
+      "state": "Catalonia",
+      "tz": "Europe/Madrid",
+      "lat": 41.39,
+      "lon": 2.17,
+      "title": "Police investigate what sparked a weekend of looting and rioting in Barcelona",
+      "summary": "The Local reports that experts point to social media and even foreign actors as possible drivers of the unrest.",
+      "sources": [
+        {
+          "outlet": "The Local Spain",
+          "title": "Who's really behind the looting and violence in Barcelona?",
+          "url": "https://www.thelocal.es/20261026/whos-really-behind-the-wave-of-looting-and-violence-in-barcelona",
+          "time": "2026-10-26T11:35:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "eilat-flash-floods",
+      "topic": "Weather",
+      "region": "Middle East",
+      "city": "Eilat",
+      "country": "Israel",
+      "tz": "Asia/Jerusalem",
+      "lat": 29.56,
+      "lon": 34.95,
+      "title": "Heavy rain closes highways and blocks the entrance to Eilat",
+      "summary": "The Times of Israel says authorities warned against driving or hiking in affected areas for fear of flash floods, with the weather expected to worsen after dark.",
+      "sources": [
+        {
+          "outlet": "The Times of Israel",
+          "title": "Heavy rains close highways, hiking trails in south; effect on voter turnout unclear",
+          "url": "https://www.timesofisrael.com/heavy-rains-close-highways-hiking-trails-in-south-effect-on-voter-turnout-unclear/",
+          "time": "2026-10-27T15:43:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "hebron-wedding-lockdown",
+      "topic": "Community",
+      "region": "Middle East",
+      "city": "Hebron",
+      "country": "Palestine",
+      "places": [
+        "West Bank"
+      ],
+      "tz": "Asia/Hebron",
+      "lat": 31.53,
+      "lon": 35.1,
+      "title": "A Hebron groom's wedding is postponed by an Israeli military lockdown",
+      "summary": "Al Jazeera says Israel's military operation in Hebron has disrupted daily Palestinian life.",
+      "sources": [
+        {
+          "outlet": "Al Jazeera",
+          "title": "Dream postponed: Hebron groom caught in Israeli military lockdown",
+          "url": "https://www.aljazeera.com/news/2026/10/27/dream-postponed-hebron-groom-caught-in-israeli-military-lockdown",
+          "time": "2026-10-27T21:12:00Z"
+        }
+      ]
+    },
+    {
+      "scale": "local",
+      "id": "kalba-clock-tower",
+      "topic": "Culture",
+      "region": "Middle East",
+      "city": "Kalba",
+      "country": "United Arab Emirates",
+      "state": "Sharjah",
+      "places": [
+        "Sharjah",
+        "Khor Fakkan"
+      ],
+      "tz": "Asia/Dubai",
+      "lat": 25.07,
+      "lon": 56.35,
+      "title": "Sharjah plans a women-only clock tower in Kalba and a care complex on Khor Fakkan Road",
+      "summary": "Sharjah's ruler announced the tower near Kalba University, opposite the existing clock tower, The National reports.",
+      "sources": [
+        {
+          "outlet": "The National",
+          "title": "Sharjah announces women-only clock tower in Kalba and care complex on Khor Fakkan Road",
+          "url": "https://www.thenationalnews.com/news/uae/2026/10/27/sharjah-announces-women-only-clock-tower-in-kalba-and-care-complex-on-khorfakkan-road/",
+          "time": "2026-10-27T18:28:00Z"
         }
       ]
     }
   ],
   "lighter": [
     {
-      "id": "crows",
+      "id": "eel-ball",
       "big": true,
-      "topic": "Science",
-      "city": "Worldwide",
-      "country": "Worldwide",
-      "tz": "UTC",
-      "lat": null,
-      "lon": null,
-      "title": "Crows turn what they see into decisions twice as fast as humans",
-      "summary": "New research in the journal Science finds crows process visual information into decisions twice as fast as humans and other primates, NPR reports, and in a similar way to humans.",
+      "topic": "Nature",
+      "city": "Tasmania",
+      "country": "Australia",
+      "tz": "Australia/Hobart",
+      "lat": -42,
+      "lon": 148.3,
+      "title": "A giant ball of 2.8 million eels gathers off Tasmania to spawn",
+      "summary": "CSIRO scientists have identified an underwater mountain where a threatened deep-sea eel species gathers every year, ABC News reports.",
       "sources": [
         {
-          "outlet": "NPR",
-          "title": "Should 'bird brain' be a compliment? Here's how crows think fast",
-          "url": "https://www.npr.org/2026/10/22/nx-s1-6010587/should-bird-brain-be-a-compliment-heres-how-crows-think-fast",
-          "time": "2026-10-22T20:47:00Z"
+          "outlet": "ABC News",
+          "title": "Giant ball of 2.8 million eels gathers off Tasmania's coast to spawn",
+          "url": "https://www.abc.net.au/news/science/2026-10-28/australia-biggest-eel-ball-2-8-million-off-tasmania/107309716",
+          "time": "2026-10-28T00:02:00Z"
         }
       ]
     },
     {
-      "id": "mahjong",
-      "places": [
-        "United States"
-      ],
-      "city": "Taixing",
+      "id": "terracotta-fingerprints",
+      "topic": "Science",
+      "city": "Xi'an",
       "country": "China",
       "tz": "Asia/Shanghai",
-      "lat": 32.17,
-      "lon": 120.02,
-      "title": "America's mahjong craze is giving a Chinese factory town a lifeline",
-      "summary": "NPR reports that shoppers in the US will pay hundreds of dollars for a mahjong set, and manufacturers in the eastern Chinese city of Taixing can barely keep up with demand.",
+      "lat": 34.38,
+      "lon": 109.28,
+      "title": "Fingerprints suggest women and children helped make the Terracotta Army",
+      "summary": "A new study of fingerprints preserved in the clay figures found that people younger than 15, and women, may have helped make them, Colombia One reports.",
       "sources": [
         {
-          "outlet": "NPR",
-          "title": "How America's mahjong craze is throwing a Chinese manufacturing town a lifeline",
-          "url": "https://www.npr.org/2026/10/22/nx-s1-6000127/china-mahjong-tile-game-taixing-manufacturing",
-          "time": "2026-10-22T20:53:00Z"
+          "outlet": "Colombia One",
+          "title": "The Terracotta Army Holds a Hidden Clue About Who Built It, New Study Finds",
+          "url": "https://colombiaone.com/2026/10/27/terracotta-army-women-children-fingerprints-study/",
+          "time": "2026-10-27T23:30:00Z"
         }
       ]
     },
     {
-      "id": "orangutans",
-      "city": "Kalimantan",
-      "country": "Indonesia",
-      "tz": "Asia/Jakarta",
-      "lat": -1.68,
-      "lon": 113.38,
-      "title": "Rescuers save dozens of critically endangered orangutans from Indonesian wildfires",
-      "summary": "NPR reports that rescuers in Indonesia have saved dozens of orangutans, a critically endangered species, during a deadly wildfire season.",
-      "sources": [
-        {
-          "outlet": "NPR",
-          "title": "Dozens of critically endangered orangutans rescued from Indonesian wildfires",
-          "url": "https://www.npr.org/2026/10/17/nx-s1-6004881/dozens-of-critically-endangered-orangutans-rescued-from-indonesian-wildfires",
-          "time": "2026-10-17T11:43:00Z"
-        }
-      ]
-    },
-    {
-      "id": "psychedelics",
-      "city": "Worldwide",
-      "country": "Worldwide",
-      "tz": "UTC",
+      "id": "darwins-rheas",
+      "topic": "Nature",
+      "city": "Patagonia National Park",
+      "country": "Chile",
+      "tz": "America/Santiago",
       "lat": null,
       "lon": null,
-      "title": "First human data hints that psychedelics could help calm inflammation",
-      "summary": "Lab studies have shown that psychedelics such as psilocybin can lower inflammation, NPR reports, and researchers are now publishing some of the first human data suggesting the same potential.",
+      "title": "A women-led team prepares to release 13 Darwin's rheas in Chilean Patagonia",
+      "summary": "Mongabay says the birds nearly went extinct in the region just 20 years ago.",
       "sources": [
         {
-          "outlet": "NPR",
-          "title": "New human data hints at psychedelics' potential to combat inflammation",
-          "url": "https://www.npr.org/2026/10/21/nx-s1-6009441/psychedelics-brain-inflammation-immune-system",
-          "time": "2026-10-21T15:33:00Z"
+          "outlet": "Mongabay",
+          "title": "These giant birds nearly disappeared",
+          "url": "https://news.mongabay.com/short-article/2026/10/these-giant-birds-nearly-disappeared/",
+          "time": "2026-10-27T09:56:00Z"
         }
       ]
     },
     {
-      "id": "moontime",
-      "city": "Worldwide",
-      "country": "Worldwide",
-      "tz": "UTC",
+      "id": "new-mussels",
+      "topic": "Science",
+      "city": "Southern United States",
+      "country": "United States",
+      "tz": null,
       "lat": null,
       "lon": null,
-      "title": "What time is it on the Moon? Why measuring lunar time matters",
-      "summary": "NPR spoke to James Olthoff, a delegate to the International Bureau of Weights and Measures, about why it is important to measure time accurately on the Moon.",
+      "title": "Five new mussel species turn up in US rivers after 20 years of searching",
+      "summary": "Researchers snorkelled rivers feeling for mussels, and DNA showed many familiar-looking shells were different species, Mongabay reports.",
       "sources": [
         {
-          "outlet": "NPR",
-          "title": "What time is it on the moon?",
-          "url": "https://www.npr.org/2026/10/18/nx-s1-6003578/what-time-is-it-on-the-moon",
-          "time": "2026-10-18T21:00:00Z"
+          "outlet": "Mongabay",
+          "title": "Five new mussel species reveal how much biodiversity US rivers still conceal",
+          "url": "https://news.mongabay.com/2026/10/five-new-mussel-species-reveal-how-much-biodiversity-us-rivers-still-conceal/",
+          "time": "2026-10-27T11:39:00Z"
         }
       ]
     },
     {
-      "id": "bossdms",
-      "places": [
-        "United States"
-      ],
-      "city": "Worldwide",
-      "country": "Worldwide",
-      "tz": "UTC",
+      "id": "gabon-botanists",
+      "topic": "Nature",
+      "city": "Gabon's rainforests",
+      "country": "Gabon",
+      "tz": "Africa/Libreville",
       "lat": null,
       "lon": null,
-      "title": "A consultant goes viral for sharing the cringe-worthy messages bosses send workers",
-      "summary": "NPR reports that a management consultant has gone viral by sharing anonymous direct messages that employees received from their bosses, including some sent on their wedding days.",
+      "title": "Botanists keep finding new plant species in Gabon's rainforests",
+      "summary": "Africanews says botanist Archange Boupoya believes the largely mysterious natural wealth needs cataloguing.",
       "sources": [
         {
-          "outlet": "NPR",
-          "title": "A consultant is going viral for exposing the cringe-worthy DMs bosses send employees",
-          "url": "https://www.npr.org/2026/10/24/nx-s1-6012795/a-consultant-is-going-viral-for-exposing-the-cringe-worthy-dms-bosses-send-employees",
-          "time": "2026-10-24T11:42:00Z"
+          "outlet": "Africanews",
+          "title": "Botanists comb Gabon's rich rainforests with nature on the line",
+          "url": "https://www.africanews.com/2026/10/27/botanists-comb-gabons-rich-rainforests-with-nature-on-the-line/",
+          "time": "2026-10-27T19:31:00Z"
         }
       ]
     },
     {
-      "id": "justeat",
-      "places": [
-        "United Kingdom"
-      ],
-      "city": "Worldwide",
-      "country": "Worldwide",
-      "tz": "UTC",
-      "lat": null,
-      "lon": null,
-      "title": "Just Eat apologises after its AI-made food pictures go viral for the wrong reasons",
-      "summary": "Al Jazeera reports that Just Eat has apologised after AI-generated images of food on its platform went viral for badly misrepresenting menu items.",
+      "id": "wa-balcony-solar",
+      "topic": "Tech",
+      "city": "Perth",
+      "country": "Australia",
+      "state": "Western Australia",
+      "tz": "Australia/Perth",
+      "lat": -31.95,
+      "lon": 115.86,
+      "title": "Western Australia moves to legalise plug-in 'balcony' solar panels and batteries",
+      "summary": "ABC News says it would be the first Australian state to do so, with the technology already used by millions of people in Europe and the UK.",
       "sources": [
         {
-          "outlet": "Al Jazeera",
-          "title": "Just Eat apologises after AI-generated images blunder",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/just-eat-apologises-after-ai-generated-images-blunder",
-          "time": "2026-10-24T09:29:00Z"
+          "outlet": "ABC News",
+          "title": "WA set to become first state to legalise plug-in solar panels, batteries",
+          "url": "https://www.abc.net.au/news/2026-10-28/western-australia-to-lift-ban-on-balcony-solar/107316134",
+          "time": "2026-10-27T21:14:00Z"
+        }
+      ]
+    },
+    {
+      "id": "kiribati-fisherman",
+      "topic": "Community",
+      "city": "Kiribati",
+      "country": "Kiribati",
+      "tz": "Pacific/Tarawa",
+      "lat": null,
+      "lon": null,
+      "title": "A fisherman lost at sea for 41 days is rescued off Kiribati",
+      "summary": "ABC News says Luka Rahan's boat motor failed and, with no anchor, he began to drift.",
+      "sources": [
+        {
+          "outlet": "ABC News",
+          "title": "Fisherman lost at sea for 41 days rescued off Kiribati",
+          "url": "https://www.abc.net.au/news/2026-10-28/fisherman-lost-at-sea-for-41-days-rescued-off-kiribati/107316560",
+          "time": "2026-10-27T23:14:00Z"
+        }
+      ]
+    },
+    {
+      "id": "bagan-lanterns",
+      "topic": "Culture",
+      "city": "Bagan",
+      "country": "Myanmar",
+      "tz": "Asia/Yangon",
+      "lat": 21.17,
+      "lon": 94.86,
+      "title": "Lanterns float above Bagan's ancient temples for the Thadingyut festival",
+      "summary": "Thousands gathered to mark the end of Buddhist Lent, Africanews reports.",
+      "sources": [
+        {
+          "outlet": "Africanews",
+          "title": "Myanmar: spectacular lantern festival lights up ancient temples in Bagan",
+          "url": "https://www.africanews.com/2026/10/27/myanmar-spectacular-lantern-festival-lights-up-ancient-temples-in-bagan/",
+          "time": "2026-10-27T15:57:00Z"
         }
       ]
     }
   ],
   "sport": [
     {
-      "result": "Australia's Jillaroos thrash England 78-0",
-      "note": "The win came at the Women's Rugby League World Cup, but centre Julia Robinson went to hospital.",
+      "result": "Harry Kane wins the Ballon d'Or",
+      "note": "The Bayern Munich striker beat Kylian Mbappé and Lamine Yamal, DW reports; the Nation says he is the first Englishman to win it since Michael Owen in 2001.",
+      "outlet": "DW",
+      "url": "https://www.dw.com/en/harry-kane-ballon-d-or-for-bayern-munich-striker/a-79723299"
+    },
+    {
+      "result": "Alexia Putellas wins a record-equalling third women's Ballon d'Or",
+      "note": "The Barcelona and Spain midfielder; Malawi's Temwa Chawinga became the first African woman in the women's top 10, AllAfrica reports.",
+      "outlet": "BBC News",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cqp9gky38lj3o"
+    },
+    {
+      "result": "Fleetwood Town knock Arsenal out of the League Cup",
+      "note": "The fourth-tier side beat the reigning English champions in what ABC called an all-time upset.",
       "outlet": "ABC News",
-      "url": "https://www.abc.net.au/news/2026-10-24/jillaroos-england-rugby-league-world-cup-live/107305106"
+      "url": "https://www.abc.net.au/news/2026-10-28/arsenal-eliminated-efl-league-cup-fleetwood-town/107317536"
     },
     {
-      "result": "Marathon champion Peres Jepchirchir gets a provisional ban",
-      "note": "The Kenyan world champion, who won this year's Sydney marathon by three minutes, tested positive for EPO.",
+      "result": "Australia fight back on day one of the third Test in Cape Town",
+      "note": "Australia dismissed South Africa for 329, with Mitchell Starc's late spell the highlight, Daily Maverick says.",
+      "outlet": "Daily Maverick",
+      "url": "https://www.dailymaverick.co.za/article/2026-10-27-starc-masterclass-and-proteas-mistakes-give-australia-an-edge-at-newlands/"
+    },
+    {
+      "result": "Kimi Antonelli wins in Austin",
+      "note": "Mercedes boss Toto Wolff called it Antonelli's best drive, though it wasn't quite enough to clinch the title.",
+      "outlet": "BBC News",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c6wyvnlx0erxo"
+    },
+    {
+      "result": "Dallas Cowboys beat the Philadelphia Eagles 38-21",
+      "note": "The Eagles suffered a fifth straight defeat and have lost quarterback Jalen Hurts for the season, The Japan Times reports.",
+      "outlet": "The Japan Times",
+      "url": "https://www.japantimes.co.jp/sports/2026/10/27/more-sports/cowboys-eagles-prescott/"
+    },
+    {
+      "result": "Golden State Valkyries move closer to the WNBA title",
+      "note": "Another big performance in Game 5 leaves Atlanta Dream, with Australian Izzy Borlase, on the brink of losing the Finals series.",
       "outlet": "ABC News",
-      "url": "https://www.abc.net.au/news/2026-10-24/sydney-marathon-champion-jepchirchir-provisional-ban-epo/107304266"
-    },
-    {
-      "result": "Bayern coach Vincent Kompany is in hospital after a collapse",
-      "note": "Bayern Munich say he is stable but will be out for weeks.",
-      "outlet": "Al Jazeera",
-      "url": "https://www.aljazeera.com/sports/2026/10/24/bayern-say-coach-kompany-stable-in-hospital-but-will-be-out-for-weeks"
-    },
-    {
-      "result": "Molly Picklum tops the surfing standings after winning in Portugal",
-      "note": "The Australian is in pole position for a second straight world title.",
-      "outlet": "ABC News",
-      "url": "https://www.abc.net.au/news/2026-10-24/aussie-picklum-back-on-top-wsl-standings-portugal-win/107304474"
-    },
-    {
-      "result": "Wallaroos beat Scotland in Canberra",
-      "note": "Emily Chancellor and Cecilia Smith retired from international rugby after the match.",
-      "outlet": "ABC News",
-      "url": "https://www.abc.net.au/news/2026-10-24/wallaroos-send-retiring-pair-out-with-win-over-scotland/107304368"
-    },
-    {
-      "result": "Bulls beat Bucks while Tatum scores 36",
-      "note": "Boston also sent the Knicks to a second straight loss, and the Lakers beat the Clippers.",
-      "outlet": "Al Jazeera",
-      "url": "https://www.aljazeera.com/sports/2026/10/24/chicago-bulls-storm-back-from-early-deficit-to-beat-milwaukee-bucks-in-nba"
-    },
-    {
-      "result": "Tonga and Samoa are star draws at the Rugby League World Cup",
-      "note": "Once seen as minnows, both sides are now among the tournament's top attractions.",
-      "outlet": "ABC News",
-      "url": "https://www.abc.net.au/news/2026-10-24/one-time-minnows-tonga-and-samoa-now-star-world-cup-attractions/107296364"
+      "url": "https://www.abc.net.au/news/2026-10-27/borlase-wnba-dream-fading-after-game-5-finals-loss/107314598"
     }
   ]
 }

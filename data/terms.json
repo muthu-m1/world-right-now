@@ -146,5 +146,21 @@
   "national-rally": {
     "term": "National Rally",
     "definition": "France's main far-right party, led by Marine Le Pen. It holds its annual congress in Orléans this weekend."
+  },
+  "knesset": {
+    "term": "Knesset",
+    "definition": "Israel's parliament, which has 120 seats. A coalition needs at least 61 of them to govern."
+  },
+  "plenum": {
+    "term": "plenum",
+    "definition": "A full meeting of the Chinese Communist Party's Central Committee, usually held behind closed doors, where major policy and personnel decisions are discussed."
+  },
+  "frontex": {
+    "term": "Frontex",
+    "definition": "The European Union's border and coast guard agency, which helps member states control the EU's external borders and return migrants."
+  },
+  "austrac": {
+    "term": "AUSTRAC",
+    "definition": "Australia's financial intelligence agency, which supervises businesses such as casinos for money-laundering and terrorism-financing risks."
   }
 }
