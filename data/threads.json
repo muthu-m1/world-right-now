@@ -120,6 +120,22 @@
           "outlet": "The Kathmandu Post",
           "url": "https://kathmandupost.com/world/2026/10/28/norway-s-premier-says-call-with-putin-was-effort-to-present-european-views"
         }
+      },
+      {
+        "date": "2026-10-29",
+        "text": "Russia strikes a train at Dnipro station with a jet-powered drone, killing at least 13 people.",
+        "source": {
+          "outlet": "RTÉ",
+          "url": "https://www.rte.ie/news/ukraine/2026/1029/1597186-ukraine-russia/"
+        }
+      },
+      {
+        "date": "2026-10-29",
+        "text": "Kremlin aide Yuri Ushakov says the 'battlefield situation' will determine when peace talks begin and rules out European participation in an upcoming Abu Dhabi meeting.",
+        "source": {
+          "outlet": "The Kyiv Independent",
+          "url": "https://kyivindependent.com/russia-says-battlefield-situation-will-determine-when-ukraine-peace-talks-begin/"
+        }
       }
     ]
   },
@@ -235,6 +251,22 @@
         "source": {
           "outlet": "Daily Maverick",
           "url": "https://www.dailymaverick.co.za/article/2026-10-28-qatari-mediators-present-iran-with-new-deal-to-end-the-war-official-says/"
+        }
+      },
+      {
+        "date": "2026-10-29",
+        "text": "The Wall Street Journal reports Vice President JD Vance wrote to the head of Iran's Supreme National Security Council with a framework for talks; Trump acknowledges the letter but calls it an offer of medical supplies.",
+        "source": {
+          "outlet": "The Times of Israel",
+          "url": "https://www.timesofisrael.com/vance-reportedly-contacted-top-iran-security-official-in-bid-to-restart-peace-talks/"
+        }
+      },
+      {
+        "date": "2026-10-29",
+        "text": "US officials tell several regional allies to be ready for possible renewed military action against Iran after the midterms; a ship is reported on fire in the Strait of Hormuz.",
+        "source": {
+          "outlet": "RTÉ",
+          "url": "https://www.rte.ie/news/2026/1029/1597154-us-iran-strikes/"
         }
       }
     ]
@@ -396,6 +428,14 @@
           "outlet": "The Guardian",
           "url": "https://www.theguardian.com/global-development/2026/oct/28/africa-ebola-outbreak-could-reach-uk-says-top-health-official"
         }
+      },
+      {
+        "date": "2026-10-29",
+        "text": "Kenya has confirmed nine cases and released the first 20 contacts of its first patient; the outbreak is reported to have passed 10,000 confirmed cases, mostly in DR Congo.",
+        "source": {
+          "outlet": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/c693z948px0jo"
+        }
       }
     ]
   },
@@ -482,6 +522,22 @@
           "outlet": "The Times of Israel",
           "url": "https://www.timesofisrael.com/liveblog-october-28-2026/"
         }
+      },
+      {
+        "date": "2026-10-29",
+        "text": "With more than 90% of votes counted, the BBC says all signs point to an impasse and new elections may be the most likely outcome; Netanyahu vows to stay with his far-right partners.",
+        "source": {
+          "outlet": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/cm62y46d97wwo"
+        }
+      },
+      {
+        "date": "2026-10-29",
+        "text": "The Central Elections Committee asks the Shin Bet chief to investigate allegations of foreign interference linked to Qatar, and a far-right minister calls for the arrest of Arab party leaders.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/video/20261029-israel-s-election-committee-urges-probe-into-alleged-qatari-interference"
+        }
       }
     ]
   },
@@ -527,6 +583,82 @@
         "source": {
           "outlet": "RTÉ",
           "url": "https://www.rte.ie/news/2026/1028/1597039-bolsonaro-brazil/"
+        }
+      },
+      {
+        "date": "2026-10-28",
+        "text": "Flávio Bolsonaro lands in Miami by private jet after crossing into Argentina and flying via Ecuador; President Lula calls his escape 'shameful'.",
+        "source": {
+          "outlet": "Agência Brasil",
+          "url": "https://agenciabrasil.ebc.com.br/en/politica/noticia/2026-10/lula-terms-flavio-bolsonaros-escape-shameful"
+        }
+      },
+      {
+        "date": "2026-10-29",
+        "text": "Bolsonaro calls himself Brazil's 'true president', then 'leader', and denies he fled; Argentina's opposition demands answers from the Milei government.",
+        "source": {
+          "outlet": "Buenos Aires Times",
+          "url": "https://www.batimes.com.ar/news/latin-america/flavio-bolsonaro-claims-he-is-brazils-true-president-then-backtracks.phtml"
+        }
+      }
+    ]
+  },
+  "spain-rail-crash": {
+    "title": "Spain's rail crash",
+    "intro": "Spain's second major high-speed rail collision this year killed at least 68 people on 28 October and has raised fresh concerns about the safety of the country's rail network.",
+    "events": [
+      {
+        "date": "2026-10-28",
+        "text": "A Renfe high-speed train hits the back of a stopped Iryo train near Urda in Toledo province, south of Madrid, killing at least 68 people.",
+        "source": {
+          "outlet": "The Local Spain",
+          "url": "https://www.thelocal.es/20261028/breaking-at-least-ten-dead-as-two-trains-collide-in-central-spain"
+        }
+      },
+      {
+        "date": "2026-10-28",
+        "text": "Spain's transport minister blames 'inexplicable human error', saying a train was ordered to go in error by the rail manager Adif despite a technical failure that had halted services.",
+        "source": {
+          "outlet": "The Local Spain",
+          "url": "https://www.thelocal.es/20261028/spains-transport-minister-blames-rail-crash-on-inexplicable-human-error"
+        }
+      },
+      {
+        "date": "2026-10-29",
+        "text": "Spain begins three days of mourning as the toll is reported at 68 or 69; Renfe drivers go ahead with a strike called before the crash over safety concerns.",
+        "source": {
+          "outlet": "The Guardian",
+          "url": "https://www.theguardian.com/world/2026/oct/29/spain-mourning-period-deadly-train-crash"
+        }
+      }
+    ]
+  },
+  "cyclone-arnab": {
+    "title": "Cyclone Arnab",
+    "intro": "A cyclone that struck India's eastern coast on 28 October killed several people in Andhra Pradesh and floods villages in Odisha as it weakens inland.",
+    "events": [
+      {
+        "date": "2026-10-28",
+        "text": "Cyclone Arnab batters north Andhra Pradesh with winds gusting up to 150 kmph; five people are reported dead and crops on 80,500 hectares are affected.",
+        "source": {
+          "outlet": "The Hindu",
+          "url": "https://www.thehindu.com/news/national/andhra-pradesh/5-dead-as-cyclone-arnab-batters-north-andhra-with-heavy-rain/article71636779.ece"
+        }
+      },
+      {
+        "date": "2026-10-29",
+        "text": "The storm weakens into a depression; Odisha prepares to airlift people from about 300 villages marooned in Ganjam district.",
+        "source": {
+          "outlet": "The Hindu",
+          "url": "https://www.thehindu.com/news/national/odisha/post-arnab-odisha-preparing-to-airlift-people-stranded-by-floodwater/article71639465.ece"
+        }
+      },
+      {
+        "date": "2026-10-29",
+        "text": "Its remnants bring rain and landslide risk to Nepal.",
+        "source": {
+          "outlet": "The Kathmandu Post",
+          "url": "https://kathmandupost.com/national/2026/10/29/cyclone-arnab-s-remnants-raise-landslide-risk-on-nepal-s-main-highways"
         }
       }
     ]

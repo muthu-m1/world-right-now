@@ -174,5 +174,25 @@
   "ndrf": {
     "term": "NDRF",
     "definition": "India's National Disaster Response Force, a specialist national unit that rescues people and gives relief during floods, cyclones, earthquakes and other disasters. Each state also has its own response force, the SDRF."
+  },
+  "adif": {
+    "term": "Adif",
+    "definition": "Spain's state-owned company that manages the country's railway tracks, signals and control centres. Train operators such as Renfe and Iryo run their services on them."
+  },
+  "m23": {
+    "term": "M23",
+    "definition": "An armed rebel group fighting in eastern DR Congo. Congo accuses neighbouring Rwanda of backing it."
+  },
+  "ecb": {
+    "term": "European Central Bank",
+    "definition": "The central bank for the countries that use the euro. It sets the interest rates that influence borrowing costs and prices across the euro area."
+  },
+  "pds": {
+    "term": "Public distribution system",
+    "definition": "India's system through which the government sells subsidised grain such as rice and wheat to low-income families."
+  },
+  "upa-lokayukta": {
+    "term": "Upa Lokayukta",
+    "definition": "A deputy to the Lokayukta, Karnataka's state anti-corruption ombudsman. The office can inspect public offices and look into complaints about officials."
   }
 }
