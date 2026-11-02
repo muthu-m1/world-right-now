@@ -136,6 +136,14 @@
           "outlet": "The Kyiv Independent",
           "url": "https://kyivindependent.com/russia-says-battlefield-situation-will-determine-when-ukraine-peace-talks-begin/"
         }
+      },
+      {
+        "date": "2026-11-02",
+        "text": "Russian bombing kills 24 at an aid centre in Zaporizhzhia region; a six-day humanitarian truce around Oleshky ends and the Kremlin rules out repeating it for now.",
+        "source": {
+          "outlet": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/cjy56dndlyz0o"
+        }
       }
     ]
   },
@@ -268,6 +276,14 @@
           "outlet": "RTÉ",
           "url": "https://www.rte.ie/news/2026/1029/1597154-us-iran-strikes/"
         }
+      },
+      {
+        "date": "2026-11-02",
+        "text": "Iran says its plan to reopen the Strait of Hormuz and resume nuclear talks with the US has been cut from seven days to two, as Qatar-led mediation continues ahead of the US midterms.",
+        "source": {
+          "outlet": "France 24",
+          "url": "https://www.france24.com/en/video/20261102-iran-offers-deal-on-hormuz-strait-netanyahu-wants-to-finish-the-job"
+        }
       }
     ]
   },
@@ -343,6 +359,14 @@
         "source": {
           "outlet": "France 24",
           "url": "https://www.france24.com/en/france/20261024-live-hundreds-of-protests-expected-in-france-amid-high-tensions-and-heavy-police-presence"
+        }
+      },
+      {
+        "date": "2026-11-02",
+        "text": "Dozens of French high schools are blockaded again and unions plan a nationwide strike on Thursday, after more than 320,000 marched on Saturday.",
+        "source": {
+          "outlet": "The Guardian",
+          "url": "https://www.theguardian.com/education/2026/nov/02/franch-students-school-blockades-protests"
         }
       }
     ]
@@ -436,6 +460,14 @@
           "outlet": "BBC News",
           "url": "https://www.bbc.co.uk/news/articles/c693z948px0jo"
         }
+      },
+      {
+        "date": "2026-11-02",
+        "text": "The outbreak is reported to have killed more than 5,300 people and infected over 10,000 since May, spreading to Kenya, Uganda and Nigeria.",
+        "source": {
+          "outlet": "Euronews",
+          "url": "https://www.euronews.com/2026/11/02/ebola-kills-over-5300-in-fastest-growing-outbreak-on-record"
+        }
       }
     ]
   },
@@ -483,6 +515,14 @@
         "source": {
           "outlet": "BBC News",
           "url": "https://www.bbc.co.uk/news/articles/cj5ynkk6v3pzo"
+        }
+      },
+      {
+        "date": "2026-11-02",
+        "text": "Drone attacks continue to hit Sudan’s power system, and the army reports new defections from the RSF.",
+        "source": {
+          "outlet": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/2/drone-attacks-extend-campaign-targeting-sudans-power-system"
         }
       }
     ]
@@ -537,6 +577,14 @@
         "source": {
           "outlet": "France 24",
           "url": "https://www.france24.com/en/video/20261029-israel-s-election-committee-urges-probe-into-alleged-qatari-interference"
+        }
+      },
+      {
+        "date": "2026-11-02",
+        "text": "President Herzog begins coalition negotiations; Liberman backs Eisenkot for prime minister but rules out a minority government with Arab support.",
+        "source": {
+          "outlet": "The Times of Israel",
+          "url": "https://www.timesofisrael.com/liberman-to-back-eisenkot-for-pm-but-rules-out-minority-government-with-arab-support/"
         }
       }
     ]
@@ -600,6 +648,14 @@
           "outlet": "Buenos Aires Times",
           "url": "https://www.batimes.com.ar/news/latin-america/flavio-bolsonaro-claims-he-is-brazils-true-president-then-backtracks.phtml"
         }
+      },
+      {
+        "date": "2026-11-01",
+        "text": "Secretary of State Rubio says the US was not directly involved in Flávio Bolsonaro’s flight from Brazil, while Trump says he can stay in the US “as long as he wants”.",
+        "source": {
+          "outlet": "Buenos Aires Times",
+          "url": "https://www.batimes.com.ar/news/latin-america/rubio-says-us-not-directly-involved-in-flavio-bolsonaros-flight-from-brazil.phtml"
+        }
       }
     ]
   },
@@ -629,6 +685,14 @@
         "source": {
           "outlet": "The Guardian",
           "url": "https://www.theguardian.com/world/2026/oct/29/spain-mourning-period-deadly-train-crash"
+        }
+      },
+      {
+        "date": "2026-11-02",
+        "text": "Authorities identify 66 of the 69 victims and train drivers call two more strike days this month.",
+        "source": {
+          "outlet": "The Local Spain",
+          "url": "https://www.thelocal.es/20261102/today-in-spain-a-roundup-of-the-latest-news-on-monday-102"
         }
       }
     ]
